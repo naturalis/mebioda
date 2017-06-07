@@ -1,4 +1,4 @@
-Methods in Biodiversity Analysis 2018
+Methods in Biodiversity Analysis 2017
 =====================================
 
 Week 2: Two-dimensional data from images, occurrences, and GIS
