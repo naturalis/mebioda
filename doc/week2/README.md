@@ -1,8 +1,8 @@
 Methods in Biodiversity Analysis 2017
 =====================================
 
-Week 2: Two-dimensional data from images, occurrences, and GIS
---------------------------------------------------------------
+Week 2 (4-8 December): Two-dimensional data from images, occurrences, and GIS
+-----------------------------------------------------------------------------
 
 ### Day 1 - Introduction
 
