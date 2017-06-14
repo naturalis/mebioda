@@ -35,4 +35,4 @@ Week 2 (4-8 December): Two-dimensional data from images, occurrences, and GIS
 - Lecture I: Visualization (e.g. maps, histograms, tables, etc.)
 - Lecture II: Export (e.g. image files, WebGIS)
 - Lecture III: Scenario analyses
-- Assignment: Plotting your data
+- Practical: Ecological Niche Modelling (e.g. MAXENT)
