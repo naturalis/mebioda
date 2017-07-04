@@ -29,7 +29,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS)
 - Lecture II: Automated metabarcoding pipelines (e.g. HTS-barcode checker, DNA WaterScan)
 - Lecture III: Automated metabarcoding pipelines (e.g. Kinabalu mycorrhizal diversity)
-- Practical: Hands-on practical (step by step)[Metabarcoding.md] data analysis of mycorrhizal diversity
+- Practical: Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity
 
 ### Day 5 - Wrap-up Reproducible and Open Data Science
 
