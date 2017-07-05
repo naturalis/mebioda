@@ -12,7 +12,7 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 ### Day 2 - (Spatial) Data input
 
-- Lecture I: Data sources (e.g. web services, spatial data sets, attribute data)
+- Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Satellite images and remote sensing (including Lidar data ?)  --> Joris of Leon Hauser (CML)
 - Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (evt?)
 
