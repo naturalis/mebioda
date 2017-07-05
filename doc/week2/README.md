@@ -30,7 +30,7 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 - Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, MAXENT)
 - Practical: Analysing your data in ArcGIS: _Data preperation with use of spatial tools for SDM_ 2 pers.
 
-### Day 5 - Data output
+### Day 5 - (Spatial) Data output
 
 - Lecture I: Visualization (e.g. maps, histograms, tables, etc.)
 - Lecture II: Export spatial results (e.g. image files, WebGIS)
