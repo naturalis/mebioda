@@ -21,14 +21,14 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
 - Lecture III: Data and file versioning (e.g. version management, backup, history, provenance) - Vos
-- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_
+- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
 
 ### Day 4 - (Spatial) Data analysis
 
 - Lecture I: Tools for spatial data analysis (ArcGIS extensions, QGIS, R)
 - Lecture II: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture III: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
-- Practical: Analysing your data in ArcGIS: _Data preperation with use of spatial tools for SDM_
+- Practical: Analysing your data in ArcGIS: _Data preperation with use of spatial tools for SDM_ 2 pers.
 
 ### Day 5 - Data output
 
