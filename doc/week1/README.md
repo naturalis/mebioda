@@ -22,7 +22,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Lecture I: Biodiversity analysis of HTS data (e.g. barcoding)
 - Lecture II: Biodiversity analysis of HTS data (cont.)
 - Lecture III: Data science tools (e.g. Unix command line, git, R, python)
-- Practical: Reproducible and Open Data Science
+- Practical: [Reproducible and Open Data Science](https://github.com/Pfern/OSODOS/tree/master/docs)
 
 ### Day 4 - Metabarcoding
 
