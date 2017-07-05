@@ -14,13 +14,13 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data)
 - Lecture II: Satellite images and remote sensing (including Lidar data ?)  --> Joris of Leon Hauser (CML)
-- Lecture III: Digitalization, georeferencing and GPS
+- Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (evt?)
 
 ### Day 3 - (Spatial) Data management
 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
-- Lecture III: Data and file versioning (e.g. version management, backup, history, provenance)
+- Lecture III: Data and file versioning (e.g. version management, backup, history, provenance) - Vos
 - Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_
 
 ### Day 4 - (Spatial) Data analysis
