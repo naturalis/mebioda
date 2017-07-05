@@ -25,9 +25,9 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 ### Day 4 - (Spatial) Data analysis
 
-- Lecture I: Tools for spatial data analysis (ArcGIS extensions, QGIS, R)
-- Lecture II: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
-- Lecture III: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
+- Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
+- Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
+- Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, MAXENT)
 - Practical: Analysing your data in ArcGIS: _Data preperation with use of spatial tools for SDM_ 2 pers.
 
 ### Day 5 - Data output
