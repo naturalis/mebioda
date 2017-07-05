@@ -7,13 +7,13 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 ### Day 1 - Introduction
 
 - Lecture I: Introduction to GIS
-- Lecture II: GIS+SDM project example: _Birds of the Philippines_
+- Lecture II: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd
 - Lecture III: The geographical approach
 
 ### Day 2 - (Spatial) Data input
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data)
-- Lecture II: Satellite images and remote sensing (including Lidar data ?)  --> Joris of Leon Hauser
+- Lecture II: Satellite images and remote sensing (including Lidar data ?)  --> Joris of Leon Hauser (CML)
 - Lecture III: Digitalization, georeferencing and GPS
 
 ### Day 3 - (Spatial) Data management
