@@ -27,7 +27,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 ### Day 4 - Metabarcoding
 
 - Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS)
-- Lecture II: Automated metabarcoding pipelines [DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/) - Van der Hoorn
+- Lecture II: Automated metabarcoding pipelines [DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/) - Van der Hoorn / Beentjes
 - Lecture III: Guest lecture metabarcoding: [Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566) - Geml
 - Practical: Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity - Geml
 
