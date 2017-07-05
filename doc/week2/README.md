@@ -21,18 +21,18 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
 - Lecture III: Data and file versioning (e.g. version management, backup, history, provenance)
-- Practical: Getting your data into ArcGIS = 'Plotting species distributions on a map'
+- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_
 
 ### Day 4 - (Spatial) Data analysis
 
 - Lecture I: Tools for spatial data analysis (ArcGIS extensions, QGIS, R)
 - Lecture II: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture III: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
-- Practical: Analysing your data in ArcGIS = 'Data preperation with use of spatial tools for SDM'
+- Practical: Analysing your data in ArcGIS: _Data preperation with use of spatial tools for SDM_
 
 ### Day 5 - Data output
 
 - Lecture I: Visualization (e.g. maps, histograms, tables, etc.)
 - Lecture II: Export spatial results (e.g. image files, WebGIS)
 - Lecture III: Scenario analyses (including multicriteria analysises)
-- Practical: Ecological Niche Modelling = Species distribution modelling (e.g. MAXENT)  ! Dit moet dan samen met Leon, Jesus of Niels
+- Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Leon Marshall
