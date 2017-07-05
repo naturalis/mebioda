@@ -7,7 +7,7 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 ### Day 1 - Introduction
 
 - Lecture I: Introduction to GIS
-- Lecture II: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd
+- Lecture II: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (?)
 - Lecture III: The geographical approach
 
 ### Day 2 - (Spatial) Data input
