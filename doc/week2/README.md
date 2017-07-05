@@ -34,5 +34,5 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 - Lecture I: Visualization (e.g. maps, histograms, tables, etc.)
 - Lecture II: Export spatial results (e.g. image files, WebGIS)
-- Lecture III: Scenario analyses (focus on SDM)
+- Lecture III: Scenario analyses (focus on SDM) - Leon or Niels (?)
 - Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Leon Marshall
