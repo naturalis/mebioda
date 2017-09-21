@@ -6,7 +6,7 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 ### Day 1 - Introduction
 
-- Lecture I: Introduction to GIS
+- Lecture I: Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)
 - Lecture II: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
 - Lecture III: The geographical approach
 
@@ -15,6 +15,7 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Satellite images and remote sensing (including Lidar data ?)  - Joris Timmermans (CML)
 - Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (evt?)
+- Homework: Select a species and download occurrence data from GBIF
 
 ### Day 3 - (Spatial) Data management
 
@@ -27,12 +28,18 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
-- Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, MAXENT)
+- Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Leon + Maarten
 - Practical: Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.
 
 ### Day 5 - (Spatial) Data output
 
-- Lecture I: Visualization (e.g. maps, histograms, tables, etc.)
-- Lecture II: Export spatial results (e.g. image files, WebGIS)
-- Lecture III: Future projections (focus on SDM) - Leon or Niels (?)
+- Lecture I: Export and visualize (e.g. maps, histograms, tables, WebGIS, etc.)
+- Lecture II: Principles of SDM - Niels
+- Lecture III: Future projections, climate models, introduction to SDM practical - Leon
 - Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Leon Marshall
+- Reporting requirements:
+1. a 2-3 page report on a selected species
+2. screendumps of distribution 
+3. screendumps of selected variables
+4. response to future scenario
+5. biological interpretation
