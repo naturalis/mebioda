@@ -1,4 +1,4 @@
-![MeBioDA](docs/desktop.png)
+![MeBioDA](doc/desktop.png)
 
 This repository contains materials for the MSc course _Methods in Biodiversity Analysis_, offered through a 
 collaboration between [Naturalis](http://naturalis.nl), [IBL](https://www.universiteitleiden.nl/en/science/biology),
