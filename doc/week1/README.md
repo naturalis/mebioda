@@ -16,13 +16,14 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Lecture I: High-throughput DNA sequencing (e.g. amplicon sequencing, NGS platforms, data formats)
 - Lecture II: High-throughput DNA sequencing (cont.)
 - Lecture III: Generic HTS data pre-processing (e.g. demultiplexing, quality trimming)
+- Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 3 - Biodiversity analysis of HTS data
 
 - Lecture I: Biodiversity analysis of HTS data (e.g. barcoding)
 - Lecture II: Biodiversity analysis of HTS data (cont.)
 - Lecture III: Data science tools (e.g. Unix command line, git, R, python)
-- Practical: _[Reproducible and Open Data Science](https://github.com/Pfern/OSODOS/tree/master/docs)_
+- Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 4 - Metabarcoding
 
@@ -33,5 +34,4 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 
 ### Day 5 - Wrap-up Reproducible and Open Data Science
 
-- Practical: Reproducible and Open Data Science (cont.)
-- Lecture III: Wrap-up Reproducible and Open Data Science
+- Lecture III: Wrap-up Open Science, Open Data, Open Source
