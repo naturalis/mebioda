@@ -7,21 +7,21 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 ### Day 1 - Introduction
 
 - Lecture I: Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)
-- Lecture II: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
-- Lecture III: The geographical approach
+- Lecture II: Introduction to GIS (2) and The geographical approach
+- Lecture III: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
 
 ### Day 2 - (Spatial) Data input
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
-- Lecture II: Satellite images and remote sensing (including Lidar data ?)  - Joris Timmermans (CML)
-- Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (evt?)
+- Lecture II: Satellite images and remote sensing (including Lidar_data ?)  - Joris Timmermans (CML)
+- Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
 - Homework: Select a species and download occurrence data from GBIF
 
 ### Day 3 - (Spatial) Data management
 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
-- Lecture III: Data and file versioning (e.g. version management, backup, history, provenance) - Vos
+- Lecture III: Data and file versioning (e.g. version management, backup, history, provenance) - Rutger Vos
 - Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
 
 ### Day 4 - (Spatial) Data analysis
@@ -33,7 +33,7 @@ Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use 
 
 ### Day 5 - (Spatial) Data output
 
-- Lecture I: Export and visualize (e.g. maps, histograms, tables, WebGIS, etc.)
+- Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
 - Lecture II: Principles of SDM - Niels
 - Lecture III: Future projections, climate models, introduction to SDM practical - Leon
 - Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Leon Marshall
