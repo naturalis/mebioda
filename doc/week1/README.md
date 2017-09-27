@@ -35,3 +35,4 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 ### Day 5 - Wrap-up Reproducible and Open Data Science
 
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
+- Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
