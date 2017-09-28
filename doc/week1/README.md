@@ -34,7 +34,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 
 ### Day 5 - Phylogenies and wrap-up
 
-- Lecture I: Phylogenies
-- Lecture II: Phylogenies (cont.)
+- Lecture I: Phylogenies (e.g. phylogenetic placement)
+- Lecture II: Phylogenies (e.g. megatrees such as greengenes, silva)
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
