@@ -7,7 +7,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 ### Day 1 - Introduction
 
 - Lecture I: Introduction to the course
-- Lecture II: Introduction to biodiversity data science
+- Lecture II: Introduction to biodiversity and data science
 - Lecture III: Introduction to molecular biodiversity
 - Cleveringa Oratie: no afternoon education (15:00-18:00)
 
