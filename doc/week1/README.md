@@ -12,7 +12,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Cleveringa Oratie: no afternoon education (15:00-18:00)
 
 ### Day 2 - High-throughput DNA sequencing (HTS)
-<!-- Christiaan Henkel -->
+<!-- Christiaan Henkel probably available, will confirm 2017-10-05 -->
 - Lecture I: High-throughput DNA sequencing (e.g. amplicon sequencing, NGS platforms, data formats)
 - Lecture II: High-throughput DNA sequencing (cont.)
 - Lecture III: Generic HTS data pre-processing (e.g. demultiplexing, quality trimming)
