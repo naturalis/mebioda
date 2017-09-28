@@ -32,7 +32,9 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Lecture III: Guest lecture metabarcoding: _[Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566)_ - Geml
 - Practical: _Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity_ - Geml
 
-### Day 5 - Wrap-up Reproducible and Open Data Science
+### Day 5 - Phylogenies and wrap-up
 
+- Lecture I: Phylogenies
+- Lecture II: Phylogenies (cont.)
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
