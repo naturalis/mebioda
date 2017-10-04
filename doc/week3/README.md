@@ -11,14 +11,14 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
 [Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.pdf)
 
-### Day 2 - Characters
+### Day 2 - Comparative character analysis
 
 - Lecture I: Homology and cross-sectional character analysis
 - Lecture II: Morphological characters and longitudinal analysis (Aidan Couzens?)
 - Lecture III: Character data mining and representation (Jeremy Miller?)
 - Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
 
-### Day 3 - Traits
+### Day 3 - Trait analysis
 
 - Lecture I: Applied trait research (Tiedo van Kuijk?) <!--[Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)-->
 - Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
