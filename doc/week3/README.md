@@ -1,5 +1,5 @@
-Patterns of function and form: comparative analysis of traits, characters and diversification
----------------------------------------------------------------------------------------------
+Patterns of function and form: comparative analysis of traits, characters, and diversification
+----------------------------------------------------------------------------------------------
 The diversity of species at any given place, which we could quantify for example by metabarcoding, as well
 as their geographical patterns of diversity are not simply accidents of history. 
 
