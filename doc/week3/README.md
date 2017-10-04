@@ -27,7 +27,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 4 - Diversification
 
 - Lecture I: [Methods for computing functional diversity](w3l12%20-%20METHODS-%20FUNCTIONAL%20AND%20PHYLO%20DIVERSITY/Functional_diversity_tutorial.pdf)
-- Lecture II: [Methods for computation phylogenetic diversity](w3l11%20-%20METHODS-%20PHYLO%20AND%20TRAIT%20DISPERSION/Phylo-trait_tutorial.pdf)
+- Lecture II: [Methods for computating phylogenetic diversity](w3l11%20-%20METHODS-%20PHYLO%20AND%20TRAIT%20DISPERSION/Phylo-trait_tutorial.pdf)
 - Lecture III: Trait dependent diversification
 - Practical: TBD
 
