@@ -17,14 +17,14 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture III: [Trait covariation and optimization](w3l8%20-%20TRAIT%20COVARIATION%20AND%20OPTIMIZATION/Trait_covariation.pdf)
 - Practical: TBD
 
-### Day 3 - TBD
+### Day 3 - Characters
 
 - Lecture I: TBD
 - Lecture II: TBD
 - Lecture III: TBD
 - Practical: TBD
 
-### Day 4 - TBD
+### Day 4 - Diversification
 
 - Lecture I: TBD
 - Lecture II: TBD
