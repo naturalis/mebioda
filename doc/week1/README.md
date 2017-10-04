@@ -41,6 +41,6 @@ a journal club where we discuss a relevant publication with each other in brief 
 ### Day 5 - Phylogenies and wrap-up
 
 - Lecture I: Phylogenies (e.g. [phylogenetic placement](https://github.com/Pbdas/epa-ng))
-- Lecture II: Phylogenies (e.g. megatrees such as greengenes, silva)
+- Lecture II: Phylogenies (e.g. megatrees such as greengenes, silva, tree representation)
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
 - Journal club: _All students present their selected paper to the class (10 min. + questions)_
