@@ -1,8 +1,11 @@
-Methods in Biodiversity Analysis 2017
-=====================================
-
-Week 2 (4/12 - 8/12): Two-dimensional data from images and occurrences with use of GIS and spatial analyses
------------------------------------------------------------------------------------------------------------
+The analysis of spatial patterns in biodiversity: geographical information systems and species distribution models
+------------------------------------------------------------------------------------------------------------------
+In the second week of the course we will concern ourselves with spatial patterns in biodiversity: where do species
+occur? What are the local conditions there? Can we infer species' preferences for particular areas? In the morning
+we will have plenary sessions where we will review the theory and current practices, illustrated with several case
+studies. In the afternoon we will do hands-on work to develop our own case of geospatial biodiversity analysis: we
+will collect (and clean) our own occurrence data, import it for visualization, prepare it further, then analyze it
+by species distribution modelling. We will present our findings in a brief report.
 
 ### Day 1 - Introduction
 
