@@ -8,8 +8,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: Introduction to the week
 - Lecture II: [Introduction to trait-based analysis](w3l1%20-%20TRAIT%20BASED%20ECOLOGY%20-%20OVERVIEW%20I/why%20trait-based%20science.pdf)
 - Lecture III: [Phylogenetic conservatism](w3l3-%20PHYLOGENETIC%20CONSERVATIONISM/phylogenetic%20conservationism.pdf)
-- Practical: [Introduction to RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd)
-
+- Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd)
 
 ### Day 2 - Characters
 
