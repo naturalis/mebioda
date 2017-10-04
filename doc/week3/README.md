@@ -13,9 +13,9 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 2 - Characters
 
-- Lecture I: 
+- Lecture I: Homology and character analysis
 - Lecture II: Morphological characters and longitudinal analysis (Aidan Couzens?)
-- Lecture III: TBD
+- Lecture III: Character data mining and representation (Jeremy Miller?)
 - Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
 
 ### Day 3 - Traits
