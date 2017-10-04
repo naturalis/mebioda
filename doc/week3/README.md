@@ -22,7 +22,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: TBD
 - Lecture II: TBD
 - Lecture III: TBD
-- Practical: TBD
+- Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
 
 ### Day 4 - Diversification
 
