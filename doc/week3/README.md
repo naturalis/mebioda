@@ -10,19 +10,20 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture III: [Phylogenetic conservatism](w3l3-%20PHYLOGENETIC%20CONSERVATIONISM/phylogenetic%20conservationism.pdf)
 - Practical: TBD
 
-### Day 2 - Traits
+
+### Day 2 - Characters
+
+- Lecture I: 
+- Lecture II: Morphological characters and longitudinal analysis (Aidan Couzens?)
+- Lecture III: TBD
+- Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
+
+### Day 3 - Traits
 
 - Lecture I: Applied trait research (Tiedo van Kuijk?) <!--[Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)-->
 - Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
 - Lecture III: [Trait covariation and optimization](w3l8%20-%20TRAIT%20COVARIATION%20AND%20OPTIMIZATION/Trait_covariation.pdf)
 - Practical: TBD, probably trait databases, e.g. [BIEN](http://bien.nceas.ucsb.edu/bien/), [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php)
-
-### Day 3 - Characters
-
-- Lecture I: TBD
-- Lecture II: TBD
-- Lecture III: TBD
-- Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
 
 ### Day 4 - Diversification
 
