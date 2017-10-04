@@ -5,9 +5,9 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 1 - Introduction
 
-- Lecture I: [Introduction to trait-based analysis](w3l1%20-%20TRAIT%20BASED%20ECOLOGY%20-%20OVERVIEW%20I/why%20trait-based%20science.pdf)
-- Lecture II: TBD
-- Lecture III: TBD
+- Lecture I: Introduction to the week and to comparative analysis
+- Lecture II: [Introduction to trait-based analysis](w3l1%20-%20TRAIT%20BASED%20ECOLOGY%20-%20OVERVIEW%20I/why%20trait-based%20science.pdf)
+- Lecture III: [Phylogenetic conservatism](w3l3-%20PHYLOGENETIC%20CONSERVATIONISM/phylogenetic%20conservationism.pdf)
 - Practical: TBD
 
 ### Day 2 - TBD
