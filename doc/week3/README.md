@@ -11,32 +11,32 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
 [Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.pdf)
 
-### Day 2 - Comparative character analysis
+### Day 2 - Topological analysis
+
+- Lecture I: Tree traversal (e.g. pre-, post-, level- order)
+- Lecture II: Simple tree shape metrics (e.g. balance, branchiness)
+- Lecture III: Estimating evolutionary processes (e.g. birth/death)
+- Practical: TBD
+
+### Day 3 - Comparative character analysis
 
 - Lecture I: Homology and cross-sectional character analysis
 - Lecture II: Morphological characters and longitudinal analysis (Aidan Couzens?)
 - Lecture III: Character data mining and representation (Jeremy Miller?)
 - Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
 
-### Day 3 - Trait analysis
+### Day 4 - Trait analysis
 
 - Lecture I: Applied trait research (Tiedo van Kuijk?) <!--[Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)-->
 - Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
 - Lecture III: [Trait covariation and optimization](w3l8%20-%20TRAIT%20COVARIATION%20AND%20OPTIMIZATION/Trait_covariation.pdf)
 - Practical: TBD, probably trait databases, e.g. [BIEN](http://bien.nceas.ucsb.edu/bien/), [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php)
 
-### Day 4 - Diversification
+### Day 5 - Diversification
 
 - Lecture I: [Methods for computing functional diversity](w3l12%20-%20METHODS-%20FUNCTIONAL%20AND%20PHYLO%20DIVERSITY/Functional_diversity_tutorial.pdf)
 - Lecture II: [Methods for computing phylogenetic diversity](w3l11%20-%20METHODS-%20PHYLO%20AND%20TRAIT%20DISPERSION/Phylo-trait_tutorial.pdf)
 - Lecture III: Trait-dependent diversification (Vincent Merckx?)
-- Practical: TBD
-
-### Day 5 - TBD
-
-- Lecture I: TBD
-- Lecture II: TBD
-- Lecture III: TBD
 - Practical: TBD
 
 <!--
