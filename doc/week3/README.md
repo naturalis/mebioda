@@ -10,10 +10,10 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture III: [Phylogenetic conservatism](w3l3-%20PHYLOGENETIC%20CONSERVATIONISM/phylogenetic%20conservationism.pdf)
 - Practical: TBD
 
-### Day 2 - TBD
+### Day 2 - Traits
 
-- Lecture I: TBD
-- Lecture II: TBD
+- Lecture I: [Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)
+- Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
 - Lecture III: TBD
 - Practical: TBD
 
