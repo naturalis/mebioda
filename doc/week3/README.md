@@ -5,7 +5,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 1 - Introduction
 
-- Lecture I: TBD
+- Lecture I: [Introduction to trait-based analysis](w3l1%20-%20TRAIT%20BASED%20ECOLOGY%20-%20OVERVIEW%20I/why%20trait-based%20science.pdf)
 - Lecture II: TBD
 - Lecture III: TBD
 - Practical: TBD
