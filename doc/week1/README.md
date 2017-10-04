@@ -3,6 +3,15 @@ Methods in Biodiversity Analysis 2017
 
 Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 ----------------------------------------------------------------------
+_Biodiversity analysis_ can be broadly defined as the study and interpretation of patterns of species diversity and  
+ecological functioning as structured by history and geography. In this field, data of a variety of different
+types and dimensions need to be integrated and analyzed statistically to be able to meaningfully address relevant 
+research questions. This course reviews these different types of data and the current methodologies for processing and
+analyzing them. The review starts with one-dimensional, sequential data from which at least some relevant insights can
+be gained by analyzing its diversity per se: DNA. While we are introducing ourselves to this in plenary form in the 
+mornings, we will take two afternoons individually to work our way through an e-book about open science, open data and
+open source practices. We will then do a hands-on practical in metabarcoding data analysis and conclude the week with 
+a journal club where we discuss a relevant publication with each other in brief stand-up presentations.
 
 ### Day 1 - Introduction
 
@@ -19,7 +28,7 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 3 - Biodiversity analysis of HTS data
-<!-- Krijn Trimbos -->
+<!-- Krijn Trimbos or Jeremy Miller -->
 - Lecture I: Biodiversity analysis of HTS data (e.g. barcoding)
 - Lecture II: Biodiversity analysis of HTS data (cont.)
 - Lecture III: Data science tools (e.g. Unix command line, git, R, python)
@@ -37,4 +46,4 @@ Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
 - Lecture I: Phylogenies (e.g. phylogenetic placement)
 - Lecture II: Phylogenies (e.g. megatrees such as greengenes, silva)
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
-- Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
+- Journal club: _All students present their selected paper to the class (10 min. + questions)_
