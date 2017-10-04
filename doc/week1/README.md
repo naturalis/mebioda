@@ -1,8 +1,5 @@
-Methods in Biodiversity Analysis 2017
-=====================================
-
-Week 1 (27/11 - 1/12): Reproducible and Open Biodiversity Data Science
-----------------------------------------------------------------------
+Reproducible and Open Biodiversity Data Science, with a focus on DNA
+--------------------------------------------------------------------
 _Biodiversity analysis_ can be broadly defined as the study and interpretation of patterns of species diversity and  
 ecological functioning as structured by history and geography. In this field, data of a variety of different
 types and dimensions need to be integrated and analyzed statistically to be able to meaningfully address relevant 
