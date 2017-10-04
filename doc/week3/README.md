@@ -14,7 +14,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 - Lecture I: [Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)
 - Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
-- Lecture III: TBD
+- Lecture III: [Trait covariation and optimization](w3l8%20-%20TRAIT%20COVARIATION%20AND%20OPTIMIZATION/Trait_covariation.pdf)
 - Practical: TBD
 
 ### Day 3 - TBD
