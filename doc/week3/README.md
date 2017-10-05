@@ -21,7 +21,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 3 - Comparative character analysis
 
 - Lecture I: Homology and cross-sectional character analysis
-- Lecture II: Morphological characters and longitudinal analysis (Aidan Couzens?)
+- Lecture II: Morphological characters and longitudinal analysis ([Aidan Couzens](http://onlinelibrary.wiley.com/doi/10.1111/evo.12866/full)?)
 - Lecture III: Character data mining and representation (Jeremy Miller?)
 - Practical: TBD, probably [BayesTraits](http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html)
 
