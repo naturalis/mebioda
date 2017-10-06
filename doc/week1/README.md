@@ -21,7 +21,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 <!-- Christiaan Henkel probably available, will confirm 2017-10-05 -->
 - Lecture I: High-throughput DNA sequencing (e.g. amplicon sequencing, NGS platforms, data formats)
 - Lecture II: High-throughput DNA sequencing (cont.)
-- Lecture III: Generic HTS data pre-processing (e.g. demultiplexing, quality trimming)
+- Lecture III: Generic HTS data pre-processing (e.g. demultiplexing, quality trimming) - Henkel
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 3 - Biodiversity analysis of HTS data
