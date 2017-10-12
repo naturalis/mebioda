@@ -37,7 +37,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: [Methods for computing functional diversity](w3l12%20-%20METHODS-%20FUNCTIONAL%20AND%20PHYLO%20DIVERSITY/Functional_diversity_tutorial.pdf)
 - Lecture II: [Methods for computing phylogenetic diversity](w3l11%20-%20METHODS-%20PHYLO%20AND%20TRAIT%20DISPERSION/Phylo-trait_tutorial.pdf)
 - Lecture III: Trait-dependent diversification (Vincent Merckx?)
-- Practical: TBD
+- Practical: [Phylogenetic signal]([Phylogenetic diversity](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture6/PD.Rmd)) and [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
 <!--
 With considerable re-use from:
