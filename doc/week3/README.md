@@ -16,7 +16,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: Tree traversal (e.g. pre-, post-, level- order)
 - Lecture II: Simple tree shape metrics (e.g. balance, branchiness)
 - Lecture III: Estimating evolutionary processes (e.g. birth/death)
-- Practical: TBD
+- Practical: TBD, maybe turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical
 
 ### Day 3 - Comparative character analysis
 
