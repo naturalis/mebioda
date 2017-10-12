@@ -30,7 +30,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: Applied trait research (Tiedo van Kuijk?) <!--[Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)-->
 - Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
 - Lecture III: [Trait covariation and optimization](w3l8%20-%20TRAIT%20COVARIATION%20AND%20OPTIMIZATION/Trait_covariation.pdf)
-- Practical: TBD, probably trait databases, e.g. [BIEN](http://bien.nceas.ucsb.edu/bien/), [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php)
+- Practical: TBD, probably work on trait databases, e.g. [BIEN](http://bien.nceas.ucsb.edu/bien/), [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php). Maybe use the RBIEN [tutorials](https://github.com/naturalis/RBIEN/tree/master/tutorials)
 
 ### Day 5 - Diversification
 
