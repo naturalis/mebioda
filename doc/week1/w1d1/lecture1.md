@@ -3,13 +3,9 @@ Introduction to the course
 
 Who are we? Who am I?
 ---------------------
-
-Learning goals
---------------
-- To develop a data-centric view of biodiversity research
-- To adopt principles and practices of open science
-- To learn computational skills in biodiversity analysis
-- To improve our communication abilities
+- Different academic backgrounds (IBL, CML)
+- Different interests, needs, and expectations
+- Different skill levels and experiences
 
 Prerequisites and assumptions
 -----------------------------
@@ -17,11 +13,20 @@ Prerequisites and assumptions
   practices of molecular biology, biogeography, systematics,
   and evolution
 - We are natural scientists: we've had previous training
-  in statistics and maths, know how to read scientific
-  publications, and know how to present research, orally 
-  and in writing
+  in statistics (e.g. what is a PCA? What is Bayesian 
+  statistics?), know how to read scientific publications, 
+  and know how to present research, orally and in writing
 - We are not computer scientists, but we're not afraid of
   computers
+- We are going to learn together: questions, responses,
+  discussions, interruptions, are always welcome
+
+Learning goals
+--------------
+- To develop a data-centric view of biodiversity research
+- To adopt principles and practices of open science
+- To learn computational skills in biodiversity analysis
+- To improve our communication abilities
 
 Course outline
 --------------
