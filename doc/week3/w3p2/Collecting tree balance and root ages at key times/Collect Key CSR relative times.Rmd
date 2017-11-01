@@ -1,0 +1,247 @@
+---
+title: "CollectKeyRelativeTimes"
+author: "irene"
+date: "23/10/2017"
+output: word_document
+---
+Here, they collect the COL_BLUM values at the key CSR relative times (CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile) for the three treamtments combined with the different intensities. 
+```{r}
+SEED_LIST_ALL = read.table("MESA_seed_list.txt",header=F)
+
+CSR_REL_TIMES = read.table("CSR_relative_points.txt",header=T,sep="\t")
+CSRRT_DIM = dim(CSR_REL_TIMES)
+CSRRT_DIM
+END_SIM_TIME = 600
+NCOLS = CSRRT_DIM[2]
+CSR_RELTIME_BVALMAT = matrix(data=0,nrow = dim(SEED_LIST_ALL)[1],ncol=NCOLS)
+colnames(CSR_RELTIME_BVALMAT) = colnames(CSR_REL_TIMES)
+CSR_RELTIME_BVALMAT[,1] = CSR_REL_TIMES[,1]
+
+```
+
+
+```{r}
+#first, we will do it for the random treatment
+FE1 = "_randext0.9_NEW.out"
+FE2 = "_randext0.75_NEW.out"
+FE3 = "_randext0.5_NEW.out"
+
+for (s in 1:dim(SEED_LIST_ALL)[1]) {
+    #FE = FEMAT[1]
+    #message(FE)
+      
+    SEEDVAL = as.character(SEED_LIST_ALL[s,1])
+    #message(SEEDVAL)
+    INFILENAME = paste("MESA_X5Balance_test_s",SEEDVAL,FE1,sep="")
+    message(INFILENAME)
+    
+    INFILENAME2 = paste("MESA_X5Balance_test_s",SEEDVAL,FE2,sep="")
+    message(INFILENAME2)
+    
+    INFILENAME3 = paste("MESA_X5Balance_test_s",SEEDVAL,FE3,sep="")
+    message(INFILENAME3)
+    
+    DATA = read.table(INFILENAME,header=T)
+    DATA2 = read.table(INFILENAME2,header=T)
+    DATA3 = read.table(INFILENAME3,header=T)
+    
+    for (k in 2:5){
+      CURR_TIME = CSR_REL_TIMES[s,k]
+      CURR_TIME_ROW = which(DATA[,1]==CURR_TIME)
+      CURR_TIME_CBVAL = DATA[CURR_TIME_ROW,6]
+      CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+    }
+    
+    for (k in 6:9){
+      CURR_TIME = CSR_REL_TIMES[s,k]
+      CURR_TIME_ROW = which(DATA2[,1]==CURR_TIME)
+      CURR_TIME_CBVAL = DATA2[CURR_TIME_ROW,6]
+      CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+    }
+    
+    for (k in 10:13){
+      CURR_TIME = CSR_REL_TIMES[s,k]
+      CURR_TIME_ROW = which(DATA3[,1]==CURR_TIME)
+      CURR_TIME_CBVAL = DATA3[CURR_TIME_ROW,6]
+      CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+    }
+
+}
+```
+
+```{r}
+#for the the the selective-on-diversifiers (SOD) treatment
+FE4 = "_lotrtext0.9_NEW.out"
+FE5 = "_lotrtext0.75_NEW.out"
+FE6 = "_lotrtext0.5_NEW.out"
+
+#FEMAT = rbind(FE4,FE5,FE6)
+for (s in 1:dim(SEED_LIST_ALL)[1]) {
+  #FE = FEMAT[1]
+  #message(FE)
+  
+  SEEDVAL = as.character(SEED_LIST_ALL[s,1])
+  #message(SEEDVAL)
+  INFILENAME = paste("MESA_X5Balance_test_s",SEEDVAL,FE4,sep="")
+  message(INFILENAME)
+  
+  INFILENAME2 = paste("MESA_X5Balance_test_s",SEEDVAL,FE5,sep="")
+  message(INFILENAME2)
+  
+  INFILENAME3 = paste("MESA_X5Balance_test_s",SEEDVAL,FE6,sep="")
+  message(INFILENAME3)
+  
+  DATA = read.table(INFILENAME,header=T)
+  DATA2 = read.table(INFILENAME2,header=T)
+  DATA3 = read.table(INFILENAME3,header=T)
+  
+  for (k in 14:17){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+  for (k in 18:21){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA2[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA2[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+  for (k in 22:25){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA3[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA3[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+}
+
+```
+
+```{r}
+#then, for the the the selective-on-relicts (SOR) treatment
+FE7 = "_hitrtext0.9_NEW.out"
+FE8 = "_hitrtext0.75_NEW.out"
+FE9 = "_hitrtext0.5_NEW.out"
+
+for (s in 1:dim(SEED_LIST_ALL)[1]) {
+  #FE = FEMAT[1]
+  #message(FE)
+  
+  SEEDVAL = as.character(SEED_LIST_ALL[s,1])
+  #message(SEEDVAL)
+  INFILENAME = paste("MESA_X5Balance_test_s",SEEDVAL,FE7,sep="")
+  message(INFILENAME)
+  
+  INFILENAME2 = paste("MESA_X5Balance_test_s",SEEDVAL,FE8,sep="")
+  message(INFILENAME2)
+  
+  INFILENAME3 = paste("MESA_X5Balance_test_s",SEEDVAL,FE9,sep="")
+  message(INFILENAME3)
+  
+  DATA = read.table(INFILENAME,header=T)
+  DATA2 = read.table(INFILENAME2,header=T)
+  DATA3 = read.table(INFILENAME3,header=T)
+  
+  for (k in 26:29){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+  for (k in 30:33){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA2[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA2[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+  for (k in 34:37){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA3[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA3[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+}
+
+write.table(CSR_RELTIME_BVALMAT,"KeyCSR_RelativeTimes_CBVALS.out", sep = " ")
+
+```
+
+```{r}
+#Finally, get all equivalent Control times
+NCOLS = CSRRT_DIM[2]
+CSR_RELTIME_BVALMAT = matrix(data=0,nrow = dim(SEED_LIST_ALL)[1],ncol=NCOLS)
+colnames(CSR_RELTIME_BVALMAT) = colnames(CSR_REL_TIMES)
+CSR_RELTIME_BVALMAT[,1] = CSR_REL_TIMES[,1]
+
+FE10 = "_noext0.9_NEW.out" 
+
+for (s in 1:dim(SEED_LIST_ALL)[1]) {
+  #FE = FEMAT[1]
+  #message(FE)
+  
+  SEEDVAL = as.character(SEED_LIST_ALL[s,1])
+  #message(SEEDVAL)
+  INFILENAME = paste("MESA_X5Balance_test_s",SEEDVAL,FE10,sep="")
+  message(INFILENAME)
+
+  DATA = read.table(INFILENAME,header=T)
+
+  for (k in 2:37){
+    CURR_TIME = CSR_REL_TIMES[s,k]
+    CURR_TIME_ROW = which(DATA[,1]==CURR_TIME)
+    CURR_TIME_CBVAL = DATA[CURR_TIME_ROW,6]
+    CSR_RELTIME_BVALMAT[s,k] = CURR_TIME_CBVAL
+  }
+  
+}
+
+write.table(CSR_RELTIME_BVALMAT,"KeyCSR_RelativeTimes_CTRLEQUIV_CBVALS.out", sep = " ")
+
+#
+CSR_GMEAN = 335
+FQTR_GMEAN = 405
+MID_GMEAN = 470
+TQTR_GMEAN = 535
+
+
+GMEAN_MAT = matrix(data=0,nrow = dim(SEED_LIST_ALL)[1],ncol=6)
+colnames(GMEAN_MAT) = c("SEED","CSR_GMEAN","FQTR_GMEAN","MID_GMEAN","TQTR_GMEAN", "END_SIM")
+GMEAN_MAT[,1] = CSR_REL_TIMES[,1]
+
+for (s in 1:dim(SEED_LIST_ALL)[1]) {
+
+  SEEDVAL = as.character(SEED_LIST_ALL[s,1])
+  #message(SEEDVAL)
+  INFILENAME = paste("MESA_X5Balance_test_s",SEEDVAL,FE10,sep="")
+  message(INFILENAME)
+  
+  DATA = read.table(INFILENAME,header=T)
+  
+  CSR_ROW = which(DATA[,1]==CSR_GMEAN)
+  FQTR_ROW = which(DATA[,1]==FQTR_GMEAN)
+  MID_ROW = which(DATA[,1]==MID_GMEAN)
+  TQTR_ROW = which(DATA[,1]==TQTR_GMEAN)
+  ENDSIM_ROW = which(DATA[,1]==END_SIM_TIME)
+  
+  CSR_CBVAL = DATA[CSR_ROW,6]
+  FQTR_CBVAL = DATA[FQTR_ROW,6]
+  MID_CBVAL = DATA[MID_ROW,6]
+  TQTR_CBVAL = DATA[TQTR_ROW,6]
+  ENDSIM_CBVAL = DATA[ENDSIM_ROW,6]
+  VALS = cbind(CSR_CBVAL,FQTR_CBVAL,MID_CBVAL,TQTR_CBVAL,ENDSIM_CBVAL)
+  
+  GMEAN_MAT[s,2:6] = VALS
+  
+}
+  
+write.table(GMEAN_MAT,"KeyCSR_RelativeTimes_CTRLEQUIV_GRANDMEANS_CBVALS.out", sep = " ")
+
+
+```
+
