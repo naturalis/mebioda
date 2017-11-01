@@ -12,7 +12,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 
 ### Day 1 - Introduction
 
-- Lecture I: Introduction to the course
+- Lecture I: [Introduction to the course](w1d1/lecture1.md)
 - Lecture II: Introduction to biodiversity and data science
 - Lecture III: Introduction to molecular biodiversity
 - Cleveringa Oratie: no afternoon education (15:00-18:00)
