@@ -71,8 +71,8 @@ UNIX pipes
 - UNIX programs by default write to STDOUT and read from STDIN
 - The defaults can be re-directed with “> outfile” and “< infile”, respectively
 - The output from one program can be piped into the input from the next:
-   
-    cat file | sort | uniq > sorted_no_dups
+
+      cat file | sort | uniq > sorted_no_dups
 
 UNIX programming
 ----------------
@@ -85,6 +85,7 @@ UNIX programming
 Compiling
 ---------
 Source code can be compiled into binary following standard (optional) steps:
+
     tar -xzf prog.tar.gz
     cd prog
     (autoconf)
