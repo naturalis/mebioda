@@ -28,7 +28,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 <!-- Krijn Trimbos or Jeremy Miller -->
 - Lecture I: Biodiversity analysis of HTS data (e.g. barcoding)
 - Lecture II: Biodiversity analysis of HTS data (cont.)
-- Lecture III: Data science tools (e.g. Unix command line, git, R, python)
+- Lecture III: [Data science tools: UNIX](w1d3/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 4 - Metabarcoding
