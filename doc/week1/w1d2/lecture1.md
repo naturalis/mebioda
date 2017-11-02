@@ -285,3 +285,32 @@ phased samples) given as well as the genotypes. The microsatellite calls are unp
 
 The GFF format
 --------------
+Once a plausible sequence has been generated (e.g. by doing a de novo assembly or by 
+computing a consensus from a genome alignment) the next step might be to annotate it, i.e.
+predict ORFs and scan databases for homologies. Such genome annotations are stored in GFF
+files:
+
+```
+contig_1    maker   gene            1797    7025    .   +   .   ID=CR513_016834;Name=CR513_016834;Alias=maker-contig_1-snap-gene-0.0;Note=Similar to SCAI: Protein SCAI (Homo sapiens);
+contig_1    maker   five_prime_UTR  1797    1954    .   +   .   ID=CR513_016834-RA:five_prime_utr;Parent=CR513_016834-RA;
+contig_1    maker   CDS             1955    2095    .   +   0   ID=CR513_016834-RA:cds;Parent=CR513_016834-RA;
+contig_1    maker   CDS             2223    2359    .   +   0   ID=CR513_016834-RA:cds;Parent=CR513_016834-RA;
+contig_1    maker   CDS             6748    6979    .   +   1   ID=CR513_016834-RA:cds;Parent=CR513_016834-RA;
+contig_1    maker   three_prime_UTR 6980    7025    .   +   .   ID=CR513_016834-RA:three_prime_utr;Parent=CR513_016834-RA;
+```
+
+1. name of the chromosome or scaffold; chromosome names can be given with or without the 
+   'chr' prefix. Important note: the seqname must be one used within Ensembl, i.e. a 
+   standard chromosome name or an Ensembl identifier such as a scaffold ID, without any 
+   additional content such as species or assembly. See the example GFF output below.
+2. name of the program that generated this feature, or the data source (database or 
+   project name)
+3. feature type name, e.g. Gene, Variation, Similarity
+4. start position of the feature, with sequence numbering starting at 1.
+5. end position of the feature, with sequence numbering starting at 1.
+6. a floating point value.
+7. defined as + (forward) or - (reverse).
+8. one of '0', '1' or '2'. '0' indicates that the first base of the feature is the first 
+   base of a codon, '1' that the second base is the first base of a codon, and so on.
+9. semicolon-separated list of tag-value pairs, providing additional information about 
+   each feature.
