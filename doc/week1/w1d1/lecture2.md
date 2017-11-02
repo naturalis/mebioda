@@ -35,19 +35,24 @@ Biodiversity data
   - Remote sensing satellites and drones
   - Digital cameras
 
+The data cycle
+--------------
+![](data_life_cycle.jpg)
+
 Data science
 ------------
-The dirty work leading up to, and including, statistical analysis:
+The dirty work throughout the data cycle, leading up to, and including, 
+statistical analysis:
 - Representation and modeling of collected data
-- Data processing: cleaning, filtering, conversion, reduction, integration
-- Data management: metadata, versioning
-- Handling scalability challenges, e.g. automation
+- Data processing: cleaning, filtering, reduction, integration
+- Data management: metadata, versioning, formats
+- Handling scalability challenges, e.g. through automation
 - And finally: analyzing, visualizing, and interpreting data
 
 Representation and modeling of collected data
 ---------------------------------------------
-- How is sequencing data represented, what does it capture, how is
-  it annotated with additional information?
+- How is sequencing data represented over the course of the data cycle, 
+  what does it capture, how is it annotated with additional information?
 - How is geospatial data represented? There are different data types
   (e.g. number types, pixel values), different scaling levels, 
   different coordinate systems, etc.
@@ -64,6 +69,7 @@ Data processing
   integration techniques need to be considered. For example, how to
   combine your molecular sequences (and phylogenies) with occurrences
   and traits from public databases?
+![](data_pyramid.png)
 
 Data management
 ---------------
