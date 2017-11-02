@@ -33,7 +33,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 
 ### Day 4 - Metabarcoding
 
-- Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS)
+- Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS): CITES checker
 - Lecture II: Automated metabarcoding pipelines: _[DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/)_ - Van der Hoorn / Beentjes
 - Lecture III: Guest lecture metabarcoding: _[Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566)_ - Geml
 - Practical: _Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity_ - Geml
