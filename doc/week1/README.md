@@ -19,7 +19,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 
 ### Day 2 - High-throughput DNA sequencing (HTS)
 <!-- Christiaan Henkel probably available, will confirm 2017-10-05 -->
-- Lecture I: High-throughput DNA sequencing (e.g. amplicon sequencing, NGS platforms, data formats)
+- Lecture I: [High-throughput DNA sequencing data](w1d2/lecture1.md)
 - Lecture II: Generic HTS data pre-processing (e.g. demultiplexing, quality trimming) - Henkel
 - Lecture III: HTS applied to the tulip - Henkel
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
