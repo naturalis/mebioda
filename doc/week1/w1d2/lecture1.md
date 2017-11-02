@@ -109,10 +109,10 @@ Example:
 @SQ SN:ref LN:45
 r001    99 ref  7 30 8M2I4M1D3M = 37 39 TTAGATAAAGGATACTG *
 r002     0 ref  9 30 3S6M1P1I4M * 0   0 AAAAGATAAGGATA    *
-r003     0 ref  9 30 5S6M       * 0   0 GCCTAAGCTAA       * SA:Z:ref,29,-,6H5M,17,0;
+r003     0 ref  9 30 5S6M       * 0   0 GCCTAAGCTAA       *
 r004     0 ref 16 30 6M14N5M    * 0   0 ATAGCTTCAGC       *
-r003  2064 ref 29 17 6H5M       * 0   0 TAGGC             * SA:Z:ref,9,+,5S6M,30,1;
-r001   147 ref 37 30 9M         = 7 -39 CAGCGGCAT         * NM:i:1
+r003  2064 ref 29 17 6H5M       * 0   0 TAGGC             *
+r001   147 ref 37 30 9M         = 7 -39 CAGCGGCAT         *
 ```
 
 Mandatory columns: 
@@ -131,24 +131,54 @@ Mandatory columns:
 | 10  | SEQ   | Query SEQuence on the same strand as the reference |
 | 11  | QUAL  | Query QUALity (ASCII-33=Phred base quality)        |
 
+What is a CIGAR?
+----------------
+The sequence being aligned to a reference may have additional bases that are not in the 
+reference or may be missing bases that are in the reference. The CIGAR string is a 
+sequence of base lengths and the associated operation. They are used to indicate things 
+like which bases align (either a match/mismatch) with the reference, are deleted from the 
+reference, and are insertions that are not in the reference.
+For example:
+```
+RefPos:     1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
+Reference:  C  C  A  T  A  C  T  G  A  A  C  T  G  A  C  T  A  A  C
+Read: ACTAGAATGGCT
+```
+Aligning these two:
+```
+RefPos:     1  2  3  4  5  6  7     8  9 10 11 12 13 14 15 16 17 18 19
+Reference:  C  C  A  T  A  C  T     G  A  A  C  T  G  A  C  T  A  A  C
+Read:                   A  C  T  A  G  A  A     T  G  G  C  T
+```
+With the alignment above, you get:
+```
+POS: 5
+CIGAR: 3M1I3M1D5M
+```
+The POS indicates that the read aligns starting at position 5 on the reference. The CIGAR 
+says that the first 3 bases in the read sequence align with the reference. The next base 
+in the read does not exist in the reference. Then 3 bases align with the reference. The 
+next reference base does not exist in the read sequence, then 5 more bases align with the 
+reference. Note that at position 14, the base in the read is different than the reference,
+but it still counts as an M since it aligns to that position.
 
 Bitwise flags
 -------------
 
-| 2<sup>x</sup> | Value (Hex)       | Value (Decimal)    | Bits         | SAM property                              |
-|---------------|-------------------|--------------------|--------------|-------------------------------------------|
-| 2<sup>0</sup> | 1                 | 1                  | 000000000001 | read paired                               |
-| 2<sup>1</sup> | 2                 | 2                  | 000000000010 | read mapped in proper pair                |
-| 2<sup>2</sup> | 4                 | 4                  | 000000000100 | read unmapped                             |
-| 2<sup>3</sup> | 8                 | 8                  | 000000001000 | mate unmapped                             |
-| 2<sup>4</sup> | 10<sub>hex</sub>  | 16<sub>dec</sub>   | 000000010000 | read reverse strand                       |
-| 2<sup>5</sup> | 20<sub>hex</sub>  | 32<sub>dec</sub>   | 000000100000 | mate reverse strand                       |
-| 2<sup>6</sup> | 40<sub>hex</sub>  | 64<sub>dec</sub>   | 000001000000 | first in pair                             |
-| 2<sup>7</sup> | 80<sub>hex</sub>  | 128<sub>dec</sub>  | 000010000000 | second in pair                            |
-| 2<sup>8</sup> | 100<sub>hex</sub> | 256<sub>dec</sub>  | 000100000000 | not primary alignment                     |
-| 2<sup>9</sup> | 200<sub>hex</sub> | 512<sub>dec</sub>  | 001000000000 | read fails platform/vendor quality checks |
-| 2<sup>A</sup> | 400<sub>hex</sub> | 1024<sub>dec</sub> | 010000000000 | read is PCR or optical duplicate          |
-| 2<sup>B</sup> | 800<sub>hex</sub> | 2048<sub>dec</sub> | 100000000000 | supplementary alignment                   |
+| 2<sup>x</sup> | Value (Hex)       | Value (Decimal)    | Bits         | SAM property                             |
+|---------------|-------------------|--------------------|--------------|------------------------------------------|
+| 2<sup>0</sup> | 1                 | 1                  | 000000000001 | are there multiple fragments?            |
+| 2<sup>1</sup> | 2                 | 2                  | 000000000010 | are all fragments properly aligned?      |
+| 2<sup>2</sup> | 4                 | 4                  | 000000000100 | is this fragment unmapped?               |
+| 2<sup>3</sup> | 8                 | 8                  | 000000001000 | is the next fragment unmapped?           |
+| 2<sup>4</sup> | 10<sub>hex</sub>  | 16<sub>dec</sub>   | 000000010000 | is this query the reverse strand?        |
+| 2<sup>5</sup> | 20<sub>hex</sub>  | 32<sub>dec</sub>   | 000000100000 | is the next fragment the reverse strand? |
+| 2<sup>6</sup> | 40<sub>hex</sub>  | 64<sub>dec</sub>   | 000001000000 | is this the 1st fragment?                |
+| 2<sup>7</sup> | 80<sub>hex</sub>  | 128<sub>dec</sub>  | 000010000000 | is this the last fragment?               |
+| 2<sup>8</sup> | 100<sub>hex</sub> | 256<sub>dec</sub>  | 000100000000 | is this a secondary alignment?           |
+| 2<sup>9</sup> | 200<sub>hex</sub> | 512<sub>dec</sub>  | 001000000000 | did this read fail quality controls?     |
+| 2<sup>A</sup> | 400<sub>hex</sub> | 1024<sub>dec</sub> | 010000000000 | is this read a PCR or optical duplicate? |
+| 2<sup>B</sup> | 800<sub>hex</sub> | 2048<sub>dec</sub> | 100000000000 | supplementary alignment                  |
 
 The values in the `FLAG` column (2) correspond to bitwise flags as follows: 
 
