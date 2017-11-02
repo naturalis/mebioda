@@ -84,6 +84,18 @@ The SAM/BAM/CRAM format
 - Textual (SAM) and binary representations (BAM)
 - Accessed using tools such as samtools, picard, EMBOSS, (Bio::SamTools, Galaxy)
 
+```
+coor  12345678901234  5678901234567890123456789012345
+ref   AGCATGTTAGATAA**GATAGCTGTGCTAGTAGGCAGTCAGCGCCAT
+
+r001+       TTAGATAAAGGATA*CTG
+r002+      aaaAGATAA*GGATA
+r003+    g̶c̶c̶t̶a̶AGCTAA
+r004+                  ATAGCT..............TCAGC
+r003-                         t̶t̶a̶g̶c̶t̶TTAGGC
+r001-                                       CAGCGCCAT
+```
+
 The VCF/BCF format
 ------------------
 - Format for variants (SNPs, indels, microsats) computed from a SAM/BAM/CRAM file
