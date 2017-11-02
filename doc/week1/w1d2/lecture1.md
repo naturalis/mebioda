@@ -141,6 +141,12 @@ The values in the `FLAG` column (2) correspond to bitwise flags as follows:
 | 2064 | 0x810 | supplementary/reversecomplemented                                               |
 | 147  | 0x93  | last (second of a pair)/reverse-complemented/properly aligned/multiple segments |
 
+Using the flags, we can filter the reads in a BAM file:
+
+```
+$ samtools view -f 4 file.bam > unmapped.sam
+```
+
 The VCF/BCF format
 ------------------
 - Format for variants (SNPs, indels, microsats) computed from a SAM/BAM/CRAM file
