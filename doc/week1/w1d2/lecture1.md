@@ -87,25 +87,27 @@ The SAM/BAM/CRAM format
 ![](sam.png)
 
 Example of extended CIGAR and the pileup output. 
-a. Alignments of one pair of reads and three single-end reads.
-b. The corresponding SAM file. The ‘@SQ’ line in the header section gives the order of 
-   reference sequences. Notably, r001 is the name of a read pair. According to 
-   FLAG 163 (=1 + 2 + 32 + 128), the read mapped to position 7 is the second read in the 
-   pair (128) and regarded as properly paired (1 + 2); its mate is mapped to 37 on the 
-   reverse strand (32). Read r002 has three soft-clipped (unaligned) bases. The coordinate 
-   shown in SAM is the position of the first aligned base. The CIGAR string for this 
-   alignment contains a P (padding) operation which correctly aligns the inserted 
-   sequences. Padding operations can be absent when an aligner does not support multiple 
-   sequence alignment. The last six bases of read r003 map to position 9, and the first 
-   five to position 29 on the reverse strand. The hard clipping operation H indicates 
-   that the clipped sequence is not present in the sequence field. The NM tag gives the 
-   number of mismatches. Read r004 is aligned across an intron, indicated by the N 
-   operation. 
-c. Simplified pileup output by SAMtools. Each line consists of reference name, sorted 
-   coordinate, reference base, the number of reads covering the position and read bases. 
-   In the fifth field, a dot or a comma denotes a base identical to the reference; a dot 
-   or a capital letter denotes a base from a read mapped on the forward strand, while a 
-   comma or a lowercase letter on the reverse strand.
+
+**(a)** Alignments of one pair of reads and three single-end reads.
+
+**(b)** The corresponding SAM file. The ‘@SQ’ line in the header section gives the order 
+of reference sequences. Notably, r001 is the name of a read pair. According to 
+`FLAG 163 (=1 + 2 + 32 + 128)`, the read mapped to position 7 is the second read in the 
+pair (128) and regarded as properly paired (1 + 2); its mate is mapped to 37 on the 
+reverse strand (32). Read r002 has three soft-clipped (unaligned) bases. The coordinate 
+shown in SAM is the position of the first aligned base. The CIGAR string for this 
+alignment contains a P (padding) operation which correctly aligns the inserted sequences. 
+Padding operations can be absent when an aligner does not support multiple sequence 
+alignment. The last six bases of read r003 map to position 9, and the first five to 
+position 29 on the reverse strand. The hard clipping operation H indicates that the 
+clipped sequence is not present in the sequence field. The NM tag gives the number of 
+mismatches. Read r004 is aligned across an intron, indicated by the N operation. 
+   
+**(c)** Simplified pileup output by SAMtools. Each line consists of reference name, sorted 
+coordinate, reference base, the number of reads covering the position and read bases. In 
+the fifth field, a dot or a comma denotes a base identical to the reference; a dot or a 
+capital letter denotes a base from a read mapped on the forward strand, while a comma or a 
+lowercase letter on the reverse strand.
 
 The VCF/BCF format
 ------------------
