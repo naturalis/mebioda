@@ -50,6 +50,22 @@ Commonly-used file operations
 | `chmod` | Change file mode        |
 | `chown` | Change file owner       |
 
+`chmod` permission bits:
+
+| 001 | x | 1 | 2<sup>0</sup> |
+| 010 | w | 2 | 2<sup>1</sup> |
+| 100 | r | 4 | 2<sup>2</sup> |
+
+Hence, rwx = 1+2+4 = 7, rw = 2+4 = 6, r = 4.
+
+```
+# set text file rw for user, r for others:
+$ chmod 644 file.txt
+
+# set script rwx for user, rx for others:
+$ chmod 755 script.sh
+```
+
 Commonly-used text operations
 -----------------------------
 

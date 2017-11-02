@@ -1,19 +1,6 @@
-(High-throughput) DNA sequencing
-================================
-
-Sequencing techniques
----------------------
-- (Meta)barcoding of specific markers
-- Probing for ultraconserved regions
-- RNA sequencing
-- etc.
-
-Sequencing platforms
---------------------
-- Old school: Sanger sequencing
-- Short read standard: Illumina HiSeq
-- Long reads: PacBio
-- Longer reads: Nanopore MinION
+% High-throughput DNA sequencing
+% Rutger Vos
+% November-December 2017
 
 Data centric view of genome resequencing workflow
 -------------------------------------------------
@@ -45,8 +32,28 @@ Example:
 
 Quality (phred) scores
 ----------------------
+Phred quality scores _Q_ are defined as a property which is logarithmically related to 
+the base-calling error probabilities _P_.
+
+_Q_ = -10 log<sub>10</sub> _P_
+
+For example, if Phred assigns a quality score of 30 to a base, the chances that this base 
+is called incorrectly are 1 in 1000.
+
+| Phred Quality Score | Probability of incorrect base call | Base call accuracy |
+|---------------------|------------------------------------|--------------------|
+| 10                  | 1 in 10                            | 90%                |
+| 20                  | 1 in 100                           | 99%                |
+| 30                  | 1 in 1000                          | 99.9%              |
+| 40                  | 1 in 10,000                        | 99.99%             |
+| 50                  | 1 in 100,000                       | 99.999%            |
+| 60                  | 1 in 1,000,000                     | 99.9999%           |
+
+Phred score encoding
+--------------------
 
 Different platforms map phred scores in different ways to ASCII:
+
 - sanger: 33..126
 - solexa: 59..126
 - illumina: 64..126
@@ -63,8 +70,8 @@ Different platforms map phred scores in different ways to ASCII:
 |   40  |   (   |   56  |   8   |   72  |   H   |   88  |   X   |   104 |   h   |   120 |   x   |
 |   41  |   )   |   57  |   9   |   73  |   I   |   89  |   Y   |   105 |   i   |   121 |   y   |
 |   42  |   *   |   58  |   :   |   74  |   J   |   90  |   Z   |   106 |   j   |   122 |   z   |
-|   43  |   +   |   59  |   ;   |   75  |   K   |   91  |   [   |   107 |   k   |   123 |   {   |
-|   44  |   ,   |   60  |   <   |   76  |   L   |   92  |   \   |   108 |   l   |   124 |   \|  |
+|   43  |   +   |   59  |   ;   |   75  |   K   |   91  |   \[  |   107 |   k   |   123 |   {   |
+|   44  |   ,   |   60  |   <   |   76  |   L   |   92  |   \\  |   108 |   l   |   124 |   \|  |
 |   45  |   -   |   61  |   =   |   77  |   M   |   93  |   ]   |   109 |   m   |   125 |   }   |
 |   46  |   .   |   62  |   >   |   78  |   N   |   94  |   ^   |   110 |   n   |   126 |   ~   |
 |   47  |   /   |   63  |   ?   |   79  |   O   |   95  |   _   |   111 |   o   |       |       |
@@ -74,32 +81,66 @@ The SAM/BAM/CRAM format
 -----------------------
 - Format to represent (FASTQ) reads aligned to a reference sequence
 - Textual (SAM) and binary representations (BAM)
-- Accessed using tools such as samtools, picard, EMBOSS, (Bio::SamTools, Galaxy)
+- Binary representation further compressed as CRAM
+- Accessed using tools such as samtools, picard
 
-![](sam.png)
+Example alignment:
 
-Example of extended CIGAR and the pileup output. 
+```
+Coor    12345678901234  5678901234567890123456789012345
+ref     AGCATGTTAGATAA**GATAGCTGTGCTAGTAGGCAGTCAGCGCCAT
++r001/1       TTAGATAAAGGATA*CTG
++r002        aaaAGATAA*GGATA
++r003      gcctaAGCTAA
++r004                    ATAGCT..............TCAGC
+-r003                           ttagctTAGGC
+-r001/2                                       CAGCGGCAT
+```
 
-**(a)** Alignments of one pair of reads and three single-end reads.
+- Read `r001/1` and `r001/2` constitute a read pair
+- `r003` is a chimeric read
+- `r004` represents a split alignment
 
-**(b)** The corresponding SAM file. The ‘@SQ’ line in the header section gives the order 
-of reference sequences. Notably, r001 is the name of a read pair. According to 
-`FLAG 163 (=1 + 2 + 32 + 128)`, the read mapped to position 7 is the second read in the 
-pair (128) and regarded as properly paired (1 + 2); its mate is mapped to 37 on the 
-reverse strand (32). Read r002 has three soft-clipped (unaligned) bases. The coordinate 
-shown in SAM is the position of the first aligned base. The CIGAR string for this 
-alignment contains a P (padding) operation which correctly aligns the inserted sequences. 
-Padding operations can be absent when an aligner does not support multiple sequence 
-alignment. The last six bases of read r003 map to position 9, and the first five to 
-position 29 on the reverse strand. The hard clipping operation H indicates that the 
-clipped sequence is not present in the sequence field. The NM tag gives the number of 
-mismatches. Read r004 is aligned across an intron, indicated by the N operation. 
-   
-**(c)** Simplified pileup output by SAMtools. Each line consists of reference name, sorted 
-coordinate, reference base, the number of reads covering the position and read bases. In 
-the fifth field, a dot or a comma denotes a base identical to the reference; a dot or a 
-capital letter denotes a base from a read mapped on the forward strand, while a comma or a 
-lowercase letter on the reverse strand.
+Hexadecimal
+-----------
+
+| 2<sup>x</sup> | Value (Hex)       | Value (Decimal)    | Bits         | SAM property                              |
+|---------------|-------------------|--------------------|--------------|-------------------------------------------|
+| 2<sup>0</sup> | 1                 | 1                  | 000000000001 | read paired                               |
+| 2<sup>1</sup> | 2                 | 2                  | 000000000010 | read mapped in proper pair                |
+| 2<sup>2</sup> | 4                 | 4                  | 000000000100 | read unmapped                             |
+| 2<sup>3</sup> | 8                 | 8                  | 000000001000 | mate unmapped                             |
+| 2<sup>4</sup> | 10<sub>hex</sub>  | 16<sub>dec</sub>   | 000000010000 | read reverse strand                       |
+| 2<sup>5</sup> | 20<sub>hex</sub>  | 32<sub>dec</sub>   | 000000100000 | mate reverse strand                       |
+| 2<sup>6</sup> | 40<sub>hex</sub>  | 64<sub>dec</sub>   | 000001000000 | first in pair                             |
+| 2<sup>7</sup> | 80<sub>hex</sub>  | 128<sub>dec</sub>  | 000010000000 | second in pair                            |
+| 2<sup>8</sup> | 100<sub>hex</sub> | 256<sub>dec</sub>  | 000100000000 | not primary alignment                     |
+| 2<sup>9</sup> | 200<sub>hex</sub> | 512<sub>dec</sub>  | 001000000000 | read fails platform/vendor quality checks |
+| 2<sup>A</sup> | 400<sub>hex</sub> | 1024<sub>dec</sub> | 010000000000 | read is PCR or optical duplicate          |
+| 2<sup>B</sup> | 800<sub>hex</sub> | 2048<sub>dec</sub> | 100000000000 | supplementary alignment                   |
+
+SAM representation
+------------------
+
+```
+@HD VN:1.5 SO:coordinate
+@SQ SN:ref LN:45
+r001    99 ref  7 30 8M2I4M1D3M = 37 39 TTAGATAAAGGATACTG *
+r002     0 ref  9 30 3S6M1P1I4M * 0   0 AAAAGATAAGGATA    *
+r003     0 ref  9 30 5S6M       * 0   0 GCCTAAGCTAA       * SA:Z:ref,29,-,6H5M,17,0;
+r004     0 ref 16 30 6M14N5M    * 0   0 ATAGCTTCAGC       *
+r003  2064 ref 29 17 6H5M       * 0   0 TAGGC             * SA:Z:ref,9,+,5S6M,30,1;
+r001   147 ref 37 30 9M         = 7 -39 CAGCGGCAT         * NM:i:1
+```
+
+The values in the `FLAG` column (2) correspond to bitwise flags as follows: 
+
+| FLAG | hex   | [Explanation](https://broadinstitute.github.io/picard/explain-flags.html)       |
+|------|-------|---------------------------------------------------------------------------------|
+| 99   | 0x63  | first/next is reverse-complemented/properly aligned/multiple segments           |
+| 0    |       | no flags set, thus a mapped single segment                                      |
+| 2064 | 0x810 | supplementary/reversecomplemented                                               |
+| 147  | 0x93  | last (second of a pair)/reverse-complemented/properly aligned/multiple segments |
 
 The VCF/BCF format
 ------------------
