@@ -31,10 +31,10 @@ The FASTQ format
 
 Record layout:
 
-1. `@`+identifier (note paired-end sequencing)
-2. Sequence data, IUPAC single character nucleotides
-3. +
-4. Quality lines map phred scores to ASCII characters
+1. `@`+identifier - _note paired-end sequencing_
+2. Sequence data - _IUPAC single character nucleotides_
+3. `+` - _separator between sequence and quality_
+4. Quality lines - _map phred scores to ASCII characters_
 
 Example:
 
