@@ -52,9 +52,11 @@ Commonly-used file operations
 
 `chmod` permission bits:
 
-| 001 | x | 1 | 2<sup>0</sup> |
-| 010 | w | 2 | 2<sup>1</sup> |
-| 100 | r | 4 | 2<sup>2</sup> |
+| bits | code | value | 2<sup>n</sup> |
+|------|------|-------|---------------|
+| 001  | x    | 1     | 2<sup>0</sup> |
+| 010  | w    | 2     | 2<sup>1</sup> |
+| 100  | r    | 4     | 2<sup>2</sup> |
 
 Hence, rwx = 1+2+4 = 7, rw = 2+4 = 6, r = 4.
 
