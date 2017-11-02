@@ -92,7 +92,7 @@ r001+       TTAGATAAAGGATA*CTG
 r002+      aaaAGATAA*GGATA
 r003+    g̶c̶c̶t̶a̶AGCTAA
 r004+                  ATAGCT..............TCAGC
-r003-                         t̶t̶a̶g̶c̶t̶TTAGGC
+r003-                         ̶t̶t̶a̶g̶c̶t̶TTAGGC
 r001-                                       CAGCGCCAT
 ```
 
