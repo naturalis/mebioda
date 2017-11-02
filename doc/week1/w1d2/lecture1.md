@@ -88,7 +88,7 @@ Example alignment:
 ```
 Coor    12345678901234  5678901234567890123456789012345
 ref     AGCATGTTAGATAA**GATAGCTGTGCTAGTAGGCAGTCAGCGCCAT
-+r001/1       TTAGATAAAGGATA*CTG
++r001/1       TTAGATAAAGGATA*CTG                       
 +r002        aaaAGATAA*GGATA
 +r003      gcctaAGCTAA
 +r004                    ATAGCT..............TCAGC
@@ -100,8 +100,40 @@ ref     AGCATGTTAGATAA**GATAGCTGTGCTAGTAGGCAGTCAGCGCCAT
 - `r003` is a chimeric read
 - `r004` represents a split alignment
 
-Hexadecimal
------------
+SAM representation
+------------------
+
+Example:
+```
+@HD VN:1.5 SO:coordinate
+@SQ SN:ref LN:45
+r001    99 ref  7 30 8M2I4M1D3M = 37 39 TTAGATAAAGGATACTG *
+r002     0 ref  9 30 3S6M1P1I4M * 0   0 AAAAGATAAGGATA    *
+r003     0 ref  9 30 5S6M       * 0   0 GCCTAAGCTAA       * SA:Z:ref,29,-,6H5M,17,0;
+r004     0 ref 16 30 6M14N5M    * 0   0 ATAGCTTCAGC       *
+r003  2064 ref 29 17 6H5M       * 0   0 TAGGC             * SA:Z:ref,9,+,5S6M,30,1;
+r001   147 ref 37 30 9M         = 7 -39 CAGCGGCAT         * NM:i:1
+```
+
+Mandatory columns: 
+
+| No. |	Name  | Description                                        |
+|-----|-------|----------------------------------------------------|
+| 1   | QNAME | Query NAME of the read or the read pair            |
+| 2   | FLAG  | Bitwise FLAG (pairing, strand, mate strand, etc.)  |
+| 3   | RNAME | Reference sequence NAME                            |
+| 4   | POS   | 1-Based leftmost POSition of clipped alignment     |
+| 5   | MAPQ  | MAPping Quality (Phred-scaled)                     |
+| 6   | CIGAR | Extended CIGAR string (operations: MIDNSHP)        |
+| 7   | MRNM  | Mate Reference NaMe (‘=’ if same as RNAME)         |
+| 8   | MPOS  | 1-Based leftmost Mate POSition                     |
+| 9   | ISIZE | Inferred Insert SIZE                               |
+| 10  | SEQ   | Query SEQuence on the same strand as the reference |
+| 11  | QUAL  | Query QUALity (ASCII-33=Phred base quality)        |
+
+
+Bitwise flags
+-------------
 
 | 2<sup>x</sup> | Value (Hex)       | Value (Decimal)    | Bits         | SAM property                              |
 |---------------|-------------------|--------------------|--------------|-------------------------------------------|
@@ -117,20 +149,6 @@ Hexadecimal
 | 2<sup>9</sup> | 200<sub>hex</sub> | 512<sub>dec</sub>  | 001000000000 | read fails platform/vendor quality checks |
 | 2<sup>A</sup> | 400<sub>hex</sub> | 1024<sub>dec</sub> | 010000000000 | read is PCR or optical duplicate          |
 | 2<sup>B</sup> | 800<sub>hex</sub> | 2048<sub>dec</sub> | 100000000000 | supplementary alignment                   |
-
-SAM representation
-------------------
-
-```
-@HD VN:1.5 SO:coordinate
-@SQ SN:ref LN:45
-r001    99 ref  7 30 8M2I4M1D3M = 37 39 TTAGATAAAGGATACTG *
-r002     0 ref  9 30 3S6M1P1I4M * 0   0 AAAAGATAAGGATA    *
-r003     0 ref  9 30 5S6M       * 0   0 GCCTAAGCTAA       * SA:Z:ref,29,-,6H5M,17,0;
-r004     0 ref 16 30 6M14N5M    * 0   0 ATAGCTTCAGC       *
-r003  2064 ref 29 17 6H5M       * 0   0 TAGGC             * SA:Z:ref,9,+,5S6M,30,1;
-r001   147 ref 37 30 9M         = 7 -39 CAGCGGCAT         * NM:i:1
-```
 
 The values in the `FLAG` column (2) correspond to bitwise flags as follows: 
 
