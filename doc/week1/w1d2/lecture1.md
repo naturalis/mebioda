@@ -15,19 +15,18 @@ Sequencing platforms
 - Long reads: PacBio
 - Longer reads: Nanopore MinION
 
-File formats
-------------
-- FASTA
-- FASTQ
-- SAM/BAM
-- VCF
-- BED
-- GFF
+Data centric view of genome resequencing workflow
+-------------------------------------------------
+1. (semi-)raw reads come out of lab as FASTQ
+2. reads are aligned to a (pseudo-)reference as SAM/BAM/CRAM
+3. alignment is viewed in genome browser, with additional tracks as BED
+4. variants are called (e.g. as VCF/BCF), consensus is computed (e.g. as FASTA)
+5. consensus is annotated as GFF
 
 The FASTQ format
 ----------------
-- Sequential format returned by most HTS platforms
 - The initial mountain of data to deal with
+- Sequential [format](FASTQ.pdf) returned by most HTS platforms
 - Includes base calling quality scores
 
 Record layout:
@@ -89,6 +88,7 @@ The VCF/BCF format
 ------------------
 - Format for variants (SNPs, indels, microsats) computed from a SAM/BAM/CRAM file
 - Concise, good for resequencing projects, but lossy
+- [Text](VCFv4.2.pdf) and binary version
 
 ```
 ##fileformat=VCFv4.2
