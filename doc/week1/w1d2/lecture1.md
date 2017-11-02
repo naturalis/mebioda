@@ -1,6 +1,5 @@
-% High-throughput DNA sequencing
-% Rutger Vos
-% November-December 2017
+High-throughput DNA sequencing
+==============================
 
 Data centric view of genome resequencing workflow
 -------------------------------------------------
