@@ -197,8 +197,46 @@ $ samtools view -f 4 file.bam > unmapped.sam
 
 The BED format
 --------------
+If you load a SAM/BAM file in a genome browser (e.g. [UCSC](https://genome.ucsc.edu)) you
+might want to load additional 'tracks' alongside the alignment. For this the BED format
+is used.
 
+```
+track name=pairedReads description="Clone Paired Reads" useScore=1
+chr22 1000 5000 cloneA 960 + 1000 5000 0 2 567,488, 0,3512
+chr22 2000 6000 cloneB 900 - 2000 6000 0 2 433,399, 0,3601
+```
 
+1.  The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. 
+    scaffold10671).
+2.  The starting position of the feature in the chromosome or scaffold. The first base in 
+    a chromosome is numbered 0.
+3.  The ending position of the feature in the chromosome or scaffold. The chromEnd base is 
+    not included in the display of the feature. For example, the first 100 bases of a 
+    chromosome are defined as chromStart=0, chromEnd=100, and span the bases numbered 0-99.
+4.  Defines the name of the BED line. This label is displayed to the left of the BED line 
+    in the Genome Browser window when the track is open to full display mode or directly 
+    to the left of the item in pack mode.
+5.  A score between 0 and 1000. If the track line useScore attribute is set to 1 for this 
+    annotation data set, the score value will determine the level of gray in which this 
+    feature is displayed (higher numbers = darker gray).
+6.  Defines the strand. Either "." (=no strand) or "+" or "-".
+7.  The starting position at which the feature is drawn thickly (for example, the start 
+    codon in gene displays). When there is no thick part, thickStart and thickEnd are 
+    usually set to the chromStart position.
+8.  The ending position at which the feature is drawn thickly (for example the stop codon 
+    in gene displays).
+9.  An RGB value of the form R,G,B (e.g. 255,0,0). If the track line itemRgb attribute is 
+    set to "On", this RBG value will determine the display color of the data contained in 
+    this BED line. NOTE: It is recommended that a simple color scheme (eight colors or 
+    less) be used with this attribute to avoid overwhelming the color resources of the 
+    genome Browser and your Internet browser.
+10. The number of blocks (exons) in the BED line.
+11. A comma-separated list of the block sizes. The number of items in this list should 
+    correspond to blockCount.
+12. A comma-separated list of block starts. All of the blockStart positions should be 
+    calculated relative to chromStart. The number of items in this list should correspond 
+    to blockCount.
 
 The VCF/BCF format
 ------------------
