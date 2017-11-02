@@ -78,7 +78,7 @@ Different platforms map phred scores in different ways to ASCII:
 
 The SAM/BAM/CRAM format
 -----------------------
-- Format to represent (FASTQ) reads aligned to a reference sequence
+- [Format](SAM.pdf) to represent (FASTQ) reads aligned to a reference sequence
 - Textual (SAM) and binary representations (BAM)
 - Binary representation further compressed as CRAM
 - Accessed using tools such as samtools, picard
@@ -165,6 +165,11 @@ Using the flags, we can filter the reads in a BAM file:
 $ samtools view -f 4 file.bam > unmapped.sam
 ```
 
+The BED format
+--------------
+
+
+
 The VCF/BCF format
 ------------------
 - Format for variants (SNPs, indels, microsats) computed from a SAM/BAM/CRAM file
@@ -209,9 +214,6 @@ The VCF/BCF format
 Genotype data are given for three samples, two of which are phased and the third unphased, 
 with per sample genotype quality, depth and haplotype qualities (the latter only for the 
 phased samples) given as well as the genotypes. The microsatellite calls are unphased.
-
-BED files
----------
 
 The GFF format
 --------------
