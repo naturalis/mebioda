@@ -37,18 +37,13 @@ File access
 Commonly-used file operations
 -----------------------------
 
-| Command | Function                |
-|---------|-------------------------|
-| `ls`    | List files              |
-| `cd`    | Change directory        |
-| `pwd`   | Print working directory |
-| `rm`    | Remove files            |
-| `cp`    | Copy files              |
-| `mv`    | Rename/move files       |
-| `mkdir` | Make directory          |
-| `rmdir` | Remove directory        |
-| `chmod` | Change file mode        |
-| `chown` | Change file owner       |
+| Command | Function                | Command | Function                |
+|---------|-------------------------|---------|-------------------------|
+| `ls`    | List files              | `mv`    | Rename/move files       |
+| `cd`    | Change directory        | `mkdir` | Make directory          |
+| `pwd`   | Print working directory | `rmdir` | Remove directory        |
+| `rm`    | Remove files            | `chmod` | Change file mode        |
+| `cp`    | Copy files              | `chown` | Change file owner       |
 
 `chmod` permission bits:
 
@@ -58,7 +53,11 @@ Commonly-used file operations
 | 010  | w    | 2     | 2<sup>1</sup> |
 | 100  | r    | 4     | 2<sup>2</sup> |
 
-Hence, rwx = 1+2+4 = 7, rw = 2+4 = 6, r = 4.
+Hence: 
+
+- rwx = 111 = 1+2+4 = 7
+- rw = 110 = 2+4 = 6 
+- r = 100 = 4
 
 ```
 # set text file rw for user, r for others:
