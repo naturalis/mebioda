@@ -63,7 +63,7 @@ PhyloXML
 - Successor [format](phyloxml.pdf) to NHX
 - Deals with the same concepts as NHX but in XML
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phyloxml xmlns="http://www.phyloxml.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
   <phylogeny rooted="true">
