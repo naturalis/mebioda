@@ -249,3 +249,27 @@ Tabular representations
 - However, more general cases (such as networks) will require a node and an edge table
 - Traversals require recursive queries, although some common queries (e.g. node 
   descendants, ancestors, MRCA) can be implemented with additional, pre-computed indexes
+  
+```js
+// load the external data
+d3.csv("Arachnida.csv", function(error, data) {
+
+	// create a name: node map
+	var dataMap = data.reduce(function(map, node) {
+		map[node.name] = node;
+		return map;
+	}, {});
+
+	// populate the tree structure
+	var root;
+	data.forEach(function(node) {	
+		var parent = dataMap[node.parent];		
+		if ( parent ) {			
+			( parent.children || ( parent.children = [] ) ).push(node);
+		} 
+		else {
+			root = node;
+		}
+	});	
+});
+```

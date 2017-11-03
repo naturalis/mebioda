@@ -24,23 +24,23 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Lecture III: HTS applied to the tulip - Henkel
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
-### Day 3 - Biodiversity analysis of HTS data
+### Day 3 - Barcoding
 <!-- Krijn Trimbos or Jeremy Miller -->
-- Lecture I: Biodiversity analysis of HTS data (e.g. barcoding)
-- Lecture II: Biodiversity analysis of HTS data (cont.)
+- Lecture I: The barcoding workflow and MSA data
+- Lecture II: Species delimitation
 - Lecture III: [Data science tools: UNIX](w1d3/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 4 - Metabarcoding
 
-- Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS): CITES checker
+- Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS, [phylogenetic placement](https://github.com/Pbdas/epa-ng)): CITES checker
 - Lecture II: Automated metabarcoding pipelines: _[DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/)_ - Van der Hoorn / Beentjes
 - Lecture III: Guest lecture metabarcoding: _[Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566)_ - Geml
 - Practical: _Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity_ - Geml
 
 ### Day 5 - Phylogenies and wrap-up
 
-- Lecture I: Phylogenies (e.g. [phylogenetic placement](https://github.com/Pbdas/epa-ng))
-- Lecture II: Phylogenies (e.g. megatrees such as greengenes, silva, tree representation)
+- Lecture I: [Phylogenetic data](w1d5/lecture1.md)
+- Lecture II: [Megatrees](w1d5/lecture2.md) (e.g. algorithms, SQL)
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
 - Journal club: _All students present their selected paper to the class (10 min. + questions)_
