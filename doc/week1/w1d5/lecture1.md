@@ -3,10 +3,11 @@ Big data phylogenetics
 
 Phylogenetic data
 -----------------
-- Plays a role in a variety of different analyses
-- Both intra- and interspecific (gene trees versus species trees)
-- Need for metadata and annotation, but hard to represent as tables
-- Variety of different input datam e.g.:
+- Plays a role in a variety of different contexts within biodiversity research, e.g.:
+  - Taxonomy and systematics 
+  - Diversification analysis
+  - Comparative analysis
+- Variety of different input data, e.g.:
   - Multiple sequence alignments
   - Morphological characters
   - Computed distances (e.g. niche overlap?)
@@ -14,8 +15,8 @@ Phylogenetic data
 - Variety of different methods, e.g.:
   - Distance based, such as NJ
   - Optimality criterion-based, such as MP and ML
-  - Bayesian
-- Variety of different interpretations outputs, e.g.:
+  - Bayesian, Markov chains
+- Variety of different interpretations of output, e.g.:
   - Tips are species, individuals, or sequences
   - Branches are evolutionary change, time, or rates
   - Nodes are speciations or duplications
