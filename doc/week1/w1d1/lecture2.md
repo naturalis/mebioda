@@ -83,4 +83,10 @@ Automation
 - Reproducibility is easier with automation
 - We will explore this using the UNIX/Linux shell, using R, and scripting
   languages (a bit of Python and Perl)
+
+Tools of the trade
+------------------
+- UNIX/Linux operating systems
+- Scripting languages
+- Relational databases
   

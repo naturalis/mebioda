@@ -1,6 +1,17 @@
 Big data phylogenetics
 ======================
 
+Outline
+-------
+- Overview of the characteristics of phylogenetic data
+- About representation formats
+- Review of common data formats:
+  - Newick / New Hampshire
+  - New Hampshire eXtended (w. example analysis of TreeFam)
+  - PhyloXML
+  - Nexus
+  - NeXML (w. example analysis of TreeBASE)
+
 Phylogenetic data
 -----------------
 - Plays a role in a variety of different contexts within biodiversity research, e.g.:
@@ -21,6 +32,16 @@ Phylogenetic data
   - Branches are evolutionary change, time, or rates
   - Nodes are speciations or duplications
   - Topology represents evolutionary hypothesis or clustering
+
+About representation formats
+----------------------------
+- Phylogenetic data is less 'big' than NGS data
+- Often simple text-based, web standards ([XML](https://www.w3.org/XML/), 
+  [JSON](http://www.json.org/), [RDF](https://www.w3.org/RDF/))
+- More amenable to relational databases ([SQL](https://en.wikipedia.org/wiki/SQL))
+- Rarely represented in binary format (but see the [examl](ExaML.pdf) parser for an
+  application specific example)
+
 
 The Newick / New Hampshire format
 ---------------------------------
@@ -76,6 +97,17 @@ other contexts, such as:
 - To store summary statistics of Bayesian analyses, as done by treeannotator
 - To store branch and node decorations (e.g. color, line thickness), as done by Mesquite
 
+Example of gene tree research: TreeFam data mining
+--------------------------------------------------
+
+![](treefam.png)
+
+1. [Download the TreeFam data dump](https://github.com/rvosa/bh15/blob/master/pipeline.sh)
+2. [Extract and clean up NHX trees and FASTA data](https://github.com/rvosa/bh15/blob/master/script/treefammer.pl)
+3. [Perform fossil calibration on NHX trees](https://github.com/rvosa/bh15/blob/master/script/ratogrammer.pl)
+4. [Extract rate as function of distance from duplication](https://github.com/rvosa/bh15/blob/master/script/ratebydist.pl)
+5. [Draw a plot](https://github.com/rvosa/bh15/blob/master/script/scatterplt.R)
+
 PhyloXML
 --------
 
@@ -119,18 +151,6 @@ PhyloXML
 </phyloxml>
 ```
 
-Example of gene tree research: TreeFam data mining
---------------------------------------------------
-
-![](treefam.png)
-
-1. [Download the TreeFam data dump](https://github.com/rvosa/bh15/blob/master/pipeline.sh)
-2. [Extract and clean up NHX trees and FASTA data](https://github.com/rvosa/bh15/blob/master/script/treefammer.pl)
-3. [Perform fossil calibration on NHX trees](https://github.com/rvosa/bh15/blob/master/script/ratogrammer.pl)
-4. [Extract rate as function of distance from duplication](https://github.com/rvosa/bh15/blob/master/script/ratebydist.pl)
-5. [Draw a plot](https://github.com/rvosa/bh15/blob/master/script/scatterplt.R)
-
-
 The Nexus format
 ----------------
 
@@ -170,11 +190,18 @@ end;
 NeXML
 -----
 
+![](nexml.gif)
+
+- Representation of [Nexus as XML](nexml.pdf) ([example](tree.xml))
+- [Easily](nexus2nexml.pl) translatable 
+- The format in which [TreeBASE](http://treebase.org)'s data 
+  [dump](https://github.com/TreeBASE/supertreebase) is made available
+
+Example of species tree research: TreeBASE data mining
+------------------------------------------------------
+
+JSON
+----
+
 Tabular representations
 -----------------------
-
-Phyloinformatic projects
-------------------------
-- Gene tree projects, e.g. TreeFam
-- Many species tree projects, e.g. TreeBASE
-- Big tree projects, e.g. OpenTree, ToLWeb, phylogenetic placement
