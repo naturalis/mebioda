@@ -6,6 +6,12 @@ UNIX/Linux operating systems: why do we care?
 - Have better facilities for automation (shell scripting)
 - A lot of scientific software is (only) written for them
 - Linux is free, so analytical environments can be copied
+
+Our own Linux image
+-------------------
+- Install [VirtualBox](https://www.virtualbox.org/)
+- Download [the image](https://www.dropbox.com/s/xovgaqnussueuoh/mebioda.ova?dl=0)
+- Launch it. User: `mebioda`, password: `mebioda`
   
 UNIX file system conventions
 ----------------------------
