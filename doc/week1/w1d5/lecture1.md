@@ -19,8 +19,41 @@ Newick representation:
 ```
 
 - Optionally has branch lengths after each tip or node, as `:0.002321`
+- Optionally has comments inside square brackets, e.g. `[comment]`
 - ['Invented' on a napkin at Newick's Lobster House in Durham, New Hampshire, in 1986.](http://evolution.genetics.washington.edu/phylip/newicktree.html)
 - Concise, but lacking all metadata
+
+New Hampshire eXtended
+----------------------
+
+- Additional data is embedded inside square brackets (i.e. should be backward compatible
+  with Newick format), which start with `&&NHX`, followed by `:key=value` pairs 
+- Keys allowed:
+  - `GN` - a text string, used for gene names
+  - `AC` - a text name, for sequence accession numbers
+  - `B`  - a decimal number, for branch support values (e.g. bootstrap)
+  - `T`  - taxon identifier, a number
+  - `S`  - species name, a text string 
+  - `D`  - flag to indicate whether node is a gene duplication (T), a speciation (F), or
+    unknown (?)
+
+Example:
+
+```
+(
+	(
+		(
+			A[&&NHX:S=Homo sapiens],
+			B[&&NHX:S=Homo sapiens]		
+		)[&&NHX:D=T],
+		(
+			C[&&NHX:S=Pan paniscus],
+			D[&&NHX:S=Pan troglodytes]
+		)[&&NHX:D=T],	
+	)	
+	,E
+);
+```
 
 The Nexus format
 ----------------
@@ -57,9 +90,6 @@ end;
 - Many different, mutually incompatible dialects that deviate from the original 
   [standard](NEXUS_final.pdf)
 - More facilities for metadata (e.g. names of things, annotations for taxa)
-
-New Hampshire eXtended
-----------------------
 
 PhyloXML
 --------
