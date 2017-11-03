@@ -56,6 +56,10 @@ Example:
 	,E
 );
 ```
+The technique to 'overload' comments in square brackets to embed data is also used in 
+other contexts, such as:
+- To store summary statistics of Bayesian analyses, as done by treeannotator
+- To store branch and node decorations (e.g. color, line thickness), as done by Mesquite
 
 PhyloXML
 --------
