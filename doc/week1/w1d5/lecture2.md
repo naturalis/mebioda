@@ -102,3 +102,36 @@ POST: n1
 POST: n3
 POST: n4
 ```
+
+How traversals map to tabular data
+----------------------------------
+
+![](phylogeny.png)
+
+For a depth-first traversal, all the children for the focal node need to be reachable, so
+a simple table design (`tree`) might be:
+
+|nodeId|parentId|
+|------|--------|
+| A    | n1     |
+| B    | n1     |
+| C    | n2     |
+| D    | n2     |
+| n1   | n3     |
+| n2   | n3     |
+| n3   | n4     |
+| E    | n4     |
+
+This way, for any focal node, its parent, children and siblings can be queried, e.g. 
+given `n3`, retrieve the parent:
+
+```sql
+SELECT parentId from tree where nodeId='n3'
+-- n4
+```
+The children:
+```sql
+SELECT nodeId from tree where parentId='n3'
+-- n1
+-- n2
+```
