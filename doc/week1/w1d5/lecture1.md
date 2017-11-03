@@ -100,6 +100,18 @@ PhyloXML
 </phyloxml>
 ```
 
+Example of gene tree research: TreeFam data mining
+--------------------------------------------------
+
+![](treefam.png)
+
+1. [Download the TreeFam data dump](https://github.com/rvosa/bh15/blob/master/pipeline.sh)
+2. [Extract and clean up NHX trees and FASTA data](https://github.com/rvosa/bh15/blob/master/script/treefammer.pl)
+3. [Perform fossil calibration on NHX trees](https://github.com/rvosa/bh15/blob/master/script/ratogrammer.pl)
+4. [Extract rate as function of distance from duplication](https://github.com/rvosa/bh15/blob/master/script/ratebydist.pl)
+5. [Draw a plot](https://github.com/rvosa/bh15/blob/master/script/scatterplt.R)
+
+
 The Nexus format
 ----------------
 
