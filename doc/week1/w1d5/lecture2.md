@@ -202,11 +202,11 @@ select mrca.name
 	from 
 		node as mrca, 
 		node as a, 
-        node as c 
-    where 
-    	a.name='A' and 
-    	c.name='C' and 
-    	m.left < a.left and 
-    	mrca.right > c.right
-    limit 1;
+		node as c 
+	where 
+		a.name='A' and 
+		c.name='C' and 
+		m.left < a.left and 
+		mrca.right > c.right
+	limit 1;
 ```
