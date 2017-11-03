@@ -6,6 +6,10 @@ Phylogenetic data
 - Plays a role in a variety of different analyses
 - Both intra- and interspecific (gene trees versus species trees)
 - Need for metadata and annotation, but hard to represent as tables
+- Variety of different interpretations, e.g.:
+  - Tips are species, individuals, or sequences
+  - Branches are evolutionary change, time, or rates
+  - Nodes are speciations or duplications
 
 The Newick / New Hampshire format
 ---------------------------------
