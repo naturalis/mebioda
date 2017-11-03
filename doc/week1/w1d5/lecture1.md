@@ -49,10 +49,50 @@ Example:
 		(
 			C[&&NHX:S=Pan paniscus],
 			D[&&NHX:S=Pan troglodytes]
-		)[&&NHX:D=T],	
+		)[&&NHX:D=F],	
 	)	
 	,E
 );
+```
+
+PhyloXML
+--------
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<phyloxml xmlns="http://www.phyloxml.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+  <phylogeny rooted="true">
+    <clade>
+      <clade>
+        <clade>
+          <events><duplications>1</duplications></events>
+          <clade>
+            <name>A</name>
+            <taxonomy><scientific_name>Homo sapiens</scientific_name></taxonomy>
+          </clade>
+          <clade>
+            <name>B</name>
+            <taxonomy><scientific_name>Homo sapiens</scientific_name></taxonomy>            
+          </clade>
+        </clade>
+        <clade>
+          <events><speciations>1</speciations></events>
+          <clade>
+            <name>C</name>
+            <taxonomy><scientific_name>Pan paniscus</scientific_name></taxonomy>            
+          </clade>
+          <clade>
+            <name>D</name>
+            <taxonomy><scientific_name>Pan troglodytes</scientific_name></taxonomy>            
+          </clade>
+        </clade>
+      </clade>
+      <clade>
+        <name>E</name>
+      </clade>
+    </clade>
+  </phylogeny>
+</phyloxml>
 ```
 
 The Nexus format
@@ -90,9 +130,6 @@ end;
 - Many different, mutually incompatible dialects that deviate from the original 
   [standard](NEXUS_final.pdf)
 - More facilities for metadata (e.g. names of things, annotations for taxa)
-
-PhyloXML
---------
 
 NeXML
 -----
