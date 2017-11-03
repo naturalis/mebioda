@@ -6,10 +6,20 @@ Phylogenetic data
 - Plays a role in a variety of different analyses
 - Both intra- and interspecific (gene trees versus species trees)
 - Need for metadata and annotation, but hard to represent as tables
-- Variety of different interpretations, e.g.:
+- Variety of different input datam e.g.:
+  - Multiple sequence alignments
+  - Morphological characters
+  - Computed distances (e.g. niche overlap?)
+  - Input trees (e.g. supertree methods)
+- Variety of different methods, e.g.:
+  - Distance based, such as NJ
+  - Optimality criterion-based, such as MP and ML
+  - Bayesian
+- Variety of different interpretations outputs, e.g.:
   - Tips are species, individuals, or sequences
   - Branches are evolutionary change, time, or rates
   - Nodes are speciations or duplications
+  - Topology represents evolutionary hypothesis or clustering
 
 The Newick / New Hampshire format
 ---------------------------------
