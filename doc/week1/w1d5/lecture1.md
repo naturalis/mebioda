@@ -26,6 +26,8 @@ Newick representation:
 New Hampshire eXtended
 ----------------------
 
+- [Format](https://sites.google.com/site/cmzmasek/home/software/forester/nhx) developed 
+  primarily for gene trees
 - Additional data is embedded inside square brackets (i.e. should be backward compatible
   with Newick format), which start with `&&NHX`, followed by `:key=value` pairs 
 - Keys allowed:
@@ -57,6 +59,9 @@ Example:
 
 PhyloXML
 --------
+
+- Successor [format](phyloxml.pdf) to NHX
+- Deals with the same concepts as NHX but in XML
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
