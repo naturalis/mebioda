@@ -3,6 +3,7 @@ Barcoding workflow and MSA data
 
 Barcoding
 ---------
+
 ![](barcode_pipeline.jpg)
 
 Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
@@ -12,19 +13,150 @@ Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
 - Includes marker sequence [data](fasta.fas), images, lat/lon coordinates, etc.
 - Can query [taxonomically](http://www.boldsystems.org/index.php/Public_SearchTerms?query=Danaus[tax])
   and download [all sequences](Danaus.fas)
-- Has a [URL API](http://www.boldsystems.org/index.php/api_home)
 - Identification services:
   - COI for animals
   - ITS for fungi
   - rbcL and matK for plants
+  
+Fetching taxon data through the [URL API](http://www.boldsystems.org/index.php/api_home)
+----------------------------------------------------------------------------------------
+
+```bash
+# Fetch taxon data for Danaus as JSON
+$ curl -o Danaus.json http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus
+```
+
+Returned [taxon data](Danaus.json) is encoded as JSON:
+
+```json
+{
+  "top_matched_names": [
+    {
+      "taxid": 6926,
+      "taxon": "Danaus",
+      "tax_rank": "genus",
+      "tax_division": "Animals",
+      "parentid": 3681,
+      "parentname": "Danainae",
+      "representitive_image": {
+        "image": "JAGWI/WIJAG1191+1445394342.JPG",
+        "apectratio": 1.333
+      },
+      "specimenrecords": "517"
+    }
+  ],
+  "total_matched_names": 1
+}
+```
+
+Let's say we wanted to figure out what the image location was, we can then read this
+JSON in a little [script](json.py):
+
+```python
+import urllib
+import simplejson as json # sudo pip install simplejson
+url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus"
+response = urllib.urlopen(url)
+data = json.loads(response.read())
+
+if data['top_matched_names']:
+	for name in data['top_matched_names']:
+		if name['representitive_image']:
+			print name['representitive_image']['image']
+
+```
+
+Fetching sequences 
+------------------
+
+Data from URLs can be downloaded on the command line using [curl](https://curl.haxx.se/):
+
+```bash
+# Fetch all sequences for Danaus as FASTA
+$ curl -o Danaus.fas http://www.boldsystems.org/index.php/API_Public/sequence?taxon=Danaus
+```
+
+The BOLD sequence data service API returns a [FASTA file](Danaus.fas), which holds 
+multiple sequences, unaligned. The 
+[definition line](https://en.wikipedia.org/wiki/FASTA_format#Description_line) is 
+formatted as:
+
+```
+>ID|Scientific binomial|marker|...
+``` 
+
+With this we can use standard UNIX command line tools to do some basic checks, e.g.:
+
+```bash
+$ grep '>' Danaus.fas | cut -f 3 -d '|' | sort | uniq
+ArgKin
+CAD
+COI-3P
+COI-5P
+COI-5P
+EF1-alpha
+GAPDH
+IDH
+MDH
+RpS2
+RpS5
+Wnt1
+```
+
+Filtering out markers
+---------------------
+It turns out there are multiple markers for this genus. Unfortunately, because FASTA 
+records are multiple lines (and the exact number is unpredictable), we can't easily use
+command line tools (like `grep`). Instead, we might write a little script, e.g. in 
+[biopython](http://biopython.org):
+
+```python
+from Bio import SeqIO # sudo pip install biopython
+with open("Danaus.fas", "rU") as handle:
+    
+    # Example: retain COI
+    for record in SeqIO.parse(handle, "fasta"):
+        fields = record.description.split('|')
+        if fields[2] == 'COI-5P':
+        	print '>' + record.description
+        	print record.seq
+```
+
+Run as:
+
+```shell
+$ python fasta.py > Danaus.COI-5P.fas
+```
 
 Multiple sequence alignment
 ---------------------------
-### muscle
-### mafft
 
-FASTA
------
+FASTA files can be aligned, for example, with [muscle](https://www.drive5.com/muscle/):
+
+```shell
+$ muscle -in Danaus.COI-5P.fas -out Danaus.muscle.fas
+```
+
+Resulting in an [alignment](Danaus.muscle.fas), which is also a FASTA file. 
+
+Alternatively, you might align with [mafft](https://mafft.cbrc.jp/alignment/software/), 
+which has additional functionality for more difficult markers (such as ITS):
+
+```shell
+$ mafft Danaus.COI-5P.fas > Danaus.mafft.fas
+```
+
+Resulting in this [file](Danaus.mafft.fas). You can view both, for example, with this 
+[web viewer](http://msa.biojs.net/app/). Are they different?
+
+```shell
+$ ls -la Danaus.m*
+-rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.mafft.fas
+-rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.muscle.fas
+```
+
+**These files have the exact same number of bytes. Are we sure they are identical? How 
+might we verify this further?**
 
 PHYLIP
 ------
