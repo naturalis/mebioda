@@ -158,6 +158,40 @@ $ ls -la Danaus.m*
 **These files have the exact same number of bytes. Are we sure they are identical? How 
 might we verify this further?**
 
+Converting and comparing alignments
+-----------------------------------
+Because the FASTA records in the files produced by `mafft` and `muscle` are in a different
+order and the sequence data is capitalized differently, we can't easily compare the two
+files. Here we sort the records, and capitalize the sequences, then write out to a
+specified file format (e.g. `phylip`).
+
+```python
+import sys
+from Bio import SeqIO
+from Bio import AlignIO
+from Bio.Align import MultipleSeqAlignment
+
+with open(sys.argv[1], "rU") as handle:
+    
+    records = {}
+    for seq in SeqIO.parse(handle, "fasta"):
+        fields  = seq.description.split('|')
+        seq.seq = seq.seq.upper()
+        records[fields[0]] = seq
+    
+    aln = MultipleSeqAlignment([ records[key] for key in sorted(records.keys()) ])
+    AlignIO.write(aln, sys.argv[2], sys.argv[3])
+```
+
+Usage:
+
+```bash
+$ python convert.py <infile> <outfile> <format>
+```
+
+Now we can compare the two alignments, e.g. with a 
+[diff](https://github.com/naturalis/mebioda/commit/93090e4ac2f80bb0e1bd9a63d40b73987631b3fd?diff=split).
+
 PHYLIP
 ------
 
