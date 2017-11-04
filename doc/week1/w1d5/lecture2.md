@@ -123,8 +123,8 @@ a simple table design (table `node` in [tree.db](tree.db)) might be:
 | 8  | E    | 9    |
 | 9  | n4   |      |
 
-This way, for any focal node, its parent, children and siblings can be queried, e.g. 
-given `n3`, retrieve the parent:
+This way, for any focal node, its parent, children and siblings can be queried in 
+[SQL](https://en.wikipedia.org/wiki/SQL), e.g. given `n3`, retrieve the parent:
 
 ```sql
 select p.name from node as n, node as p where n.name = 'n3' and n.parent = p.id

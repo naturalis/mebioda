@@ -89,4 +89,4 @@ Tools of the trade
 - UNIX/Linux operating systems
 - Scripting languages
 - Relational databases
-  
+- Versioning
