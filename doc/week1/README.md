@@ -25,7 +25,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 3 - Barcoding
-<!-- Krijn Trimbos or Jeremy Miller -->
+
 - Lecture I: The barcoding workflow and MSA data
 - Lecture II: Species delimitation
 - Lecture III: [Data science tools: UNIX](w1d3/lecture3.md)
