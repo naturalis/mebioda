@@ -4,17 +4,8 @@ Species delimitation with DNA barcodes
 Species concepts and delimitation intro
 ---------------------------------------
 
-<iframe 
-	src="https://www.slideshare.net/slideshow/embed_code/key/qAVPsxv5tsT43S" 
-	width="595" 
-	height="485" 
-	frameborder="0" 
-	marginwidth="0" 
-	marginheight="0" 
-	scrolling="no" 
-	style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" 
-	allowfullscreen> 
-</iframe> 
+The following slide show provides an overview of species concepts and the application
+of species delimitation techniques to natural history collection specimens: 
 
 [Species delimitation - species limits and character evolution](https://www.slideshare.net/rvosa/species-delimitation-species-limits-and-character-evolution)
 
