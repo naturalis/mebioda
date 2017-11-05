@@ -140,7 +140,8 @@ $ muscle -in Danaus.COI-5P.fas -out Danaus.muscle.fas
 Resulting in an [alignment](Danaus.muscle.fas), which is also a FASTA file. 
 
 Alternatively, you might align with [mafft](https://mafft.cbrc.jp/alignment/software/), 
-which has additional functionality for more difficult markers (such as ITS):
+(or one of the many other multiple sequence alignment tools) which has additional 
+functionality for more difficult markers (such as ITS):
 
 ```shell
 $ mafft Danaus.COI-5P.fas > Danaus.mafft.fas
@@ -155,8 +156,20 @@ $ ls -la Danaus.m*
 -rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.muscle.fas
 ```
 
-**These files have the exact same number of bytes. Are we sure they are identical? How 
-might we verify this further?**
+Same number of bytes (so, same number of inserted gaps) but with different contents. Could
+be capitalization, could be line folding, could be sequence order, or 
+_actual differences in the alignment algorithms_. 
+[Checksums](https://en.wikipedia.org/wiki/Checksum) are different:
+
+```shell
+$ md5 Danaus.mafft.fas
+MD5 (Danaus.mafft.fas) = 47e8d36d43a68f11c131badf75adcc3a
+
+$ md5 Danaus.mafft.nex
+MD5 (Danaus.mafft.nex) = e604e23ab1c39ecf54f755a0c882ded8
+```
+
+**How might we verify this further?**
 
 Converting and comparing alignments
 -----------------------------------
@@ -197,6 +210,51 @@ PHYLIP
 
 Nexus
 -----
+
+We can convert between PHYLIP and Nexus format using a variety of tools. On the command
+line you might do something like this:
+
+```bash
+# Using a direct call to a library function. To install:
+# $ sudo cpanm Bio::Phylo
+$ perl -MBio::Phylo::IO=parse -e 'print parse()->to_nexus' \
+	format fasta \
+	file Danaus.mafft.fas \
+	as_project 1 \
+	type dna > Danaus.mafft.nex
+```
+
+Which produces [this file](Danaus.mafft.nex):
+
+```
+#NEXUS
+BEGIN TAXA;
+[! Taxa block written by Bio::Phylo::Taxa v2.0.1 on Sun Nov  5 00:55:32 2017 ]	
+        DIMENSIONS NTAX=214;
+        TAXLABELS
+		'AGIRI015-17|Danaus'
+
+		[...]
+		
+		'XAK468-06|Danaus'
+        ;
+END;
+BEGIN CHARACTERS;
+[! Characters block written by Bio::Phylo::Matrices::Matrix v2.0.1 on Sun Nov  5 00:55:32 2017 ]
+	DIMENSIONS NCHAR=1472;
+	FORMAT DATATYPE=Dna MISSING=? GAP=-;
+	MATRIX
+		'ANICT934-11|Danaus'      --------------------------------------tactttatattttatt [...]
+		
+		[...]
+		
+		'SZCBP431-15|Danaus'      --------------------------------------tactatatattttatt [...]
+	;
+END;
+BEGIN NOTES;
+[! Notes block written by Bio::Phylo::Project v2.0.1 on Sun Nov  5 00:55:33 2017 ]
+END;
+```
 
 Phylogenetic inference
 ----------------------
