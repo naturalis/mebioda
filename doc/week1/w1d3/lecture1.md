@@ -259,6 +259,19 @@ END;
 Phylogenetic inference
 ----------------------
 
+```bash
+# let's install phylip
+$ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.696.tar.gz
+$ gunzip phylip-3.696.tar.gz
+$ tar xvf phylip-3.696.tar
+$ cd phylip-3.696/src
+$ make -f Makefile.unx install
+$ cd -
+$ sudo mv phylip-3.696 /usr/local
+```
+
+Now add `/usr/local/phylip-3.696/exe` to the $PATH
+
 Distance-based methods
 ----------------------
 
