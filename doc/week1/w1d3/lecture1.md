@@ -85,7 +85,9 @@ formatted as:
 >ID|Scientific binomial|marker|...
 ``` 
 
-With this we can use standard UNIX command line tools to do some basic checks, e.g.:
+With this we can use standard UNIX command line tools 
+[grep, cut, sort and uniq](http://www.tldp.org/LDP/abs/html/textproc.html) to do some 
+basic checks, e.g.:
 
 ```bash
 $ grep '>' Danaus.fas | cut -f 3 -d '|' | sort | uniq
@@ -171,8 +173,8 @@ MD5 (Danaus.mafft.nex) = e604e23ab1c39ecf54f755a0c882ded8
 
 **How might we verify this further?**
 
-Converting and comparing alignments
------------------------------------
+Comparing different alignment results
+-------------------------------------
 Because the FASTA records in the files produced by `mafft` and `muscle` are in a different
 order and the sequence data is capitalized differently, we can't easily compare the two
 files. Here we sort the records, and capitalize the sequences, then write out to a
@@ -204,62 +206,13 @@ $ python convert.py <infile> <outfile> <format>
 
 Now we can compare the two alignments, e.g. with a 
 [diff](https://github.com/naturalis/mebioda/commit/93090e4ac2f80bb0e1bd9a63d40b73987631b3fd?diff=split).
+It seems that there are only minor differences. 
 
-PHYLIP
-------
+Detecting non-overlapping sequences
+-----------------------------------
 
-Nexus
------
-
-We can convert between PHYLIP and Nexus format using a variety of tools. On the command
-line you might do something like this:
-
-```bash
-# Using a direct call to a library function. To install:
-# $ sudo cpanm Bio::Phylo
-$ perl -MBio::Phylo::IO=parse -e 'print parse()->to_nexus' \
-	format fasta \
-	file Danaus.mafft.fas \
-	as_project 1 \
-	type dna > Danaus.mafft.nex
-```
-
-Which produces [this file](Danaus.mafft.nex):
-
-```
-#NEXUS
-BEGIN TAXA;
-[! Taxa block written by Bio::Phylo::Taxa v2.0.1 on Sun Nov  5 00:55:32 2017 ]	
-        DIMENSIONS NTAX=214;
-        TAXLABELS
-		'AGIRI015-17|Danaus'
-
-		[...]
-		
-		'XAK468-06|Danaus'
-        ;
-END;
-BEGIN CHARACTERS;
-[! Characters block written by Bio::Phylo::Matrices::Matrix v2.0.1 on Sun Nov  5 00:55:32 2017 ]
-	DIMENSIONS NCHAR=1472;
-	FORMAT DATATYPE=Dna MISSING=? GAP=-;
-	MATRIX
-		'ANICT934-11|Danaus'      --------------------------------------tactttatattttatt [...]
-		
-		[...]
-		
-		'SZCBP431-15|Danaus'      --------------------------------------tactatatattttatt [...]
-	;
-END;
-BEGIN NOTES;
-[! Notes block written by Bio::Phylo::Project v2.0.1 on Sun Nov  5 00:55:33 2017 ]
-END;
-```
-
-Phylogenetic inference
-----------------------
-
-Install Mesquite
+One quick way to compute a pairwise distance matrix is with PHYLIP's program `dnadist`, so
+let's install it:
 
 ```bash
 # let's install phylip
@@ -272,29 +225,30 @@ $ cd -
 $ sudo mv phylip-3.696 /usr/local
 ```
 
-Now add `/usr/local/phylip-3.696/exe` to the $PATH
+(And add `/usr/local/phylip-3.696/exe` to the $PATH)
 
-Distance-based methods
-----------------------
+When we compute a distance matrix we receive warnings that for some pairs of sequences 
+there is no sequence overlap at all:
 
-Optimality criterion-based
---------------------------
-
-```bash
-# let's install RAxML
-$ cd /usr/local/
-$ curl -o standard-RAxML-8.2.11.tar.gz https://codeload.github.com/stamatak/standard-RAxML/tar.gz/v8.2.11
-$ gunzip standard-RAxML-8.2.11.tar.gz
-$ tar xvf standard-RAxML-8.2.11.tar
-$ cd standard-RAxML-8.2.11
-
-# or whichever platform is appropriate...
-$ make -f Makefile.SSE3.PTHREADS.mac
-$ sudo ln -s /usr/local/standard-RAxML-8.2.11/raxmlHPC-PTHREADS-SSE3 /usr/local/bin/raxml
+```
+WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 200; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 202; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 200; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 202; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 200; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 202; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 200; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 202; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 200; -1.0 WAS WRITTEN
+WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 202; -1.0 WAS WRITTEN
 ```
 
-Bayesian
---------
+In a text editor we can see that 200 and 202 are `SETIU001-1` and `SETIU032-1`.
+Let's [remove](https://github.com/naturalis/mebioda/commit/681e9750b32612b59b2953a6b3a042f6c2ee47f0?diff=unified)
+these.
+
+Bayesian evolutionary analysis by sampling trees (BEAST)
+--------------------------------------------------------
 
 [BEAST2](http://www.beast2.org/) is a modular system that can run many different types of 
 analyses. The typical workflow usually goes:
@@ -322,14 +276,14 @@ with open(sys.argv[1], "rU") as handle:
         print record.seq
 ```
 
-- Which gives us [this version](https://github.com/naturalis/mebioda/commit/76e9562db3f5ce1a8140f73f0b57d34e56e63b42)
-  to import in `beauti`, resulting in the [input file](BEAST/Danaus.mafft.xml).
+Which gives us [this version](https://github.com/naturalis/mebioda/commit/76e9562db3f5ce1a8140f73f0b57d34e56e63b42)
+to import in `beauti`, resulting in the [input file](BEAST/Danaus.mafft.xml).
 
 Running a BEAST analysis
 ------------------------
 
 ![](BEAST/tracer.png)
 
-- If we run the [input file](BEAST/Danaus.mafft.xml) for 10*10^6 generations, the 
-  [log](BEAST/Danaus.log) file shows in tracer that all the parameters have been 
-  sufficiently sampled.
+If we run the [input file](BEAST/Danaus.mafft.xml) for 10*10^6 generations, the 
+[log](BEAST/Danaus.log) file shows in tracer that all the parameters have been 
+sufficiently sampled.
