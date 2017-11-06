@@ -112,15 +112,27 @@ WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 202; -1.0 WAS WRITTEN
 
 In a text editor we can see that 200 and 202 are `SETIU001-1` and `SETIU032-1`.
 Let's [remove](https://github.com/naturalis/mebioda/commit/681e9750b32612b59b2953a6b3a042f6c2ee47f0?diff=unified)
-these. Try again without those specimens:
+these. [Results](Danaus_ABGD) after trying again without those specimens:
 
 ![](Danaus_ABGD/Danaus.rank.svg)
 
 GMYC
 ----
 
+**Fujisawa T & Barraclough TG.** 2013. Delimiting Species Using Single-Locus Data and 
+the Generalized Mixed Yule Coalescent Approach: A Revised Method and Evaluation on 
+Simulated Data Sets _Systematic Biology_ **62**(5): 707–724 
+doi:[10.1093/sysbio/syt033](https://doi.org/10.1093/sysbio/syt033) ([pdf](GMYC.pdf))
+
+![](GMYC.png)
+
+- [Tutorial](https://doi.org/10.5281/zenodo.838259)
+- [Web server](http://species.h-its.org/gmyc/)
+
 PTP
 ---
+
+- [Web server](http://species.h-its.org/ptp/)
 
 Monophyly
 ---------

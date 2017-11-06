@@ -278,6 +278,20 @@ Distance-based methods
 Optimality criterion-based
 --------------------------
 
+```bash
+# let's install RAxML
+$ cd /usr/local/
+$ curl -o standard-RAxML-8.2.11.tar.gz https://codeload.github.com/stamatak/standard-RAxML/tar.gz/v8.2.11
+$ gunzip standard-RAxML-8.2.11.tar.gz
+$ tar xvf standard-RAxML-8.2.11.tar
+$ cd standard-RAxML-8.2.11
+
+# or whichever platform is appropriate...
+$ make -f Makefile.SSE3.PTHREADS.mac
+$ sudo ln -s `pwd`/raxmlHPC-PTHREADS-SSE3 /usr/local/bin/raxml
+```
+
 Bayesian
 --------
 
+- BEAST
