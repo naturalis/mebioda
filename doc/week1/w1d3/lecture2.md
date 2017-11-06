@@ -157,16 +157,36 @@ Monophyly, polyphyly, paraphyly
 Trees: Strong Operational Bias in European Lepidoptera, _Systematic Biology_ 
 **65**(6): 1024–1040 doi:[10.1093/sysbio/syw044](https://doi.org/10.1093/sysbio/syw044)
 
+_So how are the putative species from BoLD actually entangled?_
+
 ![](monophyly.jpg)
 
-So how are the putative species from BoLD actually entangled?
+For each taxon:
+1. Collect all tips that belong to it
+2. Find the MRCA for the collected tips
+3. Collect all descendants of the MRCA. If this set is identical to the set of step 1. 
+   then the taxon is monophyletic and the analysis moves on to the next taxon.
+4. Collect all nodes that subtend tips from the focal taxon as well as at least one other 
+   taxon and sort these by their post-order index.
+5. Group the collected, sorted nodes into distinct root-to-tip paths. Internal nodes that 
+   are nested in each other are identified (and collected in the same group) by checking 
+   that the pre-order index of the focal node is larger, and the post-order index of the 
+   focal node is smaller than that of the next node in the sorted list. If there is more 
+   than one distinct root-to-tip path (i.e., group), the taxon is considered polyphyletic,
+   otherwise paraphyletic.
+6. For each first (i.e. most recent) node in each group, collect all subtended species. 
+   The union of these sets across groups forms the set of entangled species.
 
 ```bash
-curl \
+$ curl \
   -F "infile=@BEAST/Danaus.consensus.trees.nwk" \
   -F "format=newick" \
   -F "separator=-" \
   -F "astsv=true" \
   -F "cgi=true" \
-  http://monophylizer.naturalis.nl/cgi-bin/monophylizer.pl
+  http://monophylizer.naturalis.nl/cgi-bin/monophylizer.pl > Danaus.monophyly.tsv
 ```
+
+Which produces a [spreadsheet](Danaus.monophyly.tsv) that identifies the exact matches
+(i.e. `monophyletic`) and where there is entanglement among species (i.e. `paraphyletic`
+or `polyphyletic`).
