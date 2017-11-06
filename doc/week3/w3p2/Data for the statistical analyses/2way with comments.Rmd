@@ -1,0 +1,220 @@
+---
+title: "2way Anova"
+author: "irene"
+date: "2/11/2017"
+output: word_document
+---
+Simulated phylogenies were generated with the software MESA, using trait-biased and heritable speciation probabilities. At a particular point of the simulation a user-specified fraction of terminal taxa were culled from the tree. Four mass extintion treatments we employed: 
+Random = taxa were culled from the tree regardeless of trait value or phylogenetic position
+Selective-on-diversifiers = taxa culled from the tree had the lowes trait value and highest speciation rates.
+Selective-on-relicts = those taxa with highest trait value and lowest speciation rates were culled preferentally. 
+each of the treatments occurred at intensity 90%, 0.75% and 0.5%of all the extant taxa in the tree. Following mass extintion, trees recovered continued to evolve according to the same rules applied before the extintion event. 
+Recovery from mass extintion had 2 phases: Clade size recovery, covering the time where the tree either recovers to it pre- extintion size or settles to a new equilibrium value and Post CSR, the time after clade size recovery until the end of the simulation. 
+The nexus files produced by MESA were then manipulated in R. 
+The Colless index of imbalance was calculated using the function for each tree in a time series. Trees more balanced have negative values while those less balanced have positive values.  
+Then for the three treamtments combined with the different intensities,the Colless index of imbalance (COL_BLUM) values were collected at the key CSR relative times (CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile) and at pre extintion time (300), post extintion event (305), at the CRS end-mid time (470) and at the end of simulation (600).
+
+
+Now, for tree balance at CSR, the post CSR inverval times and end simulation times, we analyze the treatments involving a combination of extintion types and intensity with two-way ANOVA and Tukey-corrected multiple comparison testing, in order to see if there are any significant treatment-by-intensity interactions. Different treatment intensities are treated as non-numerical
+factors, and a family-wise confidence level of 95% are assumed for all comparisons.
+
+```{r} 
+CSR <- read.table("CSR_1.txt", header=T,sep="\t")
+colnames(CSR) = c("TREAT","INTENSITY","COLBLUM")
+attach(CSR)
+tapply(COLBLUM,TREAT,mean)# we calculate the mean of the tree balance value for the treatment types
+tapply(COLBLUM,INTENSITY,mean)# we calculate the mean of the tree balance value for the intensities. 
+tapply(COLBLUM,TREAT:INTENSITY,mean) # we calculate the mean of the tree balance value for the treatment type and intensity. 
+
+with_int <- aov(COLBLUM ~ TREAT*INTENSITY) 
+summary(with_int)
+summary.lm(with_int)
+
+no_int = aov(COLBLUM ~ TREAT+INTENSITY)
+summary(no_int)
+summary.lm(no_int)
+
+anova(no_int,with_int)# the models do not differ significantly, what does it mean?
+TukeyHSD(with_int) # 
+plot(TukeyHSD(with_int))
+
+TukeyHSD(no_int)
+plot(TukeyHSD(no_int))
+
+
+boxplot(COLBLUM~TREAT, notch=T)
+boxplot(COLBLUM~INTENSITY, notch=T)
+
+interaction.plot(TREAT,INTENSITY,COLBLUM,type="b")
+
+INT2 = factor(INTENSITY)
+levels(INT2)
+levels(INT2)[3]="highest"
+levels(INT2)[c(1,2)]="lowest"
+no_int2 = aov(COLBLUM~TREAT+INT2)
+summary(no_int2)
+anova(no_int,no_int2)
+```
+
+
+```{r pressure, echo=FALSE}
+CSR_END_1Q = read.table("CSR_ENDMID_1Q.txt", header=T,sep="\t")
+
+CSR_END_MIDNEW = read.table("CSR_ENDMID_NEW2017.txt", header=T,sep="\t")
+
+colnames(CSR_END_1Q) = c("TREAT","INTENSITY","COLBLUM")
+attach(CSR_END_1Q)
+
+tapply(COLBLUM,TREAT,mean)
+tapply(COLBLUM,INTENSITY,mean)
+tapply(COLBLUM,TREAT:INTENSITY,mean)
+
+with_int <- aov(COLBLUM ~ TREAT*INTENSITY)
+summary(with_int)
+summary.lm(with_int)
+
+no_int = aov(COLBLUM ~ TREAT+INTENSITY)
+summary(no_int)
+summary.lm(no_int)
+
+anova(no_int,with_int)
+
+TukeyHSD(with_int)
+plot(TukeyHSD(with_int))
+
+TukeyHSD(no_int)
+plot(TukeyHSD(no_int))
+
+
+boxplot(COLBLUM~TREAT, notch=T)
+boxplot(COLBLUM~INTENSITY, notch=T)
+
+interaction.plot(TREAT,INTENSITY,COLBLUM,type="b")
+
+INT2 = factor(INTENSITY)
+levels(INT2)
+levels(INT2)[3]="highest"
+levels(INT2)[c(1,2)]="lowest"
+no_int2 = aov(COLBLUM~TREAT+INT2)
+summary(no_int2)
+anova(no_int,no_int2) # 
+```
+```{r}
+CSR_END_MIDNEW = read.table("CSR_ENDMID_NEW2017.txt", header=T,sep="\t")
+colnames(CSR_END_MIDNEW) = c("TREAT","INTENSITY","COLBLUM")
+attach(CSR_END_MIDNEW)
+tapply(COLBLUM,TREAT,mean)
+tapply(COLBLUM,INTENSITY,mean)
+tapply(COLBLUM,TREAT:INTENSITY,mean)
+
+with_int <- aov(COLBLUM ~ TREAT*INTENSITY)
+summary(with_int)
+summary.lm(with_int)
+
+no_int = aov(COLBLUM ~ TREAT+INTENSITY)
+summary(no_int)
+summary.lm(no_int)
+
+anova(no_int,with_int)
+TukeyHSD(with_int)
+#Random and SOR do not differ significantly form each other at any intensity and all SOD trees remained more balanced than the other treatments.
+plot(TukeyHSD(with_int))
+
+TukeyHSD(no_int)
+plot(TukeyHSD(no_int))
+
+
+boxplot(COLBLUM~TREAT, notch=T)
+boxplot(COLBLUM~INTENSITY, notch=T)
+
+interaction.plot(TREAT,INTENSITY,COLBLUM,type="b")
+
+INT2 = factor(INTENSITY)
+levels(INT2)
+levels(INT2)[3]="highest"
+levels(INT2)[c(1,2)]="lowest"
+no_int2 = aov(COLBLUM~TREAT+INT2) 
+summary(no_int2)
+anova(no_int,no_int2) 
+```
+
+```{r}
+CSR_END_3Q = read.table("CSR_ENDMID_3Q.txt", header=T,sep="\t")
+colnames(CSR_END_3Q) = c("TREAT","INTENSITY","COLBLUM")
+attach(CSR_END_3Q)
+
+tapply(COLBLUM,TREAT,mean)
+tapply(COLBLUM,INTENSITY,mean)
+tapply(COLBLUM,TREAT:INTENSITY,mean)
+
+with_int <- aov(COLBLUM ~ TREAT*INTENSITY)
+summary(with_int)
+summary.lm(with_int)
+
+no_int = aov(COLBLUM ~ TREAT+INTENSITY)
+summary(no_int)
+summary.lm(no_int)
+
+anova(no_int,with_int)
+
+TukeyHSD(with_int) # the difference between the SOD and the other treatments is fading. Both the Random and the SOR treatments show more balanced values. 
+plot(TukeyHSD(with_int))
+
+TukeyHSD(no_int)
+plot(TukeyHSD(no_int))
+
+
+boxplot(COLBLUM~TREAT, notch=T)
+boxplot(COLBLUM~INTENSITY, notch=T)
+
+interaction.plot(TREAT,INTENSITY,COLBLUM,type="b")
+
+INT2 = factor(INTENSITY)
+levels(INT2)
+levels(INT2)[3]="highest"
+levels(INT2)[c(1,2)]="lowest"
+no_int2 = aov(COLBLUM~TREAT+INT2)
+summary(no_int2)
+anova(no_int,no_int2)
+```
+
+
+```{r}
+ENDSIM <- read.table("ENDSIM_1.txt", header=T,sep="\t")
+colnames(ENDSIM) = c("TREAT","INTENSITY","COLBLUM")
+attach(ENDSIM)
+tapply(COLBLUM,TREAT,mean)
+tapply(COLBLUM,INTENSITY,mean)
+tapply(COLBLUM,TREAT:INTENSITY,mean)
+
+with_int <- aov(COLBLUM ~ TREAT*INTENSITY)
+summary(with_int)
+summary.lm(with_int)
+
+no_int = aov(COLBLUM ~ TREAT+INTENSITY)
+summary(no_int)
+summary.lm(no_int)
+
+anova(no_int,with_int)
+TukeyHSD(with_int)# most between-treatment that had previously existed have been eroded or disappeared completely, having declined from previous higher imbalance values. The only significant differences involved SOD 0.9 which remained more balance than all the other treatment/ intensity combinations. The other treatment converged mostly on the similar Ic values.
+plot(TukeyHSD(with_int))
+
+TukeyHSD(no_int)
+plot(TukeyHSD(no_int))
+
+
+boxplot(COLBLUM~TREAT, notch=T)
+boxplot(COLBLUM~INTENSITY, notch=T)
+
+interaction.plot(TREAT,INTENSITY,COLBLUM,type="b")
+
+INT2 = factor(INTENSITY)
+levels(INT2)
+levels(INT2)[3]="highest"
+levels(INT2)[c(1,2)]="lowest"
+no_int2 = aov(COLBLUM~TREAT+INT2)
+summary(no_int2)
+anova(no_int,no_int2)
+
+```
+
