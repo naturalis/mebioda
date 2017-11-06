@@ -115,7 +115,7 @@ following clusters:
 
 Which are distributed across the clades near the tips:
 
-![](GMYC.png)
+![](GMYC_results.png)
 
 How many (using line count, [`wc -l`](http://linuxcommand.org/lc3_man_pages/wc1.html)) 
 distinct taxonomic names do we have in the alignment:
