@@ -259,6 +259,8 @@ END;
 Phylogenetic inference
 ----------------------
 
+Install Mesquite
+
 ```bash
 # let's install phylip
 $ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.696.tar.gz
@@ -288,10 +290,27 @@ $ cd standard-RAxML-8.2.11
 
 # or whichever platform is appropriate...
 $ make -f Makefile.SSE3.PTHREADS.mac
-$ sudo ln -s `pwd`/raxmlHPC-PTHREADS-SSE3 /usr/local/bin/raxml
+$ sudo ln -s /usr/local/standard-RAxML-8.2.11/raxmlHPC-PTHREADS-SSE3 /usr/local/bin/raxml
 ```
 
 Bayesian
 --------
 
-- BEAST
+BEAST can read FASTA files, but it would be nice if the definition lines came out better
+in trees, so we relabel these:
+
+```python
+import sys
+from Bio import SeqIO # sudo pip install biopython
+with open(sys.argv[1], "rU") as handle:
+    
+    # Example: relabel sequences as Genus_species-ID
+    for record in SeqIO.parse(handle, "fasta"):
+        fields = record.description.split('|')
+        name = fields[1].replace(' ', '_')
+        print '>' + name + '-' + fields[0]
+        print record.seq
+```
+
+- Set up Java (e.g. 8, [osx](http://www.rockhoppertech.com/blog/multiple-java-vms-on-osx/))
+- Install [BEAST](https://github.com/beast-dev/beast-mcmc/releases)
