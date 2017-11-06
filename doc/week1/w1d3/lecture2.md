@@ -138,7 +138,6 @@ doi:[10.1093/bioinformatics/btt499](https://doi.org/10.1093/bioinformatics/btt49
   see different classes of distances produced by different Poisson processes
 - Has a Bayesian implementation that produces support values for clusterings
 
-
 Using the same tree as for GMYC on the [bPTP web server](http://species.h-its.org/ptp/)
 obtains an [MLE of 16 species](PTP/output.PTPMLPartition.txt) with potential for (far)
 greater splitting:
@@ -151,5 +150,23 @@ Estimated number of species is between 14 and 135
 Mean: 78.03
 ```
 
-Monophyly
----------
+Monophyly, polyphyly, paraphyly
+-------------------------------
+
+**Mutanen, M _et al._** 2016. Species-Level Para- and Polyphyly in DNA Barcode Gene 
+Trees: Strong Operational Bias in European Lepidoptera, _Systematic Biology_ 
+**65**(6): 1024–1040 doi:[10.1093/sysbio/syw044](https://doi.org/10.1093/sysbio/syw044)
+
+![](monophyly.jpg)
+
+So how are the putative species from BoLD actually entangled?
+
+```bash
+curl \
+  -F "infile=@BEAST/Danaus.consensus.trees.nwk" \
+  -F "format=newick" \
+  -F "separator=-" \
+  -F "astsv=true" \
+  -F "cgi=true" \
+  http://monophylizer.naturalis.nl/cgi-bin/monophylizer.pl
+```
