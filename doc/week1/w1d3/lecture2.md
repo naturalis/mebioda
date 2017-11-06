@@ -81,53 +81,49 @@ $ mkdir Danaus_ABGD
 $ abgd -o Danaus_ABGD -a Danaus.mafft.fas
 ```
 
-This is all we get:
-
-```
-calculating distances 214 seq
-<BR>
-building newick tree for your data (it can take time when many sequences)
-The matrix is not symmetric
- The matrix  is not symmetric<BR>
-```
-
-Debugging ABGD
---------------
-
-Yikes, an error. Is there something wrong with our data? We can also input a distance
-matrix, can we compute one with PHYLIP's `dnadist`? Problem:
-
-```
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 202; -1.0 WAS WRITTEN
-```
-
-In a text editor we can see that 200 and 202 are `SETIU001-1` and `SETIU032-1`.
-Let's [remove](https://github.com/naturalis/mebioda/commit/681e9750b32612b59b2953a6b3a042f6c2ee47f0?diff=unified)
-these. [Results](Danaus_ABGD) after trying again without those specimens:
+[Resulting files](Danaus_ABGD), showing the barcode gap inflection point:
 
 ![](Danaus_ABGD/Danaus.rank.svg)
 
-GMYC
-----
+Species delimitation using Generalized Mixed Yule Coalescent (GMYC)
+-------------------------------------------------------------------
 
 **Fujisawa T & Barraclough TG.** 2013. Delimiting Species Using Single-Locus Data and 
 the Generalized Mixed Yule Coalescent Approach: A Revised Method and Evaluation on 
 Simulated Data Sets _Systematic Biology_ **62**(5): 707–724 
 doi:[10.1093/sysbio/syt033](https://doi.org/10.1093/sysbio/syt033) ([pdf](GMYC.pdf))
 
+- Separate evolutionary lineages diversify according to 
+  [processes](https://en.wikipedia.org/wiki/Birth%E2%80%93death_process) such as the 
+  **Yule** (pure birth) model, the simplest one.
+- Gene copies **coalesce** according to population genetic processes (e.g. the rate is
+  proportional to the effective population size).
+- The GMYC method looks for the MLE of where the coalescent process took over from the
+  lineage diversification process.
+
 ![](GMYC.png)
 
-- [Tutorial](https://doi.org/10.5281/zenodo.838259)
-- [Web server](http://species.h-its.org/gmyc/)
+The GMYC web service
+--------------------
+
+The analysis can be performed through a [web service](http://species.h-its.org/gmyc/),
+and results for the [Danaus consensus tree](BEAST/Danaus.consensus.trees.nwk) in the 
+following clusters:
+
+- number of ML clusters: 13 (CI: 11-14)
+- number of ML entities: 15 (CI: 13-16)
+
+Which are distributed across the clades near the tips:
+
+![](GMYC.png)
+
+How many (using line count, [`wc -l`](http://linuxcommand.org/lc3_man_pages/wc1.html)) 
+distinct taxonomic names do we have in the alignment:
+
+```bash
+$ grep '>' Danaus.mafft.fas | cut -f 1 -d '-' | sort | uniq | wc -l
+      15
+```
 
 PTP
 ---
