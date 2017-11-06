@@ -288,4 +288,4 @@ If we run the [input file](BEAST/Danaus.mafft.xml) for 10*10^6 generations, the
 [log](BEAST/Danaus.log) file shows in tracer that all the parameters have been 
 sufficiently sampled. If we compute a consensus, this is the result:
 
-![](BEAST/Danaus.consensus.trees)
+![](BEAST/Danaus.consensus.trees.pdf)
