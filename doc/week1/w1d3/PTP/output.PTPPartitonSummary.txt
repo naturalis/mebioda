@@ -1,0 +1,412 @@
+ Danaus_gilippusDHJ01-MHAAC201-06: 1.000
+ Danaus_ismare-GBLN0491-06: 1.000
+ Danaus_plexippus-MHACG747-05: 0.937
+ Danaus_genutia-ANICT934-11: 0.909
+ Danaus_gilippus-LOFLC286-06: 0.865
+ Danaus_affinis-ANICT1129-11: 0.858
+ Danaus_eresimus-LYPAP515-09: 0.858
+ Danaus_chrysippus-GBLN0117-06: 0.810
+ Danaus_genutia_genutia-GBLN4388-14: 0.798
+ Danaus_plexippus-BLPDO987-10: 0.785
+ Danaus_chrysippus-MABUT109-10: 0.784
+ Danaus_chrysippus-GBLN0112-06: 0.767
+ Danaus_eresimus-LEPPA326-12: 0.760
+ Danaus_plexippus-SDP129035-13: 0.724
+ Danaus_plexippus-LYPAP539-09: 0.676
+ Danaus_gilippus-BBLOD914-11: 0.626
+ Danaus_genutia-CBL010-12, Danaus_genutia-GBMIN22829-13: 0.625
+ Danaus_plexippus-LYPAP538-09: 0.618
+ Danaus_eresimus-LEPPA384-12: 0.614
+ Danaus_chrysippus-GBLN0115-06: 0.538
+ Danaus_gilippus-LYPAP528-09: 0.535
+ Danaus_genutia-GBGL8280-12: 0.532
+ Danaus_chrysippus-GWOTH602-12, Danaus_chrysippus-LSAFR2199-12, Danaus_chrysippus-LSAFR2271-12: 0.502
+ Danaus_plexippus-BLPDD747-09: 0.496
+ Danaus_chrysippus-GBGL8326-12: 0.488
+ Danaus_affinis-LOQC758-05: 0.479
+ Danaus_affinis-KHCBT1102-16, Danaus_melanippus_hegesippus-BOPM168-12, Danaus_melanippus-FPMBC151-15, Danaus_melanippus_hegesippus-BOPM167-12, Danaus_melanippus_hegesippus-BOPM166-12, Danaus_melanippus-SETIU018-16: 0.466
+ Danaus_plexippus-MHACG727-05: 0.455
+ Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05: 0.453
+ Danaus_melanippus-SETIU018-16: 0.443
+ Danaus_erippus-LEPAR267-11: 0.435
+ Danaus_chrysippus-LSAFR2271-12: 0.434
+ Danaus_gilippus-LEPAR956-14, Danaus_gilippus-LEPPA758-13, Danaus_gilippus-LEPPA826-13, Danaus_gilippus-LEPPA364-12, Danaus_gilippus-LEPPA821-13, Danaus_gilippus-LEPPA726-13, Danaus_gilippus-LEPPA717-13: 0.433
+ Danaus_plexippus-MHACG743-05: 0.430
+ Danaus_plexippus-MHMXO676-08: 0.430
+ Danaus_plexippus-MHACG750-05: 0.428
+ Danaus_genutia-GBMIN12316-13: 0.420
+ Danaus_chrysippus-EZSPN784-09: 0.416
+ Danaus_plexippus-EZSPM685-12: 0.416
+ Danaus_erippus-LEPAR193-11, Danaus_erippus-LEPAR229-11, Danaus_erippus-LEPPA027-11, Danaus_erippus-LEPPA813-13, Danaus_erippus-LEPAR223-11, Danaus_erippus-LEPPA575-13, Danaus_erippus-LEPPA773-13, Danaus_erippus-LEPPA731-13, Danaus_erippus-LEPAR267-11, Danaus_erippus-LEPIG519-11, Danaus_erippus-LEPPA057-11, Danaus_erippus-LEPPA563-13: 0.414
+ Danaus_plexippus-GBLN0108-06: 0.394
+ Danaus_chrysippus-GBLN0116-06: 0.390
+ Danaus_affinis-LOQC758-05, Danaus_affinis-LOQC776-05, Danaus_affinis-LOQTI427-11, Danaus_affinis-LOQTI736-12: 0.378
+ Danaus_eresimus-LYPAP514-09, Danaus_eresimus-LYPAP516-09, Danaus_eresimus-LYPAP517-09, Danaus_eresimus-LYPAP513-09, Danaus_eresimus-LYPAP521-09, Danaus_eresimus-LYPAP519-09, Danaus_chrysippus-GBLN0109-06: 0.377
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13: 0.373
+ Danaus_plexippus-EZSPM685-12, Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04: 0.365
+ Danaus_chrysippus-MAIMB137-09: 0.345
+ Danaus_plexippus-LEFIA1435-10: 0.344
+ Danaus_chrysippus-GWOTH602-12, Danaus_chrysippus-LSAFR2199-12: 0.337
+ Danaus_erippus-LEPPA563-13: 0.329
+ Danaus_plexippus-MHMYC1253-09: 0.323
+ Danaus_plexippus-MHMXY652-09: 0.323
+ Danaus_plexippus-MHMXY650-09: 0.320
+ Danaus_gilippus-BBLOD894-11: 0.316
+ Danaus_eresimus-LYPAP513-09, Danaus_eresimus-LYPAP521-09, Danaus_eresimus-LYPAP519-09: 0.316
+ Danaus_chrysippus-WALPB2425-14, Danaus_chrysippus-WALPB2429-14: 0.309
+ Danaus_plexippus-GBLN2044-09: 0.300
+ Danaus_plexippus-LYPAP532-09: 0.300
+ Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06: 0.299
+ Danaus_genutia-GBLN0299-06, Danaus_genutia-KHCBT1197-16, Danaus_genutia-KHCBT1097-16, Danaus_genutia-KHCBT1190-16, Danaus_genutia-KHCBT1100-16, Danaus_genutia_intermedius-BOPM163-12: 0.293
+ Danaus_gilippus-LEPAR956-14, Danaus_gilippus-LEPPA758-13, Danaus_gilippus-LEPPA826-13: 0.286
+ Danaus_gilippus-LEPPA717-13: 0.283
+ Danaus_plexippus-MHACG748-05: 0.283
+ Danaus_plexippus-LYPAP534-09: 0.283
+ Danaus_plexippus-MHMXO676-08, Danaus_plexippus-MHACG743-05: 0.283
+ Danaus_plexippus-MHAAC200-06: 0.282
+ Danaus_plexippus-MHACG742-05: 0.282
+ Danaus_plexippus-BLPDD747-09, Danaus_plexippus-MHAAC200-06, Danaus_plexippus-MHACG742-05: 0.281
+ Danaus_plexippus-MHMXY654-09: 0.277
+ Danaus_chrysippus-ANICT1128-11, Danaus_chrysippus-LNSWE282-06, Danaus_chrysippus-LNSWG282-06, Danaus_chrysippus-GBLN0113-06, Danaus_chrysippus-LNSWE161-06, Danaus_chrysippus-LNSWE139-06, Danaus_chrysippus-WALPB2425-14, Danaus_chrysippus-WALPB2429-14: 0.277
+ Danaus_plexippus-MHMXS241-08: 0.277
+ Danaus_gilippus-BBLOD913-11, Danaus_gilippus-BBLOD1847-11: 0.276
+ Danaus_plexippus-LYPAP537-09: 0.271
+ Danaus_erippus-LEPPA731-13: 0.270
+ Danaus_chrysippus-EZSPC1197-10, Danaus_chrysippus-EZSPC1393-10, Danaus_chrysippus-GBGL8326-12: 0.263
+ Danaus_chrysippus-EZSPC1197-10: 0.257
+ Danaus_chrysippus-EZSPC1393-10: 0.257
+ Danaus_erippus-LEPIG519-11, Danaus_erippus-LEPPA057-11, Danaus_erippus-LEPPA563-13: 0.257
+ Danaus_affinis-LOQC776-05, Danaus_affinis-LOQTI427-11, Danaus_affinis-LOQTI736-12: 0.257
+ Danaus_plexippus-BLPDO988-10: 0.256
+ Danaus_plexippus-MHMXY649-09: 0.256
+ Danaus_melanippus_hegesippus-BOPM167-12, Danaus_melanippus_hegesippus-BOPM166-12, Danaus_affinis-KHCBT1102-16, Danaus_melanippus_hegesippus-BOPM168-12, Danaus_melanippus-FPMBC151-15: 0.255
+ Danaus_chrysippus-GBMIN23976-13: 0.255
+ Danaus_chrysippus-EZSPM286-09: 0.255
+ Danaus_chrysippus-EZSPC1392-10: 0.254
+ Danaus_gilippus-LEPPA821-13, Danaus_gilippus-LEPPA726-13, Danaus_gilippus-LEPPA717-13, Danaus_gilippus-LEPPA364-12: 0.254
+ Danaus_chrysippus-ANICT1128-11, Danaus_chrysippus-LNSWE282-06, Danaus_chrysippus-LNSWG282-06, Danaus_chrysippus-GBLN0113-06, Danaus_chrysippus-LNSWE161-06, Danaus_chrysippus-LNSWE139-06: 0.252
+ Danaus_gilippus-LEPPA826-13: 0.251
+ Danaus_genutia_intermedius-BOPM163-12: 0.251
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15, Danaus_chrysippus-SZCBP498-15, Danaus_chrysippus-GBLN0115-06, Danaus_chrysippus-AGIRI015-17, Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15, Danaus_chrysippus-GBLN0114-06, Danaus_chrysippus-MABUT112-10, Danaus_chrysippus-SZCBP431-15: 0.245
+ Danaus_erippus-LEPIG519-11, Danaus_erippus-LEPPA057-11: 0.244
+ Danaus_plexippus-LYPAP536-09: 0.243
+ Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05, Danaus_gilippus-LYPAP524-09, Danaus_gilippus-LYPAP526-09, Danaus_gilippus_thersippus-BBLOD911-11: 0.242
+ Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08: 0.241
+ Danaus_genutia-GBLN0299-06: 0.240
+ Danaus_genutia-KHCBT1197-16: 0.240
+ Danaus_eresimus-LEPAR1007-14, Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR269-11, Danaus_eresimus-LEPPA567-13, Danaus_eresimus-LEPAR265-11, Danaus_eresimus-LEPPA573-13, Danaus_eresimus-LEPAR273-11, Danaus_eresimus-LEPPA233-12, Danaus_eresimus-LEPIG034-11, Danaus_eresimus-LEPPA337-12, Danaus_eresimus-LEPPA384-12, Danaus_eresimus-LEPPA326-12: 0.240
+ Danaus_chrysippus-EZSPM284-09: 0.238
+ Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09: 0.235
+ Danaus_eresimus-LYPAP514-09, Danaus_eresimus-LYPAP516-09, Danaus_eresimus-LYPAP517-09, Danaus_chrysippus-GBLN0109-06: 0.235
+ Danaus_chrysippus-ANICT1128-11, Danaus_chrysippus-LNSWE282-06, Danaus_chrysippus-LNSWG282-06, Danaus_chrysippus-GBLN0113-06, Danaus_chrysippus-LNSWE161-06, Danaus_chrysippus-LNSWE139-06, Danaus_chrysippus-WALPB2425-14, Danaus_chrysippus-WALPB2429-14, Danaus_chrysippus-GBLN0112-06: 0.233
+ Danaus_chrysippus-EZSPC1197-10, Danaus_chrysippus-EZSPC1393-10: 0.231
+ Danaus_gilippus-LYPAP529-09: 0.231
+ Danaus_gilippus-GBLN0530-06: 0.231
+ Danaus_gilippus-LYPAP524-09: 0.225
+ Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09: 0.223
+ Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06: 0.222
+ Danaus_affinis-LOQC776-05: 0.222
+ Danaus_chrysippus-GBLN4726-14: 0.222
+ Danaus_chrysippus-GBLN4382-14: 0.219
+ Danaus_chrysippus-EZSPC1394-10: 0.219
+ Danaus_plexippus-LNSWE145-06: 0.218
+ Danaus_plexippus-MHAAC200-06, Danaus_plexippus-MHACG742-05: 0.214
+ Danaus_chrysippus-EZSPC1196-10: 0.213
+ Danaus_chrysippus-SZCBP463-15: 0.213
+ Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09: 0.212
+ Danaus_plexippus-LYPAP535-09: 0.212
+ Danaus_plexippus-MHMXE540-06: 0.212
+ Danaus_plexippus-MHMXY651-09: 0.212
+ Danaus_plexippus-XAB109-04: 0.212
+ Danaus_genutia-GBGL8280-12, Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17, Danaus_genutia-GBLN5592-15, Danaus_genutia-KHCBT1065-16, Danaus_genutia_intermedius-BOPM165-12, Danaus_genutia-GBMIN12316-13: 0.211
+ Danaus_genutia-GBLN0299-06, Danaus_genutia-KHCBT1197-16: 0.210
+ Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05: 0.210
+ Danaus_gilippus_thersippus-BBLOD911-11: 0.209
+ Danaus_eresimus-BBLOB381-11: 0.209
+ Danaus_gilippus-LYPAP526-09: 0.209
+ Danaus_plexippus-EZSPM277-09: 0.206
+ Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04: 0.204
+ Danaus_genutia-GBLN5592-15: 0.204
+ Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09: 0.203
+ Danaus_eresimus-LEPAR1007-14, Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR269-11, Danaus_eresimus-LEPPA567-13, Danaus_eresimus-LEPAR265-11, Danaus_eresimus-LEPPA573-13, Danaus_eresimus-LEPAR273-11, Danaus_eresimus-LEPPA233-12, Danaus_eresimus-LEPIG034-11, Danaus_eresimus-LEPPA337-12: 0.202
+ Danaus_chrysippus-EZSPN784-09, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13: 0.201
+ Danaus_gilippus-LYPAP526-09, Danaus_gilippus_thersippus-BBLOD911-11: 0.201
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15, Danaus_chrysippus-SZCBP498-15, Danaus_chrysippus-SZCBP431-15: 0.199
+ Danaus_genutia-KHCBT1097-16, Danaus_genutia-KHCBT1190-16, Danaus_genutia-KHCBT1100-16, Danaus_genutia_intermedius-BOPM163-12: 0.199
+ Danaus_gilippus-LEPAR956-14, Danaus_gilippus-LEPPA758-13: 0.196
+ Danaus_plexippus-EZSPC1347-10: 0.195
+ Danaus_plexippus-EZSPM686-12: 0.195
+ Danaus_eresimus-GBLN0110-06: 0.190
+ Danaus_gilippusDHJ02-MHAAB434-05: 0.190
+ Danaus_plexippus-LPSOB166-08: 0.185
+ Danaus_plexippus-GBLN0509-06: 0.185
+ Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05, Danaus_gilippus-LYPAP524-09: 0.184
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15, Danaus_chrysippus-SZCBP498-15, Danaus_chrysippus-GBLN0115-06, Danaus_chrysippus-MABUT109-10, Danaus_chrysippus-AGIRI015-17, Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15, Danaus_chrysippus-GBLN0114-06, Danaus_chrysippus-MABUT112-10, Danaus_chrysippus-SZCBP431-15: 0.184
+ Danaus_genutia-KHCBT1065-16, Danaus_genutia_intermedius-BOPM165-12: 0.184
+ Danaus_eresimus-LEPPA337-12, Danaus_eresimus-LEPAR273-11, Danaus_eresimus-LEPPA233-12, Danaus_eresimus-LEPIG034-11: 0.183
+ Danaus_chrysippus-SZCBP431-15: 0.182
+ Danaus_chrysippus-WALPB2429-14: 0.181
+ Danaus_plexippus-XAJ967-06: 0.181
+ Danaus_plexippus-ANICT931-11: 0.181
+ Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09: 0.181
+ Danaus_chrysippus-WALPB2425-14: 0.181
+ Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12: 0.180
+ Danaus_chrysippus-GBGL8293-12: 0.176
+ Danaus_chrysippus-GBLN0118-06: 0.176
+ Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09, Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05, Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09, Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09: 0.176
+ Danaus_genutia-CBL010-12: 0.173
+ Danaus_genutia-GBMIN22829-13: 0.173
+ Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14: 0.171
+ Danaus_gilippus-LOFLC168-06: 0.171
+ Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-GBGL8293-12: 0.169
+ Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-ANICT931-11: 0.169
+ Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12: 0.168
+ Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-GBGL8293-12: 0.168
+ Danaus_erippus-LEPAR193-11, Danaus_erippus-LEPAR229-11, Danaus_erippus-LEPPA027-11, Danaus_erippus-LEPPA813-13, Danaus_erippus-LEPAR223-11, Danaus_erippus-LEPPA575-13, Danaus_erippus-LEPPA773-13, Danaus_erippus-LEPPA731-13: 0.165
+ Danaus_eresimus-LEPAR265-11: 0.165
+ Danaus_eresimus-LEPPA573-13: 0.165
+ Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10: 0.164
+ Danaus_eresimus-LYPAP519-09: 0.164
+ Danaus_eresimus-BBLOC568-11: 0.162
+ Danaus_plexippus-MHMXY653-09: 0.162
+ Danaus_plexippus-BLPDO1005-10: 0.162
+ Danaus_plexippus-MHACG750-05, Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09: 0.161
+ Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13: 0.161
+ Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15: 0.161
+ Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08: 0.159
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15, Danaus_chrysippus-SZCBP498-15, Danaus_chrysippus-AGIRI015-17, Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15, Danaus_chrysippus-GBLN0114-06, Danaus_chrysippus-MABUT112-10, Danaus_chrysippus-SZCBP431-15: 0.158
+ Danaus_plexippus-ANICT933-11: 0.158
+ Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05: 0.158
+ Danaus_chrysippus-SZCBP461-15: 0.158
+ Danaus_plexippus-NZPWP089-12: 0.158
+ Danaus_genutia-KHCBT1100-16: 0.156
+ Danaus_erippus-LEPAR193-11, Danaus_erippus-LEPAR229-11, Danaus_erippus-LEPPA027-11, Danaus_erippus-LEPPA813-13, Danaus_erippus-LEPAR223-11, Danaus_erippus-LEPPA575-13, Danaus_erippus-LEPPA773-13: 0.155
+ Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05: 0.153
+ Danaus_chrysippus-EZSPC1198-10: 0.153
+ Danaus_plexippus-ANICT932-11: 0.152
+ Danaus_plexippus-LYPAP533-09: 0.152
+ Danaus_gilippus-BBLOD1847-11: 0.151
+ Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09: 0.151
+ Danaus_gilippus-BBLOD913-11: 0.151
+ Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05: 0.151
+ Danaus_erippus-LEPAR193-11, Danaus_erippus-LEPAR229-11, Danaus_erippus-LEPPA027-11, Danaus_erippus-LEPPA813-13, Danaus_erippus-LEPAR223-11, Danaus_erippus-LEPPA575-13, Danaus_erippus-LEPPA773-13, Danaus_erippus-LEPPA731-13, Danaus_erippus-LEPAR267-11: 0.151
+ Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08: 0.150
+ Danaus_eresimus-LEPPA567-13: 0.149
+ Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09, Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09: 0.149
+ Danaus_affinis-LOQTI427-11, Danaus_affinis-LOQTI736-12: 0.147
+ Danaus_eresimus-LEPAR1007-14, Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR269-11, Danaus_eresimus-LEPPA567-13, Danaus_eresimus-LEPAR265-11, Danaus_eresimus-LEPPA573-13, Danaus_eresimus-LEPAR273-11, Danaus_eresimus-LEPPA233-12, Danaus_eresimus-LEPIG034-11, Danaus_eresimus-LEPPA337-12, Danaus_eresimus-LEPPA384-12: 0.147
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08: 0.145
+ Danaus_plexippus-MHACG749-05: 0.143
+ Danaus_eresimus-LYPAP516-09, Danaus_eresimus-LYPAP517-09: 0.143
+ Danaus_gilippus-LEPPA821-13, Danaus_gilippus-LEPPA726-13, Danaus_gilippus-LEPPA364-12: 0.143
+ Danaus_plexippus-XAK468-06: 0.143
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10: 0.143
+ Danaus_eresimus-LYPAP514-09, Danaus_eresimus-LYPAP516-09, Danaus_eresimus-LYPAP517-09, Danaus_eresimus-LYPAP513-09, Danaus_eresimus-LYPAP521-09, Danaus_eresimus-LYPAP519-09, Danaus_eresimus-LYPAP515-09, Danaus_chrysippus-GBLN0109-06: 0.142
+ Danaus_plexippus-XAJ967-06, Danaus_plexippus-ANICT931-11: 0.142
+ Danaus_genutia_intermedius-BOPM165-12: 0.142
+ Danaus_genutia-KHCBT1065-16: 0.142
+ Danaus_affinis-ANICT1129-11, Danaus_affinis-LOQC758-05, Danaus_affinis-LOQC776-05, Danaus_affinis-LOQTI427-11, Danaus_affinis-LOQTI736-12: 0.142
+ Danaus_gilippus-LEPPA726-13: 0.140
+ Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15: 0.139
+ Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR269-11, Danaus_eresimus-LEPPA567-13, Danaus_eresimus-LEPAR1007-14: 0.138
+ Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05: 0.138
+ Danaus_chrysippus-ANICT1128-11, Danaus_chrysippus-LNSWE282-06, Danaus_chrysippus-LNSWG282-06: 0.137
+ Danaus_chrysippus-GBLN0114-06: 0.137
+ Danaus_chrysippus-MABUT112-10: 0.137
+ Danaus_gilippus-GBLN0111-06: 0.134
+ Danaus_gilippusDHJ02-MHAAB655-05: 0.134
+ Danaus_plexippus-MHACG746-05: 0.133
+ Danaus_plexippus-MHACG744-05: 0.133
+ Danaus_genutia-GBGL8280-12, Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17, Danaus_genutia-GBLN5592-15, Danaus_genutia-KHCBT1065-16, Danaus_genutia_intermedius-BOPM165-12, Danaus_genutia-GBMIN12316-13, Danaus_genutia-GBLN0299-06, Danaus_genutia-KHCBT1197-16, Danaus_genutia-KHCBT1097-16, Danaus_genutia-KHCBT1190-16, Danaus_genutia-KHCBT1100-16, Danaus_genutia_intermedius-BOPM163-12: 0.133
+ Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09: 0.133
+ Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09: 0.131
+ Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-ANICT931-11: 0.131
+ Danaus_chrysippus-LNSWE139-06: 0.130
+ Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09: 0.130
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15, Danaus_chrysippus-SZCBP498-15: 0.130
+ Danaus_eresimus-LYPAP514-09, Danaus_chrysippus-GBLN0109-06: 0.130
+ Danaus_eresimus-LEPAR273-11, Danaus_eresimus-LEPPA233-12: 0.129
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09: 0.128
+ Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT931-11: 0.127
+ Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10: 0.127
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08, Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09, Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05, Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05, Danaus_gilippus-LYPAP524-09, Danaus_gilippus-LYPAP526-09, Danaus_gilippus_thersippus-BBLOD911-11, Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11, Danaus_gilippus-BBLOD1847-11, Danaus_gilippus-BBLOD913-11, Danaus_gilippus-LYPAP528-09, Danaus_gilippus-BBLOD914-11: 0.127
+ Danaus_chrysippus-MABUT113-10: 0.127
+ Danaus_chrysippus-GBMIN12288-13: 0.127
+ Danaus_eresimus-LEPAR1007-14, Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR269-11, Danaus_eresimus-LEPPA567-13, Danaus_eresimus-LEPAR265-11, Danaus_eresimus-LEPPA573-13: 0.125
+ Danaus_chrysippus-AGIRI015-17, Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15, Danaus_chrysippus-GBLN0114-06, Danaus_chrysippus-MABUT112-10: 0.125
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13, Danaus_chrysippus-EZSPN784-09, Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06, Danaus_chrysippus-EZSPC1197-10, Danaus_chrysippus-EZSPC1393-10, Danaus_chrysippus-GBGL8326-12, Danaus_chrysippus-GBLN0117-06: 0.125
+ Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10: 0.125
+ Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12: 0.124
+ Danaus_genutia-CBL010-12, Danaus_genutia-GBMIN22829-13, Danaus_genutia_genutia-GBLN4388-14, Danaus_genutia-GBGL8280-12, Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17, Danaus_genutia-GBLN5592-15, Danaus_genutia-KHCBT1065-16, Danaus_genutia_intermedius-BOPM165-12, Danaus_genutia-GBMIN12316-13, Danaus_genutia-GBLN0299-06, Danaus_genutia-KHCBT1197-16, Danaus_genutia-KHCBT1097-16, Danaus_genutia-KHCBT1190-16, Danaus_genutia-KHCBT1100-16, Danaus_genutia_intermedius-BOPM163-12: 0.124
+ Danaus_plexippus-MHACG745-05: 0.122
+ Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17, Danaus_genutia-GBLN5592-15: 0.122
+ Danaus_plexippus-XAH203-05: 0.122
+ Danaus_eresimus-LEPAR265-11, Danaus_eresimus-LEPPA573-13: 0.121
+ Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10: 0.120
+ Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-LYPAP536-09: 0.120
+ Danaus_chrysippus-GBLN0114-06, Danaus_chrysippus-MABUT112-10: 0.119
+ Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09, Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05, Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09, Danaus_plexippus-MHACG743-05, Danaus_plexippus-MHMXO676-08, Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09: 0.119
+ Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09: 0.117
+ Danaus_eresimus-LYPAP513-09, Danaus_eresimus-LYPAP521-09: 0.117
+ Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09: 0.117
+ Danaus_eresimus-LEPPA337-12, Danaus_eresimus-LEPIG034-11: 0.115
+ Danaus_affinis-KHCBT1102-16, Danaus_melanippus_hegesippus-BOPM168-12: 0.115
+ Danaus_chrysippus-GBLN0109-06: 0.115
+ Danaus_eresimus-LYPAP514-09: 0.115
+ Danaus_plexippus-BLPDO835-10: 0.115
+ Danaus_gilippus_thersippus-BBLOD884-11: 0.115
+ Danaus_plexippus-BBLOC991-11: 0.115
+ Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09: 0.114
+ Danaus_eresimus-LEPIG034-11: 0.113
+ Danaus_eresimus-LEPPA337-12: 0.113
+ Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17, Danaus_genutia-GBLN5592-15, Danaus_genutia-KHCBT1065-16, Danaus_genutia_intermedius-BOPM165-12, Danaus_genutia-GBMIN12316-13: 0.112
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11, Danaus_gilippus-BBLOD1847-11, Danaus_gilippus-BBLOD913-11, Danaus_gilippus-LYPAP528-09, Danaus_gilippus-BBLOD914-11: 0.112
+ Danaus_melanippus_hegesippus-BOPM167-12, Danaus_melanippus_hegesippus-BOPM166-12, Danaus_melanippus-FPMBC151-15: 0.112
+ Danaus_gilippus_thersippus-BBLOD884-11, Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09: 0.112
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11: 0.111
+ Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-DMAZ124-09: 0.111
+ Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09: 0.109
+ Danaus_chrysippus-LNSWE161-06, Danaus_chrysippus-LNSWE139-06, Danaus_chrysippus-GBLN0113-06: 0.108
+ Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09: 0.108
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11, Danaus_gilippus-BBLOD1847-11, Danaus_gilippus-BBLOD913-11: 0.108
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08, Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09, Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05, Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05, Danaus_gilippus-LYPAP524-09, Danaus_gilippus-LYPAP526-09, Danaus_gilippus_thersippus-BBLOD911-11, Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11, Danaus_gilippus-BBLOD1847-11, Danaus_gilippus-BBLOD913-11, Danaus_gilippus-LYPAP528-09, Danaus_gilippus-BBLOD914-11, Danaus_gilippus-LOFLC286-06: 0.105
+ Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15: 0.104
+ Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-DMAZ124-09: 0.104
+ Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05, Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09: 0.102
+ Danaus_eresimus-LYPAP516-09: 0.102
+ Danaus_eresimus-LYPAP517-09: 0.102
+ Danaus_chrysippus-ANICT1128-11: 0.101
+ Danaus_chrysippus-CBL008-12: 0.101
+ Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10: 0.101
+ Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05, Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09, Danaus_plexippus-MHACG750-05, Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09, Danaus_plexippus-LYPAP539-09: 0.101
+ Danaus_chrysippus-GBMIN22830-13: 0.101
+ Danaus_eresimus-LEPAR273-11: 0.100
+ Danaus_eresimus-LEPPA233-12: 0.100
+ Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06: 0.100
+ Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09: 0.099
+ Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-AGIRI015-17: 0.098
+ Danaus_chrysippus-LSAFR2199-12: 0.097
+ Danaus_chrysippus-GWOTH602-12: 0.097
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08, Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09, Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05: 0.097
+ Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10: 0.095
+ Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05: 0.095
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09: 0.094
+ Danaus_plexippus-BLPDD747-09, Danaus_plexippus-MHAAC200-06, Danaus_plexippus-MHACG742-05, Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05, Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09, Danaus_plexippus-MHACG750-05, Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09, Danaus_plexippus-LYPAP539-09: 0.094
+ Danaus_genutia-KHCBT1097-16, Danaus_genutia-KHCBT1190-16, Danaus_genutia-KHCBT1100-16: 0.094
+ Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09: 0.094
+ Danaus_gilippus-LYPAP523-09: 0.094
+ Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09: 0.093
+ Danaus_chrysippus-AGIRI015-17, Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15: 0.093
+ Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17, Danaus_genutia-GBLN5592-15, Danaus_genutia-KHCBT1065-16, Danaus_genutia_intermedius-BOPM165-12: 0.093
+ Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10: 0.091
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11, Danaus_gilippus-BBLOD1847-11, Danaus_gilippus-BBLOD913-11, Danaus_gilippus-LYPAP528-09: 0.091
+ Danaus_affinis-KHCBT1102-16, Danaus_melanippus_hegesippus-BOPM168-12, Danaus_melanippus-FPMBC151-15, Danaus_melanippus_hegesippus-BOPM167-12, Danaus_melanippus_hegesippus-BOPM166-12, Danaus_melanippus-SETIU018-16, Danaus_genutia-ANICT934-11: 0.091
+ Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05: 0.091
+ Danaus_gilippus-LYPAP520-09: 0.089
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08, Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09: 0.089
+ Danaus_gilippus-LYPAP518-09: 0.089
+ Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12, Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17: 0.087
+ Danaus_genutia-KHCBT1097-16, Danaus_genutia-KHCBT1190-16: 0.087
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08, Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09, Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05, Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05, Danaus_gilippus-LYPAP524-09, Danaus_gilippus-LYPAP526-09, Danaus_gilippus_thersippus-BBLOD911-11: 0.087
+ Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05, Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09, Danaus_plexippus-MHACG750-05, Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09: 0.087
+ Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08: 0.087
+ Danaus_gilippus-LEPPA821-13, Danaus_gilippus-LEPPA364-12: 0.085
+ Danaus_erippus-LEPIG519-11: 0.084
+ Danaus_gilippusDHJ02-MHMXO674-08: 0.084
+ Danaus_erippus-LEPPA057-11: 0.084
+ Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06: 0.084
+ Danaus_gilippus-LYPAP525-09: 0.084
+ Danaus_gilippusDHJ02-MHMXO675-08, Danaus_gilippus-LYPAP522-09: 0.082
+ Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR269-11, Danaus_eresimus-LEPAR1007-14: 0.081
+ Danaus_gilippus-LYPAP522-09: 0.080
+ Danaus_gilippusDHJ02-MHMXO675-08: 0.080
+ Danaus_chrysippus-MABUT111-10: 0.080
+ Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-DMAZ124-09: 0.080
+ Danaus_chrysippus-EZSPC1195-10: 0.080
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13, Danaus_chrysippus-EZSPN784-09: 0.079
+ Danaus_genutia-CBL010-12, Danaus_genutia-GBMIN22829-13, Danaus_genutia_genutia-GBLN4388-14: 0.078
+ Danaus_affinis-LOQTI427-11: 0.075
+ Danaus_affinis-LOQTI736-12: 0.075
+ Danaus_chrysippus-LNSWE161-06, Danaus_chrysippus-GBLN0113-06: 0.075
+ Danaus_melanippus_hegesippus-BOPM166-12: 0.075
+ Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10: 0.073
+ Danaus_affinis-KHCBT1102-16: 0.072
+ Danaus_melanippus_hegesippus-BOPM168-12: 0.072
+ Danaus_chrysippus-LNSWE282-06, Danaus_chrysippus-LNSWG282-06: 0.072
+ Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05: 0.071
+ Danaus_genutia-KHCBT1097-16: 0.070
+ Danaus_genutia-KHCBT1190-16: 0.070
+ Danaus_eresimus-LEPAR269-11: 0.068
+ Danaus_erippus-LEPPA575-13, Danaus_erippus-LEPPA773-13, Danaus_erippus-LEPAR223-11: 0.067
+ Danaus_plexippus-ANICT931-11, Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-EZSPM685-12, Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04, Danaus_plexippus-BLPDO987-10, Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05, Danaus_plexippus-SDP129035-13, Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09, Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09, Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05, Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09, Danaus_plexippus-MHACG743-05, Danaus_plexippus-MHMXO676-08, Danaus_plexippus-BLPDD747-09, Danaus_plexippus-MHAAC200-06, Danaus_plexippus-MHACG742-05, Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05, Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09, Danaus_plexippus-MHACG750-05, Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09, Danaus_plexippus-LYPAP539-09: 0.065
+ Danaus_genutia-GBLN4728-14: 0.064
+ Danaus_chrysippus-GBLN4292-14: 0.064
+ Danaus_plexippus-LNSWE160-06: 0.064
+ Danaus_plexippus-LNSWE182-06: 0.064
+ Danaus_genutia_intermedius-BOPM164-12: 0.064
+ Danaus_genutia-MABUT328-13, Danaus_genutia-MYENT078-17: 0.063
+ Danaus_plexippus-ANICT931-11, Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-EZSPM685-12, Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04, Danaus_plexippus-BLPDO987-10, Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05, Danaus_plexippus-SDP129035-13, Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09, Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09, Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05, Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09, Danaus_plexippus-MHACG743-05, Danaus_plexippus-MHMXO676-08, Danaus_plexippus-BLPDD747-09, Danaus_plexippus-MHAAC200-06, Danaus_plexippus-MHACG742-05, Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05, Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09, Danaus_plexippus-MHACG750-05, Danaus_plexippus-MHMXS241-08, Danaus_plexippus-MHMXY654-09, Danaus_plexippus-LYPAP539-09, Danaus_plexippus-MHACG747-05: 0.063
+ Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09, Danaus_plexippus-MHACG727-05, Danaus_plexippus-MHMXY652-09, Danaus_plexippus-MHMYC1253-09: 0.063
+ Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05, Danaus_plexippus-SDP129035-13: 0.061
+ Danaus_plexippus-GBLN0108-06, Danaus_plexippus-GBLN2044-09, Danaus_plexippus-LYPAP532-09: 0.061
+ Danaus_melanippus_hegesippus-BOPM167-12, Danaus_melanippus-FPMBC151-15: 0.060
+ Danaus_gilippus-LYPAP527-09: 0.059
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13, Danaus_chrysippus-EZSPN784-09, Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06, Danaus_chrysippus-EZSPC1197-10, Danaus_chrysippus-EZSPC1393-10, Danaus_chrysippus-GBGL8326-12: 0.059
+ Danaus_gilippus-LYPAP531-09: 0.059
+ Danaus_erippus-LEPAR193-11, Danaus_erippus-LEPAR229-11, Danaus_erippus-LEPPA027-11, Danaus_erippus-LEPPA813-13: 0.058
+ Danaus_chrysippus-FPMBC072-15: 0.058
+ Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09: 0.057
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13, Danaus_chrysippus-EZSPN784-09, Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06: 0.055
+ Danaus_genutia-MYENT078-17: 0.054
+ Danaus_chrysippus-LNSWE161-06: 0.054
+ Danaus_gilippus-LEPPA364-12: 0.054
+ Danaus_gilippus-LEPPA821-13: 0.054
+ Danaus_chrysippus-GBLN0113-06: 0.054
+ Danaus_gilippus-LEPAR956-14: 0.054
+ Danaus_genutia-MABUT328-13: 0.054
+ Danaus_gilippus-LEPPA758-13: 0.054
+ Danaus_chrysippus-DMAZ124-09: 0.053
+ Danaus_genutia-GBLN4728-14, Danaus_genutia_intermedius-BOPM164-12: 0.053
+ Danaus_chrysippus-MABUT110-10: 0.053
+ Danaus_eresimus-LEPPA313-12, Danaus_eresimus-LEPAR1007-14: 0.052
+ Danaus_chrysippus-SZCBP498-15: 0.052
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09: 0.050
+ Danaus_erippus-LEPPA773-13: 0.048
+ Danaus_eresimus-LYPAP513-09: 0.048
+ Danaus_eresimus-LYPAP521-09: 0.048
+ Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-EZSPM685-12, Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04, Danaus_plexippus-ANICT931-11: 0.044
+ Danaus_gilippus-LYPAP530-09: 0.044
+ Danaus_plexippus-BLPDO987-10, Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05, Danaus_plexippus-SDP129035-13: 0.041
+ Danaus_plexippus-ANICT931-11, Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-EZSPM685-12, Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04, Danaus_plexippus-BLPDO987-10, Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05, Danaus_plexippus-SDP129035-13, Danaus_plexippus-BLPDO1005-10, Danaus_plexippus-MHMXY653-09, Danaus_plexippus-LYPAP537-09, Danaus_plexippus-BLPDO988-10, Danaus_plexippus-MHMXY649-09, Danaus_plexippus-LYPAP534-09, Danaus_plexippus-MHACG748-05, Danaus_plexippus-LYPAP535-09, Danaus_plexippus-MHMXY651-09, Danaus_plexippus-MHMXY650-09, Danaus_plexippus-MHACG743-05, Danaus_plexippus-MHMXO676-08: 0.040
+ Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15: 0.040
+ Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-AGIRI015-17: 0.039
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15: 0.038
+ Danaus_erippus-LEPAR193-11, Danaus_erippus-LEPAR229-11: 0.037
+ Danaus_erippus-LEPPA575-13, Danaus_erippus-LEPAR223-11: 0.032
+ Danaus_chrysippus-SZCBP462-15, Danaus_chrysippus-SZCBP472-15, Danaus_chrysippus-SZCBP498-15, Danaus_chrysippus-GBLN0115-06, Danaus_chrysippus-MABUT109-10, Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13, Danaus_chrysippus-EZSPN784-09, Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06, Danaus_chrysippus-EZSPC1197-10, Danaus_chrysippus-EZSPC1393-10, Danaus_chrysippus-GBGL8326-12, Danaus_chrysippus-GBLN0117-06, Danaus_chrysippus-GWOTH602-12, Danaus_chrysippus-LSAFR2199-12, Danaus_chrysippus-LSAFR2271-12, Danaus_chrysippus-AGIRI015-17, Danaus_chrysippus-EZSPN783-09, Danaus_chrysippus-GBLN4292-14, Danaus_chrysippus-FPMBC072-15, Danaus_chrysippus-GBGL8254-12, Danaus_chrysippus-GBLN5577-15, Danaus_chrysippus-GBLN0114-06, Danaus_chrysippus-MABUT112-10, Danaus_chrysippus-SZCBP431-15: 0.032
+ Danaus_chrysippus-CBL008-12, Danaus_chrysippus-GBMIN22830-13, Danaus_chrysippus-DMAZ124-09, Danaus_chrysippus-MABUT110-10, Danaus_chrysippus-SZCBP461-15, Danaus_chrysippus-EZSPM284-09, Danaus_chrysippus-GBLN4726-14, Danaus_chrysippus-GBMIN12288-13, Danaus_chrysippus-MABUT113-10, Danaus_chrysippus-EZSPM286-09, Danaus_chrysippus-GBMIN23976-13, Danaus_chrysippus-EZSPN784-09, Danaus_chrysippus-EZSPC1195-10, Danaus_chrysippus-MABUT111-10, Danaus_chrysippus-EZSPC1198-10, Danaus_chrysippus-EZSPC1392-10, Danaus_chrysippus-EZSPC1196-10, Danaus_chrysippus-SZCBP463-15, Danaus_chrysippus-GBGL8293-12, Danaus_chrysippus-GBLN0118-06, Danaus_chrysippus-MAIMB137-09, Danaus_chrysippus-EZSPC1394-10, Danaus_chrysippus-GBLN4382-14, Danaus_chrysippus-GBLN0116-06, Danaus_chrysippus-EZSPC1197-10, Danaus_chrysippus-EZSPC1393-10, Danaus_chrysippus-GBGL8326-12, Danaus_chrysippus-GBLN0117-06, Danaus_chrysippus-GWOTH602-12, Danaus_chrysippus-LSAFR2199-12, Danaus_chrysippus-LSAFR2271-12: 0.032
+ Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-ANICT931-11: 0.032
+ Danaus_eresimus-BBLOB381-11, Danaus_gilippus-LYPAP527-09, Danaus_gilippus-LYPAP531-09, Danaus_gilippus_thersippus-BBLOD884-11, Danaus_gilippus-LOFLC168-06, Danaus_gilippus-LYPAP525-09, Danaus_gilippusDHJ02-MHMXO674-08, Danaus_gilippus-GBLN0530-06, Danaus_gilippus-LYPAP529-09, Danaus_eresimus-BBLOC568-11, Danaus_gilippus-LYPAP522-09, Danaus_gilippusDHJ02-MHMXO675-08, Danaus_eresimus-GBLN0110-06, Danaus_gilippusDHJ02-MHAAB434-05, Danaus_gilippus-GBLN0111-06, Danaus_gilippusDHJ02-MHAAB655-05, Danaus_gilippus-LYPAP524-09, Danaus_gilippus-LYPAP526-09, Danaus_gilippus_thersippus-BBLOD911-11, Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09, Danaus_gilippus-LYPAP530-09, Danaus_gilippus-LYPAP523-09, Danaus_gilippus-LYPAP518-09, Danaus_gilippus-LYPAP520-09, Danaus_gilippus-BBLOD894-11, Danaus_gilippus-BBLOD1847-11, Danaus_gilippus-BBLOD913-11, Danaus_gilippus-LYPAP528-09, Danaus_gilippus-BBLOD914-11, Danaus_gilippus-LOFLC286-06, Danaus_gilippus-LEPAR956-14, Danaus_gilippus-LEPPA758-13, Danaus_gilippus-LEPPA826-13, Danaus_gilippus-LEPPA364-12, Danaus_gilippus-LEPPA821-13, Danaus_gilippus-LEPPA726-13, Danaus_gilippus-LEPPA717-13: 0.030
+ Danaus_erippus-LEPPA027-11, Danaus_erippus-LEPPA813-13: 0.030
+ Danaus_chrysippus-LNSWG282-06: 0.029
+ Danaus_chrysippus-LNSWE282-06: 0.029
+ Danaus_erippus-LEPPA027-11: 0.027
+ Danaus_erippus-LEPPA813-13: 0.027
+ Danaus_chrysippus-EZSPN783-09: 0.026
+ Danaus_chrysippus-AGIRI015-17: 0.026
+ Danaus_gilippus-BBLOD1831-11, Danaus_gilippus-GBLN2045-09: 0.023
+ Danaus_gilippus-GBLN2045-09: 0.021
+ Danaus_gilippus-BBLOD1831-11: 0.021
+ Danaus_erippus-LEPAR229-11: 0.020
+ Danaus_erippus-LEPAR193-11: 0.020
+ Danaus_chrysippus-GBGL8254-12: 0.018
+ Danaus_chrysippus-GBLN5577-15: 0.018
+ Danaus_melanippus_hegesippus-BOPM167-12: 0.016
+ Danaus_eresimus-LEPAR1007-14: 0.016
+ Danaus_eresimus-LEPPA313-12: 0.016
+ Danaus_erippus-LEPAR223-11: 0.016
+ Danaus_erippus-LEPPA575-13: 0.016
+ Danaus_melanippus-FPMBC151-15: 0.016
+ Danaus_chrysippus-SZCBP462-15: 0.014
+ Danaus_chrysippus-SZCBP472-15: 0.014
+ Danaus_plexippus-ANICT931-11, Danaus_plexippus-XAJ967-06, Danaus_plexippus-BBLOC991-11, Danaus_plexippus-BLPDO835-10, Danaus_plexippus-EZSPM277-09, Danaus_plexippus-ANICT932-11, Danaus_plexippus-LYPAP533-09, Danaus_plexippus-ANICT933-11, Danaus_plexippus-NZPWP089-12, Danaus_plexippus-LYPAP538-09, Danaus_plexippus-EZSPC1347-10, Danaus_plexippus-EZSPM686-12, Danaus_plexippus-LNSWE145-06, Danaus_plexippus-MHACG745-05, Danaus_plexippus-XAH203-05, Danaus_plexippus-GBLN0509-06, Danaus_plexippus-LPSOB166-08, Danaus_plexippus-LEFIA1435-10, Danaus_plexippus-EZSPM685-12, Danaus_plexippus-MHMXE540-06, Danaus_plexippus-XAB109-04, Danaus_plexippus-BLPDO987-10, Danaus_plexippus-LNSWE160-06, Danaus_plexippus-LNSWE182-06, Danaus_plexippus-LYPAP536-09, Danaus_plexippus-MHACG749-05, Danaus_plexippus-XAK468-06, Danaus_plexippus-MHACG744-05, Danaus_plexippus-MHACG746-05, Danaus_plexippus-SDP129035-13: 0.006

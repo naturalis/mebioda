@@ -85,7 +85,7 @@ $ abgd -o Danaus_ABGD -a Danaus.mafft.fas
 
 ![](Danaus_ABGD/Danaus.rank.svg)
 
-Species delimitation using Generalized Mixed Yule Coalescent (GMYC)
+Generalized Mixed Yule Coalescent (GMYC)
 -------------------------------------------------------------------
 
 **Fujisawa T & Barraclough TG.** 2013. Delimiting Species Using Single-Locus Data and 
@@ -125,10 +125,31 @@ $ grep '>' Danaus.mafft.fas | cut -f 1 -d '-' | sort | uniq | wc -l
       15
 ```
 
-PTP
----
+Poisson Tree Process (PTP)
+--------------------------
 
-- [Web server](http://species.h-its.org/ptp/)
+**J Zhang, P Kapli, P Pavlidis, A Stamatakis** 2013. A general species delimitation
+method with applications to phylogenetic placements. _Bioinformatics_ **29**(22): 
+2869–2876 
+doi:[10.1093/bioinformatics/btt499](https://doi.org/10.1093/bioinformatics/btt499)
+
+- Is tree-based, but doesn't require ultrametric (clock-like) trees
+- Uses phylogenetic distance as a proxy for substitutional difference, expecting to
+  see different classes of distances produced by different Poisson processes
+- Has a Bayesian implementation that produces support values for clusterings
+
+
+Using the same tree as for GMYC on the [bPTP web server](http://species.h-its.org/ptp/)
+obtains an [MLE of 16 species](PTP/output.PTPMLPartition.txt) with potential for (far)
+greater splitting:
+
+```
+Accptance rate: 0.69020000000000004 
+Merge: 49798 
+Split: 50202 
+Estimated number of species is between 14 and 135 
+Mean: 78.03
+```
 
 Monophyly
 ---------
