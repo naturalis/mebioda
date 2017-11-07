@@ -46,9 +46,9 @@ doi:[10.1177/0959683614540953](https://doi.org/10.1177/0959683614540953)
 ![](horse.png)
 
 **B van Geel, A Protopopov, I Bull, E Duijm, F Gill, Y Lammers, A Nieman, N Rudaya, 
-S Trofimova, A N Tikhonov, R Vos, S Zhilich, B Gravendeel**. Multiproxy diet analysis of 
-the last meal of an early Holocene Yakutian bison. _Journal of Quaternary Science_
-**29**(3): 261-268
+S Trofimova, A N Tikhonov, R Vos, S Zhilich, B Gravendeel**. 2014. Multiproxy diet 
+analysis of the last meal of an early Holocene Yakutian bison. 
+_Journal of Quaternary Science_ **29**(3): 261-268
 doi:[10.1002/jqs.2698](http://doi.org/10.1002/jqs.2698)
 
 ![](bison.png)
