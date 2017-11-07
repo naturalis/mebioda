@@ -33,10 +33,10 @@ a journal club where we discuss a relevant publication with each other in brief 
 
 ### Day 4 - Metabarcoding
 
-- Lecture I: Metabarcoding (e.g. read clustering, BLAST searching, TNRS, [phylogenetic placement](https://github.com/Pbdas/epa-ng)): CITES checker
-- Lecture II: Automated metabarcoding pipelines: _[DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/)_ - Van der Hoorn / Beentjes
-- Lecture III: Guest lecture metabarcoding: _[Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566)_ - Geml
-- Practical: _Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity_ - Geml
+- Lecture I: [Metabarcoding](w1d4/lecture1.md)
+- Lecture II: environmental quality assessments: [DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/) - Van der Hoorn / Beentjes
+- Lecture III: Guest lecture metabarcoding: [Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566) - Geml
+- Practical: Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity - Geml
 
 ### Day 5 - Phylogenies and wrap-up
 
