@@ -82,7 +82,7 @@ doi:[10.1177/0959683614540953](https://doi.org/10.1177/0959683614540953)
 
 - ancient DNA sequencing of the gut contents of a c. 5400 year old horse from Russian 
   permafrost
-- two chloroplast markers (_rbc_L and _trnL-trnF_) amplified with forward and reverse
+- two chloroplast markers (_rbcL_ and _trnL-trnF_) amplified with forward and reverse
   primers
 - findings corroborated with morphological analysis
 
