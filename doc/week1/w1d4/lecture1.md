@@ -52,15 +52,45 @@ Analysis workflow:
 2. cluster reads with [CD-HIT](http://www.bioinformatics.org/cd-hit/)
 3. BLAST against NCBI _nr_
 
-CITES listing joined with species detection in organic mixtures
----------------------------------------------------------------
+Joining CITES listing with species detection in organic mixtures
+----------------------------------------------------------------
 
 **Y Lammers, T Peelen, R A Vos & B Gravendeel**. 2014. The _HTS barcode checker_ pipeline, 
 a tool for automated detection of illegally traded species from high-throughput 
 sequencing data. _BMC Bioinformatics_ **15**:44 
 doi:[10.1186/1471-2105-15-44](https://doi.org/10.1186/1471-2105-15-44)
 
-![](cites.jpg)
+First, species from the [CITES appendices](https://www.cites.org/) are joined with the 
+species in the [NCBI taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy) using the 
+GlobalNames taxonomic name resolution service:
+
+```python
+# doing a single request to the globalnames service
+# usage: tnrs.py 'Homo sapiens'
+import requests, sys
+try:
+	url = 'http://resolver.globalnames.org/name_resolvers.json'
+	response = requests.get(url, params={'names':sys.argv[1]}, allow_redirects=True)
+	json = response.json()
+except:
+	json = []
+
+if 'results' in json['data'][0].keys():
+	if 'name_string' in json['data'][0]['results'][0].keys():
+		for data_dict in json['data']:
+			for results_dict in data_dict['results']:
+				if results_dict['data_source_title'] == 'NCBI':
+					print( results_dict['taxon_id'] )					
+```
+
+Which populates a file-based database:
+
+![](cites/cites-index.png)
+
+Querying the CITES-annotated reference database
+-----------------------------------------------
+
+![](cites/cites-checker.png)
 
 Comparing treatments: metabarcoding the Deepwater Horizon oil spill
 -------------------------------------------------------------------
