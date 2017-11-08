@@ -1,38 +1,26 @@
 Metabarcoding
 =============
 
-Introduction
-------------
+General workflow of metabarcoding assays
+----------------------------------------
 
-Metabarcoding analysis
-----------------------
-General workflow
-- sequence merging
-- data cleaning (trimming, filtering)
-- associating reads with samples
-- clustering (singleton removal)
-- OTU picking
-- taxonomic assignment
-- rarefaction
-- phylogenetic diversity metrics
+![](metabarcoding.png)
 
-Data types
-- reads from markers (eDNA, community DNA)
-- OTU tables
-
-Command-line tools and toolkits
-- QIIME
-- Mothur
-- OBITools
-- usearch
-- BLAST
-
-QIIME workflow
---------------
-- `import` data
-- demultiplex (`demux`)
-- denoise
-- feature table
+- **sequence pre-processing**, e.g. de-replication, filtering low-quality and overly 
+  short reads, trimming low-quality ends, merging pairs. Using generic 
+  [HTS tools](../w1d2/lecture1.md).
+- **demultiplexing**, e.g. to split by sampling locations and/or times. Done, for example,
+  with [QIIME](http://qiime.org/), [OBITools](https://git.metabarcoding.org/obitools/obitools/wikis/home)
+  or [mothur](https://www.mothur.org/)
+- **clustering** using tools such as [CD-HIT](http://www.bioinformatics.org/cd-hit/),
+  [UCLUST](https://www.drive5.com/usearch/manual/uclust_algo.html), or
+  [OCTUPUS](http://octupus.sourceforge.net/)
+- **outlier detection**, e.g. chimeric sequences or singletons
+- **taxonomic assignment**, e.g. by [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) 
+  searches against reference databases, or with [usearch](https://www.drive5.com/usearch/)
+  or [vsearch](https://github.com/torognes/vsearch)
+- **phylogenetic analysis**, e.g. phylogenetic placement, computation of diversity metrics
+- **comparing treatments**, e.g. by rarefaction of OTU tables
 
 Metabarcoding the Deepwater Horizon oil spill
 ---------------------------------------------
