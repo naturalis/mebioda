@@ -22,8 +22,8 @@ General workflow of metabarcoding assays
 - **phylogenetic analysis**, e.g. phylogenetic placement, computation of diversity metrics
 - **comparing treatments**, e.g. by rarefaction of OTU tables
 
-Metabarcoding the Deepwater Horizon oil spill
----------------------------------------------
+Comparing treatments: metabarcoding the Deepwater Horizon oil spill
+-------------------------------------------------------------------
 
 ![](qiime/qiime-disaster.jpg)
 
@@ -58,8 +58,9 @@ taxonomic identification of each cluster was performed using MegaBLAST, resultin
 
 ![](deepwater.png)
 
-Gut contents of a permafrost horse
-----------------------------------
+Species identification of gut contents of permafrost grazers
+------------------------------------------------------------
+
 **B Gravendeel, A Protopopov, I Bull, E Duijm, F Gill, A Nieman, N Rudaya, A N Tikhonov, 
 S Trofimova, GBA van Reenen, R Vos, S Zhilich & B van Geel**. 2014. Multiproxy study of 
 the last meal of a mid-Holocene Oyogos Yar horse, Sakha Republic, Russia. 
@@ -68,8 +69,15 @@ doi:[10.1177/0959683614540953](https://doi.org/10.1177/0959683614540953)
 
 ![](horse.png)
 
-- ancient DNA sequencing of the gut contents of a c. 5400 year old horse from Russian 
-  permafrost
+**B van Geel, A Protopopov, I Bull, E Duijm, F Gill, Y Lammers, A Nieman, N Rudaya, 
+S Trofimova, A N Tikhonov, R Vos, S Zhilich, B Gravendeel**. 2014. Multiproxy diet 
+analysis of the last meal of an early Holocene Yakutian bison. 
+_Journal of Quaternary Science_ **29**(3): 261-268
+doi:[10.1002/jqs.2698](http://doi.org/10.1002/jqs.2698)
+
+![](bison.png)
+
+- ancient DNA sequencing of the gut contents of permafrost grazers
 - two chloroplast markers (_rbcL_ and _trnL-trnF_) amplified with forward and reverse
   primers
 - findings corroborated with morphological analysis
@@ -80,22 +88,9 @@ Analysis workflow:
 2. cluster reads with [CD-HIT](http://www.bioinformatics.org/cd-hit/)
 3. BLAST against NCBI _nr_
 
-_The combined data point to an open landscape of a coastal tundra dominated by graminoids
-(Poaceae, Cyperaceae) with a limited amount of Birch and Alder._
+CITES listing joined with species detection in organic mixtures
+---------------------------------------------------------------
 
-Gut contents of a permafrost bison
-----------------------------------
-
-**B van Geel, A Protopopov, I Bull, E Duijm, F Gill, Y Lammers, A Nieman, N Rudaya, 
-S Trofimova, A N Tikhonov, R Vos, S Zhilich, B Gravendeel**. 2014. Multiproxy diet 
-analysis of the last meal of an early Holocene Yakutian bison. 
-_Journal of Quaternary Science_ **29**(3): 261-268
-doi:[10.1002/jqs.2698](http://doi.org/10.1002/jqs.2698)
-
-![](bison.png)
-
-Species detection
------------------
 **Y Lammers, T Peelen, R A Vos & B Gravendeel**. 2014. The _HTS barcode checker_ pipeline, 
 a tool for automated detection of illegally traded species from high-throughput 
 sequencing data. _BMC Bioinformatics_ **15**:44 
