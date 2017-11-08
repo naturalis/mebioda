@@ -62,7 +62,15 @@ doi:[10.1186/1471-2105-15-44](https://doi.org/10.1186/1471-2105-15-44)
 
 First, species from the [CITES appendices](https://www.cites.org/) are joined with the 
 species in the [NCBI taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy) using the 
-GlobalNames taxonomic name resolution service:
+[GlobalNames taxonomic name resolution service](http://resolver.globalnames.org/api).
+A simple request to this service would be:
+
+```bash
+curl -o globalnames.json http://resolver.globalnames.org/name_resolvers.json?names=Homo+sapiens
+```
+
+Which results in a large [JSON file](globalnames.json). In a script, you might process 
+such data as follows:
 
 ```python
 # doing a single request to the globalnames service
@@ -83,7 +91,7 @@ if 'results' in json['data'][0].keys():
 					print( results_dict['taxon_id'] )					
 ```
 
-Which populates a file-based database:
+Using this logic, a file-based database is populated:
 
 ![](cites/cites-index.png)
 
@@ -128,8 +136,6 @@ taxonomic identification of each cluster was performed using MegaBLAST, resultin
 
 ![](deepwater.png)
 
-Adaptive management and environmental quality assessment
---------------------------------------------------------
+Phylogenetic placement
+----------------------
 
-Phylogenetic placement algorithms
----------------------------------
