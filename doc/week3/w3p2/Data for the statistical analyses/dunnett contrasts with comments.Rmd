@@ -1,0 +1,78 @@
+---
+title: "dunnett tests"
+author: "irene"
+date: "26/10/2017"
+output: word_document
+---
+Dunnett's test for comparison against a standard--CTRL vs. all other treatments
+ Here, we will test whether the various extinction treatment outcomes differed systematically from the control and pre-treatment reference points.We are going to perform Dunnett's tests, using either pre-treatment or the control treatment as the reference standard. For CSR trees, only pre-treatment are used as the reference, whereas for end-simulation, comparisons are made using both control and pre-treatment as reference points. For comparisons involving pre-treatment as the standard, all treatments including Control are considered as single factors. As CSR was not defined for Control runs,  differences between treatments and control are analyzed as follows: for each treatment replicate, the time of CSR and associated value of tree balance was determined. Then, the authors determined tree balance at the same time in the corresponding Control run. This way, each series of treatment values could be compared to a different series of Control values through conventional two-tailed ttests. For simplicity of graphical display, we determined the approximate grand mean times for CSR and post-CSR intervals across all treatments (about t = 335, 405, 470, and 535 respectively), and found the corresponding Control values for these times. 
+```{r}
+#set the working directory
+CSR_VS_PREEXT_1FACT = read.table("CSR_VS_PREEXT_1FACT.txt",header=F,sep="\t")
+
+colnames(CSR_VS_PREEXT_1FACT) = c("TREAT_INTENS","VALUE")
+attach(CSR_VS_PREEXT_1FACT)
+ANVA = aov(VALUE~TREAT_INTENS,CSR_VS_PREEXT_1FACT) 
+summary.aov(ANVA)
+```
+
+```{r}
+library(multcomp)
+MULTCOMP = glht(ANVA, linfct=mcp(TREAT_INTENS = "Dunnett"))
+summary(MULTCOMP)
+# When comparing the balance after the mass extintion event to the pre extintion state (the comparison standard) only the Selective on diversifiers treatment differed significantly at all intensities. The Random at the two higher intensities and the Selective on relicts treatment only at the highest intensity. 
+```
+
+```{r}
+
+library(multcomp)
+ENDSIM_1FACT = read.table("END_SIM1FACT.txt",header=F,sep="\t")
+colnames(ENDSIM_1FACT) = c("TREAT_INTENS","VALUE")
+attach(ENDSIM_1FACT)
+ANVA = aov(VALUE~TREAT_INTENS,ENDSIM_1FACT)
+summary.aov(ANVA)
+
+```
+
+```{r}
+MULTCOMP = glht(ANVA, linfct=mcp(TREAT_INTENS = "Dunnett"))
+summary(MULTCOMP)
+
+# When comparing against end-simulation control values, only the Selective on diversifiers, 0.9 intensity differs significantly from the control. 
+
+detach(ENDSIM_1FACT)
+
+```
+
+```{r}
+PEAKIMBAL_1FACT = read.table("PEAKIMBAL_1FACT.txt",header=F,sep="\t")
+colnames(PEAKIMBAL_1FACT) = c("TREAT_INTENS","VALUE")
+attach(PEAKIMBAL_1FACT)
+ANVA = aov(VALUE~TREAT_INTENS,PEAKIMBAL_1FACT)
+summary.aov(ANVA)
+#performing a Dunnett'test 
+MULTCOMP = glht(ANVA, linfct=mcp(TREAT_INTENS = "Dunnett"))
+summary(MULTCOMP)
+
+summary(MULTCOMP)
+```
+
+```{r}
+#re-done with only post extintion peak-imbalance. 
+PEAKIMBAL_1FACT = read.table("PEAKIMBAL_1FACT_REDO.txt",header=T,sep="\t")
+colnames(PEAKIMBAL_1FACT) = c("TREAT_INTENS","VALUE")
+attach(PEAKIMBAL_1FACT)
+ANVA = aov(VALUE~TREAT_INTENS,PEAKIMBAL_1FACT)
+summary.aov(ANVA)
+```
+
+```{r}
+MULTCOMP = glht(ANVA, linfct=mcp(TREAT_INTENS = "Dunnett"))
+summary(MULTCOMP)
+```
+
+
+
+
+
+

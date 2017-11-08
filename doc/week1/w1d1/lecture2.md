@@ -3,6 +3,7 @@ Introduction to biodiversity and data science
 
 What is biodiversity?
 ---------------------
+
 - **Species diversity**
 - **Phylogenetic diversity**
   - What does it measure, and how?
@@ -12,14 +13,26 @@ What is biodiversity?
   - Can it be high when species diversity is low (or vice versa)?
   - How might it relate to species or phylogenetic diversity?
 
+----
+
+![](diversity.jpg)
+
+Source: [10.1038/nature12529](http://doi.org/10.1038/nature12529)
+
 Patterns of biodiversity
 ------------------------
+
+![](alphabetagamma.jpg)
+
 - alpha diversity: within a single extent of time and space
 - beta diversity: the turnover between locations or time windows
 - gamma diversity: the total diversity in a system
 
 Measuring biodiversity
 ----------------------
+
+![](coord_planes.png)
+
 - Molecular techniques (week 1)
 - Field observations (week 2)
 - Trait/character measurements (week 3)
@@ -43,6 +56,7 @@ Data science
 ------------
 The dirty work throughout the data cycle, leading up to, and including, 
 statistical analysis:
+
 - Representation and modeling of collected data
 - Data processing: cleaning, filtering, reduction, integration
 - Data management: metadata, versioning, formats
@@ -62,6 +76,9 @@ Representation and modeling of collected data
 
 Data processing
 ---------------
+
+![](data_pyramid.png)
+
 - To go from raw data capture to useable data, a lot of cleaning, 
   filtering, format conversion, and reduction (volume and dimensionality)
   needs to take place.
@@ -69,10 +86,12 @@ Data processing
   integration techniques need to be considered. For example, how to
   combine your molecular sequences (and phylogenies) with occurrences
   and traits from public databases?
-![](data_pyramid.png)
 
 Data management
 ---------------
+
+![](data_management.png)
+
 - How to manage versions of data, their history, and provenance?
 - How to store and share data?
 - How to represent, store, and share what we know _about_ the data?
@@ -83,4 +102,11 @@ Automation
 - Reproducibility is easier with automation
 - We will explore this using the UNIX/Linux shell, using R, and scripting
   languages (a bit of Python and Perl)
-  
+
+Tools of the trade
+------------------
+- UNIX/Linux operating systems
+- Scripting languages
+- Relational databases
+- Versioning
+- Documentation systems

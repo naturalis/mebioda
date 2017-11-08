@@ -1,0 +1,49 @@
+# Max likilhood partition 
+Species 1 (support = 1.000)
+     Danaus_gilippusDHJ01-MHAAC201-06
+
+Species 2 (support = 1.000)
+     Danaus_ismare-GBLN0491-06
+
+Species 3 (support = 0.414)
+     Danaus_erippus-LEPAR193-11,Danaus_erippus-LEPAR229-11,Danaus_erippus-LEPPA027-11,Danaus_erippus-LEPPA813-13,Danaus_erippus-LEPAR223-11,Danaus_erippus-LEPPA575-13,Danaus_erippus-LEPPA773-13,Danaus_erippus-LEPPA731-13,Danaus_erippus-LEPAR267-11,Danaus_erippus-LEPIG519-11,Danaus_erippus-LEPPA057-11,Danaus_erippus-LEPPA563-13
+
+Species 4 (support = 0.063)
+     Danaus_plexippus-ANICT931-11,Danaus_plexippus-XAJ967-06,Danaus_plexippus-BBLOC991-11,Danaus_plexippus-BLPDO835-10,Danaus_plexippus-EZSPM277-09,Danaus_plexippus-ANICT932-11,Danaus_plexippus-LYPAP533-09,Danaus_plexippus-ANICT933-11,Danaus_plexippus-NZPWP089-12,Danaus_plexippus-LYPAP538-09,Danaus_plexippus-EZSPC1347-10,Danaus_plexippus-EZSPM686-12,Danaus_plexippus-LNSWE145-06,Danaus_plexippus-MHACG745-05,Danaus_plexippus-XAH203-05,Danaus_plexippus-GBLN0509-06,Danaus_plexippus-LPSOB166-08,Danaus_plexippus-LEFIA1435-10,Danaus_plexippus-EZSPM685-12,Danaus_plexippus-MHMXE540-06,Danaus_plexippus-XAB109-04,Danaus_plexippus-BLPDO987-10,Danaus_plexippus-LNSWE160-06,Danaus_plexippus-LNSWE182-06,Danaus_plexippus-LYPAP536-09,Danaus_plexippus-MHACG749-05,Danaus_plexippus-XAK468-06,Danaus_plexippus-MHACG744-05,Danaus_plexippus-MHACG746-05,Danaus_plexippus-SDP129035-13,Danaus_plexippus-BLPDO1005-10,Danaus_plexippus-MHMXY653-09,Danaus_plexippus-LYPAP537-09,Danaus_plexippus-BLPDO988-10,Danaus_plexippus-MHMXY649-09,Danaus_plexippus-LYPAP534-09,Danaus_plexippus-MHACG748-05,Danaus_plexippus-LYPAP535-09,Danaus_plexippus-MHMXY651-09,Danaus_plexippus-MHMXY650-09,Danaus_plexippus-MHACG743-05,Danaus_plexippus-MHMXO676-08,Danaus_plexippus-BLPDD747-09,Danaus_plexippus-MHAAC200-06,Danaus_plexippus-MHACG742-05,Danaus_plexippus-GBLN0108-06,Danaus_plexippus-GBLN2044-09,Danaus_plexippus-LYPAP532-09,Danaus_plexippus-MHACG727-05,Danaus_plexippus-MHMXY652-09,Danaus_plexippus-MHMYC1253-09,Danaus_plexippus-MHACG750-05,Danaus_plexippus-MHMXS241-08,Danaus_plexippus-MHMXY654-09,Danaus_plexippus-LYPAP539-09,Danaus_plexippus-MHACG747-05
+
+Species 5 (support = 0.240)
+     Danaus_eresimus-LEPAR1007-14,Danaus_eresimus-LEPPA313-12,Danaus_eresimus-LEPAR269-11,Danaus_eresimus-LEPPA567-13,Danaus_eresimus-LEPAR265-11,Danaus_eresimus-LEPPA573-13,Danaus_eresimus-LEPAR273-11,Danaus_eresimus-LEPPA233-12,Danaus_eresimus-LEPIG034-11,Danaus_eresimus-LEPPA337-12,Danaus_eresimus-LEPPA384-12,Danaus_eresimus-LEPPA326-12
+
+Species 6 (support = 0.032)
+     Danaus_chrysippus-AGIRI015-17,Danaus_chrysippus-EZSPN783-09,Danaus_chrysippus-GBLN4292-14,Danaus_chrysippus-FPMBC072-15,Danaus_chrysippus-GBGL8254-12,Danaus_chrysippus-GBLN5577-15,Danaus_chrysippus-GBLN0114-06,Danaus_chrysippus-MABUT112-10,Danaus_chrysippus-SZCBP431-15,Danaus_chrysippus-SZCBP462-15,Danaus_chrysippus-SZCBP472-15,Danaus_chrysippus-SZCBP498-15,Danaus_chrysippus-GBLN0115-06,Danaus_chrysippus-MABUT109-10,Danaus_chrysippus-CBL008-12,Danaus_chrysippus-GBMIN22830-13,Danaus_chrysippus-DMAZ124-09,Danaus_chrysippus-MABUT110-10,Danaus_chrysippus-SZCBP461-15,Danaus_chrysippus-EZSPM284-09,Danaus_chrysippus-GBLN4726-14,Danaus_chrysippus-GBMIN12288-13,Danaus_chrysippus-MABUT113-10,Danaus_chrysippus-EZSPM286-09,Danaus_chrysippus-GBMIN23976-13,Danaus_chrysippus-EZSPN784-09,Danaus_chrysippus-EZSPC1195-10,Danaus_chrysippus-MABUT111-10,Danaus_chrysippus-EZSPC1198-10,Danaus_chrysippus-EZSPC1392-10,Danaus_chrysippus-EZSPC1196-10,Danaus_chrysippus-SZCBP463-15,Danaus_chrysippus-GBGL8293-12,Danaus_chrysippus-GBLN0118-06,Danaus_chrysippus-MAIMB137-09,Danaus_chrysippus-EZSPC1394-10,Danaus_chrysippus-GBLN4382-14,Danaus_chrysippus-GBLN0116-06,Danaus_chrysippus-EZSPC1197-10,Danaus_chrysippus-EZSPC1393-10,Danaus_chrysippus-GBGL8326-12,Danaus_chrysippus-GBLN0117-06,Danaus_chrysippus-GWOTH602-12,Danaus_chrysippus-LSAFR2199-12,Danaus_chrysippus-LSAFR2271-12
+
+Species 7 (support = 0.233)
+     Danaus_chrysippus-ANICT1128-11,Danaus_chrysippus-LNSWE282-06,Danaus_chrysippus-LNSWG282-06,Danaus_chrysippus-GBLN0113-06,Danaus_chrysippus-LNSWE161-06,Danaus_chrysippus-LNSWE139-06,Danaus_chrysippus-WALPB2425-14,Danaus_chrysippus-WALPB2429-14,Danaus_chrysippus-GBLN0112-06
+
+Species 8 (support = 0.377)
+     Danaus_chrysippus-GBLN0109-06,Danaus_eresimus-LYPAP514-09,Danaus_eresimus-LYPAP516-09,Danaus_eresimus-LYPAP517-09,Danaus_eresimus-LYPAP513-09,Danaus_eresimus-LYPAP521-09,Danaus_eresimus-LYPAP519-09
+
+Species 9 (support = 0.858)
+     Danaus_eresimus-LYPAP515-09
+
+Species 10 (support = 0.858)
+     Danaus_affinis-ANICT1129-11
+
+Species 11 (support = 0.378)
+     Danaus_affinis-LOQC758-05,Danaus_affinis-LOQC776-05,Danaus_affinis-LOQTI427-11,Danaus_affinis-LOQTI736-12
+
+Species 12 (support = 0.124)
+     Danaus_genutia-CBL010-12,Danaus_genutia-GBMIN22829-13,Danaus_genutia_genutia-GBLN4388-14,Danaus_genutia-GBGL8280-12,Danaus_genutia-GBLN4728-14,Danaus_genutia_intermedius-BOPM164-12,Danaus_genutia-MABUT328-13,Danaus_genutia-MYENT078-17,Danaus_genutia-GBLN5592-15,Danaus_genutia-KHCBT1065-16,Danaus_genutia_intermedius-BOPM165-12,Danaus_genutia-GBMIN12316-13,Danaus_genutia-GBLN0299-06,Danaus_genutia-KHCBT1197-16,Danaus_genutia-KHCBT1097-16,Danaus_genutia-KHCBT1190-16,Danaus_genutia-KHCBT1100-16,Danaus_genutia_intermedius-BOPM163-12
+
+Species 13 (support = 0.105)
+     Danaus_eresimus-BBLOB381-11,Danaus_gilippus-LYPAP527-09,Danaus_gilippus-LYPAP531-09,Danaus_gilippus_thersippus-BBLOD884-11,Danaus_gilippus-LOFLC168-06,Danaus_gilippus-LYPAP525-09,Danaus_gilippusDHJ02-MHMXO674-08,Danaus_gilippus-GBLN0530-06,Danaus_gilippus-LYPAP529-09,Danaus_eresimus-BBLOC568-11,Danaus_gilippus-LYPAP522-09,Danaus_gilippusDHJ02-MHMXO675-08,Danaus_eresimus-GBLN0110-06,Danaus_gilippusDHJ02-MHAAB434-05,Danaus_gilippus-GBLN0111-06,Danaus_gilippusDHJ02-MHAAB655-05,Danaus_gilippus-LYPAP524-09,Danaus_gilippus-LYPAP526-09,Danaus_gilippus_thersippus-BBLOD911-11,Danaus_gilippus-BBLOD1831-11,Danaus_gilippus-GBLN2045-09,Danaus_gilippus-LYPAP530-09,Danaus_gilippus-LYPAP523-09,Danaus_gilippus-LYPAP518-09,Danaus_gilippus-LYPAP520-09,Danaus_gilippus-BBLOD894-11,Danaus_gilippus-BBLOD1847-11,Danaus_gilippus-BBLOD913-11,Danaus_gilippus-LYPAP528-09,Danaus_gilippus-BBLOD914-11,Danaus_gilippus-LOFLC286-06
+
+Species 14 (support = 0.433)
+     Danaus_gilippus-LEPAR956-14,Danaus_gilippus-LEPPA758-13,Danaus_gilippus-LEPPA826-13,Danaus_gilippus-LEPPA364-12,Danaus_gilippus-LEPPA821-13,Danaus_gilippus-LEPPA726-13,Danaus_gilippus-LEPPA717-13
+
+Species 15 (support = 0.466)
+     Danaus_affinis-KHCBT1102-16,Danaus_melanippus_hegesippus-BOPM168-12,Danaus_melanippus-FPMBC151-15,Danaus_melanippus_hegesippus-BOPM167-12,Danaus_melanippus_hegesippus-BOPM166-12,Danaus_melanippus-SETIU018-16
+
+Species 16 (support = 0.909)
+     Danaus_genutia-ANICT934-11
+

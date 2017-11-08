@@ -1,0 +1,32 @@
+<nex:nexml generator="Bio::Phylo::Project v.v2.0.1" version="0.9" xmlns="http://www.nexml.org/2009" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:map="http://phylomap.org/terms.owl#" xmlns:nex="http://www.nexml.org/2009" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nexml.org/2009 http://www.nexml.org/2009/nexml.xsd">
+  <meta content="rutger.vos" datatype="xsd:string" id="ma20" property="dc:creator" xsi:type="nex:LiteralMeta"/>
+  <meta content="2017-11-03T17:31:01" datatype="xsd:date" id="ma21" property="dc:date" xsi:type="nex:LiteralMeta"/>
+  <otus id="os2">
+    <otu id="ou3" label="A"/>
+    <otu id="ou4" label="B"/>
+    <otu id="ou5" label="C"/>
+    <otu id="ou6" label="D"/>
+    <otu id="ou7" label="E"/>
+  </otus>
+  <trees id="ts8" otus="os2">
+    <tree id="te10" label="t1" xsi:type="nex:IntTree">
+      <node id="ne11" root="true"/>
+      <node id="ne12"/>
+      <node id="ne19" label="E" otu="ou7"/>
+      <node id="ne13"/>
+      <node id="ne16"/>
+      <node id="ne14" label="A" otu="ou3"/>
+      <node id="ne15" label="B" otu="ou4"/>
+      <node id="ne17" label="C" otu="ou5"/>
+      <node id="ne18" label="D" otu="ou6"/>
+      <edge id="edge12" source="ne11" target="ne12"/>
+      <edge id="edge19" source="ne11" target="ne19"/>
+      <edge id="edge13" source="ne12" target="ne13"/>
+      <edge id="edge16" source="ne12" target="ne16"/>
+      <edge id="edge14" source="ne13" target="ne14"/>
+      <edge id="edge15" source="ne13" target="ne15"/>
+      <edge id="edge17" source="ne16" target="ne17"/>
+      <edge id="edge18" source="ne16" target="ne18"/>
+    </tree>
+  </trees>
+</nex:nexml>
