@@ -7,16 +7,17 @@ Introduction
 Metabarcoding analysis
 ----------------------
 General workflow
-- data cleaning
-- read pairing
+- sequence merging
+- data cleaning (trimming, filtering)
 - associating reads with samples
-- clustering
+- clustering (singleton removal)
 - OTU picking
 - taxonomic assignment
 - rarefaction
+- phylogenetic diversity metrics
 
 Data types
-- reads from markers
+- reads from markers (eDNA, community DNA)
 - OTU tables
 
 Command-line tools and toolkits
@@ -26,12 +27,40 @@ Command-line tools and toolkits
 - usearch
 - BLAST
 
-Impact assessment
------------------
+QIIME workflow
+--------------
+- `import` data
+- demultiplex (`demux`)
+- denoise
+- feature table
+
+Metabarcoding the Deepwater Horizon oil spill
+---------------------------------------------
+
+![](qiime/qiime-disaster.jpg)
+
 **HM Bik, KM Halanych, J Sharma & WK Thomas**. 2012. Dramatic Shifts in Benthic Microbial 
 Eukaryote Communities following the Deepwater Horizon Oil Spill. _PLoS ONE_ 
 **7**(6): e38550 
 doi:[10.1371/journal.pone.0038550](https://doi.org/10.1371/journal.pone.0038550)
+
+A study using 454 data processed with the QIIME pipeline. With these data the assumption 
+was that the data are structured according to the following primer and amplicon construct:
+
+![](qiime/qiime-primer_construct.png)
+
+In this case with data with the following experimental design:
+
+- sampled over two points in time (pre- and post-spill);
+- in 7 localities (Bayfront Park, Shellfish Lab, Ryan Ct, Cadillac Ave, Dauphin Bay, 
+  Belleair Blvd, Grand Isle);
+- sequencing two markers with two primers (F04/R22, NF1/18Sr2b) 
+
+Accordingly, the reads were demultiplexed following 
+[this complex mapping](qiime/qiime-mapping.tsv). The reads were then clustered with
+[UCLUST](https://www.drive5.com/usearch/manual/uclust_algo.html) and denoised. Finally,
+taxonomic identification of each cluster was performed using MegaBLAST, resulting in a
+[sample by taxon table](qiime/qiime-samples.tsv) alternatively visualized as follows:
 
 ![](deepwater.png)
 
