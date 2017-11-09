@@ -75,50 +75,39 @@ Integrated phenotypes
 
 ![](reich_1992.png)
 Reich (1992) Ecological Monographs
-
 ![](reich_1992_2.png)
 
 The world leaf spectrum 
 ----------------
-
 ![](leaf_sp.png)
 
 
 Quantifying the diversity of strategies: life histories & new insights to diversity
 ----------------
-
 ![](grime_1977.png)
-
 ![](leaf_height.png)
-
 ![](func.png)
 
 Measure traits to measure Ecosystem function
 ----------------
 **Emerging out of the Biodiversity/Ecosystem Functioning Debate…**
-
 ![](plant_div.png)
-
 ![](sp_rich.png)
 
 Science Compass Review
 ----------------
-
 ![](biodiv.png)
 “The . . . consequences of biodiversity . . has aroused considerable interest and  controversy. . . . there is however, uncertainty as to how (these ﬁndings). . . generalize  across ecosystems”
 
 Trait diversity is more important than species richness to ecosystem functioning
 ----------------
-
 ![](trait.png)
 
 Revitalization of Community Ecology?
 ----------------
 
 “Community ecology appears to have few if any  useful generalizations . . . “
-
 ![](comm_ecology.png)
-
 ! [](func_traits.png)
 
 New & Interesting Approaches and Methods
