@@ -186,12 +186,12 @@ Previous message:  IR-pkgsl  Major bigmemmy  revision released.
 Next message:  IR-pkgsl igraph 05 .2
 Messages sorted by: ( date l ( thread  l ( subject l ( author l
 
-http://cran.r - project.org/wcb/packages/FD/ - automatic!
+http://cran.r - project.org/wcb/packages/FD/
 
 Journal of Vegetation Science 14: 927-930, 2003 
 © IAVS; Opulus Press Uppsala.
 
-          **Computer program review**
+   **Computer program review**
 VEGAN, a package of R functions for community ecology 
                    Dixon, Philip
 Department of Statistics, Iowa State University, Ames, IA 50011-1210, USA; 
@@ -200,7 +200,7 @@ Fax +15152944040; E-mail pdixon@iastate.edu
 TRY
 Plant Trait Database
 ----------------
-https://www.try-db.org/TryWeb/Home.php - automatic!
+https://www.try-db.org/TryWeb/Home.php 
 
 Class Overview
 ----------------
