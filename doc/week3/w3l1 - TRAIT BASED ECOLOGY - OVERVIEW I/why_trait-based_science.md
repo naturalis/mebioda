@@ -87,7 +87,7 @@ The world leaf spectrum
 Quantifying the diversity of strategies: life histories & new insights to diversity
 ----------------
 
-![](grime.1977.png)
+![](grime_1977.png)
 
 ![](leaf_height.png)
 
