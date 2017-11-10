@@ -76,7 +76,7 @@ Integrated phenotypes
 ![](reich_1992.png)
 Reich (1992) Ecological Monographs
 
-![](reich_1992_2.png)
+![](rsz_reich_1992_2.png)
 
 The world leaf spectrum 
 ----------------
