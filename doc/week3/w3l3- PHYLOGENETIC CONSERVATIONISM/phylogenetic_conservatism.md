@@ -45,10 +45,9 @@ Wiens et al., 2010
 
 Community Assembly
 ----------------
-**Competition**
-![](compet.png) 
-**Environmental Filtering**
-![](env_filt2.png)
+ 
+![](compet.png)**Competition** 
+![](env_filt2.png)**Environmental Filtering**
 
 Community assembly (Swenson et al.,  2006)
 ----------------
