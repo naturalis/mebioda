@@ -98,7 +98,7 @@ Measure traits to measure Ecosystem function
 ----------------
 **Emerging out of the Biodiversity/Ecosystem Functioning Debate…**
 
-![](plant_div.png)
+![](_plant_div.png)
 
 ![](sp_rich.png)
 
