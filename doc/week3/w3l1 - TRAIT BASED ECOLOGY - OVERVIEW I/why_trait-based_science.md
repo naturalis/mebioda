@@ -100,7 +100,7 @@ Measure traits to measure Ecosystem function
 
 ![](_plant_div.png)
 
-![](sp_rich.png)
+![](_sp_rich.png)
 
 Science Compass Review
 ----------------
