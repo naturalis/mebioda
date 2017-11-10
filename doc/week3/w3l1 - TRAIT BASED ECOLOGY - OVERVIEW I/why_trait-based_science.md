@@ -88,7 +88,9 @@ Quantifying the diversity of strategies: life histories & new insights to divers
 ----------------
 ![](grime_1977_1.png) | ![](grime_1977_2.png)
 
-![](leaf_height.png)
+Quantifying the diversity of strategies: life histories & new insights to diversity
+----------------
+![](l_height.png)
 
 ![](func.png)
 
