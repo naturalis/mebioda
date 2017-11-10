@@ -92,7 +92,7 @@ Quantifying the diversity of strategies: life histories & new insights to divers
 ----------------
 ![](l_height.png)
 
-![](func.png)
+![](func2.png)
 
 Measure traits to measure Ecosystem function
 ----------------
