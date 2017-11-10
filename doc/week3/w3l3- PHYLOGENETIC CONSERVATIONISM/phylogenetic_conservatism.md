@@ -48,7 +48,7 @@ Community Assembly
 **Competition**
 ![](compet.png) 
 **Environmental Filtering**
-![](1env_filt.png)
+![](env_filt2.png)
 
 Community assembly (Swenson et al.,  2006)
 ----------------
