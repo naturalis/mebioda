@@ -105,7 +105,7 @@ Measure traits to measure Ecosystem function
 Science Compass Review
 ----------------
 
-![](biodiv.png)
+![](_biodiv.png)
 “The . . . consequences of biodiversity . . has aroused considerable interest and  controversy. . . . there is however, uncertainty as to how (these ﬁndings). . . generalize  across ecosystems”
 
 Trait diversity is more important than species richness to ecosystem functioning
