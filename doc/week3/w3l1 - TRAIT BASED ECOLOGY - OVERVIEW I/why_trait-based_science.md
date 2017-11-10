@@ -81,7 +81,7 @@ Reich (1992) Ecological Monographs
 The world leaf spectrum 
 ----------------
 
-![](leaf_sp.png)
+![](_leaf_sp.png)
 
 
 Quantifying the diversity of strategies: life histories & new insights to diversity
