@@ -90,7 +90,7 @@ Quantifying the diversity of strategies: life histories & new insights to divers
 
 Quantifying the diversity of strategies: life histories & new insights to diversity
 ----------------
-![](l_height.png)
+![](_l_height.png)
 
 ![](func2.png)
 
