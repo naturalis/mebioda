@@ -10,3 +10,8 @@ The goal of the course is to impart data science skills as relevant to biodivers
 covered will include research reproducibility (e.g. scripting) and data management (e.g. versioning), while the 
 scientific applications will encompass biodiversity assessment using DNA sequence data (e.g. metabarcoding),
 geospatial data (e.g. ecological niche modeling) and phenotype/morphology data (e.g. morphometrics). 
+
+- [Week 1](doc/week1) - Molecular diversity
+- [Week 2](doc/week2) - (Geo)spatial diversity
+- [Week 3](doc/week3) - Functional diversity
+- [Week 4](doc/week4) - Synthesis and exam
