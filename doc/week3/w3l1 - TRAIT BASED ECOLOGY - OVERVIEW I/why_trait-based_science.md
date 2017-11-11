@@ -73,7 +73,7 @@ Integrated phenotypes
 
 **Some traits are more ‘central and important’**
 
-![](reich_1992.png)
+![](_reich_1992.png)
 Reich (1992) Ecological Monographs
 
 ![](rsz_reich_1992_2.png)
