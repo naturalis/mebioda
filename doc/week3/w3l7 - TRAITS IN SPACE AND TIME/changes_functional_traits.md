@@ -20,6 +20,7 @@ Changes in trait diversity over space and time
 Species richness maps for (a) all the species, (b) bats only and (c) all species other than bats,  showing how bats influence the overall latitudinal diversity gradient.
 ----------------
 ![](royal_soc.png)
+
 **Can you just replace          
 species with traits?**
 
