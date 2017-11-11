@@ -110,7 +110,7 @@ Science Compass Review
 
 Trait diversity is more important than species richness to ecosystem functioning
 ----------------
-![](trait_div.png)
+![](_trait_div.png)
 ![](trait_div_2.png)
 
 Revitalization of Community Ecology?
