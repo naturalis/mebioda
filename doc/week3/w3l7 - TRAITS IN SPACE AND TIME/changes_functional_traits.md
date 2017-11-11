@@ -19,7 +19,8 @@ Changes in trait diversity over space and time
 
 Species richness maps for (a) all the species, (b) bats only and (c) all species other than bats,  showing how bats influence the overall latitudinal diversity gradient.
 ----------------
-**Can you just replace                   ![](royal_soc.png)
+![](royal_soc.png)
+**Can you just replace          
 species with traits?**
 
 **Can functional trait ecology 
@@ -47,7 +48,7 @@ NND – local packing
 
 Stevens et. al 2006
 ----------------
-                    ![](N_mass.png)
+   ![](N_mass.png)
 
 ![](phenetic_a.png)
 
@@ -60,7 +61,7 @@ Stevens et. al 2006
 
 Species Richness - Latitude
 ----------------
-![](spe_lat.png)
+![](sp_lat.png)
 
 Swenson et. al 2012 GEB
 ----------------
