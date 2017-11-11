@@ -21,8 +21,7 @@ Species richness maps for (a) all the species, (b) bats only and (c) all species
 ----------------
 ![](royal_soc.png)
 
-**Can you just replace          
-species with traits?**
+**Can you just replace species with traits?**
 
 **Can functional trait ecology 
 teach us something NEW about 
