@@ -251,7 +251,7 @@ Trait beta diversity
 ----------------
 **Functional Sorenson's**    **Shared function between two communities**
 
-![](F_sor.png)                ![](func_sor.png)
+![](F_sor.png)                ![](fun_sor.png)
 
 **Nearest neighbor distance**  
 More functionally similar communities will have lower nearest neighbor distances
