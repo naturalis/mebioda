@@ -66,7 +66,7 @@ Functional Diversity
 dummy$trait
 ----------------
 trait data frame of 8 functional traits on 8 species
-![](dummy$trait.png)
+![](dummytrait.png)
 
 dummy$abun
 ----------------
