@@ -28,10 +28,13 @@ Enormous interspectic variation in plants traits has been observed (Reich et al.
 
 **Morphological Trait** 
 e.g. leaf thickness, leaf  size, SLA
+
 **Phenological Trait**
   e.g. leaf age
+  
 **Chemical Trait**
 e.g. leaf chlorophyll, leaf N, and leaf P
+
 **Physiological Trait**   
  e.g. photosynthetic assimilation  rate, and respiration rate
 
