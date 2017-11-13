@@ -275,7 +275,7 @@ null.model="taxa.labels”,abundance.weighted=TRUE) #standard  effect size, not 
 Nearest neighbor distance
 ----------------
 comdist.tussock <- comdist(abun.m,dis.traitm)  plot(comdist.tussock)
-![](comdist_t.png)
+![](comdist.png)
 
 Trait dendrogram
 ----------------
