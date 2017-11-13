@@ -30,20 +30,22 @@ The distribution of the species and abundance of a  community in niche space, in
 - the evenness of abundance distribution in filled niche  space (functional evenness)
 - the degree to which abundance distribution in niche space  maximizes divergence in functional characters within the  community (functional divergence).
 
-![](func richness.png)
+![](func_richness.png)
 
-![](func richness_2.png)
+![](func_richness_2.png)
+
 **Functional Richness**  
 
-![](functional evenness.png) 
+![](functional_evenness.png) 
 
-![](func richness_2.png) 
+![](func_richness_2.png) 
 
 **Functional Evenness**  
 
-![](functional divergence_1.png)
+![](functional_divergence_1.png)
 
-![](functional divergence_2.png)
+![](functional_divergence_2.png)
+
 **Functional Divergence** 
 
 
