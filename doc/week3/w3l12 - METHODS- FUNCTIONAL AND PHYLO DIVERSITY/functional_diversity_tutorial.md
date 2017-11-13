@@ -245,7 +245,7 @@ species data including observed and null mean trait  values for each community
 Trait beta diversity
 ----------------
 
-![](trait_beta_diversity.png) 
+![](t_beta_diversity.png) 
 
 Trait beta diversity
 ----------------
