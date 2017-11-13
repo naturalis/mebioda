@@ -61,7 +61,7 @@ Functional Dispersion
 Functional Diversity
 ----------------
 
-![](PCA.png)
+![](pca.png)
 
 dummy$trait
 ----------------
