@@ -55,7 +55,7 @@ Community Assembly
 
 Community assembly (Swenson et al.,  2006)
 ----------------
-![](comm_assembly.png)
+![](com_assembly.png)
 
 Community assembly (Swenson et al.,  2006)
 ----------------
