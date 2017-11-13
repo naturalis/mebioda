@@ -214,7 +214,7 @@ pool<-data.frame(sp, trait)
 ----------------
 must contain all the species in all communities
 
-![](pool_func.png)
+![](poolfunc.png)
 
 sp_list_community1<-c("sp1", "sp2","sp5","sp6")  
 test_trait_data(sp_list_community1, pool, log=TRUE,  reps=999, abweight=TRUE, abdata=abundance,  verbose=TRUE)->summary_verbose  
