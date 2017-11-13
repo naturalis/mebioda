@@ -5,15 +5,15 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 1 - Introduction
 
-- Lecture I: Data science tools: R
+- Lecture I: [Data science tools: R](w3d1/lecture1.md)
 - Lecture II: [Introduction to trait-based analysis](w3d1/lecture2.md)
 - Lecture III: [Phylogenetic conservatism](w3d1/lecture3.md)
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
-[Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.pdf)
+[Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.rmd)
 
 ### Day 2 - Topological analysis
 
-- Lecture I: Metabarcoding trees
+- Lecture I: The APG-III tree and phylocom
 - Lecture II: Simple tree shape metrics (e.g. balance, branchiness)
 - Lecture III: Estimating evolutionary processes (e.g. birth/death)
 - Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
