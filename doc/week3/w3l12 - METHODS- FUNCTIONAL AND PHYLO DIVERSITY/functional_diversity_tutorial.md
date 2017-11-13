@@ -84,9 +84,9 @@ Dummy.dist <- gowdis(dummy$trait)
 dummy.fdisp<-fdisp(dummy.dist,dummy.abun)
 ----------------
 
-![](dummy.fdisp_1.png) 
-
 ![](dummyfdisp.png)
+
+![](dummyfdisp_2.png) 
 
 Dummy.dbFD <- dbFD(dummy$trait, dummy$abun)
 ----------------
