@@ -256,7 +256,7 @@ Trait beta diversity
 **Nearest neighbor distance**  
 More functionally similar communities will have lower nearest neighbor distances
 
-![](nearest_n_1.png)      ![](nearest_n.png)
+![](nearest_n_.png)      ![](_nearest_n.png)
 
 **Pairwise dissimilarity**     **All pairwise distances between species**
 
