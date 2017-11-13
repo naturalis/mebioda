@@ -221,7 +221,7 @@ test_trait_data(sp_list_community1, pool, log=TRUE,  reps=999, abweight=TRUE, ab
 summary_verbose
 ----------------
 
-![](species_list_community1.png)
+![](specieslist_community1.png)
 
 Do this for each community that  has a minimum of 4 species
 ----------------
