@@ -56,7 +56,10 @@ The distribution of the species and abundance of a  community in niche space, in
 Functional Dispersion
 ----------------
 
-![](functional dispersion.png)
+![](fun_dispersion.png)
+
+Functional Diversity
+----------------
 
 ![](PCA.png)
 
