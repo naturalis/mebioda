@@ -18,6 +18,7 @@ Laberte and Legandgre 2010
 Kraft, 2008
 
 3. **Beta diversity**
+
    3. 3a Functional Sorensons –Fsor
    3. 3b Nearest Neighbor distance – Dnn
    3. 3c Pairwise dissimilarity - DPw
