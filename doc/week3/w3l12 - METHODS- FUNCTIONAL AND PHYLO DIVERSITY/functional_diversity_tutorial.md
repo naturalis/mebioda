@@ -186,8 +186,9 @@ Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 ----------------
 
-![](functcomp.png)
-	For ordinal, nominal and binary traits, either the dominant class is  returned, or the abundance of each individual class is returned (when  CWM.type	is "all" ).
+![](funct_comp.png)
+	
+For ordinal, nominal and binary traits, either the dominant class is  returned, or the abundance of each individual class is returned (when  CWM.type	is "all" ).
 
 Null Models: Using Kraft’s R-code  as an example.
 ----------------
