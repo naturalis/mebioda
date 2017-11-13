@@ -40,8 +40,44 @@ processes that we might visualize, qualitatively, as lineage-through-time plots:
   Ecological Opportunity (γ = -3.39). 
 - (C) Late burst of speciation or early extinction (γ = 3.20).
 
-Tree imbalance
---------------
+The tendency of nodes
+---------------------
+**Pybus, OG & Harvey, PH**, 2000. Testing macro-evolutionary models using incomplete 
+molecular phylogenies. _Proc. R. Soc. Lond. B_ 267, 2267-2272
+
+![](lecture2/gamma.png)
+
+- A tree branching under a constant-rates model should have a balance of node depths γ 
+  around the midpoint (in depth) of the tree
+- This γ is normally distributed around a mean of zero. Negative values capture early
+  diversification, positive values capture, either, late diversification or higher 
+  extinction, especially early on.
+
+```R
+library(ape)
+tree <- read.tree(text="((A:0.5,B:0.5):1,C:1.5);")
+gamma <- gammaStat(tree)
+
+# P-value for two-tailed test of deviation
+2*(1 - pnorm(abs(gamma)))
+
+# one-tailed test
+1 - pnorm(abs(gamma))
+```
+
+Lineage-specific processes
+--------------------------
+Numerous other metrics have been developed to capture the extent to which nodes are 
+concentrated near the tips or near the root, e.g.:
+
+- **Fiala, KL and RR Sokal**, 1985. Factors determining the accuracy of cladogram 
+  estimation: evaluation using computer simulation. _Evolution_, 39: 609-622
+- **Rohlf, FJ, WS Chang, RR Sokal, J Kim**, 1990. Accuracy of estimated phylogenies: 
+  effects of tree topology and evolutionary model. _Evolution_, 44(6): 1671-1684
+
+However, these metrics do not capture whether there are imbalances between lineages, e.g.
+because one is (heritably?) more likely to diversify:
+
 ![](lecture2/imbalance.jpg)
 
 Colless' imbalance
@@ -89,14 +125,13 @@ $ic = parse_tree(
 )->calc_i2;
 ```
 
-Effect of extinction on imbalance metrics
------------------------------------------
+Simulating sets of trees with different topological properties
+--------------------------------------------------------------
+Scott Chamberlain, of [rOpenSci](http://ropensci.org) has developed a nice RMarkdown
+document that demonstrates [simulating](lecture2/2012-10-10-phylogenetic-tree-balance.Rmd)
+sets of trees, filtered for different tree topology metrics. See what the distributions
+look like if the input trees aren't Yule but birth/death.
 
 Empirical results for tree balance
 ----------------------------------
 ![](lecture2/phylogenetic-tree-balance-as-a-function-of-tree-size.gif)
-
-
-Tutorial
---------
-https://recology.info/2012/10/phylogenetic-tree-balance/
