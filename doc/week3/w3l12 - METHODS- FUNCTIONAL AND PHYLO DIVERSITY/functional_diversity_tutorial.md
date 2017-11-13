@@ -240,7 +240,7 @@ null<-read.csv("null_graph.csv",header=T)
 ----------------
 species data including observed and null mean trait  values for each community
 
-![](null.png) 
+![](_null.png) 
 
 Trait beta diversity
 ----------------
