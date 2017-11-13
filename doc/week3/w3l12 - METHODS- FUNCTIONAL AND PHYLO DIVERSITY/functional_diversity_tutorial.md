@@ -122,7 +122,7 @@ For these two measures you need more species than traits. If you  don’t have t
 Functional Richness - FRic
 ----------------
 
-![](func_richness.png) 
+![](funct_richness.png) 
 Fric is the convex hull volume.  It can be abundance weighted.  If it’s one trait it’s the “range” ![](func_richness_range.png)
 
 Functional Richness - FRic
