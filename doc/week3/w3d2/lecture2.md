@@ -47,7 +47,15 @@ nodes than for shallow ones). An alternative index might therefore, as in this c
 normalize each node right away using _j_ = the number of tips subtended by the focal 
 node.
 
-- implementations
+Which one might compute, for example, thusly:
+
+```perl
+use Bio::Phylo::IO 'parse_tree';
+$ic = parse_tree(
+	'-format' => 'newick',
+	'-string' => '((A,B),C);',
+)->calc_i2;
+```
 
 Effect of extinction on imbalance metrics
 -----------------------------------------
