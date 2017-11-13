@@ -145,7 +145,7 @@ Functional Divergence - FDiv
 ----------------
 
 ![](fdiv_3.png) 
-![](Fdiv.png)  
+![](fdiv.png)  
 
 Fdiv - the degree to which  abundance distribution in  niche space maximizes  divergence in functional  characters within the  community
 
