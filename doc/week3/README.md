@@ -21,8 +21,8 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 3 - Comparative character analysis
 
 - Lecture I: Homology and cross-sectional character analysis
-- Lecture II: Morphological characters and longitudinal analysis ([Aidan Couzens](http://onlinelibrary.wiley.com/doi/10.1111/evo.12866/full)?)
-- Lecture III: Character data mining and representation (Jeremy Miller?)
+- Lecture II: Morphological characters and longitudinal analysis (Aidan Couzens)
+- Lecture III: Character data mining and representation (Jeremy Miller)
 - Practical: [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) and [Ornstein-Uhlenbeck models](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture5/OUModels.Rmd)
 
 ### Day 4 - Trait analysis
