@@ -123,7 +123,8 @@ Functional Richness - FRic
 ----------------
 
 ![](funct_richness.png) 
-Fric is the convex hull volume.  It can be abundance weighted.  If it’s one trait it’s the “range” 
+
+Fric is the convex hull volume. It can be abundance weighted.  If it’s one trait it’s the “range” 
 
 ![](funct_richness_range.png)
 
