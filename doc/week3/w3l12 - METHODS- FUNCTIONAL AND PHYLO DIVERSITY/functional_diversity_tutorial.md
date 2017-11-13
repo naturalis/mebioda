@@ -178,7 +178,8 @@ withFGR$spfgr
 Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 ----------------
 
-![](dummyfuncomp.png)
+![](dummy_funcomp.png)
+
 - functcomp returns the functional composition of a set of  communities, as measured by the community level weighted means  of trait values
 - For a continuous trait CWM is the mean trait value of all species  present in the community, weighted by their relative abundances.
 
