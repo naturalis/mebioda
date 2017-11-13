@@ -137,7 +137,7 @@ Functional Evenness - FEve
 ----------------
 
 ![](fdiv_2.png) 
-![](func_evenness.png) FEve - the evenness  of abundance  distribution in filled  niche space
+![](functional_evenness.png) FEve - the evenness  of abundance  distribution in filled  niche space
 
 Functional Divergence - FDiv
 ----------------
