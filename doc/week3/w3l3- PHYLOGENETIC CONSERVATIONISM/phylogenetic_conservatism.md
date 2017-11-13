@@ -36,7 +36,7 @@ Wiens et al., 2010
    - What are some examples at each scale?
    - What gives rise to the barriers (depicted in the  inset) in each example?
    - Crisp et al., 2009: Biome stasis at speciation  outweighs biome shifts 25
-![](wiens2.png) ![](wiens3.png)
+![](wiens_2.png) ![](wiens_3.png)
 
 Wiens et al., 2010
 ----------------
