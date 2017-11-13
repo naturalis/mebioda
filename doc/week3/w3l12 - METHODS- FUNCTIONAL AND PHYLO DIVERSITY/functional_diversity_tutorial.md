@@ -172,7 +172,8 @@ FGR
 withFGR <- dbFD(dummy$trait, dummy$abun, calc.FGR = T)  
 withFGR$FGR
 withFGR$spfgr
-![](FGR.png) ![](FGR_sp.png)
+
+![](fgr.png) ![](FGR_sp.png)
 
 Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 ----------------
