@@ -13,7 +13,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 2 - Topological analysis
 
-- Lecture I: [The APG-III tree and phylocom](w3d2/lecture1.md)
+- Lecture I: [The APG-III tree and phylocom](w3d2/lecture1.md), [Methods for computing phylogenetic diversity](w3d5/lecture2/Phylo-trait_tutorial.pdf)
 - Lecture II: Simple tree shape metrics (e.g. balance, branchiness)
 - Lecture III: Estimating evolutionary processes (e.g. birth/death)
 - Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
@@ -25,17 +25,17 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture III: Character data mining and representation (Jeremy Miller)
 - Practical: [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) and [Ornstein-Uhlenbeck models](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture5/OUModels.Rmd)
 
-### Day 4 - Trait analysis
+### Day 4 - Trait data and analysis
 
-- Lecture I: Trait databases
+- Lecture I: Trait databases, especially [BIEN](https://github.com/naturalis/RBIEN/tree/master/tutorials), but also [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php)
 - Lecture II: [Traits in space and time](w3d4/lecture2.md)
 - Lecture III: [Trait covariation and optimization](w3d4/lecture3.md)
-- Practical: TBD, probably work on trait databases, e.g. [BIEN](http://bien.nceas.ucsb.edu/bien/), [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php). Maybe use the RBIEN [tutorials](https://github.com/naturalis/RBIEN/tree/master/tutorials)
+- Practical: Collect trait data for your study organism
 
-### Day 5 - Diversification
+### Day 5 - Functional and character diversity
 
 - Lecture I: [Methods for computing functional diversity](w3d5/lecture1.md)
-- Lecture II: [Methods for computing phylogenetic diversity](w3d5/lecture2/Phylo-trait_tutorial.pdf)
+- Lecture II: Functional diversity, continued
 - Lecture III: Traits, characters, and diversification (Vincent Merckx)
 - Practical: [Phylogenetic signal](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture6/PD.Rmd) and [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
