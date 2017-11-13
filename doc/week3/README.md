@@ -13,7 +13,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 2 - Topological analysis
 
-- Lecture I: The APG-III tree and phylocom
+- Lecture I: [The APG-III tree and phylocom](w3d2/lecture1.md)
 - Lecture II: Simple tree shape metrics (e.g. balance, branchiness)
 - Lecture III: Estimating evolutionary processes (e.g. birth/death)
 - Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
@@ -35,7 +35,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 5 - Diversification
 
 - Lecture I: [Methods for computing functional diversity](w3d5/lecture1.md)
-- Lecture II: [Methods for computing phylogenetic diversity](w3l11%20-%20METHODS-%20PHYLO%20AND%20TRAIT%20DISPERSION/Phylo-trait_tutorial.pdf)
+- Lecture II: [Methods for computing phylogenetic diversity](w3d5/lecture2/Phylo-trait_tutorial.pdf)
 - Lecture III: Traits, characters, and diversification (Vincent Merckx)
 - Practical: [Phylogenetic signal](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture6/PD.Rmd) and [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
