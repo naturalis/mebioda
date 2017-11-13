@@ -1,12 +1,44 @@
 Simple tree shape metrics: imbalance, branchiness
 =================================================
 
-Lineage diversification processes
----------------------------------
+The Yule process revisited
+--------------------------
+- We've previously seen the Yule process in the context of species delimitation, where
+  certain algorithms (e.g. GMYC) attempt to find the inflection point between 
+  diversification (Yule) and population-genetic (Coalescent) processes.
+- The process assumes that every lineage is equally likely to speciate at any given time.
+- Hence, the more lineages there are, the shorter the waiting time till the next 
+  speciation, because there are more lineages playing the lottery.
+- The average expected waiting time will the next speciation is therefore 1/_n_ (or any
+  given waiting time, when simulating, is drawn from an exponential distribution).
 
-- Pure birth (Yule)
-- Birth/death
-- LTT
+![](lecture2/exponential-distribution.svg)
+
+Birth/death processes
+---------------------
+- In the simplest birth/death processes, an additional parameter determines the 
+  probability with which every lineage is to go extinct at any given time.
+- The _net diversification rate_ is thus `speciation - extinction`.
+- (In simulations this rate should obviously be positive, so the extinction rate should
+  be smaller than the birth rate in order for there to 
+  [grow a tree](http://naturalis.github.io/browbrow).)
+  
+![](lecture2/birth-death.png)
+
+Diversification through time
+----------------------------
+But, is net diversification rate (speciation-extinction) constant through time? We might
+expect 
+[ecological opportunities to arise, triggering adaptive radiations](https://www.nature.com/scitable/knowledge/library/ecological-opportunity-trigger-of-adaptive-radiation-84160951),
+processes that we might visualize, qualitatively, as lineage-through-time plots:
+
+![](lecture2/ltt.png)
+
+- (A) Even rates through time, the null hypothesis for patterns of diversification 
+  (γ = 0.05). 
+- (B) Early burst of cladogenesis and species accumulation, the expected pattern under 
+  Ecological Opportunity (γ = -3.39). 
+- (C) Late burst of speciation or early extinction (γ = 3.20).
 
 Tree imbalance
 --------------
