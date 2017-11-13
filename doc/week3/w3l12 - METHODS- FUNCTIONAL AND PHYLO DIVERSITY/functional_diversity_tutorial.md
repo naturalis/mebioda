@@ -152,7 +152,7 @@ Fdiv - the degree to which  abundance distribution in  niche space maximizes  di
 Functional Dispersion - FDis
 ----------------
 
-![](Fdiv_4.png)
+![](fdiv_4.png)
 
 - Average distance to the (abundance weighted) centroid
 - FDis is unaffected by species richness
