@@ -280,7 +280,7 @@ comdist.tussock <- comdist(abun.m,dis.traitm)  plot(comdist.tussock)
 Trait dendrogram
 ----------------
 comdist.clusters.tussock <- hclust(comdist.tussock)  plot(comdist.clusters.tussock)
-![](trait_d.png) 
+![](dendog.png) 
 
 Phylosor
 ----------------
