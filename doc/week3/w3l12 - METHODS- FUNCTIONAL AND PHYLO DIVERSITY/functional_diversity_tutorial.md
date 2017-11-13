@@ -136,7 +136,7 @@ Functional Richness - FRic
 Functional Evenness - FEve
 ----------------
 
-![](Fdiv_2.png) 
+![](fdiv_2.png) 
 ![](func_evenness.png) FEve - the evenness  of abundance  distribution in filled  niche space
 
 Functional Divergence - FDiv
