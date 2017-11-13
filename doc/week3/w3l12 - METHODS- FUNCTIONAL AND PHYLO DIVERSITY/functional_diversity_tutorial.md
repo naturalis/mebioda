@@ -131,7 +131,7 @@ Fric is the convex hull volume. It can be abundance weighted.  If it’s one tra
 Functional Richness - FRic
 ----------------
 
-![](functional_richnessFRic.png)
+![](funct_richnessFRic.png)
 
 Functional Evenness - FEve
 ----------------
