@@ -144,8 +144,10 @@ FEve - the evenness  of abundance  distribution in filled  niche space
 Functional Divergence - FDiv
 ----------------
 
-![](Fdiv_3.png) 
-![](Fdiv.png)  Fdiv - the degree to which  abundance distribution in  niche space maximizes  divergence in functional  characters within the  community
+![](fdiv_3.png) 
+![](Fdiv.png)  
+
+Fdiv - the degree to which  abundance distribution in  niche space maximizes  divergence in functional  characters within the  community
 
 Functional Dispersion - FDis
 ----------------
