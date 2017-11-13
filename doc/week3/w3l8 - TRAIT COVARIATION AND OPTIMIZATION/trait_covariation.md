@@ -46,15 +46,16 @@ Papers Covered
 ----------------
 ![](papers.png)
 
-Trait Covaraition: From Tropics to Tundra
+Trait Covariation: From Tropics to Tundra
 ----------------
 (Leaf trait data of 111 species across **6 biomes** were collected and analyzed)
 Figure 1 from Reich et al. (1997); Relations among mass-based photosynthesis, SLA, nitrogen, and LL
-![](reich_g.png)
+
+![](_reich_g.png)
 
 Reich et al. 1997. PNAS
 
-Trait Covaraition: From Tropics to Tundra
+Trait Covariation: From Tropics to Tundra
 ----------------
 (Leaf trait data of 111 species across **6 biomes** were collected and analyzed)
 Figure 1 from Reich et al. (1997); Relations among mass-based photosynthesis, SLA, nitrogen, and LL
@@ -66,7 +67,7 @@ Figure 1 from Reich et al. (1997); Relations among mass-based photosynthesis, SL
 
 Reich et al. 1997. PNAS
 
-Trait Covaraition: From Tropics to Tundra
+Trait Covariation: From Tropics to Tundra
 ----------------
 * Multiple leaf trait relationships  are similar regardless of biome or climate regime | 
 ![](legend.png)
@@ -75,7 +76,7 @@ Trait Covaraition: From Tropics to Tundra
 
 Figure 3,  Figure 4 from Reich et al. (1997)
 
-Trait Covaraition: From Tropics to Tundra
+Trait Covariation: From Tropics to Tundra
 ----------------
 ![](r_gr.png)
 
