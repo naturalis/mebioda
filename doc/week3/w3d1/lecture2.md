@@ -133,25 +133,6 @@ New & Interesting Approaches and Methods
 - Units, dimensional analysis, and Log transforma1on of traits
 - Several others too! …
 
-Phylocom
-----------------
-Software for the Analysis of Phylogenetic Community Structure and Chatacter Evolution with Phylomatic
-Current version: 4.2 (released 2011-08-06)
-© 2011-2017 Campbell Webb, David Ackerly, Steven Kembel
-
-Features (Current version 4.2)
-
-- Calculate phylogenetic community structure metrics ( Webb 's NRI, NTI, Faith's PD, Rao 's entropy) and compare observed patterns to those expected under various null models of community assembly and phylogeny structure (comstruct). Now, many metrics incorpora variation in taxon abundance.
-- Calculate inter-sample phylogenetic distance for phylogenetic ordination and classification (comdist and comdist nt ). Now incorporates null model testing  of observed patterns.
-- Comparative methods for the analysis of character evolution (aot; conservatism metrics, independent contrasts, lineages through  time).
-- Calculate trait dìstribution  metrics within sample  communities  and compare  to metrics for random community assembly  (comtrait ).
-- Simulate  phylogeny  and trait evolution under various evolutionary  models (ecovo | ve).
-- Manipulate phylogenetic trees and ecologica I community data: convert Newick to Nexus format, prune and merge phylogenetic trees,  add branch lengths to  your supertrees,  community  data  randomization using  one of several null models, and much more...
-- Turn species  lists into phylogenies ( with  or without  branch lengths) using  the included  standalone  version of phylomatic and phylocom's
-bl adj  function.
-- Handles large data sets (tested with >10,000 sam ples/ taxa) , polytomies, cont inuous and categorica! characters. NEW: detects  UNIX/Windows/Mac line-endings in  your input files.
-(Difference   from  version  4.1  to 4.2 :  minor bug fixes, and new  options :  new2 f y  and nodesi gl )
-
 Package ‘picante’
 ----------------
 
