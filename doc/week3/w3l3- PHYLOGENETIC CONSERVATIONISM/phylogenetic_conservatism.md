@@ -85,7 +85,7 @@ Wiens et al., 2010
 
 Wiens et al., 2010
 ----------------
-![](wiens4.png)
+![](wiens_4.png)
 Figure from chapter 1 of Bush et al., 2011
 
 Wiens et al., 2010
