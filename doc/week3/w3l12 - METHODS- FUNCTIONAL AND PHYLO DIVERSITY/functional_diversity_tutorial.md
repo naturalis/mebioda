@@ -260,7 +260,7 @@ More functionally similar communities will have lower nearest neighbor distances
 
 **Pairwise dissimilarity**     **All pairwise distances between species**
 
-![](pairw_diss.png)           ![](pairwise_1.png)
+![](_pairw_diss.png)           ![](pairw_.png)
 
 Mean Pairwise distance
 ----------------
