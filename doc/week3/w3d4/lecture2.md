@@ -19,7 +19,7 @@ Changes in trait diversity over space and time
 
 Species richness maps for (a) all the species, (b) bats only and (c) all species other than bats,  showing how bats influence the overall latitudinal diversity gradient.
 ----------------
-![](royal_soc.png)
+![](lecture2/royal_soc.png)
 
 **Can you just replace species with traits?**
 
@@ -44,24 +44,24 @@ Stevens et. al 2006
 Range – the amount of phenetic variation in a community  STD – uniformity of species
 NND – local packing
 
-![](phenetic_a.png)
+![](lecture2/phenetic_a.png)
 
 Stevens et. al 2006
 ----------------
-   ![](N_mass.png)
+   ![](lecture2/N_mass.png)
 
-![](phenetic_a.png)
+![](lecture2/phenetic_a.png)
 
 ----------------
-![](pca.png)
+![](lecture2/pca.png)
 
 Stevens et. al 2006
 ----------------
-![](pc1.png)
+![](lecture2/pc1.png)
 
 Species Richness - Latitude
 ----------------
-![](sp_lat.png)
+![](lecture2/sp_lat.png)
 
 Swenson et. al 2012 GEB
 ----------------
@@ -89,7 +89,7 @@ Swenson et. al 2012 GEB
 Trait  dispersion
 ----------------
 Swenson et. al 2012 GEB
-![](trait_d.png)
+![](lecture2/trait_d.png)
 
 Conclusion
 ----------------
@@ -99,12 +99,12 @@ EXTRA SLIDES:
 ----------------
 **Climatic correlation**
 Swenson et. al 2012 GEB
-![](climatic_co.png)
+![](lecture2/climatic_co.png)
 
 Compare terms
 ----------------
-![](compare_t.png)
+![](lecture2/compare_t.png)
 
 Swenson et. al 2012 GEB
 ----------------
-![](map_2.png)
+![](lecture2/map_2.png)

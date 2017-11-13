@@ -6,8 +6,8 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 1 - Introduction
 
 - Lecture I: Data science tools: R
-- Lecture II: [Introduction to trait-based analysis](w3l1%20-%20TRAIT%20BASED%20ECOLOGY%20-%20OVERVIEW%20I/why%20trait-based%20science.pdf)
-- Lecture III: [Phylogenetic conservatism](w3l3-%20PHYLOGENETIC%20CONSERVATIONISM/phylogenetic%20conservationism.pdf)
+- Lecture II: [Introduction to trait-based analysis](w3d1/lecture2.md)
+- Lecture III: [Phylogenetic conservatism](w3d1/lecture3.md)
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
 [Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.pdf)
 
@@ -27,16 +27,16 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 4 - Trait analysis
 
-- Lecture I: Applied trait research (Tiedo van Kuijk?) <!--[Traits of invaders](w3l6%20-%20INVASION%20AND%20RESTORATION/Traits_of_Invaders.pdf)-->
-- Lecture II: [Traits in space and time](w3l7%20-%20TRAITS%20IN%20SPACE%20AND%20TIME/changes_functional_traits.pdf)
-- Lecture III: [Trait covariation and optimization](w3l8%20-%20TRAIT%20COVARIATION%20AND%20OPTIMIZATION/Trait_covariation.pdf)
+- Lecture I: Trait databases
+- Lecture II: [Traits in space and time](w3d4/lecture2.md)
+- Lecture III: [Trait covariation and optimization](w3d4/lecture3.md)
 - Practical: TBD, probably work on trait databases, e.g. [BIEN](http://bien.nceas.ucsb.edu/bien/), [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php). Maybe use the RBIEN [tutorials](https://github.com/naturalis/RBIEN/tree/master/tutorials)
 
 ### Day 5 - Diversification
 
-- Lecture I: [Methods for computing functional diversity](w3l12%20-%20METHODS-%20FUNCTIONAL%20AND%20PHYLO%20DIVERSITY/Functional_diversity_tutorial.pdf)
+- Lecture I: [Methods for computing functional diversity](w3d5/lecture1.md)
 - Lecture II: [Methods for computing phylogenetic diversity](w3l11%20-%20METHODS-%20PHYLO%20AND%20TRAIT%20DISPERSION/Phylo-trait_tutorial.pdf)
-- Lecture III: Trait-dependent diversification (Vincent Merckx?)
+- Lecture III: Traits, characters, and diversification (Vincent Merckx)
 - Practical: [Phylogenetic signal](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture6/PD.Rmd) and [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
 <!--

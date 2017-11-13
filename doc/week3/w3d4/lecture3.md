@@ -23,7 +23,7 @@ General Background
 ----------------
 Enormous interspectic variation in plants traits has been observed (Reich et al., 1997; Wright et al., 2004)
 *Table 1 from Reich et al. (1997); leaves of 111 species collected across 6 biomes worldwide
-![](reich_1997.png)
+![](lecture3/reich_1997.png)
 
 
 **Morphological Trait** 
@@ -42,7 +42,7 @@ General Background
 ----------------
 Enormous interspectic variation in plants traits has been observed (Reich et  al., 1997; Wright et al., 2004)
 Table 1 from Reich et al. (1997); leaves of 111 species collected across 6 biomes worldwide
-![](reich_1997_2.png)
+![](lecture3/reich_1997_2.png)
 
 Such big variation is thought to represent adaptions to the range of  environmental conditions spanning from tropics to tundra (Reich et al., 1997).  Also, most of these traits are actually interrelated, rather than independent.
 
@@ -51,14 +51,14 @@ Such big variation is thought to represent adaptions to the range of  environmen
 
 Papers Covered
 ----------------
-![](papers.png)
+![](lecture3/papers.png)
 
 Trait Covariation: From Tropics to Tundra
 ----------------
 (Leaf trait data of 111 species across **6 biomes** were collected and analyzed)
 Figure 1 from Reich et al. (1997); Relations among mass-based photosynthesis, SLA, nitrogen, and LL
 
-![](_reich_g.png)
+![](lecture3/_reich_g.png)
 
 Reich et al. 1997. PNAS
 
@@ -67,7 +67,7 @@ Trait Covariation: From Tropics to Tundra
 (Leaf trait data of 111 species across **6 biomes** were collected and analyzed)
 Figure 1 from Reich et al. (1997); Relations among mass-based photosynthesis, SLA, nitrogen, and LL
 
-![](_reich_g.png)
+![](lecture3/_reich_g.png)
 
 - Scaling among different traits (see table 1 for more details)
 - Scaling slope is pretty similar across 6 biomes
@@ -78,17 +78,17 @@ Reich et al. 1997. PNAS
 Trait Covariation: From Tropics to Tundra
 ----------------
 * Multiple leaf trait relationships  are similar regardless of biome or climate regime | 
-![](legend.png)
+![](lecture3/legend.png)
 
-![](reich_1997_3.png)
+![](lecture3/reich_1997_3.png)
 
 Figure 3,  Figure 4 from Reich et al. (1997)
 
 Trait Covariation: From Tropics to Tundra
 ----------------
-![](r_gr.png)
+![](lecture3/r_gr.png)
 
-![](r_gr_2.png)
+![](lecture3/r_gr_2.png)
 
 Reich et al. 1997. PNAS
 
@@ -129,7 +129,7 @@ Leaf Economics Spectrum
 (Global plant trait network (Glopnet) spanning 2548 species from 219 families at  175 sites worldwide)
 They assume an inherent economics in leaf, which could be described and  quantified by revenues and expenditures per unit investment, measured by biomass  or C, N or P.
 
-![](reich_1997_4.png)
+![](lecture3/reich_1997_4.png)
 
 *Figure 3 from Reich et al. (1997)
 
@@ -169,11 +169,11 @@ Main Problem: is to find when the tree should replace its leaves, by which the n
 **g = G/t**
 Where g is the marginal gain, and G is the life time net gain by a leaf G=lifetime photosynthetic production ???maintenance cost???construction cost
 
-![](g_eq.png)
+![](lecture3/g_eq.png)
 
 Where daily photosynthetic rate (p) is considered to be a monotonic decreasing  function, while maintenance cost (m) is assumed to decrease in proportion to p.
 
-![](p_t.png)
+![](lecture3/p_t.png)
 
 Kikuzawa. 1991. The American Naturist
 
@@ -182,40 +182,40 @@ Kikuzawa Model: a cost-benefit analysis
 Main Problem: is to find when the tree should replace its leaves, by which the net  gain by a leaf per unit time over the entire life span is maximum
 G=lifetime photosynthetic production ???maintenance cost	???construction cost
 
-![](g_eq.png)
+![](lecture3/g_eq.png)
 
 Kikuzawa also introduced the concept of **favorable period f(yr; 0 < f =< 1)**
 for photosynthesis alternate within a year, and in this case g is expressed as
 
-![](g_eq_2.png)
+![](lecture3/g_eq_2.png)
 
 e.g. t=2.5yr  and f=0.5 yr
 
-![](g_eq_3.png)
+![](lecture3/g_eq_3.png)
 
 Kikuzawa. 1991. The American Naturist
 
 Kikuzawa Model: a cost-benefit analysis
 ----------------
-![](kikuzawa_1991.png)
+![](lecture3/kikuzawa_1991.png)
 
 maximize: 
 
-![](g_eq.png)
+![](lecture3/g_eq.png)
 
-![](t_opt.png)
+![](lecture3/t_opt.png)
 
 Kikuzawa. 1991. The American Naturist
 
 Kikuzawa Model: a cost-benefit analysis
 ----------------
-![](t_opt.png)
+![](lecture3/t_opt.png)
 
 1. Leaf longevity is expected to be  short when initial net  photosynthetic rate of the leaf is  large (Reich et al., 1997)
 2. Leaf longevity is long when the  construction cost of the leaf is  large (Coley, 1988)
 3. Leaf longevity is short when the  decrease in net photosynthetic rate  with time is large (Mastumoto,  1984)
 
-![](fig3_reich.png)
+![](lecture3/fig3_reich.png)
 *Figure 1 from Reich et al. (1997)
 
 Kikuzawa. 1991. The American Naturist
@@ -231,7 +231,7 @@ Kikuzawa Model: a cost-benefit analysis
 **Main Problem**: is to find when the tree should replace its leaves, by which the net  gain by a leaf per unit time over the entire life span is maximum
 
 Main Finding:
-![](t_opt.png)
+![](lecture3/t_opt.png)
 
 Kikuzawa. 1991. The American Naturist
 
@@ -243,7 +243,7 @@ Plant growth can be understood as a process of investment leading to  returns an
 3. The longevity of the leaf, analogous to the expected  duration of the revenue stream
 A time discount rate, quantifying the fact that light-capture area  deployed in the immediate future is more valuable to the plant the  same area deployed at some later time.
 
-![](g_eq.png)
+![](lecture3/g_eq.png)
 
 Westoby et al. 2000. The American Naturist
 
@@ -253,7 +253,7 @@ The Time Value of Leaf Area
 Why do species with lower SLA not evolve toward higher value?
 A likely answer is that low-SLA species, investigating more mass per unit  leaf area, build leaves with greater life span
 
-![](westoby_2000.png)
+![](lecture3/westoby_2000.png)
 
 Westoby et al. 2000. The American Naturist
 
@@ -267,7 +267,7 @@ Future persistence of leaf area should less  valuable than immediate production 
 3. There is the risk that the plant will no longer be alive to benefit
 4. Opportunity cost effect
 
-![](longevity.png)
+![](lecture3/longevity.png)
 
 The Time Value of Leaf Area
 ----------------
@@ -283,18 +283,18 @@ The Time Value of Leaf Area
 ----------------
 
 Equal-Benefit-Set Formulation
-![](r.png)
+![](lecture3/r.png)
 
-![](longev.png)
+![](lecture3/longev.png)
 
-![](leaf_lon.png)
+![](lecture3/leaf_lon.png)
 
 Westoby et al. 2000. The American Naturist
 
 The Time Value of Leaf Area
 ----------------
 
-![](westoby_2.png)
+![](lecture3/westoby_2.png)
 
 Westoby et al. 2000. The American Naturist
 

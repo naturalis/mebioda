@@ -31,23 +31,23 @@ The distribution of the species and abundance of a  community in niche space, in
 - the evenness of abundance distribution in filled niche  space (functional evenness)
 - the degree to which abundance distribution in niche space  maximizes divergence in functional characters within the  community (functional divergence).
 
-![](fun_richness.png)
+![](lecture1/fun_richness.png)
 
-![](func_richness_2.png)
+![](lecture1/func_richness_2.png)
 
 
 **Functional Richness**  
 
-![](fun_evenness.png) 
+![](lecture1/fun_evenness.png) 
 
-![](func_richness_2.png) 
+![](lecture1/func_richness_2.png) 
 
 
 **Functional Evenness**  
 
-![](fun_divergence_1.png)
+![](lecture1/fun_divergence_1.png)
 
-![](fun_divergence_2.png)
+![](lecture1/fun_divergence_2.png)
 
 
 **Functional Divergence** 
@@ -56,42 +56,42 @@ The distribution of the species and abundance of a  community in niche space, in
 Functional Dispersion
 ----------------
 
-![](fun_dispersion.png)
+![](lecture1/fun_dispersion.png)
 
 Functional Diversity
 ----------------
 
-![](pca.png)
+![](lecture1/pca.png)
 
 dummy$trait
 ----------------
 trait data frame of 8 functional traits on 8 species
 
-![](dummytrait.png)
+![](lecture1/dummytrait.png)
 
 dummy$abun
 ----------------
 matrix of abundances of the 8 species from 10 communities
 
-![](dummy$abun.png)
+![](lecture1/dummy$abun.png)
 
 Dummy.dist <- gowdis(dummy$trait)
 ----------------
 
-![](dummy.dist.png) 
+![](lecture1/dummy.dist.png) 
 - 	gowdis computes the Gower (1971) similarity coefficient exactly as  described by Podani (1999),then converts it to a dissimilarity coefficient  by using D = 1 - S. It integrates variable weights as described by  Legendre and Legendre (1998).
 
 dummy.fdisp<-fdisp(dummy.dist,dummy.abun)
 ----------------
 
-![](dummyfdisp.png)
+![](lecture1/dummyfdisp.png)
 
-![](dummyfdisp_2.png) 
+![](lecture1/dummyfdisp_2.png) 
 
 Dummy.dbFD <- dbFD(dummy$trait, dummy$abun)
 ----------------
 
-![](dummydbFD.png)
+![](lecture1/dummydbFD.png)
 **What do all of these errors mean?**
 Species x species distance matrix was not Euclidean. 'sqrt' correction was applied.  FEVe: Could not be calculated for communities with <3 functionally singular species.
 FRic: To respect s > t, FRic could not be calculated for communities with <3 functionally  singular species.
@@ -103,7 +103,7 @@ FDiv: Could not be calculated for communities with <3 functionally singular spec
 Dummy.dbFD <- dbFD(dummy$trait, dummy$abun)
 ----------------
 
-![](dummydbFD.png)
+![](lecture1/dummydbFD.png)
 **“Species x species distance matrix was not Euclidean. 'sqrt'  correction was applied.”**
 This is because “dbFD” does a PCoA and then has to account for native  eigenvalues. The package comes with four possible correction methods and  the default here is to take the square root of the distances. This doesn’t  always work so you always choose another correction method.
 
@@ -122,37 +122,37 @@ For these two measures you need more species than traits. If you  don’t have t
 Functional Richness - FRic
 ----------------
 
-![](funct_richness.png) 
+![](lecture1/funct_richness.png) 
 
 Fric is the convex hull volume. It can be abundance weighted.  If it’s one trait it’s the “range” 
 
-![](funct_richness_range.png)
+![](lecture1/funct_richness_range.png)
 
 Functional Richness - FRic
 ----------------
 
-![](funct_richnessfric.png)
+![](lecture1/funct_richnessfric.png)
 
 Functional Evenness - FEve
 ----------------
 
-![](fdiv_2.png) 
-![](functional_evenness_1.png) 
+![](lecture1/fdiv_2.png) 
+![](lecture1/functional_evenness_1.png) 
 
 FEve - the evenness  of abundance  distribution in filled  niche space
 
 Functional Divergence - FDiv
 ----------------
 
-![](fdiv_3.png) 
-![](fdiv.png)  
+![](lecture1/fdiv_3.png) 
+![](lecture1/fdiv.png)  
 
 Fdiv - the degree to which  abundance distribution in  niche space maximizes  divergence in functional  characters within the  community
 
 Functional Dispersion - FDis
 ----------------
 
-![](fdiv_4.png)
+![](lecture1/fdiv_4.png)
 
 - Average distance to the (abundance weighted) centroid
 - FDis is unaffected by species richness
@@ -164,7 +164,7 @@ Functional Dispersion - FDis
 CWM
 ----------------
 
-![](CWM.png)
+![](lecture1/CWM.png)
 Community weighted mean trait values.
 
 FGR
@@ -173,12 +173,12 @@ withFGR <- dbFD(dummy$trait, dummy$abun, calc.FGR = T)
 withFGR$FGR
 withFGR$spfgr
 
-![](fgr.png) ![](fgr_sp.png)
+![](lecture1/fgr.png) ![](lecture1/fgr_sp.png)
 
 Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 ----------------
 
-![](dummy_funcomp.png)
+![](lecture1/dummy_funcomp.png)
 
 - functcomp returns the functional composition of a set of  communities, as measured by the community level weighted means  of trait values
 - For a continuous trait CWM is the mean trait value of all species  present in the community, weighted by their relative abundances.
@@ -186,7 +186,7 @@ Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 Dummy.functcomp <- functcomp(dummy$trait,  dummy$abun)
 ----------------
 
-![](funct_comp.png)
+![](lecture1/funct_comp.png)
 	
 For ordinal, nominal and binary traits, either the dominant class is  returned, or the abundance of each individual class is returned (when  CWM.type	is "all" ).
 
@@ -214,14 +214,14 @@ pool<-data.frame(sp, trait)
 ----------------
 must contain all the species in all communities
 
-![](poolfunc.png)
+![](lecture1/poolfunc.png)
 
 sp_list_community1<-c("sp1", "sp2","sp5","sp6")  
 test_trait_data(sp_list_community1, pool, log=TRUE,  reps=999, abweight=TRUE, abdata=abundance,  verbose=TRUE)->summary_verbose  
 summary_verbose
 ----------------
 
-![](specieslist_community1.png)
+![](lecture1/specieslist_community1.png)
 
 Do this for each community that  has a minimum of 4 species
 ----------------
@@ -240,27 +240,27 @@ null<-read.csv("null_graph.csv",header=T)
 ----------------
 species data including observed and null mean trait  values for each community
 
-![](_null.png) 
+![](lecture1/_null.png) 
 
 Trait beta diversity
 ----------------
 
-![](t_beta_diversity.png) 
+![](lecture1/t_beta_diversity.png) 
 
 Trait beta diversity
 ----------------
 **Functional Sorenson's**    **Shared function between two communities**
 
-![](F_sor.png)                ![](fun_sor.png)
+![](lecture1/F_sor.png)                ![](lecture1/fun_sor.png)
 
 **Nearest neighbor distance**  
 More functionally similar communities will have lower nearest neighbor distances
 
-![](nearest_n_.png)      ![](_nearest_n.png)
+![](lecture1/nearest_n_.png)      ![](lecture1/_nearest_n.png)
 
 **Pairwise dissimilarity**     **All pairwise distances between species**
 
-![](_pairw_diss.png)           ![](pairw_.png)
+![](lecture1/_pairw_diss.png)           ![](lecture1/pairw_.png)
 
 Mean Pairwise distance
 ----------------
@@ -275,12 +275,12 @@ null.model="taxa.labels”,abundance.weighted=TRUE) #standard  effect size, not 
 Nearest neighbor distance
 ----------------
 comdist.tussock <- comdist(abun.m,dis.traitm)  plot(comdist.tussock)
-![](comdist.png)
+![](lecture1/comdist.png)
 
 Trait dendrogram
 ----------------
 comdist.clusters.tussock <- hclust(comdist.tussock)  plot(comdist.clusters.tussock)
-![](dendog.png) 
+![](lecture1/dendog.png) 
 
 Phylosor
 ----------------
