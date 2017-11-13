@@ -85,7 +85,7 @@ Trait Covariation: From Tropics to Tundra
 
 Reich et al. 1997. PNAS
 
-Summary of Reich et al. (1997)???s Paper
+Summary of Reich et al. (1997)'s Paper
 ----------------
 
 a **pattern** : Scaling relationship of leaf traits was found and demonstrated convergent evolution and global generality in plant functioning
@@ -98,10 +98,10 @@ e.g. No combination of thick, dense, and/or long lived leaves with high mass-bas
 2. Leaves of high N are attractive nutritionally, and thus subject to higher rates of herbivory
 3. Species that grow fast and have high Amax would be at a disadvantage in maintaining long-lived foliage and impose a less than optimal allocation of resources at different positions
 
-Summary of Reich et al. (1997) Paper
+Summary of Reich et al. (1997)'Paper
 ----------------
 a **pattern** : Scaling relationship of leaf traits was found and demonstrated  convergent evolution and global generality in plant functioning
-a **hypothesis** : interrelated constraints that involve compromises in leaf  structure and function, because of limits on the multiple services that carbon  and N can perform in a leaf
+a **hypothesis** : interrelated constraints that involve compromises in leaf  structure and function, because of limits on the multiple services that carbon and N can perform in a leaf
 
 e.g. No combination of thin, short-lived leaves and low Amax
 e.g. No combination of thick, dense, and/or long lived leaves with high mass-based  leaf N, Amax and Dark respiration rate
@@ -110,7 +110,7 @@ In thick/dense leaves, within-leaf shading can limit the amount of light reachin
 Leaves of high N are attractive nutritionally, and thus subject to higher rates of herbivory **(not efficient)**
 Species that grow fast and have high Amax would be at a disadvantage in  maintaining long-lived foliage and impose a less than optimal allocation of resources at different positions **(not efficient)**
 
-Summary of Reich et al. (1997)s Paper
+Summary of Reich et al. (1997)'s Paper
 ----------------
 **Some points mentioned but still quite unknown:**
 1. Why area based Amax don???t hold the same relationship as mass based Amax,  with SLA, Leaf life span, and Leaf nitrogen
