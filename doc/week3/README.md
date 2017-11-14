@@ -7,7 +7,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 - Lecture I: [Data science tools: R](w3d1/lecture1.md)
 - Lecture II: [Data carpentry](https://github.com/datacarpentry/R-ecology-lesson)
-- Lecture III: [Phylogenetic conservatism](w3d1/lecture3.md)
+- Lecture III: Data carpentry (cont.)
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
 [Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.rmd)
 
