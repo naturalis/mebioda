@@ -76,3 +76,11 @@ Assumed sampling fraction (rho) = 1
 
 R thinks it has converged.
 ```
+
+Quick sanity check
+------------------
+
+Save for some differences in rounding, the results are identical:
+- Log likelihoods are ± identical: 196349.3 (`ape`), 196349.2855 (`phytools`)
+- μ/λ = 0.9279609 (`ape`), 0.2603/0.2805 = 0.927985739750446 (`phytools`)
+- λ-μ = 0.02020561 (`ape`), 0.2805-0.2603 = 0.0202 (`phytools`)
