@@ -51,15 +51,15 @@ Open text files and copy and paste each one into a separate worksheet in your ex
 Using TNRS Taxon Scrubber 
 ---------------------------------------------
 
-- You will promarly use your "Best matches" file, which has the same number of rows as your original taxon list, so it cand irectly replace that list. 
-- use the "all matches" output to see details where multiple suggestion where provided. 
+- You will primarly use your "Best matches" file, which has the same number of rows as your original taxon list, so it can directly replace that list. 
+- use the "all matches" output to see details where multiple suggestions where provided. 
 
 Using TNRS Taxon Scrubber 
 ---------------------------------------------
 
 - First: scan the "warning" columns in your best matches sheet for partial match- higher scoring names were found.
-  - Genus name probably did not match an accepted species name, and it may suggest something a complete different family.
-  - Look at yout "all matches" sheet to look for all the suggestions, and use your brain to pick the best match (one way is to compare the suggested family name with the original name from your list).
+  - Genus name probably did not match an accepted species name, and it may suggest something, a complete different family.
+  - Look at your "all matches" sheet to look for all the suggestions, and use your brain to pick the best match (one way is to compare the suggested family name with the original name from your list).
   - Example: see " Zizyphus_jujuba from tutorial file. TNRS "best matches" prioritize the a genus match "Zyziphus" for which it has no option of taxonomic status. 
   - But in "all matches" you see option "Ziziphus jujuba" which has "accepted status". You should choose that one.
   
@@ -67,7 +67,7 @@ Using TNRS Taxon Scrubber
 ---------------------------------------------
 
 - Second: look out for match scores < 0.5
-  - specific ephitet did not match, and genus did not match 100%, it may suggest the worng family entirely. So look at option in "all matches", compare suggested family names with original family, make your best judgement.
+  - specific ephitet did not match, and genus did not match 100%, it may suggest the wrong family entirely. So look at option in "all matches", compare suggested family names with original family, make your best judgement.
 - Third: family names are often changed
   - this is normal, but if you have taxonomic knowledge, compare original with suggested families side by side. If e.g. "Fabaceae" (peas) became "Pteridaceae" ( a fern family) you probably got a funky name match.
   - if you are suspicious, go to www.tropicos.org, search both family names and compare where they sit in the taxonomyc hierarchy. If the orders differ, or worse, the classes, TRNS probably gave a poor name suggestion. 
@@ -91,15 +91,16 @@ http://.www.phylodiversity.net/ phylomatic/phylomatic.html
 
 - Copy and paste the concatenated list into Phylomatic
  - it is ok to have "sp" for unidentified species, it simply will match by genus. 
-- Output format; select "newick" 
+- Output format: select "newick" 
 - Master phylogeny: select "maximally resolved seed plant tree"
 
 What is a "newick" string?
 ---------------------------------------------
 
 - A newick string is a way of representing a phylogenetic tree in a text format.
-- The tree depicted  below should be displayed in a text like this:
+- The tree depicted below should be displayed in a text like this:
   - ((sp1,(sp2,sp3),sp4))
+  
   ![](tree.png)
   
 Getting started with Phylocom
@@ -110,20 +111,20 @@ Getting started with Phylocom
   http://bodegaphylo.wikispt.org/Community_Phylogenetics
   http://people.ucalgary.ca/~smwavosi/phylocom.htm
 - Open folder containing Phylocom on your computer.
-(*For mac, see Appendix 1, "Troubleshooting Phylocom" at the end of this tutorial)
+(For mac, see Appendix 1, "Troubleshooting Phylocom" at the end of this tutorial)
 - For Windows, go to "W32"
   - Double click "phylocom.bat"
   - Your command line console should open up with some phylocom headings.
-- *All commands will now look for files in and deposit outputs in your W32 folder.
-_ *Phylocom is picky, so note **Appendix 1** in this tutorial "Troubleshooting Phylocom".
+- All commands will now look for files in and deposit outputs in your W32 folder.
+- Phylocom is picky, so note **Appendix 1** in this tutorial "Troubleshooting Phylocom".
 
 Assigning branch lengths to your phylogeny in Phylocom
 ---------------------------------------------
 
 - Phylocom comes with a file called "wikstrom.ages", which contains known fossil ages for ancestral angiosperms.
-- Phylocom can use these ages to assign branch lengthsto your tree that are scaled with respect to time.
+- Phylocom can use these ages to assign branch lengths to your tree that are scaled with respect to time.
 - Go to "example folder", open "bladji_example" and **copy** the file the wockstrom.ages. 
-- *Note: there is also a file called "ages"in the "example" folder. That files goes with a hypothetical example dataset and will not work to assign branch lengths to your tree. 
+- Note: there is also a file called "ages"in the "example" folder. That files goes with a hypothetical example dataset and will not work to assign branch lengths to your tree. 
 - Paste "wikstrom.ages" in your W32 folder.
 - Delete "wikstrom." form the name so that your are left with "ages".
 - Copy your phylogeny text file (newick), (for this tutorial use file phylo_B2TF_origin.txt)
@@ -140,21 +141,21 @@ Assigning branch lengths to your phylogeny in Phylocom
    - A text file will show un in W32 called "phylo.ages.txt" (but you could name it anything you want)
    - Open the result file to make sure it worked. You should see a newick string with length added, like (genus_sp:75.000)
    - Save this somewhere; now you can copy this aged tree into W32 and make it your "phylo" file for other analysis.
-   -  *Remember **Appendix 1** in this tutorial contains hints for troubleshooting Phylocom.
+   - Remember **Appendix 1** in this tutorial contains hints for troubleshooting Phylocom.
    
 Understanding community phylogenetic metrics NRI and NTI
  ---------------------------------------------
  - Next, we'll analyze Net Relatedness Index (NRI) and Nearest Taxon Index (NTI) for sample community.
  - These increasingly commonly used metrics reflect phylogenetic signal in the organization of your sample plant community.
  - Both compare your sample community to random draws for the regional species pool.
-   - *Note: regional species pool=phylo file
+   - Note: regional species pool=phylo file
 - How you define your regional pool is up to you. It is usually an area that contains all of the species you think could colonize your study plot. 
-  - *Changing your regional species pool can give you different results; scale is important: (see Swenson et al., Ecology, 87(10) 2006,pp. 2418-2424)
+  - Changing your regional species pool can give you different results; scale is important: (see Swenson et al., Ecology, 87(10) 2006,pp. 2418-2424)
   
 Understanding community phylogenetic metrics NRI and NTI
 ---------------------------------------------
 
-- Both metrics tells you where taxa in your community are more closely (clustered) or less closely (over-dispersed) related to each other than you would expect by chance. 
+- Both metrics tell you where taxa in your community are more closely (clustered) or less closely (over-dispersed) related to each other than you would expect by chance. 
  - The difference between them is in phylogenetic scale.
 - NRI tells you about the whole phylogeny, and is a good indicator when the environment has excluded entire clades (groups of related species)
 - NTI tells you about the tip of the phylogeny, and is a good indicator when species exclusion is due to high competition between closely related species.
@@ -233,10 +234,10 @@ Part 2 Understanding and analyzing trait patterns in community assembly
 Understanding and analyzing trait patterns metric CWM and CWV
 ---------------------------------------------
 
-- Community Weighted Mean (CWM) and Community Weighted Variance are simple but powerful metrics in the analysis pf community assembly and response to change. 
-- These are simply the first two momentns of abundance-distribution of a given trait in the community.
+- Community Weighted Mean (CWM) and Community Weighted Variance are simple but powerful metrics in the analysis of community assembly and response to change. 
+- These are simply the first two moments of abundance-distribution of a given trait in the community.
 - These metrics are weighted by the relative abundance of each species. 
-  - The argument for abundance- weightening is that species are rarely evenly distributed in the environment, and the functioning a forest is the result of the traits of each plant, not of each species.
+  - The argument for abundance-weightening is that species are rarely evenly distributed in the environment, and the functioning of a forest is the result of the traits of each plant, not of each species.
   
 Calculating trait patterns metric CWM and CWV
 ---------------------------------------------
@@ -253,7 +254,7 @@ Calculating trait patterns metric CWM and CWV
 ---------------------------------------------
 
 - Calculating CWM and CWV with an R script
- - these equations are simple, but cumbersomeacross many sample of null communities -> Use R!
+ - these equations are simple, but cumbersome across many sample of null communities -> Use R!
 - An R script for calculating these across any number of plots of variable sizes is included with this tutorial, called "CWM_CWV.r"
 
 Calculating trait patterns metric CWM and CWV
@@ -310,14 +311,14 @@ Troubleshooting Phylocom
 ---------------------------------------------
 
 - For all users
- - You ust be able to see and delete extensions like ".txt" from files. Change setting to show extension for known file types (next two slides)
+ - You must be able to see and delete extensions (like ".txt") from files. Change setting to show extension for known file types (next two slides)
  - If Phylocom crashes when you try to execute a command, it is usually because one of your files is not in the right format, examine them closely. Compare them to files in "example" folder, or to the files included in this tutorial.
  
  Troubleshooting Phylocom
 ---------------------------------------------
 
 - For Mac users
- - Also see file accompanyng this tutorial called : "Bje_Phylocom_notes_for_Mac.docx" 
+ - Also see file accompanying this tutorial called : "Bje_Phylocom_notes_for_Mac.docx" 
   - Open up program "Terminal" in utilities folder in applications
   - Type pwd to see your current directory (e.g. /Users/owner)
   - Now type cd../../ to move you up two directories
