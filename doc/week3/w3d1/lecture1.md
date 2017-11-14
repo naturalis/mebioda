@@ -5,7 +5,7 @@ Lectures
 --------
 - Traits, phenotypes, and functional diversity
 - Characters, homology, and data integration
-- Topological phylogenetic diversity metrics
+- Topological analysis: tree shape, diversification, PD
 - Phylogenetic comparative analysis
 
 Practicals
@@ -16,17 +16,18 @@ Practicals
 - functional trait analysis
 - functional and phylogenetic diversity
 
-R concepts and data types
--------------------------
-- scalar types
-- data frames
-- object model
+R syntax
+--------
+- [syntax basics](lecture1/base-r.pdf)
+- [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
 
-R environment
--------------
-- Installing the [R](http://cran-mirror.cs.uu.nl/) engine
-- [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
-- `R CMD`
+Interacting with the R environment
+----------------------------------
+- Through the [R](http://cran-mirror.cs.uu.nl/) engine
+- In [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
+- On the shell, e.g.: 
+  - `R CMD BATCH script.R` - redirects STDOUT to file script.Rout
+  - `Rscript script.R` - no redirection
 
 Installing R packages
 ---------------------
@@ -46,6 +47,8 @@ R packages
 - picante
 - FD
 - VEGAN
+- TreeSim
+- TreePar
 
 R communities
 -------------
