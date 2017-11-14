@@ -97,3 +97,30 @@ ltt.plot(binultra,log="y")
 Resulting in:
 
 ![](lecture3/ltt.png)
+
+Rate shifts?
+------------
+**Stadler T**, 2011. Mammalian phylogeny reveals recent diversification rate shifts.
+_PNAS_ **108**(15): 6187–6192
+
+![](lecture3/sampling.jpg)
+
+```r
+library(phytools)
+library(TreePar)
+phy <- read.tree(file="PhytoPhylo.tre")
+
+# make tree binary and ultrametric
+binultra <- multi2di(force.ultrametric(phy, method = "extend"))
+
+# assume a near complete tree, rho[1]=0.95
+rho <- c(0.95,1)
+
+# set windows of 10myr, starting 0, ending 400myr
+grid <- 10
+start <- 0
+end <- 400
+
+# estimate time, lambda, mu
+res <- bd.shifts.optim(x,c(rho,1),grid,start,end)[[2]]
+```
