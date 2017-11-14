@@ -6,7 +6,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 1 - Introduction
 
 - Lecture I: [Data science tools: R](w3d1/lecture1.md)
-- Lecture II: [Introduction to trait-based analysis](w3d1/lecture2.md)
+- Lecture II: [Data carpentry](https://github.com/datacarpentry/R-ecology-lesson)
 - Lecture III: [Phylogenetic conservatism](w3d1/lecture3.md)
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
 [Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.rmd)
@@ -27,7 +27,10 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 4 - Trait data and analysis
 
-- Lecture I: Trait databases, especially [BIEN](https://github.com/naturalis/RBIEN/tree/master/tutorials), but also [EoL trait bank](http://eol.org/info/516), [TRY](https://www.try-db.org/TryWeb/Home.php)
+- Lecture I: [Introduction](w3d4/lecture1.md) to traits. Trait databases, especially 
+  [BIEN](https://github.com/naturalis/RBIEN/tree/master/tutorials), but also 
+  [EoL trait bank](http://eol.org/info/516), 
+  [TRY](https://www.try-db.org/TryWeb/Home.php)
 - Lecture II: [Traits in space and time](w3d4/lecture2.md)
 - Lecture III: [Trait covariation and optimization](w3d4/lecture3.md)
 - Practical: Collect trait data for your study organism
