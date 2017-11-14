@@ -6,7 +6,7 @@ The birth/death process revisited
 **Nee, S, May, RM & Harvey, PH**, 1994. The reconstructed evolutionary process. 
 _Philos Trans R Soc Lond B Biol Sci_ **344**:305-311
 
-![](lecture2/birth-death.png)
+![](lecture3/birth-death.png)
 
 - In the simplest case, there are two constant parameters: speciation rate (lambda, λ) and 
   extinction rate (mu, μ)
@@ -123,11 +123,98 @@ binultra <- multi2di(force.ultrametric(phy, method = "extend"))
 # assume a near complete tree, rho[1]=0.95
 rho <- c(0.95,1)
 
-# set windows of 10myr, starting 0, ending 400myr
-grid <- 10
+# set windows of 100myr, starting 0, ending 400myr
+grid <- 100
 start <- 0
 end <- 400
 
 # estimate time, lambda, mu
 res <- bd.shifts.optim(x,c(rho,1),grid,start,end)[[2]]
 ```
+
+Interpreting the results
+------------------------
+The result object looks like this:
+
+```r
+> res
+[[1]]
+[1] 9.726584e+04 9.315585e-01 2.021164e-02
+
+[[2]]
+[1] 9.724484e+04 9.265107e-01 9.788873e-01 2.160713e-02 8.541232e-03 1.000000e+02
+
+[[3]]
+[1] 9.724243e+04 9.263011e-01 9.811704e-01 9.786497e-01 2.164689e-02 7.707626e-03 3.369398e-02
+[8] 1.000000e+02 4.000000e+02
+```
+
+The MLE of a single rate shift is:
+
+```r
+> res[[2]][6]
+[1] 100
+```
+
+The rate _before_ the shift is:
+
+```r
+> res[[2]][5]
+[1] 0.008541232
+```
+
+The rate _after_ the shift is:
+
+```r
+> res[[2]][4]
+[1] 0.02160713
+```
+
+Is the result significant?
+--------------------------
+
+Test if one shift explains the tree significantly better than no shifts: if test > 0.95 
+then one shift is significantly better than 0 shifts at a 5% error:
+
+```r
+> i<-1
+> test<-pchisq(2*(res[[i]][1]-res[[i+1]][1]),3)
+> test
+[1] 1
+```
+
+How about two shifts?
+
+```r
+> i<-2
+> test<-pchisq(2*(res[[i]][1]-res[[i+1]][1]),3)
+> test
+[1] 0.8152525
+```
+
+So, we estimate a single rate shift at 100MYA, with a low net diversification rate before 
+the shift, and a higher rate afterwards. This meshes with our [LTT](lecture3/ltt.png) plot
+and our general understanding of the diversification of seed plants:
+
+![](lecture3/seedplants.png)
+
+Density-dependent diversification
+---------------------------------
+**DL Rabosky & IJ Lovette**, 2008. Density-dependent diversification in North American 
+wood warblers. _Proc. R. Soc. B_ **275**:2363-2371
+
+![](lecture3/warblers.jpg)
+
+- (a) Log-lineage through time (LTT) plot for North American wood warblers. Black line 
+  indicates LTT curve for the MCC tree (figure 1), and grey shading indicates 
+  95% quantiles on the number of lineages at any point in time as inferred from the 
+  posterior distribution of phylogenetic trees sampled with MCMC. The dashed line 
+  indicates expected rate of lineage accumulation under constant-rate diversification 
+  with no extinction. Lineages accumulate quickly in the early phases of the radiation 
+  relative to the constant-rate diversification model. 
+- (b) Posterior distribution of the γ-statistic for wood warblers (black) in comparison 
+  with the corresponding null distributions, assuming either complete (f=1) or incomplete 
+  (f=0.25) sampling. Negative values of γ relative to the null distribution indicate 
+  decelerating diversification through time.
+
+More exercises with simulated data are [here](lecture3/01-Macroevolution.Rmd).
