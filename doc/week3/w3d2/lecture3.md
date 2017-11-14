@@ -98,12 +98,19 @@ Resulting in:
 
 ![](lecture3/ltt.png)
 
-Rate shifts?
-------------
+Is rate constant through time?
+------------------------------
 **Stadler T**, 2011. Mammalian phylogeny reveals recent diversification rate shifts.
 _PNAS_ **108**(15): 6187–6192
 
 ![](lecture3/sampling.jpg)
+
+- Maybe diversification rates globally change as a function of some environmental 
+  variable, e.g. climate
+- In this model, speciation (λ) and extinction (μ) can have different value within 
+  different time windows
+- To allow for incomplete extant taxon sampling, an additional parameter (rho, ϱ) 
+  captures the completeness of the sampling
 
 ```r
 library(phytools)
