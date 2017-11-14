@@ -17,7 +17,7 @@ What’s a niche?
 
 Holt 2009
 ----------------
-![](lecture3/holt_2009.png)
+![](lecture1a/holt_2009.png)
 
 Wiens et al., 2010
 ----------------
@@ -28,7 +28,7 @@ Wiens et al., 2010
 
 Wiens et al., 2010
 ----------------
-![](lecture3/wiens_et_al.png)
+![](lecture1a/wiens_et_al.png)
 
 Wiens et al., 2010
 ----------------
@@ -36,7 +36,7 @@ Wiens et al., 2010
    - What are some examples at each scale?
    - What gives rise to the barriers (depicted in the  inset) in each example?
    - Crisp et al., 2009: Biome stasis at speciation  outweighs biome shifts 25
-![](lecture3/wiens_2.png) ![](lecture3/wiens_3.png)
+![](lecture1a/wiens_2.png) ![](lecture1a/wiens_3.png)
 
 Wiens et al., 2010
 ----------------
@@ -46,21 +46,21 @@ Wiens et al., 2010
 Community Assembly
 ----------------
  **Competition**
-![](lecture3/compet.png) 
+![](lecture1a/compet.png) 
 
 Community Assembly
 ----------------
 **Environmental Filtering**
-![](lecture3/env_filt2.png)
+![](lecture1a/env_filt2.png)
 
 Community assembly (Swenson et al.,  2006)
 ----------------
-![](lecture3/com_assembly.png)
+![](lecture1a/com_assembly.png)
 
 Community assembly (Swenson et al.,  2006)
 ----------------
 - Show spatial and phylogenetic scale  dependency.
-![](lecture3/comm_ass_2.png)
+![](lecture1a/comm_ass_2.png)
 
 Wiens et al., 2010
 ----------------
@@ -85,13 +85,13 @@ Wiens et al., 2010
 
 Wiens et al., 2010
 ----------------
-![](lecture3/wiens_4.png)
+![](lecture1a/wiens_4.png)
 Figure from chapter 1 of Bush et al., 2011
 
 Wiens et al., 2010
 ----------------
 Collej 2011: Lowland tropical rainforest par)cularly suscep)ble to climate change  because they will have to move up to 1000km to ﬁnd thermal refuge.
-![](lecture3/wiens5.png)
+![](lecture1a/wiens5.png)
 Figure from chapter 1 of Bush et al., 2011
 
 Wiens et al., 2010
@@ -105,7 +105,7 @@ Wiens et al., 2010
     
 Chapela et al., 1994: fungus‐farming  ants and their fungi
 ----------------
-![](lecture3/fungus.png)
+![](lecture1a/fungus.png)
 
 Wieblen et al., 2006
 ----------------
@@ -179,7 +179,7 @@ Ackerly 2009
 - Accrual of variance in height through time.
 - 0.14 (Acer) to 0.79 felsens (silversword)
 - Average rates: seed size < height < leaf size
-![](lecture3/ackerly.png)
+![](lecture1a/ackerly.png)
 
 Questions for John Wiens
 ----------------
