@@ -210,3 +210,12 @@ select mrca.name
 		mrca.right > c.right
 	limit 1;
 ```
+
+Exercise
+--------
+We are going to figure out which of our crop species are most distant from one another. This means
+that, in principe, we have to inspect all pairs - so work together.
+- Install a SQLite client if `sqlite3` is unavailable
+- Download the database version of the PhytoPhylo tree: https://doi.org/10.6084/m9.figshare.5598631
+- Using MRCA queries and the `height` column (distance to root) you should be able to fetch the
+  distance between a pair.
