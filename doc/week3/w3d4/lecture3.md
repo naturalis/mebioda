@@ -1,4 +1,4 @@
-rait Covariation and Optimality  Approaches to Understand Them
+Trait Covariation and Optimality  Approaches to Understand Them
 =============================================
 
 General Background
