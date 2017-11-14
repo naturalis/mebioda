@@ -6,7 +6,7 @@ The birth/death process revisited
 **Nee, S, May, RM & Harvey, PH**, 1994. The reconstructed evolutionary process. 
 _Philos Trans R Soc Lond B Biol Sci_ **344**:305-311
 
-![](lecture3/birth-death.png)
+![](lecture2/birth-death.png)
 
 - In the simplest case, there are two constant parameters: speciation rate (lambda, λ) and 
   extinction rate (mu, μ)
