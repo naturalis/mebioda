@@ -32,12 +32,12 @@ Why Trait‐based Science?
 Why Trait‐based Science?
 ----------------
 **Well, we seem to just be using the word ‘trait’ more . . . .**
-![](lecture2/google_trends.png)
+![](lecture1/google_trends.png)
 
 Why Trait‐based Science?
 ----------------
 **. . . and seem to just be using the word ‘ecology’ less.**
-![](lecture2/google_trends_2.png)
+![](lecture1/google_trends_2.png)
 
 Why Trait‐based Science?
 ----------------
@@ -73,54 +73,54 @@ Integrated phenotypes
 
 **Some traits are more ‘central and important’**
 
-![](lecture2/_reich_1992.png)
+![](lecture1/_reich_1992.png)
 Reich (1992) Ecological Monographs
 
-![](lecture2/rsz_reich_1992_2.png)
+![](lecture1/rsz_reich_1992_2.png)
 
 The world leaf spectrum 
 ----------------
 
-![](lecture2/_leaf_sp.png)
+![](lecture1/_leaf_sp.png)
 
 
 Quantifying the diversity of strategies: life histories & new insights to diversity
 ----------------
-![](lecture2/_grime_1.png) | ![](lecture2/_grime_2.png)
+![](lecture1/_grime_1.png) | ![](lecture1/_grime_2.png)
 
 Quantifying the diversity of strategies: life histories & new insights to diversity
 ----------------
-![](lecture2/_l_height.png)
+![](lecture1/_l_height.png)
 
-![](lecture2/func2.png)
+![](lecture1/func2.png)
 
 Measure traits to measure Ecosystem function
 ----------------
 **Emerging out of the Biodiversity/Ecosystem Functioning Debate…**
 
-![](lecture2/_plant_div.png)
+![](lecture1/_plant_div.png)
 
-![](lecture2/_sp_rich.png)
+![](lecture1/_sp_rich.png)
 
 Science Compass Review
 ----------------
 
-![](lecture2/_biodiv.png)
+![](lecture1/_biodiv.png)
 “The . . . consequences of biodiversity . . has aroused considerable interest and  controversy. . . . there is however, uncertainty as to how (these ﬁndings). . . generalize  across ecosystems”
 
 Trait diversity is more important than species richness to ecosystem functioning
 ----------------
-![](lecture2/_trait_div.png)
-![](lecture2/trait_div_2.png)
+![](lecture1/_trait_div.png)
+![](lecture1/trait_div_2.png)
 
 Revitalization of Community Ecology?
 ----------------
 
 “Community ecology appears to have few if any  useful generalizations . . . “
 
-![](lecture2/community.png)
+![](lecture1/community.png)
 
-! [](lecture2/func_traits.png)
+! [](lecture1/func_traits.png)
 
 New & Interesting Approaches and Methods
 ----------------
