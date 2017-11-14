@@ -1,0 +1,214 @@
+---
+name: macroevolution
+layout: post
+title: Some examples to simulate phylogenies and estimate speciation and extinction rates
+date: 2015-02-03
+author: Tanja Stadler
+tags: 
+- R
+- phylogenetic
+- tree shape
+---
+
+```{r setup}
+library(TreeSim)
+library(TreePar)
+
+set.seed(10)
+```
+
+### Simulation example - time-dependent rates
+
+First we simulate a tree with a specified number of species:
+
+```{r nspecies}
+nspecies <- 100
+```
+
+At time 1 in the past, we have a rate shift:
+
+```{r rateshift}
+time <- c(0,1)
+```
+
+Half of the present day species are sampled (rho[1]=0.5):
+
+```{r sampling}
+rho <- c(0.5,1)
+```
+
+Speciation rates (between t[i],t[i+1] we have speciation rate lambda[i]):
+
+```{r lambda}
+lambda <- c(2,5)
+```
+
+Extinction rates (between t[i],t[i+1] we have extinction rate mu[i]):
+
+```{r mu}
+mu <- c(1.5,0)
+```
+
+Simulation of a tree:
+
+```{r simulate}
+tree<-sim.rateshift.taxa( nspecies, 1, lambda, mu, frac=rho, times=time, complete=FALSE )
+```
+
+Extracting the speciation times x:
+
+```{r sort}
+x<-sort(getx(tree[[1]]),decreasing=TRUE)
+```
+
+When estimating the rate shift times t based on branching times x, 
+we allow the shift times to be 0.6, 0.8, 1, 1.2, .. ,2.4:
+
+```{r steps}
+start <- 0.4
+end <- 2
+grid <- 0.2
+```
+
+We fix rho and estimate time, lambda, mu:
+
+```{r estimate}
+res <- bd.shifts.optim(x,c(rho,1),grid,start,end)[[2]]
+res
+```
+
+res[[2]] tells us about the maximum likelihood estimate given one rate shift:
+
+- log lik = 60.6940763.
+- rate shift at time 1.0.
+- turnover (extinction/speciation) = 0.68 more recent than 1.0, 
+  and = 0.19 more ancestral than 1.0.
+- net diversification (speciation-extinction) rate = 0.81 more recent than 1.0, 
+  and = 3.66 more ancestral than 1.0.
+
+Values used for simulation:
+
+```{r values}
+mu/lambda
+lambda-mu
+```
+
+Test if 1 shift explain the tree significantly better than 0 shifts:
+if test>0.95 then 1 shift is significantly better than 0 shifts at a 5% error
+
+```{r oneshift}
+i<-1
+test<-pchisq(2*(res[[i]][1]-res[[i+1]][1]),3)
+test
+```
+
+Test if 2 shifts explain the tree significantly better than 1 shift:
+
+```{r twoshift}
+i<-2
+test<-pchisq(2*(res[[i]][1]-res[[i+1]][1]),3)
+test
+```
+
+Plot results:
+
+```{r plot}
+bd.shifts.plot(list(res),1,2.1,0,5)
+
+# Plot parameters used for simulation:
+lines(c(-max(x),-time[2]),c((lambda-mu)[2],(lambda-mu)[2]),col="red")
+lines(c(-time[2],0),c((lambda-mu)[1],(lambda-mu)[1]),col="red")
+```
+
+### Simulation example - Test for Diversity-Dependent speciation
+
+Simulate tree:
+
+```{r simdds}
+set.seed(1)
+tree<-sim.rateshift.taxa( 10, 1, c(2,0.1), c(0,0.05), frac=c(1,1), times=time, complete=FALSE )
+x<-sort(getx(tree[[1]]),decreasing=TRUE)
+```
+
+(The tree size is too small to make reliable estimations! We just analyse this tree as 
+an example for getting answers quickly!)
+
+```{r estimdds}
+# Estimate maximum likelihood speciation and extinction rates under a density-dependent speciation model
+resDD<-bd.densdep.optim(x,discrete=FALSE,continuous=TRUE)[[2]]
+# Slow! Package expoTree on CRAN performs same calculations much faster!! Same method also within Package DDD.
+
+# Estimate maximum likelihood speciation and extinction rates together with the rate shift times
+resShifts <- bd.shifts.optim(x,c(rho,1),0.1,0.1,2.1)[[2]][[2]]
+
+resDD
+resShifts
+```
+
+Best model where AIC smallest:
+
+```{r aic}
+AICDD <- 2*3+2*resDD$value
+AICShifts <- 2*5+2*resShifts[1]
+
+AICDD
+AICShifts
+```
+
+### Data example - bird orders
+
+Data analysis in Stadler & Bokma, 2013:
+Number of species in each order from Sibley and Monroe (1990)
+
+Load and plot data:
+
+```{r data}
+data(bird.orders)
+plot(bird.orders)
+```
+
+Many species are missing - ie only one per order:
+
+```{r missing}
+S <- c(10, 47, 69, 214, 161, 17, 355, 51, 56, 10, 39, 152, 6, 143, 358, 103, 319, 23, 291, 313, 196, 1027, 5712)
+
+# number of species per order:
+cbind(bird.orders$tip.label,S)
+```
+
+All orders established at 96.43 Ma:
+
+```{r orders}
+groupscut<-get.groups(bird.orders,S,96.43) 
+x<-branching.times(bird.orders)
+```
+
+Transforming molecular timescale into calendar timescale:
+
+```{r transform}
+x<-x/0.207407 
+```
+
+Allowing one shift in rates:
+
+```{r testoneshift}
+resbirds<-bd.shifts.optim(x,sampling=c(1,1),grid=1,start=96,end=135,survival=1,groups=groupscut)[[2]]
+i<-1
+test<-pchisq(2*(res[[i]][1]-res[[i+1]][1]),3)
+test
+```
+
+Sampling model is important:
+
+```{r bdshifts}
+resbirdsWrongSamp<-bd.shifts.optim(x,sampling=c(length(S)/sum(S),1),grid=1,start=96,end=135,survival=1,groups=0)[[2]]
+resbirdsCompleteSamp<-bd.shifts.optim(x,sampling=c(1,1),grid=1,start=96,end=135,survival=1,groups=0)[[2]]
+```
+
+Check the difference (especially look at turnover estimates!):
+
+```{r results}
+resbirds
+resbirdsWrongSamp
+resbirdsCompleteSamp
+```
