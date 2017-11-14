@@ -104,7 +104,7 @@ What is a "newick" string?
 - The tree depicted below should be displayed in a text like this:
   - ((sp1,(sp2,sp3),sp4))
   
-  ![](tree.png)
+  ![](lecture2/tree.png)
   
 Getting started with Phylocom
 ---------------------------------------------
@@ -164,7 +164,7 @@ Understanding community phylogenetic metrics NRI and NTI
 - NTI tells you about the tip of the phylogeny, and is a good indicator when species exclusion is due to high competition between closely related species.
  - Limiting similarity
  
- ![](limiting.png)
+ ![](lecture2/limiting.png)
  
  Understanding community phylogenetic metrics NRI and NTI
 ---------------------------------------------
@@ -174,7 +174,7 @@ Understanding community phylogenetic metrics NRI and NTI
 - The raw measure for NTI is mean nearest taxon distance (MNTD)
  - The mean of the distances between species and its most closely related species
  
- ![](red_lines.png)
+ ![](lecture2/red_lines.png)
  
 Analyzing community phylogenetic metrics in Phylocom
 ---------------------------------------------
@@ -195,7 +195,7 @@ Analyzing NRI and NTI in Phylocom
 - You will need a phylogenetic tree with branch lengths assigned, and a "sample" file.
 - Your sample file is a text file and contains three columns with no headers, separated by tabs: 
 
-![](sample_file.png)
+![](lecture2/sample_file.png)
 
 - *Note: The R package "Picante" can also measure these. But Phylocom is useful because its algorithms can deal with polytomies (multifurcations in phylogeny  as opposed to bifurcations). 
 
@@ -267,7 +267,7 @@ Calculating trait patterns metric CWM and CWV
  - First download the package "doBy" and all of its dependencies into R (if you don't know how to use this, google "Download packages in R")
  - Input data should be .csv files (saved as such from Excel) called "rawdata.csv" that looks like this (with precisely these headings)
  
- ![](rawdata.png)
+ ![](lecture2/rawdata.png)
  
  - "v.trait" is the value of the trait (like "max_height"), "abundance" is the number of individuals of that species in the plot
  - it is ok if the file "rawdata.csv had other columns with other information
@@ -282,7 +282,7 @@ Calculating trait patterns metric CWM and CWV
 - Open up the file "CWM_CWV.r" either in R as Rscript or in notepad. Copy and paste the entire code at once into R.
 - The script will output a file called " CWM_CWV_output.csv" into the folder specified as your working directory. Opened in Excel it will look like this: 
 
-![](output.png)
+![](lecture2/output.png)
 
 Part 3 Understanding trends in community phylogenetics and traits
 ---------------------------------------------
@@ -305,7 +305,7 @@ Understanding trends in community phylogenetics and traits
 - When NTI goes down (limiting similarity), trait variance increases!
 - Again, this may be a bit simplified , read the literature and think about it. 
 
-![](trends.png)
+![](lecture2/trends.png)
 
 Appendix 1 Troubleshooting Phylocom
 ---------------------------------------------
