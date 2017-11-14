@@ -11,11 +11,11 @@ Selective-on-relicts = those taxa with highest trait value and lowest speciation
   
 3. The nexus files produced by MESA were then manipulated in R. 
 
-  3. 3a The Colless index of imbalance was calculated using the function *colless* for each tree in a time series [R scripts] (w3p2/Collecting balance statistics).
+  3. 3a The Colless index of imbalance was calculated using the function *colless* for each tree in a time series [R scripts] (mebioda/doc/week3/w3p2/Collecting balance statistics).
   
-4.  For the three treatments combined with the different intensities and the control, the Colless index of imbalance values were collected at the key CSR [relative times](w3p2/Collecting tree balance and root ages at key time/Collect Key CSR relative times.Rmd). CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile and at pre extintion time (300), post extintion event (305), at the CRS end-mid time (470) and at the end of simulation (600) [key times](w3p2/Collecting tree balance and root ages at key time/CollectKeyCSRENDMIDtimes.Rmd). 
+4.  For the three treatments combined with the different intensities and the control, the Colless index of imbalance values were collected at the key CSR [relative times](mebioda/doc/week3/w3p2/Collecting tree balance and root ages at key time/Collect Key CSR relative times.Rmd). CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile and at pre extintion time (300), post extintion event (305), at the CRS end-mid time (470) and at the end of simulation (600) [key times](mebioda/doc/week3/w3p2/Collecting tree balance and root ages at key time/CollectKeyCSRENDMIDtimes.Rmd). 
    
    4. 4a the Colless index of imbalance values collected were later rearranged in EXCEL and exported in txt files to be used for the statistical analyses.
    
-5. The treatments involving a combination of extintion types and intensity were analyzed with [two-way ANOVA](w3p2/Data for the statistical analyses/2way with comments.Rmd) and Tukey-corrected multiple comparison testing, in order to see if there are any significant treatment-by-intensity interactions. 
-6. To test whether the various extinction treatment outcomes differed systematically from the control and pre-treatment reference points,  [Dunnett's tests](w3p2/Data for the statistical analyses/Dunnett contrasts with comments.Rmd) were perfomed, using either pre-treatment or the control treatment as the reference standard.
+5. The treatments involving a combination of extintion types and intensity were analyzed with [two-way ANOVA](mebioda/doc/week3/w3p2/Data for the statistical analyses/2way with comments.Rmd) and Tukey-corrected multiple comparison testing, in order to see if there are any significant treatment-by-intensity interactions. 
+6. To test whether the various extinction treatment outcomes differed systematically from the control and pre-treatment reference points,  [Dunnett's tests](mebioda/doc/week3/w3p2/Data for the statistical analyses/Dunnett contrasts with comments.Rmd) were perfomed, using either pre-treatment or the control treatment as the reference standard.
