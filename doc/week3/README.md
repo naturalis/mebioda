@@ -13,7 +13,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 2 - Topological analysis
 
-- Lecture I: [The APG-III tree and phylocom](w3d2/lecture1.md), [Methods for computing phylogenetic diversity](w3d5/lecture2/Phylo-trait_tutorial.pdf)
+- Lecture I: [The APG-III tree and phylocom](w3d2/lecture1.md), [Methods for computing phylogenetic diversity](w3d5/lecture2/lecture2.md)
 - Lecture II: [Tree shape metrics](w3d2/lecture2.md)
 - Lecture III: Estimating evolutionary processes (e.g. birth/death)
 - Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
