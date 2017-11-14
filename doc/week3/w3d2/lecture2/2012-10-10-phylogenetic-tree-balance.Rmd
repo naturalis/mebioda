@@ -14,7 +14,7 @@ tags:
 
 I need to simulate balanced and unbalanced phylogenetic trees for some research I am doing.  In order to do this, I do rejection sampling: simulate a tree -> measure tree shape -> reject if not balanced or unbalanced __enough__.  But what is enough?  We need to define some cutoff value to determine what will be our set of balanced and unbalanced trees. 
 
-### A function to calculate shape metrics, and a custom theme for plottingn phylogenies.
+### A function to calculate shape metrics
 ```{r theme } 
 foo <- function(x, metric="colless") {
 	if(metric == "colless"){
@@ -25,24 +25,6 @@ foo <- function(x, metric="colless") {
 			gammaStat(x) 
 		} else
 			stop("metric should be one of colless or gamma")
-}
-
-theme_myblank <- 
-	function(){
-		stopifnot(require(ggplot2))
-		theme_blank <- ggplot2::theme_blank
-		ggplot2::theme(
-			panel.grid.major = element_blank(),
-			panel.grid.minor = element_blank(),
-			panel.background = element_blank(),
-			plot.background = element_blank(),
-			axis.title.x = element_text(colour=NA),
-			axis.title.y = element_blank(),
-			axis.text.x = element_blank(),
-			axis.text.y = element_blank(),
-			axis.line = element_blank(),
-			axis.ticks = element_blank()
-	)
 }
 ````
 
