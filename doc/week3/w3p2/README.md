@@ -6,11 +6,12 @@ Topological analysis
 Random = taxa were culled from the tree regardeless of trait value or phylogenetic position.
 Selective-on-diversifiers = taxa culled from the tree had the lowes trait value and highest speciation rates.
 Selective-on-relicts = those taxa with highest trait value and lowest speciation rates were culled preferentally. 
+
   2. 2a Each of the treatments occurred at intensity 90%, 0.75% and 0.5% of all the extant taxa in the tree.
   
 3. The nexus files produced by MESA were then manipulated in R. 
 
-  3. 3a The Colless index of imbalance was calculated using the function *colless* for each tree in a time series. [R scripts](w2p2/Collecting balance statistics).
+  3. 3a The Colless index of imbalance was calculated using the function *colless* for each tree in a time series. [R scripts (w2p2/Collecting balance statistics).
   
 4.  For the three treatments combined with the different intensities and the control, the Colless index of imbalance values were collected at the key CSR relative times [CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile](w2p2/Collecting tree balance and root ages at key time/Collect Key CSR relative times.Rmd) and at [pre extintion time (300), post extintion event (305), at the CRS end-mid time (470) and at the end of simulation (600)](w2p2/Collecting tree balance and root ages at key time/CollectKeyCSRENDMIDtimes.Rmd). 
    
