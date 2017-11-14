@@ -24,7 +24,8 @@ R concepts and data types
 
 R environment
 -------------
-- RStudio
+- Installing the [R](http://cran-mirror.cs.uu.nl/) engine
+- [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 - `R CMD`
 
 Installing R packages
