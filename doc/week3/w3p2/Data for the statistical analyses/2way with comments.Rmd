@@ -4,7 +4,8 @@ author: "irene"
 date: "2/11/2017"
 output: word_document
 ---
-Simulated phylogenies were generated with the software MESA, using trait-biased and heritable speciation probabilities. At a particular point of the simulation a user-specified fraction of terminal taxa were culled from the tree. Four mass extintion treatments we employed: 
+Simulated phylogenies were generated with the software MESA, using trait-biased and heritable speciation probabilities. At a particular point of the simulation a user-specified fraction of terminal taxa were culled from the tree. 
+Three mass extintion treatments were employed: 
 Random = taxa were culled from the tree regardeless of trait value or phylogenetic position
 Selective-on-diversifiers = taxa culled from the tree had the lowes trait value and highest speciation rates.
 Selective-on-relicts = those taxa with highest trait value and lowest speciation rates were culled preferentally. 
