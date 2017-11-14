@@ -1,4 +1,4 @@
-An introduction to phylogenetic and trait patterns, and a tutorial n how to analyze them
+An introduction to phylogenetic and trait patterns, and a tutorial on how to analyze them
 =============================================
 
 This tutorial contains
