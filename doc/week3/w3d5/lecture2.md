@@ -4,18 +4,18 @@ An introduction to phylogenetic and trait patterns, and a tutorial on how to ana
 This tutorial contains
 ---------------------------------------------
 1. **Phylogenetic patterns in community assembly**
-1. 1a Step 1: cleaning your taxonomic lists with TNRS Taxon Scrubber.
-1. 1b Understanding and analyzing NRI and NTI: phylomatic, phylocom
+   1. 1a Step 1: cleaning your taxonomic lists with TNRS Taxon Scrubber.
+   1. 1b Understanding and analyzing NRI and NTI: phylomatic, phylocom
 2. **Community assembly patterns must be driven by traits, right?**
-2. 2a Understanding community weighted means and variances of traits. 
-2. 2b How to analyze those metrics: CWM, CWV.
+   2. 2a Understanding community weighted means and variances of traits. 
+   2. 2b How to analyze those metrics: CWM, CWV.
 3. **Understanding traits in community phylogenetics and traits**
-3. 3a Do phylogenetic and community trait patterns track each other?
-3. 3b A look at community changes in the Biosphere 2 tropical forest mesocosm
+   3. 3a Do phylogenetic and community trait patterns track each other?
+   3. 3b A look at community changes in the Biosphere 2 tropical forest mesocosm
 4. **Appendix I**: Troubleshooting Phylocom
-4. 4a For all users
-4. 4b For mac users
-4. 4c For Windows users
+   4. 4a For all users
+   4. 4b For mac users
+   4. 4c For Windows users
 
 Taxonomic Name Resolution Service
 ---------------------------------------------
