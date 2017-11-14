@@ -174,7 +174,7 @@ Understanding community phylogenetic metrics NRI and NTI
 - The raw measure for NTI is mean nearest taxon distance (MNTD)
  - The mean of the distances between species and its most closely related species
  
- ![](lecture2/red_lines.png)
+ ![](lecture2/red-lines.png)
  
 Analyzing community phylogenetic metrics in Phylocom
 ---------------------------------------------
