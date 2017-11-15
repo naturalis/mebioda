@@ -20,7 +20,7 @@ done
 
 #-----------------------------------------------------------------------------------
   #Then, the 5' primer:
-  for fq in out_trims/*_trimmed_primers.fastq
+  for fq in out_trimmed/*_trimmed_primers.fastq
 do 
 cutadapt -g GTGARTCATCGAATCTTTG -o "${fq/_primers/_primers2}" ${fq}
 done
