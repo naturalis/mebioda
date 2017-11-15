@@ -7,7 +7,7 @@ mkdir out_trimmed
 
 for fq in *.fastq 
 do
-	cutadapt -q 15,15 -o out_trims/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
+	cutadapt -q 15,15 -o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
 done
 #-----------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ done
 
 #-----------------------------------------------------------------------------------
   #Then, the 5' primer:
-  for fq in out_trims/*_trimmed_primers.fastq
+  for fq in out_trimmed/*_trimmed_primers.fastq
 do 
 cutadapt -g GTGARTCATCGAATCTTTG -o "${fq/_primers/_primers2}" ${fq}
 done
@@ -66,5 +66,5 @@ perl map.pl all.derep.fasta all.preclustered.uc all.ref.nonchimeras.fasta > all.
 perl map.pl CPuniques.fasta all.derep.uc all.nonchimeras.derep.fasta > all.nonchimeras.fasta
 
 #Cluster at 97% and relabel with OTU_n, generate OTU table
- vsearch --cluster_size all.nonchimeras.fasta --id 0.97 --strand plus --sizein --sizeout --fasta_width 0 --uc all.clustered.uc --relabel OTU_ --centroids all.otus.fasta --otutabout all.otutab.txt
-
+ vsearch --cluster_size all.nonchimeras.fasta --id 0.97  --strand plus --sizein --sizeout --fasta_width 0 --uc all.clustered.uc --relabel OTU_ --centroids all.otus.fasta --otutabout all.otutab.txt
+vsearch --usearch_global all.otus.fasta -db utax_reference_dataset_10.10.2017.fasta -id 0.7 -blast6out CPotus.m8 -strand both -maxaccepts 1 -maxrejects 256
