@@ -24,7 +24,7 @@ dplace extract \
 	lecture3/crop_usage.csv
 ```
 
-This gives us a large table with the following columns:
+This gives us a large [table](lecture3/crop_usage.csv) with the following columns:
 
 - **ID** - primary key, useful for dictionaries, e.g. `SCCS1`
 - XD_ID
@@ -40,6 +40,12 @@ This gives us a large table with the following columns:
 We want to transform this to a table where each row is a society (ID) and the columns
 are the different crops. Here's a [script](lecture3/transform.py) to do this in python,
 which results in the following [table](lecture3/checklist.csv)
+
+- Remove non-crop columns, e.g. `Agriculture not practiced or confined to non-food crops`
+- Remove non-staple crops, e.g. `Cardamum`
+- Merge alternate spellings, e.g. `Wet Rice` and `Wet rice`
+
+Which results in this [cleaned table](lecture3/checklist-cleaned.csv)
 
 
 ----
