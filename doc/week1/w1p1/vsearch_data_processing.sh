@@ -55,7 +55,7 @@ vsearch --derep_fulllength CPuniques.fasta --minuniquesize 2 --sizein --sizeout 
  vsearch --uchime_denovo all.preclustered.fasta --sizein --sizeout --fasta_width 0 --nonchimeras all.denovo.nonchimeras.fasta 
 
 #Reference chimera detection
- vsearch --uchime_ref all.denovo.nonchimeras.fasta --db utax_reference_dataset_10.10.2017.fasta --id 0.7 --sizein --sizeout --fasta_width 0 --nonchimeras all.ref.nonchimeras.fasta
+ vsearch --uchime_ref all.denovo.nonchimeras.fasta --db utax_reference_dataset_10.10.2017.fasta --id 0.7 --blast6out CPotus2017.m8 --sizein --sizeout --fasta_width 0 --nonchimeras all.ref.nonchimeras.fasta
 
 #-----------------------------------------------------------------------------------
 
@@ -66,5 +66,5 @@ perl map.pl all.derep.fasta all.preclustered.uc all.ref.nonchimeras.fasta > all.
 perl map.pl CPuniques.fasta all.derep.uc all.nonchimeras.derep.fasta > all.nonchimeras.fasta
 
 #Cluster at 97% and relabel with OTU_n, generate OTU table
- vsearch --cluster_size all.nonchimeras.fasta --id 0.97 --blast6out CPotus2017.m8 --strand plus --sizein --sizeout --fasta_width 0 --uc all.clustered.uc --relabel OTU_ --centroids all.otus.fasta --otutabout all.otutab.txt
+ vsearch --cluster_size all.nonchimeras.fasta --id 0.97  --strand plus --sizein --sizeout --fasta_width 0 --uc all.clustered.uc --relabel OTU_ --centroids all.otus.fasta --otutabout all.otutab.txt
 
