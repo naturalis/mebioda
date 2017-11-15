@@ -7,7 +7,7 @@ mkdir out_trimmed
 
 for fq in *.fastq 
 do
-	cutadapt -q 15,15 -o out_trims/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
+	cutadapt -q 15,15 -o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
 done
 #-----------------------------------------------------------------------------------
 
