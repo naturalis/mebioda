@@ -1,6 +1,11 @@
 Large phylogenies in plant biodiversity
 =======================================
 
+Phylomatic
+----------
+
+- Phylomatic http://phylodiversity.net/phylomatic/
+
 Taxonomic Name Resolution
 -------------------------
 
@@ -21,7 +26,3 @@ Pruning PhytoPhylo
 - In this [exercise](lecture1/extract.Rmd), prune the large tree and inspect the subtree
   for our taxa. What are some of the higher groups you recognize?
 
-Phylomatic
-----------
-
-- Phylomatic http://phylodiversity.net/phylomatic/
