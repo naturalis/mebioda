@@ -1,0 +1,64 @@
+---
+title: "PhytoPhylo.Rmd"
+output: html_document
+---
+
+Import ape:
+
+```{r setup}
+library(ape)
+```
+
+Read tree:
+
+```{r readtree}
+phylo<-read.tree("../lecture3/PhytoPhylo.tre")
+```
+
+Define taxa to keep:
+
+```{r speclist}
+namesList <- c(
+  "Zea_mays",
+  "Oryza_sativa",
+  "Sorghum_bicolor",
+  "Eragrostis_tremula",
+  "Eleusine_coracana",
+  "Hordeum_vulgare",
+  "Triticum_aestivum",
+  "Secale_cereale",
+  "Manihot_esculenta",
+  "Solanum_tuberosum",
+  "Ipomoea_batatas",
+  "Colocasia_esculenta",
+  "Dioscorea_cayennensis",
+  "Musa_acuminata",
+  "Ensete_ventricosum",
+  "Fagopyrum_esculentum",
+  "Arachis_hypogaea",
+  "Cucurbita_pepo",
+  "Artocarpus_altilis",
+  "Mangifera_indica",
+  "Cocos_nucifera",
+  "Phoenix_dactylifera",
+  "Metroxylon_sagu"
+)
+```
+
+Extract taxa:
+
+```{r extract}
+pruned.tree <- drop.tip(phylo,phylo$tip.label[-match(namesList, phylo$tip.label)])
+```
+
+Write to file:
+
+```{r write}
+write.tree(pruned.tree, file="PhytoPhylo-pruned.tre")
+```
+
+Plot result:
+
+```{r plot}
+plot(pruned.tree, show.node.label = T)
+```

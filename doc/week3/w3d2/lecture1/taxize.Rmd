@@ -1,0 +1,47 @@
+---
+title: "taxize"
+output: html_document
+---
+
+Imports to use the taxize service:
+
+```{r setup}
+library(taxize)
+```
+
+Do a classification query on NCBI using binomial name:
+
+```{r lookup, echo=FALSE}
+namesList <- c(
+  "Zea mays",
+  "Oryza sativa",
+  "Sorghum bicolor",
+  "Eragrostis tef",
+  "Eleusine coracana",
+  "Hordeum vulgare",
+  "Triticum aestivum",
+  "Secale cereale",
+  "Manihot esculenta",
+  "Solanum tuberosum",
+  "Ipomoea batatas",
+  "Colocasia esculenta",
+  "Dioscorea cayennensis",
+  "Musa acuminata",
+  "Ensete ventricosum",
+  "Fagopyrum esculentum",
+  "Arachis hypogaea",
+  "Cucurbita pepo",
+  "Artocarpus altilis",
+  "Mangifera indica",
+  "Cocos nucifera",
+  "Phoenix dactylifera",
+  "Metroxylon sagu"
+)
+tnrs_result <- classification(namesList, db = 'ncbi')
+```
+
+Now try the same for `itis`:
+
+- How is the interaction different? 
+- Which service returns more results?
+- How are the classifications different?
