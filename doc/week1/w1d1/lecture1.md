@@ -58,6 +58,31 @@ presentation, report, exam.
 - **Lecture topics**: Diversity in space, time, and function
 - **Exam**
 
+Links to other courses
+----------------------
+
+- **Genomic Architecture**: the substance of GA is assumed 
+  to be a given. We will give more attention to the data
+  science and bioinformatics side of genome (and other)
+  sequencing.
+- **Advanced Statistics**: also assumed to be a given. We
+  will refresh our R skills and apply them more specifically
+  to cases involving biodiversity.
+- **(old) Methods In Biodiversity Analysis**: is more or less
+  renamed as Integrative Taxonomy. "Old MIBA" is therefore a
+  different course, with different contents.
+- **Integrative Taxonomy**: is mostly "Old MIBA" under a new
+  name. Focuses more on taxonomy and systematics, less on 
+  data science and informatics.
+
+Teaching materials
+------------------
+
+- Slides (re-formatted as handouts) are at http://github.com/naturalis/mebioda
+- Handouts and slides are subject to ongoing (wiki-like) improvement
+- During the course we will learn how to use this platform to
+  share data, scripts, files with each other
+
 Grading
 -------
 - Exam: 50%
