@@ -4,9 +4,14 @@ Genome HTS in biodiversity research
 High-throughput sequencing
 --------------------------
 
+> What are our experiences with:
+> - Any lab work, e.g. isolating DNA? PCR?
+> - Any sequencing? Sanger? HTS?
+> - Any data analysis?
+
 - At time of writing (2017) there are multiple technologies, broadly categorized as
   sequencing-by-ligation (e.g. SOLiD) and sequencing-by-synthesis (illumina, Ion Torrent,
-  454)
+  454). Reads are getting longer on all platforms, but especially on PacBio and MinION.
 - A number of vendors have created numerous platforms for specific needs and requirements, 
   e.g. data volumes, read lengths, cost, error profile, runtime
 - A fairly current review is [Goodwin et al., 2016](lecture2/goodwin2016.pdf)
@@ -102,6 +107,8 @@ Additional filtering
 
 Overlap-layout-consensus assembly
 ---------------------------------
+
+> What do we know about graph theory? Edges? Vertices? Degrees? Directedness?
 
 - In _Sanger_ sequencing assembly, a 
   [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is constructed 
