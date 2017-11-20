@@ -1,3 +1,6 @@
+The D-PLACE database
+--------------------
+
 The Standard Cross-Cultural Sample (SCCS) describes a subset of 186 societies that also 
 appear in the EA. These 186 societies were chosen by George P. Murdock, the creator of 
 the dataset, with the goal of maximizing independence among societies. The societies are 
@@ -24,6 +27,9 @@ dplace extract \
 	lecture3/crop_usage.csv
 ```
 
+Transforming the D-PLACE query results
+--------------------------------------
+
 This gives us a large [table](lecture3/crop_usage.csv) with the following columns:
 
 - **ID** - primary key, useful for dictionaries, e.g. `SCCS1`
@@ -46,6 +52,9 @@ which results in the following [table](lecture3/checklist.csv)
 - Merge alternate spellings, e.g. `Wet Rice` and `Wet rice`
 
 Which results in this [cleaned table](lecture3/checklist-cleaned.csv)
+
+Assessing phylogenetic diversity
+--------------------------------
 
 
 ----

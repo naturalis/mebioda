@@ -33,6 +33,21 @@ all affect downstream analysis time differently.
 Clipping primers
 ----------------
 
+![](lecture2/libstructure.png)
+
+**Sidenote about amplicon sequencing**
+
+- In _amplicon_ sequencing, the fragment will have been ligated with a primer as well as 
+  an adaptor sequence. 
+- This allows for more samples to be multiplexed because the number of combinations then 
+  becomes _n adaptors_ * _n primers_ 
+- And you probably don't need the amount of coverage on a single marker that a 
+  non-multiplexed run would give you anyway
+- However, platform vendors cannot de-multiplex automatically (because they know their
+  own adaptors, but not _your_ primers), and with degenerate primers you'd have to do
+  [fuzzy matching](https://github.com/naturalis/fastq-simple-tools/blob/master/script/splitfastq.pl#L128) 
+  against their sequences
+
 Quality trimming
 ----------------
 

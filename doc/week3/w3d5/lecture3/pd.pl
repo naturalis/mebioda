@@ -11,7 +11,7 @@ use Bio::Phylo::Util::Logger ':levels';
 my $mapfile; # maps checklist columns to tree tips
 my $dbfile; # location of the checklist-cleaned.csv
 my $treefile; # location of the tree file
-my $replicates = 100_000; # number of replicates
+my $replicates = 1000; # number of replicates
 my @sizes = ( 2 .. 5 ); # subtree sizes (i.e. number of tips)
 my $verbosity = WARN; # log level
 my $outfile; # CSV file with resampled distances
@@ -40,56 +40,36 @@ my $tree = parse_tree(
 );
 $log->info("Done reading newick tree");
 
-my $mat = distmat( $tree );
-make_distributions( $outfile, $mat, $replicates, @sizes );
+make_distributions( $outfile, $tree, $replicates, @sizes );
 
 # write two-column table with resampled distances
 sub make_distributions {
-	my ( $outfile, $mat, $replicates, @sizes ) = @_;
+	my ( $outfile, $tree, $replicates, @sizes ) = @_;
 	open my $fh, '>', $outfile or die $!;	
 	print $fh join( ',', map { "size$_" } @sizes ), "\n";	
 	for my $rep ( 1 .. $replicates ) {
+		$log->debug("Computing replicate $rep");
 		my @res;
 		for my $size ( @sizes ) {
-			push @res, resample( $mat, $size );
+			push @res, resample( 
+				parse_tree(
+					'-format' => 'newick',
+					'-file'   => $treefile,
+				), 
+				$size 
+			);
 		}
-		print $fh join( ',', @res ), "\n";
+		print $fh join( ',', @res ), "\n";		
 	}
 }
 
-# compute square distance matrix
-sub distmat {
-	my $tree = shift;
-	my @tips = @{ $tree->get_terminals };
-	my %dist = map { $_->get_name => {} } @tips;
-	for my $i ( 0 .. $#tips - 1 ) {
-		for my $j ( $i + 1 .. $#tips ) {
-			my $d = $tips[$i]->calc_patristic_distance( $tips[$j] );
-			my $i_n = $tips[$i]->get_name;
-			my $j_n = $tips[$j]->get_name;
-			$dist{ $i_n }->{ $j_n } = $d;
-			$dist{ $j_n }->{ $i_n } = $d;
-			$log->debug("Distance $i_n => $j_n = $d");
-		}
-	}
-	return \%dist;
-}
-
-# take a single sample of average distance between $size tips
+# take a single sample of tree length
 sub resample {
-	my ( $mat, $size ) = @_;
-	my @tips = shuffle( keys %$mat );
-	my @dist;
-	for my $i ( 0 .. $size - 2 ) {
-		my $i_n = $tips[$i];
-		for my $j ( $i + 1 .. $size - 1 ) {
-			my $j_n = $tips[$j];
-			my $d = $mat->{$i_n}->{$j_n};
-			push @dist, $d;
-			$log->debug("Distance $i_n => $j_n = $d");
-		}
-	}
-	return sum(@dist)/scalar(@dist);
+	my ( $tree, $size ) = @_;
+	my @tips = shuffle( @{ $tree->get_terminals } );
+	my @sample = @tips[ 0 .. $size - 1 ];
+	my $subtree = $tree->keep_tips(\@sample);
+	return $subtree->calc_tree_length;
 }
 
 # read mapfile
