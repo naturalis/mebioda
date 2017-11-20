@@ -7,7 +7,7 @@ High-throughput sequencing
 > What are our experiences with:
 > - Any lab work, e.g. isolating DNA? PCR?
 > - Any sequencing? Sanger? HTS?
-> - Any data analysis?
+> - Any HTS data analysis?
 
 - At time of writing (2017) there are multiple technologies, broadly categorized as
   sequencing-by-ligation (e.g. SOLiD) and sequencing-by-synthesis (illumina, Ion Torrent,
