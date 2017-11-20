@@ -55,7 +55,7 @@ vsearch --derep_fulllength CPuniques.fasta --minuniquesize 2 --sizein --sizeout 
  vsearch --uchime_denovo all.preclustered.fasta --sizein --sizeout --fasta_width 0 --nonchimeras all.denovo.nonchimeras.fasta 
 
 #Reference chimera detection
- vsearch --uchime_ref all.denovo.nonchimeras.fasta --db utax_reference_dataset_10.10.2017.fasta --id 0.7 --sizein --sizeout --fasta_width 0 --nonchimeras all.ref.nonchimeras.fasta
+ vsearch --uchime_ref all.denovo.nonchimeras.fasta --db utax_reference_dataset_10.10.2017.fasta --sizein --sizeout --fasta_width 0 --nonchimeras all.ref.nonchimeras.fasta
 
 #-----------------------------------------------------------------------------------
 
