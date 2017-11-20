@@ -78,12 +78,18 @@ Additional filtering
 Overlap-layout-consensus assembly
 ---------------------------------
 
-- In _Sanger_ sequencing assembly, a _graph_ is constructed where every _vertex_ is a 
-  read, and _edges_ connect the reads that overlap
-- Subsequently, the _Hamiltonian path_, which visits every _vertex_ (read) exactly once
-  is searched for, and the consensus sequence along the path is computed
+- In _Sanger_ sequencing assembly, a 
+  [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is constructed 
+  where every 
+  [vertex](https://en.wikipedia.org/wiki/Vertex_(graph_theory)) is a 
+  read, and 
+  [edges](https://en.wikipedia.org/wiki/Edge_(graph_theory)) connect the reads that 
+  overlap
+- Subsequently, the [Hamiltonian path](https://en.wikipedia.org/wiki/Hamiltonian_path), 
+  which visits every _vertex_ (read) exactly once is searched for, and the consensus 
+  sequence along the path is computed
 - However, this _overlap-layout-consensus_ approach is hard to solve (computer scientists
-  call this _NP-complete_)
+  call this [NP-complete](https://en.wikipedia.org/wiki/NP-completeness))
 
 ![](lecture2/overlap-layout-consensus.png)
 
@@ -94,8 +100,10 @@ An alternative way to traverse the graph
   HTS data 
 - Another approach to traverse graphs is along the _Eulerian path_, where every _edge_
   (instead of vertex) is visited exactly once
-- The _Eulerian path_ can be traversed in _linear time_ (computer scientists notate this
-  as "_O_(|_E_|)")
+- The [Eulerian path](https://en.wikipedia.org/wiki/Eulerian_path) can be traversed in 
+  _linear time_ (computer scientists notate this as "_O_(|_E_|)") as opposed to 
+  non-deterministic _polynomial time_ (i.e. with _n_ input _T_(_n_) = O(_n_<sup>k</sup>) 
+  for some constant _k_ in [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation))
 - However, for this _Eulerian path_ to exist, either zero or two _vertices_ may exist with 
   odd _degree_, so the Seven Bridges of Königsberg, which Euler studied, don't form a path
   (and the overlap graph might also not)
@@ -105,7 +113,8 @@ An alternative way to traverse the graph
 Making the graph amenable to Eulerian traversal
 -----------------------------------------------
 
-- In a _De Bruijn_ graph, all vertices have even degree
+- In a [De Bruijn graph](https://en.wikipedia.org/wiki/De_Bruijn_graph), all vertices 
+  have even degree
 - A _De Bruijn_ graph connects symbolic sequence data such that every vertex is a sequence
   string of length _k_ (a "_k-mer_") that is connected to other such vertices if the 
   the sequences are identical along the substring of length _k_-1, i.e. the sequences
@@ -121,21 +130,45 @@ HTS sequence data and _k-mers_
 
 - The _De Bruijn_ graph presupposes that for every _k-mer_ there are neighbours that 
   overlap with it along the substring _k-1_
-- However, read data does not naturally come out meeting that assumption: there are biases
+- HTS read data does not naturally come out meeting that assumption: there are biases
   causing reads to overlap more irregularly
-- However, the reads can be re-processed to some smaller size _k_ that are shifted
-  relative to one another (note that this collapses the duplicates that are then created):
+- However, the reads can be re-processed to a spectrum of substrings of some smaller 
+  size _k_ that are shifted relative to one another (note that this collapses the 
+  duplicates that are then created):
 
 ![](lecture2/K-mer-example.png)
 
+This re-processing can be achieved naively (there are faster tools than this) in python
+thusly:
+
+```python
+def find_kmers(string, k):
+    
+      kmers = []
+      n = len(string)
+
+      for i in range(0, n-k+1):
+           kmers.append(string[i:i+k])
+
+      return kmers
+```
+
 Optimal _k-mer_ size
 --------------------
+
+**Chikhi R & P Medvedev**, 2014. Informed and automated k-mer size selection for genome 
+assembly. _Bioinformatics_ **30**(1): 31–37 
+doi:[10.1093/bioinformatics/btt310](https://doi.org/10.1093/bioinformatics/btt310)
 
 - Smaller _k_ makes for a smaller graph, but at the cost of more duplicate _k-mers_ 
   collapsed, causing information loss and an inability to cross over repeat regions
 - Higher _k_ is more memory intensive, and may increase the risk of _k-mers_ having no
   neighbours, causing short contigs
+- Some tools exist that attempt to optimize this value, for example by attempting to 
+  predict the value that results in the most distinct _k-mers_, which corresponds with
+  certain measures of assembly quality:
 
+![](lecture2/K-mer-genie.png)
 
 
 Taxonomic diversity: tomato relatives
