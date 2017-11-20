@@ -1,13 +1,29 @@
-Genomes in biodiversity research
-================================
+Genome HTS in biodiversity research
+===================================
 
-Adaptor sequences
------------------
+High-throughput sequencing
+--------------------------
+
+- At time of writing (2017) there are multiple technologies, broadly categorized as
+  sequencing-by-ligation (e.g. SOLiD) and sequencing-by-synthesis (illumina, Ion Torrent,
+  454)
+- A number of vendors have created numerous platforms for specific needs and requirements, 
+  e.g. data volumes, read lengths, cost, error profile, runtime
+- A fairly current review is [Goodwin et al., 2016](lecture2/goodwin2016.pdf)
+- Illumina (below) is currently the largest platform
+
+![](lecture2/illumina.png)
+
+Library preparation
+-------------------
 
 ![](lecture2/fragmentation_and_ligation.png)
 
-Read data may still have **adaptor sequences** that were ligated to the fragments during
-library preparation.
+- After DNA isolation and fragmentation, _primer sequences_ may be _ligated_ to the 
+  fragment as part of an amplification procedure (PCR)
+- In addition, various sequencing platforms involve ligation of _adaptor sequences_ for
+  various roles, e.g. to label samples and to participate in the chemistry of the 
+  platform (attach to the flowcell surface, for example)
 
 Clipping adaptors
 -----------------
@@ -27,8 +43,11 @@ doi:[10.1186/s12859-016-1069-7](http://doi.org/10.1186/s12859-016-1069-7)
 
 ![](lecture2/clipping.png)
 
-There are many tools available for adaptor clipping. Some are faster than others, and they
-all affect downstream analysis time differently.
+- There are many tools available for adaptor clipping. Some are faster than others, and 
+  they all affect downstream analysis time differently
+- Under some circumstances, it may not be necessary to do this, depending on the 
+  experimental design (for example, if there is no de-multiplexing to do and the adaptors
+  are ignored in a mapping assembly)
 
 Clipping primers
 ----------------
@@ -48,19 +67,25 @@ Clipping primers
   [fuzzy matching](https://github.com/naturalis/fastq-simple-tools/blob/master/script/splitfastq.pl#L128) 
   against their sequences
 
-Quality trimming
-----------------
+Quality assessment and trimming
+-------------------------------
+
+A convenient tool for initial quality assessment of HTS read data is 
+[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html),
+whose results can indicate numerous pathologies:
+
+- Low Phred scores overall (e.g. pacbio compared to illumina), at higher base positions 
+  on the read (i.e. near the "end"), or along homopolymers, some of which can be addressed
+  using read trimming
+- The presence of biases (GC content) and overrepresentations of certain reads (e.g.
+  adaptors) that may still need to be clipped 
+- Some examples show: 
+  - [good illumina data](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html)
+  - [bad illumina data](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html)
+  - [adaptors still connected](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/RNA-Seq_fastqc.html)
+  - [pacbio](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/pacbio_srr075104_fastqc.html)
 
 ![](lecture2/fastqc.png)
-
-The Phred quality of called bases is lower:
-
-- At higher base positions in the read (i.e. near the "end")
-- The first few bases
-- Along homopolymers
-
-Hence, read trimming by quality is a common procedure, for which, again, many tools are
-available.
 
 Additional filtering
 --------------------
@@ -68,12 +93,12 @@ Additional filtering
 ![](lecture2/chimera.gif)
 
 - A (crude) proxy for a read possibly being chimeric is that it occurs only once, i.e. as
-  a singleton, which you might therefore filter out. This is especially the case in
-  genome, but not in amplicon sequencing (because the chimera might be PCR'ed).
+  a singleton, which you might therefore filter out. This is more likely the case in
+  genomes than in amplicon sequencing (because the chimera might be PCR'ed)
 - On platforms that have variable length reads, you might want to filter out all reads
   below a threshold length
-- When paired-end sequencing, one of the two 'ends' might be filtered out, in which case
-  you might filter out the opposite end as well
+- When paired-end sequencing, one of the two 'ends' might have been filtered out, in 
+  which case you might filter out the opposite end as well
 
 Overlap-layout-consensus assembly
 ---------------------------------
