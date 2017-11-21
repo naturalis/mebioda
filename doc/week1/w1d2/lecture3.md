@@ -95,18 +95,20 @@ Sequencing and assembling the King Cobra genome
 - paired end (insert size: 200-500 bp) and mate pair (insert size: 2-5 Kbp) sequencing 
   (Illumina GAIIx, read length 36–151 bp) 
 - data processing including adaptor clipping
-- _de novo_ assembly using [CLC](http://www.clcbio.com/), resulting in N50=3982 bp
-- scaffolding using [SSPACE](https://doi.org/10.1093/bioinformatics/btq683)
+- _de novo_ assembly using [CLC](http://www.clcbio.com/), resulting in N50=3,982 bp
+- scaffolding using [SSPACE](https://doi.org/10.1093/bioinformatics/btq683), resulting
+  in an N50=225,511 bp
 
 Venom gene analysis
 -------------------
 
 ![](lecture3/anolis_carolinensis.jpg)
 
-- the genome was annotated using [MAKER](http://www.yandell-lab.org/software/maker.html), 
-  using protein data from 
+- the [genome](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA201683) was annotated using 
+  [MAKER](http://www.yandell-lab.org/software/maker.html), using protein data from 
   [Uniprot/Swiss-Prot](http://www.uniprot.org/uniprot/?query=reviewed:yes)
-  and the annotated genome of _Anolis carolinensis_
+  and the annotated genome of _Anolis carolinensis_ (brief side note: the work on 
+  Caribbean Anoles by the [Losos lab](https://lososlab.oeb.harvard.edu/research))
 - on the basis of the MAKER genes and by BLAST searching the genome using known venom
   query sequences, gene copies were collected and aligned with 
   [MUSCLE](https://www.drive5.com/muscle/)
@@ -124,11 +126,6 @@ Venom gene duplication
 
 ![](lecture3/cobra-duplication.jpg)
 
-_Gene duplication coupled with positive selection is the mechanism underlying venom 
-protein neofunctionalization. Our results are, therefore, consistent with a prominent 
-role for prey-driven natural selection in generating the genetic diversity of the most 
-pathogenic toxin families._
-
 - **A** The vast majority of toxin family gene duplication events occurred in the king 
   cobra lineage compared with the Burmese python and their common ancestor
 - **B** Comparisons of venom gland expression (log-transformed), venom-related gene 
@@ -140,6 +137,62 @@ pathogenic toxin families._
 - **D** Moderate expansion of other pathogenic toxin families
 - **E** Ancillary toxin families show reduced evidence of gene duplication
 
-Spatial diversity: phytophagous insects
----------------------------------------
+_Gene duplication coupled with positive selection is the mechanism underlying venom 
+protein neofunctionalization. Our results are, therefore, consistent with a prominent 
+role for prey-driven natural selection in generating the genetic diversity of the most 
+pathogenic toxin families._
 
+An invasive plant among native insect herbivores
+------------------------------------------------
+
+**Schilthuizen M et al.** 2016. Incorporation of an invasive plant into a native insect 
+herbivore food web. _PeerJ_ **4**:e1954 
+doi:[10.7717/peerj.1954](https://doi.org/10.7717/peerj.1954)
+
+![](lecture3/prunus-moorland.jpg)
+
+In open habitats, such as this moorland in the Netherlands, the exotic 
+[_Prunus serotina_](https://en.wikipedia.org/wiki/Prunus_serotina) (black cherry) may 
+spread invasively, as this carpet of seedlings shows. Understanding how phytophagous 
+insects colonize such invasives is therefore of scientific as well as practical interest.
+
+Herbivores switch to the new invasive
+-------------------------------------
+
+![](lecture3/prunus-herbivory.jpg)
+
+- Assessment of herbarium specimens through time show increasing herbivory on the 
+  new invasive
+- _G. quinquepunctata_ is a model specialist, originally found only on 
+  [_Sorbus aucuparia_](https://en.wikipedia.org/wiki/Sorbus_aucuparia), but
+  recently also observed on _P. serotina_
+- host choice experiments on collected beetles showed that individuals from Sorbus 
+  preferred Sorbus, while those from Prunus showed no significant preference
+
+Sequencing _G. quinquepunctata_
+-------------------------------
+
+![](lecture3/prunus-gonioctena-quinquepunctata.jpg)
+
+- [2 individuals (one from each host)](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA277307) 
+  were paired-end sequenced (Illumina HiSeq 2000)
+- reads from the individuals were pooled to create a pseudo-reference, assembled with
+  [ABySS](http://doi.org/10.1101/gr.089532.108), (_k-mer_ length=23, obtained with
+  [KmerGenie](https://doi.org/10.1093/bioinformatics/btt310))
+- reads from the two individuals were then mapped back against the pseudo-reference
+  using [BWA](http://bio-bwa.sourceforge.net/)
+
+SNP calling and selection
+-------------------------
+
+![](lecture3/SNP-example.png)
+
+- SNPs were called using [samtools](http://www.htslib.org/doc/samtools.html) according to 
+  the following criteria:
+  - the positions were both homozygous for different alleles between the samples
+  - had a coverage of at least 10×in each sample
+  - had flanking regions that were at least 100 bp long with a minimum combined coverage 
+    of at least 15x with a maximum of 2 heterozygous positions
+- contigs containing candidate SNPs were validated by BLAST and removing all 
+  non-arthropod contigs
+- for a random sample (n=128) of SNPs filtered thusly, primers were designed
