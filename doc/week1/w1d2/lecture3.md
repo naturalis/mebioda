@@ -80,7 +80,7 @@ Functional diversity: snake venom
 adaptation in the snake venom system. _PNAS_ **110**(51): 20651–20656
 doi:[10.1073/pnas.1314702110](http://doi.org/10.1073/pnas.1314702110)
 
-![](lecture3/cobra-venom.png)
+![](lecture3/cobra-venom.jpg)
 
 The king cobra venom system with venom and accessory gland expression profiles. Pie 
 charts display the normalized percentage abundance of toxin transcripts recovered from 
@@ -98,8 +98,8 @@ Sequencing and assembling the King Cobra genome
 - _de novo_ assembly using [CLC](http://www.clcbio.com/), resulting in N50=3982 bp
 - scaffolding using [SSPACE](https://doi.org/10.1093/bioinformatics/btq683)
 
-Venome gene analysis
---------------------
+Venom gene analysis
+-------------------
 
 ![](lecture3/anolis_carolinensis.jpg)
 
@@ -121,7 +121,7 @@ Venome gene analysis
 Venom gene duplication
 ----------------------
 
-![](lecture3/cobra-duplication.png)
+![](lecture3/cobra-duplication.jpg)
 
 _Gene duplication coupled with positive selection is the mechanism underlying venom 
 protein neofunctionalization. Our results are, therefore, consistent with a prominent 
