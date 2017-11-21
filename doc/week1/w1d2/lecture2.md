@@ -4,10 +4,11 @@ Genome HTS in biodiversity research
 High-throughput sequencing
 --------------------------
 
-> What are our experiences with:
+> What are your experiences with:
 > - Any lab work, e.g. isolating DNA? PCR?
 > - Any sequencing? Sanger? HTS?
 > - Any HTS data analysis?
+> - What have you learned in Genomic Architecture?
 
 - At time of writing (2017) there are multiple technologies, broadly categorized as
   sequencing-by-ligation (e.g. SOLiD) and sequencing-by-synthesis (illumina, Ion Torrent,
@@ -18,6 +19,16 @@ High-throughput sequencing
 - Illumina (below) is currently the largest platform
 
 ![](lecture2/illumina.png)
+
+Typical workflow
+----------------
+
+1. clip any synthetic oligonucleotides (adaptors, primers)
+2. trim low quality bases, filter short reads
+3. _de novo_ or _mapping_ assembly
+4. further annotation
+5. variant calling
+6. consensus sequence computation
 
 Library preparation
 -------------------
@@ -108,7 +119,7 @@ Additional filtering
 Overlap-layout-consensus assembly
 ---------------------------------
 
-> What do we know about graph theory? Edges? Vertices? Degrees? Directedness?
+> What do you know about graph theory? Edges? Vertices? Degrees? Directedness?
 
 - In _Sanger_ sequencing assembly, a 
   [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is constructed 
@@ -145,8 +156,8 @@ An alternative way to traverse the graph
 Making the graph amenable to Eulerian traversal
 -----------------------------------------------
 
-- In a [De Bruijn graph](https://en.wikipedia.org/wiki/De_Bruijn_graph), all vertices 
-  have even degree
+- In a complete [De Bruijn graph](https://en.wikipedia.org/wiki/De_Bruijn_graph), all 
+  vertices have even degree
 - A _De Bruijn_ graph connects symbolic sequence data such that every vertex is a sequence
   string of length _k_ (a "_k-mer_") that is connected to other such vertices if the 
   the sequences are identical along the substring of length _k_-1, i.e. the sequences
@@ -185,8 +196,8 @@ def find_kmers(string, k):
       return kmers
 ```
 
-Optimal _k-mer_ size
---------------------
+Optimal _k-mer_ size and assembly
+---------------------------------
 
 **Chikhi R & P Medvedev**, 2014. Informed and automated k-mer size selection for genome 
 assembly. _Bioinformatics_ **30**(1): 31–37 
@@ -202,13 +213,75 @@ doi:[10.1093/bioinformatics/btt310](https://doi.org/10.1093/bioinformatics/btt31
 
 ![](lecture2/K-mer-genie.png)
 
+- [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) is often used as benchmark / gold 
+  standard for _de novo_ assembly, but it is limited in data set size. 
+- [SOAPdenovo2](http://soap.genomics.org.cn/soapdenovo.html) is an efficient, commonly 
+  used assembler for larger genomes.
+- [NG50](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#NG50) gives the 
+  length of the contig (when sorted by descending length) that is the mid point along the
+  way to covering the length of the reference genome (compare with N50, which is the mid
+  point along the way to the total length of the assembly).
 
-Taxonomic diversity: tomato relatives
--------------------------------------
+Scaffolding
+-----------
 
-Functional diversity: snake venom
----------------------------------
+- _De novo_ assembly results in _contigs_, stretches of contiguous read data, which then
+  may be scaffolded
+- [Paired-end and mate-pair](https://era7bioinformatics.com/en/page.cfm?id=1626) read 
+  data (with larger insert sizes) can help span a gap and help orient and approximate
+  the distance between reads
+- Other ways to scaffold include using [optical mapping](https://en.wikipedia.org/wiki/Optical_mapping)
+  or sequencing longer reads (e.g. pacbio) as well
 
-Spatial diversity: phytophagous insects
----------------------------------------
+![](lecture2/scaffolding.jpg)
 
+Mapping assembly
+----------------
+
+![](lecture2/mapping.png)
+
+- In a mapping assembly, a reference genome is scanned for the best place to map a read
+- Hence, the reference genome needs to be indexed in order for this to be efficient
+
+The Burrows-Wheeler transform
+-----------------------------
+
+![](lecture2/bwt.png)
+
+1. All rotations for a given input string are generated
+2. These are sorted alphabetically
+3. The final column is the transformed string, i.e. [BWT(T)](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform)
+
+This string has the following properties:
+
+- Almost incomprehensibly, the input string can be recovered from BWT(T) by a reverse
+  function
+- But, in the transformed string, the same character now occurs multiple times in 
+  sequence, which can be compressed (e.g. by counting the number of repetitions)
+- By computing an additional index (FM), substring locations can quickly be found,
+  and thus reads be mapped
+- [Here](lecture2/bwt_fm.pdf) is a good tutorial with code samples for all the steps
+  in Python
+
+BWT mapping assembly tools
+--------------------------
+
+Commonly used BWT mapping tools are:
+
+- [bwa](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtp324)
+- [bowtie](https://dx.doi.org/10.1186%2Fgb-2009-10-3-r25)
+- [SOAP2](https://doi.org/10.1093/bioinformatics/btp336)
+
+Genome annotation
+-----------------
+
+![](lecture2/MAKER.jpg)
+
+Genomes are annotated using multiple lines of evidence, such as:
+
+- gene prediction, e.g. with [SNAP](https://doi.org/10.1186/1471-2105-5-59)
+- [EST](https://en.wikipedia.org/wiki/Expressed_sequence_tag) mappings, e.g. with
+  [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) 
+  or [exonerate](https://doi.org/10.1186/1471-2105-6-31)
+- protein mappings, e.g. with blastx (protein blast) or exonerate
+- repeat masking data
