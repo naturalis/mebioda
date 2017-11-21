@@ -103,8 +103,9 @@ Venom gene analysis
 
 ![](lecture3/anolis_carolinensis.jpg)
 
-- the genome was annotated using [MAKER](www.yandell-lab.org/software/maker.html), using
-  protein data from [Uniprot/Swiss-Prot](http://www.uniprot.org/uniprot/?query=reviewed:yes)
+- the genome was annotated using [MAKER](http://www.yandell-lab.org/software/maker.html), 
+  using protein data from 
+  [Uniprot/Swiss-Prot](http://www.uniprot.org/uniprot/?query=reviewed:yes)
   and the annotated genome of _Anolis carolinensis_
 - on the basis of the MAKER genes and by BLAST searching the genome using known venom
   query sequences, gene copies were collected and aligned with 
@@ -128,16 +129,16 @@ protein neofunctionalization. Our results are, therefore, consistent with a prom
 role for prey-driven natural selection in generating the genetic diversity of the most 
 pathogenic toxin families._
 
-- (A) The vast majority of toxin family gene duplication events occurred in the king 
+- **A** The vast majority of toxin family gene duplication events occurred in the king 
   cobra lineage compared with the Burmese python and their common ancestor
-- (B) Comparisons of venom gland expression (log-transformed), venom-related gene 
+- **B** Comparisons of venom gland expression (log-transformed), venom-related gene 
   duplication events, and rate of evolution of main toxin families (red) and ancillary 
   toxin families (green). ω represents the dN/dS ratio identified for venomous gene 
   clades. The boundary for directional selection is indicated by a bold line.
-- (C) Massive expansion of the 
+- **C** Massive expansion of the 
   [three-finger toxin](https://en.wikipedia.org/wiki/Three-finger_toxin) gene family
-- (D) Moderate expansion of other pathogenic toxin families
-- (E) Ancillary toxin families show reduced evidence of gene duplication
+- **D** Moderate expansion of other pathogenic toxin families
+- **E** Ancillary toxin families show reduced evidence of gene duplication
 
 Spatial diversity: phytophagous insects
 ---------------------------------------
