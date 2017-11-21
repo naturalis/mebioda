@@ -285,3 +285,16 @@ Genomes are annotated using multiple lines of evidence, such as:
   or [exonerate](https://doi.org/10.1186/1471-2105-6-31)
 - protein mappings, e.g. with blastx (protein blast) or exonerate
 - repeat masking data
+
+Variant calling
+---------------
+
+![](lecture2/SNP-example.png)
+
+Variants are called with a variety of methods:
+
+- Allele counting 
+- Probabilistic/Bayesian: build a model of the expected number of variants and use that
+  to quantify support for any given call
+- Heuristic techniques: based on filtering / thresholding for read depth, base quality,
+  frequency
