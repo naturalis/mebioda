@@ -161,8 +161,8 @@ Herbivores switch to the new invasive
 
 ![](lecture3/prunus-herbivory.jpg)
 
-- Assessment of herbarium specimens through time show increasing herbivory on the 
-  new invasive
+- Assessment of herbarium specimens through time shows increasing herbivory on the 
+  new invasive (A) compared to the native _P. padus_ (B)
 - _G. quinquepunctata_ is a model specialist, originally found only on 
   [_Sorbus aucuparia_](https://en.wikipedia.org/wiki/Sorbus_aucuparia), but
   recently also observed on _P. serotina_
@@ -174,7 +174,7 @@ Sequencing _G. quinquepunctata_
 
 ![](lecture3/prunus-gonioctena-quinquepunctata.jpg)
 
-- [2 individuals (one from each host)](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA277307) 
+- [2 individuals (one from each host)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA277307) 
   were paired-end sequenced (Illumina HiSeq 2000)
 - reads from the individuals were pooled to create a pseudo-reference, assembled with
   [ABySS](http://doi.org/10.1101/gr.089532.108), (_k-mer_ length=23, obtained with
@@ -195,4 +195,47 @@ SNP calling and selection
     of at least 15x with a maximum of 2 heterozygous positions
 - contigs containing candidate SNPs were validated by BLAST and removing all 
   non-arthropod contigs
-- for a random sample (n=128) of SNPs filtered thusly, primers were designed
+
+Genotyping host populations
+---------------------------
+
+![](lecture3/prunus-snpline.jpg)
+
+- for a random sample (n=128) of the filtered SNPs, primers were designed using
+  [kraken](https://www.lgcgroup.com/products/genotyping-software/kraken/)
+- an additional 206 beetles from _S. aucuparia_, and 173 from _P. serotina_ were
+  collected and genotyped with the 
+  [LGC SNPline](https://www.lgcgroup.com/products/genotyping-instruments/snpline)
+
+Analysis of Molecular Variance 
+------------------------------
+
+![](lecture3/prunus-fst.jpg)
+
+- SNPs were analyzed using Analysis of Molecular Variance 
+  ([AMOVA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1205020/)), which is implemented
+  in [Arlequin](http://cmpg.unibe.ch/software/arlequin3/) and the R package
+  [ade4](https://cran.r-project.org/web/packages/ade4/index.html)
+- The AMOVA produces estimates of variance components and F-statistic analogs, 
+  reflecting the correlation of haplotypic diversity _at different levels of hierarchical 
+  subdivision_ (in this case, of host plants nested within sampling localities).
+- The hierarchical AMOVA with host plants nested within localities, showed significant 
+  (P < 0.01) differentiation between host plants in each locality
+
+What was F<sub>ST</sub> again?
+------------------------------
+
+![](lecture3/prunus-fst.pdf)
+
+STRUCTURE analysis
+------------------
+
+![](lecture3/prunus-structure.png)
+
+- [STRUCTURE](http://www.genetics.org/content/155/2/945) analysis attempts to find the
+  optimal number of populations (_K_) to explain the population genetic patterns
+- the highest posterior probability was for _K_=2, but these two groups did not 
+  correspond with host plant nor with locality  
+- Genotype assignments under _K_=2. Groups of individuals have been ordered by locality 
+  and then host. In other words, the first half of the individuals are from one host, the 
+  second half from the other. We conclude that host does not affect population stucture.
