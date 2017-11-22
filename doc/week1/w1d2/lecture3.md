@@ -225,7 +225,7 @@ Analysis of Molecular Variance
 What was F<sub>ST</sub> again?
 ------------------------------
 
-![](lecture3/prunus-fst.pdf)
+![](lecture3/prunus-fst.png)
 
 STRUCTURE analysis
 ------------------
