@@ -4,10 +4,31 @@ High-throughput DNA sequencing
 Data centric view of genome resequencing workflow
 -------------------------------------------------
 1. (semi-)raw reads come out of lab as FASTQ
-2. reads are aligned to a (pseudo-)reference as SAM/BAM/CRAM
-3. alignment is viewed in genome browser, with additional tracks as BED
-4. variants are called (e.g. as VCF/BCF), consensus is computed (e.g. as FASTA)
-5. consensus is annotated as GFF
+2. reads are assembled to a FASTA file
+3. reads are aligned to a (pseudo-)reference as SAM/BAM/CRAM
+4. alignment is viewed in genome browser, with additional tracks as BED
+5. variants are called (e.g. as VCF/BCF), consensus is computed (e.g. as FASTA)
+6. consensus is annotated as GFF
+
+The FASTA format
+----------------
+- The simplest, and therefore most common sequence format
+- Holds DNA/RNA/AA sequence data in IUPAC single characters
+- Seen in Genomic Architectures, used for online BLAST
+- Syntax:
+```
+>Definition_line
+agctcagactacgactacgcatcagcga
+```
+
+Extensions:
+- The first words in the definition line are often used to embed data, e.g. identifiers
+- Sequence quality is sometimes written to separate FASTA-like files with records
+  in the same order (and same length)
+- Can be one or multiple records, which might be aligned, in which case there
+  might be gap `-` characters
+- Lower case and capitalized are sometimes used to embed information such as
+  base quality or strandedness
 
 The FASTQ format
 ----------------
@@ -47,6 +68,8 @@ is called incorrectly are 1 in 1000.
 | 40                  | 1 in 10,000                        | 99.99%             |
 | 50                  | 1 in 100,000                       | 99.999%            |
 | 60                  | 1 in 1,000,000                     | 99.9999%           |
+
+![](lecture2/phred.jpg)
 
 Phred score encoding
 --------------------
