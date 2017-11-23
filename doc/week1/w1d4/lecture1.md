@@ -25,13 +25,36 @@ General workflow of metabarcoding assays
 Species identification of gut contents of permafrost grazers
 ------------------------------------------------------------
 
+- ancient DNA sequencing of the gut contents of permafrost grazers
+- two chloroplast markers (_rbcL_ and _trnL-trnF_) amplified with forward and reverse
+  primers
+- findings corroborated with morphological analysis of macroremains and pollen
+
+Analysis workflow:
+
+1. demultiplex on IonTorrent adaptors; Phred quality (Q20) and length (>=100bp) filter
+2. cluster reads with [CD-HIT](http://www.bioinformatics.org/cd-hit/)
+3. BLAST against NCBI _nr_
+
+Mid-Holocene horse
+------------------
+
 **B Gravendeel, A Protopopov, I Bull, E Duijm, F Gill, A Nieman, N Rudaya, A N Tikhonov, 
 S Trofimova, GBA van Reenen, R Vos, S Zhilich & B van Geel**. 2014. Multiproxy study of 
 the last meal of a mid-Holocene Oyogos Yar horse, Sakha Republic, Russia. 
 _The Holocene_ **24**(10): 1288-1296
 doi:[10.1177/0959683614540953](https://doi.org/10.1177/0959683614540953)
 
+- c. 5,400 years ago, [Oyogos Yar](https://goo.gl/maps/jyEBfYaKEgn), Russia
+- Pollen grains and the aDNA record give information about taxa that occurred in the 
+  landscape. 
+- The combined data point to an open landscape of a coastal tundra dominated by 
+  graminoids (Poaceae, Cyperaceae) with a limited amount of Birch and Alder.
+
 ![](horse.png)
+
+Early Holocene Yakutian bison
+-----------------------------
 
 **B van Geel, A Protopopov, I Bull, E Duijm, F Gill, Y Lammers, A Nieman, N Rudaya, 
 S Trofimova, A N Tikhonov, R Vos, S Zhilich, B Gravendeel**. 2014. Multiproxy diet 
@@ -39,18 +62,15 @@ analysis of the last meal of an early Holocene Yakutian bison.
 _Journal of Quaternary Science_ **29**(3): 261-268
 doi:[10.1002/jqs.2698](http://doi.org/10.1002/jqs.2698)
 
+- c. 10,500 years ago, [Chuckchalakh lake](https://goo.gl/maps/ykG5NpsFceS2), Russia
+- Remains of shrubs (_Alnus_, _Betula_, _Salix_) and Poaceae indicate that the animal 
+  probably lived in a landscape of predominantly dry soils, intermixed with wetlands 
+  containing herbaceous plant species, as indicated by remains of _Comarum palustre_, 
+  _Caltha palustris_, _Eriophorum_, _Sparganium_, _Menyanthes trifoliata_ and 
+  _Utricularia_.
+- All recorded taxa still occur in the present-day Yakutian tundra vegetation. 
+
 ![](bison.png)
-
-- ancient DNA sequencing of the gut contents of permafrost grazers
-- two chloroplast markers (_rbcL_ and _trnL-trnF_) amplified with forward and reverse
-  primers
-- findings corroborated with morphological analysis
-
-Analysis workflow:
-
-1. demultiplex on IonTorrent adaptors; Phred quality (Q20) and length (>=100bp) filter
-2. cluster reads with [CD-HIT](http://www.bioinformatics.org/cd-hit/)
-3. BLAST against NCBI _nr_
 
 Joining CITES listing with species detection in organic mixtures
 ----------------------------------------------------------------
