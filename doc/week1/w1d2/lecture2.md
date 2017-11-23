@@ -14,6 +14,7 @@ The FASTA format
 ----------------
 - The simplest, and therefore most common sequence format
 - Holds DNA/RNA/AA sequence data in IUPAC single characters
+- Flat text, can be read by most bioinformatics **toolkits**
 - Seen in Genomic Architectures, used for online BLAST
 - Syntax:
 ```
@@ -34,6 +35,7 @@ The FASTQ format
 ----------------
 - The initial mountain of data to deal with
 - Sequential [format](lecture2/FASTQ.pdf) returned by most HTS platforms
+- Flat text, can be read by most bioinformatics **toolkits**
 - Includes base calling quality scores
 
 Record layout:
@@ -104,7 +106,10 @@ The SAM/BAM/CRAM format
 - [Format](lecture2/SAM.pdf) to represent (FASTQ) reads aligned to a reference sequence
 - Textual (SAM) and binary representations (BAM)
 - Binary representation further compressed as CRAM
-- Accessed using tools such as samtools, picard
+- Created using reference mapping tools such as BWA
+- Accessed using tools such as [samtools](http://www.htslib.org/), 
+  [picard](http://broadinstitute.github.io/picard/), and scripting toolkits built on 
+  top of these (e.g. PySAM)
 
 Example alignment:
 
@@ -337,3 +342,8 @@ contig_1    maker   three_prime_UTR 6980    7025    .   +   .   ID=CR513_016834-
    base of a codon, '1' that the second base is the first base of a codon, and so on.
 9. semicolon-separated list of tag-value pairs, providing additional information about 
    each feature.
+
+Submission to NCBI
+------------------
+
+See: [WGS2NCBI](https://github.com/naturalis/wgs2ncbi)
