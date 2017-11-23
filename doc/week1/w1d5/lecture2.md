@@ -68,6 +68,9 @@ Breadth-first traversal
 
 A breadth-first algorithm:
 
+- Assume that a `node` object knows about its next sibling (`node.sibling`)
+- Assume that a `node` object knows about its first child (`node.first_child`)
+
 ```python
 def breadth_first(node):
 	print 'PRE: ', node.name
