@@ -69,8 +69,6 @@ is called incorrectly are 1 in 1000.
 | 50                  | 1 in 100,000                       | 99.999%            |
 | 60                  | 1 in 1,000,000                     | 99.9999%           |
 
-![](lecture2/phred.jpg)
-
 Phred score encoding
 --------------------
 
@@ -79,6 +77,8 @@ Different platforms map phred scores in different ways to ASCII:
 - sanger: 33..126
 - solexa: 59..126
 - illumina: 64..126
+
+![](lecture2/phred.jpg)
 
 | code  | char  | code  | char  | code  | char  | code  | char  | code  | char  | code  | char  |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
