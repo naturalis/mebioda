@@ -225,3 +225,4 @@ that, in principe, we have to inspect all pairs - so work together.
 - Download the database version of the PhytoPhylo tree: https://doi.org/10.6084/m9.figshare.5598631
 - Using MRCA queries and the `height` column (distance to root) you should be able to fetch the
   distance between a pair.
+- What could explain the fact that you see the same distance for many pairs?
