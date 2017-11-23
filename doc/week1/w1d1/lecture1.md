@@ -4,7 +4,7 @@ Methods in Biodiversity Analysis
 Introductions
 -------------
 
-- Different academic backgrounds (IBL, CML)
+- Different academic backgrounds (IBL, CML, ...)
 - Different interests, needs, and expectations
 - Different skill levels and experiences
 
@@ -59,8 +59,8 @@ Lectures in the morning, practicals in the afternoon, presentation, report, exam
 Links to other courses
 ----------------------
 
-Methods in Biodiversity Analysis as well as the following courses are compulsory in the 
-master Biodiversity and Sustainability, 2017-2018:
+**Methods in Biodiversity Analysis as well as the following courses are compulsory in the 
+master Biodiversity and Sustainability, 2017-2018:**
 
 - [Genomic Architecture](https://studiegids.leidenuniv.nl/courses/show/67715/genomic-architecture) -
   We will give more attention to the data science and bioinformatics side of genome 
@@ -69,14 +69,14 @@ master Biodiversity and Sustainability, 2017-2018:
   We will refresh our R skills but apply them more specifically to cases involving 
   biodiversity.
 
-In addition, Methods in Biodiversity Analysis is an elective in:
+In addition, Methods in Biodiversity Analysis is an **elective** in:
 
 - Biology: Biology and Education, 2017-2018
 - Biology: Biology and Science-Based Business, 2017-2018
 - Biology: Biology and Science Communication & Society, 2017-2018
 - Biology: General Biology Programme (no research specialisation), 2017-2018
 
-In relation to the old programme and the master Evolutionary Biology, 2017-2018:
+In relation to the **old** programme and the master **Evolutionary Biology**, 2017-2018:
 
 - [(old) Methods In Biodiversity Analysis](https://studiegids.leidenuniv.nl/courses/show/56721/Methods-in-Biodiversity-Analysis) - 
   In previous years, the course named "Methods in Biodiversity Analysis" was much
@@ -90,16 +90,19 @@ In relation to the old programme and the master Evolutionary Biology, 2017-2018:
 Teaching materials
 ------------------
 
+- There is no book.
+- Most lectures reference several publications. You should be broadly aware of their
+  contents insofar as a biologist can (so skip over the formulas).
 - Slides (re-formatted as handouts) are at http://github.com/naturalis/mebioda
-- Handouts and slides are subject to ongoing (wiki-like) improvement
+- Handouts and slides are subject to ongoing (wiki-like) improvement.
 - During the course we will learn how to use this platform to share data, scripts, files 
-  with each other
+  with each other.
 
 Teamwork
 --------
 
-- With the hands-on parts of the course we will try to learn in pairs,
-  helping each other
+- With the hands-on parts of the course we will try to learn in pairs, helping each other
+- At least one of you **bring a laptop**, also to the lectures
 - All assignments are individual, though
 
 Grading
