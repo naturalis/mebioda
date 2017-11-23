@@ -33,28 +33,28 @@ Course outline
 Lectures in the morning, practicals in the afternoon, 
 presentation, report, exam.
 
-### Week 1: Molecular Biodiversity
+### [Week 1: Molecular Biodiversity](../)
 - **Lecture topics**: DNA sequencing techniques; Barcoding; 
   Metabarcoding; Phylogenetics
 - **Homework**: _Open Science, Open Data, Open Source_
 - **Practical**: Analysis of mycorrhizal molecular diversity
 - **Presentations**: 10 minute standup about a topical paper
 
-### Week 2: Geospatial Patterns
+### [Week 2: Geospatial Patterns](../../week2)
 - **Lecture topics**: GIS and the geographical approach;
   Data input, management, and analysis; Niche modeling
 - **Homework**: Collecting occurrence data from GBIF
 - **Practicals**: ArcGIS, MAXENT
 - **Report**: Niche modeling results for GBIF species
 
-### Week 3: Comparative Analysis
+### [Week 3: Comparative Analysis](../../week3)
 - **Lecture topics**: Trait diversity; Tree topologies;
   Comparative character analysis; Diversification
 - **Practicals**: RMarkdown, Phylogenies in R (tree shape,
   diversification), Likelihood and Bayesian ancestor 
   reconstruction, trait analysis
 
-### Week 4: Wrap-up and Exam
+### [Week 4: Wrap-up and Exam](../../week4)
 - **Lecture topics**: Diversity in space, time, and function
 - **Exam**
 
@@ -82,6 +82,13 @@ Teaching materials
 - Handouts and slides are subject to ongoing (wiki-like) improvement
 - During the course we will learn how to use this platform to
   share data, scripts, files with each other
+
+Teamwork
+--------
+
+- With the hands-on parts of the course we will try to learn in pairs,
+  helping each other
+- All assignments are individual, though
 
 Grading
 -------
