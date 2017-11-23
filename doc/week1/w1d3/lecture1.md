@@ -1,17 +1,19 @@
 Data science tools
 ==================
 
+- Install [VirtualBox](https://www.virtualbox.org/)
+- Download [the image](https://www.dropbox.com/s/xovgaqnussueuoh/mebioda.ova?dl=0)
+- In VirtualBox:
+  - Import appliance
+  - Select the image, accept the settings and import (this will take a minute or two)
+  - Start the image
+  - User: `mebioda`, password: `mebioda`
+
 UNIX/Linux operating systems: why do we care?
 ---------------------------------------------
 - Have better facilities for automation (shell scripting)
 - A lot of scientific software is (only) written for them
 - Linux is free, so analytical environments can be copied
-
-Our own Linux image
--------------------
-- Install [VirtualBox](https://www.virtualbox.org/)
-- Download [the image](https://www.dropbox.com/s/xovgaqnussueuoh/mebioda.ova?dl=0)
-- Launch it. User: `mebioda`, password: `mebioda`
   
 UNIX file system conventions
 ----------------------------
@@ -51,6 +53,25 @@ Commonly-used file operations
 | `rm`    | Remove files            | `chmod` | Change file mode        |
 | `cp`    | Copy files              | `chown` | Change file owner       |
 
+> In Ubuntu, click the top-left search button and look for 'terminal'
+
+```bash
+# file listing
+$ ls
+
+# long (-l) listing of all (-a) files, sizes in (-h) human readable format:
+$ ls -lah
+
+# manual pages of ls
+$ man ls
+```
+
+File modes
+----------
+
+- Files can be **r**eadable, **w**ritable, and/or e**x**ecutable
+- Files belong to **u**sers, who belong to a **g**roup but not to the **o**thers
+
 `chmod` permission bits:
 
 | bits | code | value | 2<sup>n</sup> |
@@ -85,6 +106,9 @@ Commonly-used text operations
 | `sed`   | Search and replace      |
 | `sort`  | Sort lines              |
 | `uniq`  | Filter duplicate lines  |
+| `cut`   | Cut columns from table  |
+| `paste` | Concatenate columns     |
+| `join`  | Join matching columns   |
 | `cat`   | Print file contents     |
 | `wc`    | Word count              |
 | `awk`   | Tabular data processing |
