@@ -18,10 +18,10 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Cleveringa Oratie: no afternoon education (15:00-18:00)
 
 ### Day 2 - High-throughput DNA sequencing (HTS)
-<!-- Christiaan Henkel probably available, will confirm 2017-10-05 -->
+
 - Lecture I: [High-throughput DNA sequencing data](w1d2/lecture1.md)
-- Lecture II: Generic HTS data pre-processing (e.g. demultiplexing, quality trimming) - Henkel
-- Lecture III: HTS applied to the tulip - Henkel
+- Lecture II: [HTS data types and file formats](w1d2/lecture2.md)
+- Lecture III: [Cases of HTS in biodiversity research](w1d2/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 3 - Barcoding
