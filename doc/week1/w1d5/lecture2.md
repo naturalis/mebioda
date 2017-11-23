@@ -7,6 +7,9 @@ Recursion
 A tree is a hierarchical data structure that is often traversed using recursion. For 
 example:
 
+- Assume that a `node` object has a name (`node.name`)
+- Assume that a `node` object has zero or more other such nodes as children (`node.children`)
+
 ```python
 # Start at the root
 depth_first(root)
