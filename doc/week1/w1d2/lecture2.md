@@ -69,6 +69,8 @@ is called incorrectly are 1 in 1000.
 | 50                  | 1 in 100,000                       | 99.999%            |
 | 60                  | 1 in 1,000,000                     | 99.9999%           |
 
+![](lecture2/phred.jpg)
+
 Phred score encoding
 --------------------
 
