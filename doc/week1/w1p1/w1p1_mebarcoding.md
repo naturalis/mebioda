@@ -84,7 +84,7 @@ Week 1 Data analysis of mycorrhizal diversity
 5. **Clustering at 97% before chimera detection**
 
 
-       vsearch --cluster_size CPuniq_no_sing.fasta --id 0.97 --strand plus --sizein --sizeout --fasta_width 0 --uc CR_otus.uc --relabel OTU_ --centroids CP.otus.fasta --otutabout CP.otutab.txt
+       vsearch --cluster_size CPuniq_no_sing.fasta --id 0.97 --strand plus --sizein --sizeout --fasta_width 0 --uc CP_otus.uc --relabel OTU_ --centroids CP.otus.fasta --otutabout CP.otutab.txt
        
 - --cluster_size: sorts sequences by decreasing abundance before
     clustering.
@@ -98,7 +98,7 @@ the abundances of the OTUs in the different samples.
 
 6. **De novo chimera detection**
             
-       vsearch --uchime_denovo CR.otus.fasta --sizein --sizeout --fasta_width 0 --nonchimeras CR.otus.nonchim.fasta 
+       vsearch --uchime_denovo CP.otus.fasta --sizein --sizeout --fasta_width 0 --nonchimeras CP.otus.nonchim.fasta 
 
 --uchime_denovo: Detect chimeras present in the fasta-formatted filename, without external references(i.e. de novo)       
 
