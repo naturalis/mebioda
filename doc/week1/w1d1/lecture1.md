@@ -56,6 +56,36 @@ Lectures in the morning, practicals in the afternoon, presentation, report, exam
 - **Lecture topics**: Diversity in space, time, and function
 - **Exam**
 
+Guest lectures
+--------------
+
+- **DNA WaterScan** - 
+  [Berry van der Hoorn](https://science.naturalis.nl/en/people/scientists/berry-van-der-hoorn/) 
+  / [Kevin Beentjes](https://science.naturalis.nl/en/people/scientists/kevin-beentjes/)
+- **Fungal molecular diversity** - 
+  [József Geml](https://science.naturalis.nl/en/people/scientists/jozsef-geml/)
+- **GIS** -
+  [Maarten van 't Zelfde](https://www.universiteitleiden.nl/medewerkers/maarten-van-t-zelfde)
+- **Birds of the Philippines** - 
+  [Merlijn van Weerd](https://www.universiteitleiden.nl/en/staffmembers/merlijn-van-weerd)
+- **Remote sensing** -
+  [Joris Timmermans](https://www.universiteitleiden.nl/medewerkers/joris-timmermans)
+- **Georeferencing** - 
+  [Jeroen Creuwels](https://www.linkedin.com/in/jeroen-creuwels-81b979a/)
+- **ENM** -
+  [Niels Raes](https://science.naturalis.nl/en/people/scientists/niels-raes/)
+  / [Leon Marshall](https://science.naturalis.nl/en/people/scientists/leon-marshall/)
+- **3D objects** -
+  [Aidan Couzens](https://science.naturalis.nl/en/people/scientists/aiden-couzens/)
+- **Character data** - 
+  [Jeremy Miller](https://science.naturalis.nl/en/people/scientists/jeremy-miller/)
+- **Diversification** - 
+  [Vincent Merckx](https://science.naturalis.nl/en/people/scientists/vincent-merckx/)
+- **Biodiversity dynamics** - 
+  [Hans ter Steege](https://science.naturalis.nl/en/people/scientists/hans-ter-steege/)
+- **Paleontology** - 
+  [Pim Kaskes](https://www.researchgate.net/profile/Pim_Kaskes)
+
 Links to other courses
 ----------------------
 
