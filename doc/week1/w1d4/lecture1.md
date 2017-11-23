@@ -150,7 +150,6 @@ In this case with data with the following experimental design:
 
 ![](deepwater-sampling.png)
 
-
 Oil spill impact: dramatic shifts in benthic microbial eukaryote communities
 ----------------------------------------------------------------------------
 
@@ -165,3 +164,60 @@ taxonomic identification of each cluster was performed using MegaBLAST, resultin
 Phylogenetic placement
 ----------------------
 
+To quantify th e turnover between sites and treatments, it is useful to compute metrics
+of phylogenetic diversity, such as UniFrac:
+
+![](unifrac.jpg)
+
+**Calculation of the UniFrac distance metric** 
+
+- Squares, triangles, and circles denote sequences derived from different communities. 
+- Branches attached to nodes are colored black if they are unique to a particular 
+  environment and gray if they are shared. 
+- **A** Tree representing phylogenetically similar communities, where a significant 
+  fraction of the branch length in the tree is shared (gray). 
+- **B** Tree representing two communities that are maximally different so that 100% of 
+  the branch length is unique to either the circle or square environment. 
+- **C** Using the UniFrac metric to determine if the circle and square communities are 
+  significantly different. For _n_ replicates (r), the environment assignments of the 
+  sequences were randomized, and the fraction of unique (black) branch lengths was 
+  calculated. The reported _P_ value is the fraction of random trees that have at least 
+  as much unique branch length as the true tree (arrow). If this P value is below a 
+  defined threshold, the samples are considered to be significantly different. 
+- **D** The UniFrac metric can be calculated for all pairwise combinations of 
+  environments in a tree to make a distance matrix. This matrix can be used with standard 
+  multivariate statistical techniques such as UPGMA and principal coordinate analysis to 
+  compare the biotas in the environments.
+
+Constructing a large metabarcoding phylogeny
+--------------------------------------------
+
+![](cluster.png)
+
+- A common approach is to align ribosomal RNA against the [SILVA](https://www.arb-silva.de/)
+  reference database (in this case using [PyNAST](http://biocore.github.io/pynast/)) and
+  infer a tree (e.g. with [FastTree](http://microbesonline.org/fasttree/))
+- This tree then becomes the input tree for the Unifrac distance calculations (β 
+  diversity), resulting in a distance matrix
+- From the distance matrix, a tree can clustered that, in this case, shows the similarity
+  among the post-spill sites
+
+Principal Coordinate Analysis
+-----------------------------
+
+![](pcoa.png)
+
+- Because the Unifrac distance matrix is multidimensional, methods to reduce 
+  dimensionality (e.g. to 3D) such as PCoA, to explore and to visualize similarities or 
+  dissimilarities of data. It starts with a similarity matrix or dissimilarity matrix 
+  (= distance matrix) and assigns for each item a location in a low-dimensional space, 
+  e.g. as a 3D graphics
+- The 2D visualization broadly shows the same as the environment clustering: post-spill
+  sites are similar to one another. 
+  
+> The authors claim that the pre-spill sites were more diverse. This is not very obvious 
+> from the 2D plot, but perhaps it is clearer in an interactive 3D view. 
+
+> The [supplementary data](https://doi.org/10.5061/dryad.4sd51d4b) with the paper have 
+> PCoA results in *.kin files next to folders that have a `king.jar` file in them. Use 
+> this to view some of the *.kin files. Were the pre-spill sites more diverse?
