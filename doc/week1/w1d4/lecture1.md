@@ -122,8 +122,14 @@ In this case with data with the following experimental design:
 
 - sampled over two points in time (pre- and post-spill);
 - in 7 localities (Bayfront Park, Shellfish Lab, Ryan Ct, Cadillac Ave, Dauphin Bay, 
-  Belleair Blvd, Grand Isle);
-- sequencing two markers with two primers (F04/R22, NF1/18Sr2b) 
+  Belleair Blvd, Grand Isle), mostly in the vicinity of 
+  [Mobile, Alabama](https://goo.gl/maps/3XgxRk9P1Wk)
+- sequencing two markers 
+  ([regions of the 18 S gene](https://en.wikipedia.org/wiki/18S_ribosomal_RNA)) with two 
+  primers (respectively F04/R22, NF1/18Sr2b) 
+
+![](deepwater-sampling.png)
+
 
 Oil spill impact: dramatic shifts in benthic microbial eukaryote communities
 ----------------------------------------------------------------------------
