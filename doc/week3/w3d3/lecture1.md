@@ -121,7 +121,7 @@ In an **ordinary least squares** (OLS) regression model, the relationship of a
 response variable _Y_ to a predictor variable _X_<sub>1</sub> can be given using the 
 regression equation:
 
-![](lecture1/pgls-5.1.png)
+![](lecture1/pgls-5-1.png)
 
 - _b<sub>0</sub>_ is the intercept value of the regression equation, 
 - _b<sub>1</sub>_ is the parameter estimate (the slope value) for the predictor 
@@ -131,16 +131,16 @@ regression equation:
 For a simple regression with one predictor (_X_), the slope of the regression line
 _b<sub>1</sub>_ is given by:
 
-![](lecture1/pgls-5.2.png)
+![](lecture1/pgls-5-2.png)
 
 - _n_ is the sample size
-- _X<sub>i</sub>_ is the _i_th value of _X_ (up to the last value _X<sub>n</sub>_)
+- _X<sub>i</sub>_ is the _i_ th value of _X_ (up to the last value _X<sub>n</sub>_)
 - _X&#772;_ represents the mean value of _X_ (0.97)
 - Likewise for _Y<sub>i</sub>_ and _Y&#772;_ (1.30)
 
 The intercept _b<sub>0</sub>_ then follows:
 
-![](lecture1/pgls-5.3.png)
+![](lecture1/pgls-5-3.png)
 
 Maximum likelihood
 ------------------
