@@ -248,19 +248,40 @@ character with two states (_i_ and _j_), matrix looks like this:
 
 - The transition **rate** for _i→j_ is _q<sub>ij</sub>_
 - A state either changes or it doesn't: the rows must sum, hence the rate for 
-  _i→i_ is 1-_q<sub>ij</sub>_
+  _i→i_ (i.e. no change) is 1-_q<sub>ij</sub>_
 - _P(j,i,t)_ is the **probability** that a branch beginning in state _i_ ends in state
   _j_, after time period _t_.
 - For a given variable, _P(j,i,t)_ will take only two forms for branches leading to the
   tips of the tree because _j_ will be constant (it's what we observe at the tips).
 - For all other branches both _j_ and _i_ can vary from 0 to 1 so four possibilities 
   arise in each variable (0→0, 0→1, 1→0, 1→1). 
-- Assume that we have two characters (_X_ and _Y_), then the **likelihood** for this tree
-  will be given by:
+- Assume that we have two characters (_X_ and _Y_), then the **likelihood** (_L(I)_) for 
+  this tree will be given by:
 
 ![](lecture1/likelihood-annotated.png)
 
 ![](lecture1/likelihood-tree-annotated.png)
+
+Likelihood
+----------
+
+### Quick recap
+- **Probability** is used before data are available to describe plausibility of a future 
+  outcome, given a value for the parameter. 
+- **Likelihood** is used after data are available to 
+  [describe](https://en.wikipedia.org/wiki/Likelihood_function) plausibility of a 
+  parameter value.
+
+### The likelihood framework
+- Likelihood values for different combinations of parameters (e.g. constraints on the _Q_
+  matrix, alternative tree topologies) can be compared in 
+  [hypothesis testing](https://en.wikipedia.org/wiki/Likelihood-ratio_test)
+- [Maximum likelihood estimates](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
+  obtain point estimates of the parameter values (e.g. tree shape) that maximize the 
+  likelihood
+- Correlated traits can be tested by expanding the _Q_ matrix:
+
+![](lecture1/likelihood-correlated.png)
 
 Bayesian
 --------
