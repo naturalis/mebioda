@@ -132,13 +132,13 @@ regression equation:
 
 ![](lecture1/pgls-5-1.png)
 
-- _b<sub>0</sub>_ is the intercept value of the regression equation, 
-- _b<sub>1</sub>_ is the parameter estimate (the slope value) for the predictor 
+- _b_<sub>0</sub> is the intercept value of the regression equation, 
+- _b_<sub>1</sub> is the parameter estimate (the slope value) for the predictor 
 - _ε_ is the residual error (i.e. for a given point, how far it falls off the regression 
   line).
 
 For a simple regression with one predictor (_X_), the slope of the regression line
-_b<sub>1</sub>_ is given by:
+_b_<sub>1</sub> is given by:
 
 ![](lecture1/pgls-5-2.png)
 
@@ -147,7 +147,7 @@ _b<sub>1</sub>_ is given by:
 - _X&#772;_ represents the mean value of _X_ (0.97)
 - Likewise for _Y<sub>i</sub>_ and _Y&#772;_ (1.30)
 
-The intercept _b<sub>0</sub>_ then follows:
+The intercept _b_<sub>0</sub> then follows:
 
 ![](lecture1/pgls-5-3.png)
 
