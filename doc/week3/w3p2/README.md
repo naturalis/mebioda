@@ -11,7 +11,7 @@ Selective-on-relicts = those taxa with highest trait value and lowest speciation
   
 3. The nexus files produced by MESA were then manipulated in R. 
 
-   3. 3a The Colless index of imbalance was calculated using the function *colless* for each tree in a time series. [MESA_otuput files](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
+   3. 3a The Colless index of imbalance was calculated using the function *colless* for each tree in a time series. [MESA_output files](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
   
 4.  For the three treatments combined with the different intensities and the control, the Colless index of imbalance values were collected at the key CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile and at pre extintion time (300), post extintion event (305), at the CRS end-mid time (470) and at the end of simulation (600).
    
