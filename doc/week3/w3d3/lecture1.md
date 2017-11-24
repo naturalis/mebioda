@@ -193,7 +193,7 @@ Variance-covariance matrix from relatedness
 - Hence, there will be covariation in residuals, which we must account for in our 
   variance–covariance matrix, **C**.
 
-![](lecture1/pgls-varcov-phyll.png)
+![](lecture1/pgls-varcov-phyl.png)
 
 - The expected covariance will be related to the amount of shared evolutionary history 
   between the species. Hence, the diagonal elements (i.e. the variance elements) of the 
