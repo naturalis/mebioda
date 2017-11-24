@@ -12,8 +12,8 @@ methods. Ignoring phylogeny, one would conclude that X and Y are positively corr
 2-tailed _P_ = 0.034), when in fact this relationship emerges primarily from the high 
 divergence in X and Y between the two clades at the root of the phylogeny.
 
-False positives (type I error) in comparative analysis
-------------------------------------------------------
+False positives (type I errors)
+-------------------------------
 
 Increased [type I error](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors) rates 
 of conventional statistics in analyses of interspecific data. When two traits evolve 
@@ -116,6 +116,15 @@ measurement error, recent methods can account for these sources of error.
 
 [R/_ape_ tutorial for independent contrasts](https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts)
 
+Independent contrasts drawbacks
+-------------------------------
+
+- Tree needs to be fully bifurcating (otherwise, which against which for the contrast?)
+- Data points (_n_-1) no longer represent species, but the differences between them (so, 
+  how to detect if any particular species or group is exceptional?)
+- Also, how to do more complex modeling and hypothesis testing? Maybe there are better
+  approaches?
+
 An example case
 ---------------
 
@@ -209,6 +218,8 @@ When this new version of **C** is applied to the GLS calculation (e.g. with
 solution: 
 
     log(propodus length) = - 0.276 + 1.616 x log(carapace breadth)
+
+![](lecture1/pgls-plot.png)
 
 Categorical data and maximum likelihood
 ---------------------------------------
