@@ -12,6 +12,31 @@ methods. Ignoring phylogeny, one would conclude that X and Y are positively corr
 2-tailed _P_ = 0.034), when in fact this relationship emerges primarily from the high 
 divergence in X and Y between the two clades at the root of the phylogeny.
 
+False positives (type I error) in comparative analysis
+------------------------------------------------------
+
+Increased [type I error](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors) rates 
+of conventional statistics in analyses of interspecific data. When two traits evolve 
+independently along a phylogeny according to Brownian motion, the probability of 
+rejecting the null hypothesis of no correlation (type I error) increases with the amount 
+of phylogenetic structure of the data.  
+
+![](lecture1/autocorrelation-a.png)
+
+Simulations with a star phylogeny result in the error rates of 5%, which is the expected 
+type I error rate if conventional (nonphylogenetic) analyses are used. 
+
+![](lecture1/autocorrelation-b.png)
+
+The shaded area represents simulations where the resulting ordinary Pearson coefficient 
+falls above the tabular critical value of +0.476 (11 degrees of freedom), which would 
+incorrectly suggest that the two traits are correlated.
+
+![](lecture1/autocorrelation-c.png)
+
+Type I error rates can be higher than 25% if the data shows a strong phylogenetic 
+structure.
+
 Brownian motion
 ---------------
 
