@@ -221,8 +221,44 @@ solution:
 
 ![](lecture1/pgls-plot.png)
 
-Categorical data and maximum likelihood
+Categorical data and character analysis
 ---------------------------------------
+
+![](lecture1/mp-anc.png)
+
+- Comparative analysis of discrete, categorical data (including biomolecular sequence
+  data) requires other approaches to analyze, with implicit or explicit models for how
+  discrete states change
+- Under [MP](https://en.wikipedia.org/wiki/Ancestral_reconstruction#Maximum_parsimony)
+  (as you might do in [mesquite](https://mesquiteproject.wikispaces.com/)) the general
+  assumption is that evolutionary change should be minimized (and then there can be 
+  constraints, e.g. about directionality)
+- However, explicit models of state transitions allow for more kinds of hypothesis tests
+
+Continuous-time Markov models
+-----------------------------
+
+Transitions between states can be modeled as a rate matrix (_Q_). For example, for a 
+character with two states (_i_ and _j_), matrix looks like this:
+
+|     | _i_                 | _j_                |
+|-----|---------------------|--------------------|
+| _i_ | 1-_q<sub>ij</sub>_  | _q<sub>ij</sub>_   |
+| _j_ | _q<sub>ji</sub>_    | 1-_q<sub>ji</sub>_ |
+
+- The transition _i_ → _j_ has **rate** _q<sub>ij</sub>_
+- A state either changes or it doesn't, so the rows must sum
+- _P(j,i,t)_ is the **probability** that a branch beginning in state _i_ ends in state
+  _j_, after time period _t_.
+- For a given variable, _P(j,i,t)_ will take only two forms for branches leading to the
+  tips of the tree because _j_ will be constant (it's what we observe at the tips).
+- For all other branches both _j_ and _i_ can vary from 0 to 1 so four possibilities 
+  arise in each variable (0 → 0, 0 → 1, 1 → 0, 1 → 1). Then the likelihood for this tree
+  will be given by:
+
+![](lecture1/likelihood-annotated.png)
+
+![](lecture1/likelihood-tree-annotated.png)
 
 Bayesian
 --------
