@@ -114,8 +114,17 @@ correlation analyses through the origin). Even though the classic algorithm to c
 contrasts neglects important sources of uncertainty such as individual variation and 
 measurement error, recent methods can account for these sources of error.
 
-Phylogenetic GLS
-----------------
+[R/_ape_ tutorial for independent contrasts](https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts)
+
+An example case
+---------------
+
+![](lecture1/pgls-fiddler.png)
+
+![](lecture1/pgls-data.png)
+
+Ordinary least squares
+----------------------
 
 In an **ordinary least squares** (OLS) regression model, the relationship of a
 response variable _Y_ to a predictor variable _X_<sub>1</sub> can be given using the 
@@ -142,8 +151,67 @@ The intercept _b<sub>0</sub>_ then follows:
 
 ![](lecture1/pgls-5-3.png)
 
-Maximum likelihood
-------------------
+Generalizing the model: the variance-covariance matrix
+------------------------------------------------------
+
+In the case of OLS, the implicit assumption is that there is no covariance between 
+residuals (i.e. all species are independent of each other, and residuals from closely 
+related species are not more similar on average than residuals from distantly related 
+species).
+
+This (_n_ x _n_) variance–covariance matrix is denoted as **C**, and for five species 
+under the assumption of no phylogenetic effects on the residuals, it looks like:
+
+![](lecture1/pgls-varcov-null.png)
+
+- The first row and first column represent values from comparisons with the first
+  species (in our case _Uca chlorophthalmus_), the second row and column with 
+  _Uca crassipes_, and so on. 
+- Hence, the diagonal elements (the line of values from top left to bottom right) 
+  represent the variance of the residuals, while the other off-diagonal elements equal 
+  zero, meaning there is no covariation among the residuals. 
+- When this variance–covariance structure is assumed, the results of GLS are the same as 
+  those of OLS (the contribution of **C** to the regression calculation essentially drops 
+  out).
+
+Variance-covariance matrix from relatedness
+-------------------------------------------
+
+- The key statistical issue with cross-species analyses is that species data points are 
+  non-independent because of their shared phylogenetic history.
+- Consequently, the errors may also be non-independent or autocorrelated (residuals from 
+  closely related species may be similar). 
+- Hence, there will be covariation in residuals, which we must account for in our 
+  variance–covariance matrix, **C**.
+
+![](lecture1/pgls-varcov-phyll.png)
+
+- The expected covariance will be related to the amount of shared evolutionary history 
+  between the species. Hence, the diagonal elements (i.e. the variance elements) of the 
+  matrix are the total length of branches from the root of the tree to the tips. 
+  _This will be the same for each cell if the phylogeny is ultrametric (i.e. all tips are 
+  the same distance from the root of the phylogeny), as it is in the case of our example_
+- The off-diagonal covariance elements represent the total shared branch length of the
+  evolutionary history of the two species being compared. Hence, for _U. chlorophthalmus_
+  and _U. crassipes_, we see that each species has independent (nonshared) branch lengths 
+  of 1. Conversely, the two species share 2 branch lengths in their evolutionary history 
+  back to the root of the tree. Consequently, the value entered into column 1–row 2 (and 
+  column 2–row 1) of the matrix is 2. 
+- We can repeat this for all the other species comparisons (e.g. _U. sindensis_ and 
+  _U. argillicola_ do not share any evolutionary history, so their expected covariance is 
+  0) and produce the new expected variance–covariance matrix.
+  
+PGLS solution
+-------------
+
+When this new version of **C** is applied to the GLS calculation (e.g. with 
+[geiger](https://www.r-phylo.org/wiki/HowTo/PGLS)), we eventually end with the PGLS 
+solution: 
+
+    log(propodus length) = - 0.276 + 1.616 x log(carapace breadth)
+
+Categorical data and maximum likelihood
+---------------------------------------
 
 Bayesian
 --------
