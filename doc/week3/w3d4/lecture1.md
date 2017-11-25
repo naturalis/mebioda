@@ -80,6 +80,7 @@ Science Compass Review
 ----------------------
 
 ![](lecture1/_biodiv.png)
+
 "The [...] consequences of biodiversity [...] has aroused considerable interest and 
 controversy. [...] there is however, uncertainty as to how (these ﬁndings) [...] 
 generalize across ecosystems"
@@ -93,11 +94,10 @@ Trait diversity is more important than species richness to ecosystem functioning
 Revitalization of Community Ecology?
 ------------------------------------
 
-“Community ecology appears to have few if any  useful generalizations . . . “
+"Community ecology appears to have few if any useful generalizations [...]"
 
 ![](lecture1/community.png)
-
-! [](lecture1/func_traits.png)
+![](lecture1/func_traits.png)
 
 New & Interesting Approaches and Methods
 ----------------------------------------
