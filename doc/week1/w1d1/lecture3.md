@@ -5,7 +5,7 @@ High-throughput sequencing
 --------------------------
 - Introduction to HTS (NGS) data formats and representations
 - Data (pre-)processing workflow
-- Case study genomics: the tulip
+- Case studies in genomics
 
 Barcoding
 ---------
@@ -30,7 +30,7 @@ Practical and homework
 - Fetching, filtering, aligning BoLD sequences
 - Analyzing Kinabalu metabarcoding data
 - Reading [OSODOS](http://osodos.org)
-- Reading journal article, preparing 10 min. standup
+- Reading journal article, preparing 5 min. standup
 
 Journal club
 ------------
