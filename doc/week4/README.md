@@ -9,3 +9,5 @@ patterns of diversity through space and time. We will then wrap up the course an
 - Lecture II: Morphological diversity through space and time: excavations (cont.) - Pim Kaskes
 - Lecture III: Functional diversity through space and time: Amazonia - Hans ter Steege
 - Seminar: Course wrap-up
+
+### Friday, 22-12 Examination 11.00 to 13.00
