@@ -69,7 +69,7 @@ Red thread / model organisms
 ----------------------------
 
 Some exercises across the weeks will deal with the same model organisms, for which we
-all pick a staple food crop:
+all pick our own staple food crop:
 
 - Barcode data collection
 - Paper about barcode diversity
