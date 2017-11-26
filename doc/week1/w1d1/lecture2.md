@@ -265,6 +265,32 @@ Data processing
   combine your molecular sequences (and phylogenies) with occurrences
   and traits from public databases?
 
+Methods in biodiversity data analysis
+-------------------------------------
+
+**Biomolecular sequences**
+- Sequence clustering and species delimitation
+- _De novo_ and mapping assembly, annotation, and variant calling
+- Phylogenetic analysis, tree shape analysis, molecular selection analysis
+
+**Geospatial data**
+- GIS operations
+- Ecological niche modeling
+- Projections
+
+**Traits and characters**
+- Comparative analysis
+- Functional diversity
+- Trait-dependent diversification 
+
+Analysis workflows
+------------------
+
+- Too much data to do 'by hand'
+- Reproducibility is easier with automation
+- We will explore this using the UNIX/Linux shell, using R, and scripting
+  languages (a bit of Python and Perl)
+
 Data management
 ---------------
 
@@ -274,17 +300,15 @@ Data management
 - How to store and share data?
 - How to represent, store, and share what we know _about_ the data?
 
-Automation
-----------
-- Too much data to do 'by hand'
-- Reproducibility is easier with automation
-- We will explore this using the UNIX/Linux shell, using R, and scripting
-  languages (a bit of Python and Perl)
-
 Tools of the trade
 ------------------
-- UNIX/Linux operating systems
-- Scripting languages
-- Relational databases
-- Versioning
+
+![](software-carpentry-large.png)
+
+- UNIX/Linux operating systems and [shell](http://swcarpentry.github.io/shell-novice/)
+- Scripting languages, especially 
+  [python](http://swcarpentry.github.io/python-novice-inflammation/) and
+  [R](http://swcarpentry.github.io/r-novice-inflammation/)
+- Relational databases and [SQL](http://swcarpentry.github.io/sql-novice-survey/)
+- Versioning with [git](http://swcarpentry.github.io/git-novice/)
 - Documentation systems
