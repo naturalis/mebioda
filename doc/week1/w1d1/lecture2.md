@@ -154,6 +154,27 @@ Broad spatial patterns of functional diversity
 
 Source: [10.1038/nature12529](http://doi.org/10.1038/nature12529)
 
+How different diversity measures interact
+-----------------------------------------
+
+**PL Thompson, TJ Davies & A Gonzalez**, 2015. Ecosystem Functions across Trophic Levels 
+Are Linked to Functional and Phylogenetic Diversity. _PLoS ONE_ **10**(2): e0117595
+doi:[10.1371/journal.pone.0117595](https://doi.org/10.1371/journal.pone.0117595)
+
+![](sd-pd-fd.png)
+
+**Hypothesized relationships between ecosystem function and species richness (a), 
+functional diversity (b), and phylogenetic diversity (c).**
+
+_We predict a stronger relationship with ecosystem function, and thus a higher 
+R<sup>2</sup>, for functional diversity **(b)** and phylogenetic diversity **(c)** than 
+for species richness **(a)** because the former two measures incorporate information 
+about the traits, or the evolutionary similarity of the different species in the 
+community. Panel **(d)** depicts the results of variation partitioning, indicating our 
+hypothesis that functional and phylogenetic diversity will explain all of the variation 
+explained by species richness, as well as additional variation, both overlapping and 
+unique._
+
 Patterns of biodiversity
 ------------------------
 
