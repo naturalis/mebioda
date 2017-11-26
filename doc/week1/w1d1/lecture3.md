@@ -34,6 +34,10 @@ Practical and homework
 
 Journal club
 ------------
+- What does this paper say about the systematics of this species (i.e. in relation to others)?
+- If the paper is unsuitable, suggest an alternative (paper or species)
+- Prepare 3 slides max to present the paper
+- Prepare a 5 min talk
 
 1. **Maize** - Cereal: _Zea mays_ subsp. _mays_. Teosintes are _Z. m. huehuetenangensis_, _Z. m. mexicana_, and _Z. m. parviglumis_ (Poaceae)
 	- [Phylogenetic analysis reveals five independent transfers of the chloroplast gene rbcL to the mitochondrial genome in angiosperms.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.623.8964&rep=rep1&type=pdf) (2003)
