@@ -8,6 +8,14 @@ Introductions
 - Different interests, needs, and expectations
 - Different skill levels and experiences
 
+> Please introduce yourself, mentioning at least the following:
+> - Name
+> - Which faculty (IBL, CML, ...) 
+> - Which master's programme
+> - Any concurrent activities (internships, etc.)
+> - Computational skill (e.g. programming, data analysis)
+> - Your expectations and needs
+
 Prerequisites and assumptions
 -----------------------------
 
