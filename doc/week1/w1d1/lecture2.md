@@ -4,6 +4,8 @@ Introduction to biodiversity and data science
 What is biodiversity?
 ---------------------
 
+![](biodiversity.png)
+
 - **Species diversity**
   - Number of species in an ecological community, landscape or region
   - Perhaps taking abundance into account
@@ -15,8 +17,8 @@ What is biodiversity?
   - Can it be high when species diversity is low (or vice versa)?
   - How might it relate to species or phylogenetic diversity?
 
-Species diversity
------------------
+Species richness
+----------------
 
 ![](species-accumulation-curves.png)
  
@@ -71,9 +73,9 @@ Incorporating relatedness and evolutionary history
 ![](phylogenetic-diversity.gif)
 
 - Species diversity is not very informative
-- The same numbers of species might correspond with different amounts of evolutionary
-  history
-- High amounts of evolutionary history seem to correspond with large amounts of biomass
+- The same numbers of species might correspond with different amounts of phylogenetic
+  diversity (PD)
+- High amounts of PD seem to correspond with large amounts of biomass
 
 ![](phylogenetic-diversity-biomass.gif)
 
@@ -87,6 +89,27 @@ Incorporating relatedness and evolutionary history
 **MW Cadotte, BJ Cardinale, & TH Oakley**, 2008. Evolutionary history and the effect of 
 biodiversity on plant productivity. _PNAS_ **105**(44): 17012–17017 
 doi:[10.1073/pnas.0805962105](http://doi.org/10.1073/pnas.0805962105)
+
+Phylogenetic diversity versus species diversity
+-----------------------------------------------
+
+**TJ Davies & LB Buckley**, 2011. Phylogenetic diversity as a window into the 
+evolutionary and biogeographic histories of present-day richness gradients for mammals.
+_Philos Trans R Soc Lond B Biol Sci_ **366**: 2414–2425
+doi:[10.1098/rstb.2011.0058](http://doi.org/10.1098/rstb.2011.0058) 
+
+- PD may explain some patterns better than species diversity, but it has its own
+  dynamics as well.
+- For example, South America shows low richness of old mammal lineages, with tropical 
+  lineage diversity only approaching that for Africa within the last 20 Mya. 
+- Probably explained by the extratropical origins of clades that subsequently diversified
+  in South America following successive migration events and the formation of the 
+  [Isthmus of Panama](https://en.wikipedia.org/wiki/Isthmus_of_Panama) (±3MYA)
+
+![](phylogenetic-vs-species-diversity.png)
+
+Residuals (millions of years) from a LOESS regression of cell PD against cell species 
+number. Blue = less PD than expected, red = more than expected.
 
 ----
 
