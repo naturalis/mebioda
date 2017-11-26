@@ -5,6 +5,8 @@ What is biodiversity?
 ---------------------
 
 - **Species diversity**
+  - Checklists
+  - Perhaps taking abundance into account
 - **Phylogenetic diversity**
   - What does it measure, and how?
   - Can it be high when species diversity is low (or vice versa)?
