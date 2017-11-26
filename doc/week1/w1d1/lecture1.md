@@ -20,7 +20,7 @@ Prerequisites and assumptions
 -----------------------------
 
 - We are biologists: we are aware of the principles and practices of molecular biology, 
-  biogeography, systematics, and evolution
+  ecology, biogeography, systematics, and evolution
 - We are natural scientists: we've had previous training in statistics (e.g. what is a 
   PCA? What is Bayesian statistics?), know how to read scientific publications, and know 
   how to present research, orally and in writing
