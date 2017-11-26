@@ -5,7 +5,7 @@ What is biodiversity?
 ---------------------
 
 - **Species diversity**
-  - Checklists
+  - Number of species in an ecological community, landscape or region
   - Perhaps taking abundance into account
 - **Phylogenetic diversity**
   - What does it measure, and how?
@@ -14,6 +14,79 @@ What is biodiversity?
   - What does it measure, and how?
   - Can it be high when species diversity is low (or vice versa)?
   - How might it relate to species or phylogenetic diversity?
+
+Species diversity
+-----------------
+
+![](species-accumulation-curves.png)
+ 
+**Species accumulation curves** for pollinator, plant, bee and 
+[syrphid](https://en.wikipedia.org/wiki/Hoverfly) diversity with 95%
+confidence intervals using the method “random” in the package 
+[vegan](https://cran.r-project.org/web/packages/vegan/index.html) from the statistical
+program R
+
+(From: **EI Hennig & J Ghazoul**, 2012. Pollinating animals in the urban environment.
+_Urban Ecosystems_ **15**(1): 149–166
+doi:[10.1007/s11252-011-0202-7](http://doi.org/10.1007/s11252-011-0202-7))
+
+Biases among biodiversity data sets are pervasive:
+
+- **Species counts / checklists** - vary by expended effort
+- **Sequencing results** - vary likewise, by expended effort but also due to chemistry
+- **Occurrence data** - expended effort, biases through time and space
+
+Broad spatial patterns of species richness
+------------------------------------------
+
+![](species-area-curves.png)
+
+- **Species-area curve** - more species in larger areas
+- **S = CA<sup>z</sup>**
+- **log(S) = log(C) + z * log(A)**
+  - **S** = Species richness
+  - **C** = constant
+  - **A** = Area
+  - **z** = constant
+
+Uncertainty in species-area relationships
+-----------------------------------------
+
+![](species-area-uncertainties.jpg)
+
+- _The results revealed a high level of uncertainty in model selection across biomes and 
+  taxa, and that the power-law model is clearly the most appropriate in only a minority 
+  of cases._
+- _Our findings suggest that the results of analyses that assume a power-law model may be 
+  at severe odds with real ecological patterns [...]._
+
+**F Guilhaumon, O Gimenez, KJ Gaston, & D Mouillot**, 2008. Taxonomic and 
+regional uncertainty in species-area relationships and the identification of richness 
+hotspots. _PNAS_ **105**(40): 15458–15463 
+doi:[10.1073/pnas.0803610105](http://doi.org/10.1073/pnas.0803610105)
+
+Incorporating relatedness and evolutionary history
+--------------------------------------------------
+
+![](phylogenetic-diversity.gif)
+
+- Species diversity is not very informative
+- The same numbers of species might correspond with different amounts of evolutionary
+  history
+- High amounts of evolutionary history seem to correspond with large amounts of biomass
+
+![](phylogenetic-diversity-biomass.gif)
+
+- _[...] functional and ecological similarities are shaped by patterns of common ancestry, 
+  such that distantly related species might contribute more to production than close 
+  relatives, perhaps by increasing niche breadth._
+- _We show that the amount of phylogenetic diversity within communities explained 
+  significantly more variation in plant community biomass than other measures of 
+  diversity, such as the number of species or functional groups._
+
+**MW Cadotte, BJ Cardinale, & TH Oakley**, 2008. Evolutionary history and the effect of 
+biodiversity on plant productivity. _PNAS_ **105**(44): 17012–17017 
+doi:[10.1073/pnas.0805962105](http://doi.org/10.1073/pnas.0805962105)
 
 ----
 
