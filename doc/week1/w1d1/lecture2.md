@@ -111,7 +111,44 @@ doi:[10.1098/rstb.2011.0058](http://doi.org/10.1098/rstb.2011.0058)
 Residuals (millions of years) from a LOESS regression of cell PD against cell species 
 number. Blue = less PD than expected, red = more than expected.
 
-----
+Functional diversity
+--------------------
+
+**OL Petchey & KJ Gaston**, 2006. Functional diversity: back to basics and looking 
+forward. _Ecology Letters_ **9**(6): 741–758
+doi:[10.1111/j.1461-0248.2006.00924.x](http://doi.org/10.1111/j.1461-0248.2006.00924.x)
+
+Functional diversity concerns the range of things that organisms do (mediated by their
+traits) in communities and ecosystems. Selecting and analyzing traits to incorporate in
+FD calculations is complicated:
+
+![](functional-diversity.png)
+
+- **FDvar** [Mason et al., 2003](http://doi.org/10.1111/j.1654-1103.2003.tb02184.x)
+- **FAD** [Walker et al., 1999](http://doi.org/10.1007/s100219900062)
+- **FD** [Petchey & Gaston, 2002](http://doi.org/10.1046/j.1461-0248.2002.00339.x)
+
+Functional diversity versus species diversity
+---------------------------------------------
+
+**RD Stuart-Smith et al.**, 2013. Integrating abundance and functional traits reveals new 
+global hotspots of fish diversity. _Nature_ **501**: 539–542 
+doi:[10.1038/nature12529](http://doi.org/10.1038/nature12529)
+
+![](fd-species.jpg)
+
+In reef fish diversity, highest diversity at the equator, and decreasing towards the 
+poles, with highest diversity concentrated in the so-called 'Coral Triangle.'
+
+![](fd-function.jpg)
+
+...But if we look at not just richness, but what species are doing, we find a very 
+different pattern. This map suggests that the Coral Triangle is one of the least 
+functionally diverse places on the planet. In other words, it harbors a lot of species, 
+but in general, they are all doing more or less the same thing. 
+
+Broad spatial patterns of functional diversity
+----------------------------------------------
 
 ![](diversity.jpg)
 
