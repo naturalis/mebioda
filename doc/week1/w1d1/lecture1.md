@@ -35,7 +35,7 @@ Learning goals
 - To develop a data-centric view of biodiversity research
 - To adopt principles and practices of open science
 - To learn computational skills in biodiversity analysis
-- To improve our communication abilities
+- To improve our communication and teamwork abilities
 
 Course outline
 --------------
@@ -64,6 +64,17 @@ Lectures in the morning, practicals in the afternoon, presentation, report, exam
 ### [Week 4: Wrap-up and Exam](../../week4)
 - **Lecture topics**: Diversity in space, time, and function
 - **Exam**
+
+Red thread / model organisms
+----------------------------
+
+Some exercises across the weeks will deal with the same model organisms, for which we
+all pick a staple food crop:
+
+- Barcode data collection
+- Paper about barcode diversity
+- Occurrence data collection and ENM
+- Functional trait data collection
 
 Guest lectures
 --------------
