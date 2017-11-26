@@ -9,6 +9,7 @@ What is biodiversity?
 - **Species diversity**
   - Number of species in an ecological community, landscape or region
   - Perhaps taking abundance into account
+  - The basis of early [island biogeography](https://en.wikipedia.org/wiki/The_Theory_of_Island_Biogeography)
 - **Phylogenetic diversity**
   - What does it measure, and how?
   - Can it be high when species diversity is low (or vice versa)?
