@@ -22,8 +22,9 @@ Prerequisites and assumptions
 - We are biologists: we are aware of the principles and practices of molecular biology, 
   ecology, biogeography, systematics, and evolution
 - We are natural scientists: we've had previous training in statistics (e.g. what is a 
-  PCA? What is Bayesian statistics?), know how to read scientific publications, and know 
-  how to present research, orally and in writing
+  PCA? What are residuals? What is R<sup>2</sup>? What is Bayesian statistics?), know 
+  how to read scientific publications, and know how to present research, orally and in 
+  writing
 - We are not computer scientists, but we're not afraid of computers
 - We are going to learn together: questions, responses, discussions, interruptions, are 
   always welcome
