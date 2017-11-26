@@ -8,14 +8,23 @@ Introductions
 - Different interests, needs, and expectations
 - Different skill levels and experiences
 
+> Please introduce each other, mentioning at least the following:
+> - Name
+> - Which faculty (IBL, CML, ...) 
+> - Which master's programme
+> - Any concurrent activities (internships, etc.)
+> - Computational skill (e.g. programming, data analysis)
+> - Your expectations and needs
+
 Prerequisites and assumptions
 -----------------------------
 
 - We are biologists: we are aware of the principles and practices of molecular biology, 
-  biogeography, systematics, and evolution
-- We are natural scientists: we've had previous training in statistics (e.g. what is a 
-  PCA? What is Bayesian statistics?), know how to read scientific publications, and know 
-  how to present research, orally and in writing
+  ecology, biogeography, systematics, and evolution
+- We've had previous training in statistics (e.g. what is a 
+  PCA? What are residuals? What is R<sup>2</sup>? What is Bayesian statistics?)
+- We know how to read scientific publications, and know how to present research, orally 
+  and in writing
 - We are not computer scientists, but we're not afraid of computers
 - We are going to learn together: questions, responses, discussions, interruptions, are 
   always welcome
