@@ -12,8 +12,8 @@ Introductions
 > - Name
 > - Which faculty (IBL, CML, ...) 
 > - Which master's programme
-> - Any concurrent activities (internships, etc.)
-> - Computational skill (e.g. programming, data analysis)
+> - Any concurrent activities (internships, courses, etc.)
+> - Data analytical skills (e.g. programming, statistics, bioinformatics)
 > - Your expectations and needs
 
 Prerequisites and assumptions
