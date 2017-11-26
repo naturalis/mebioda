@@ -176,7 +176,7 @@ hypothesis that functional and phylogenetic diversity will explain all of the va
 explained by species richness, as well as additional variation, both overlapping and 
 unique._
 
-Patterns of biodiversity
+Dynamics of biodiversity
 ------------------------
 
 ![](alphabetagamma.jpg)
@@ -186,7 +186,7 @@ Patterns of biodiversity
 - **gamma (γ)** diversity: the total diversity in a system
 
 Research questions surrounding, for example, latitudinal gradients in diversity can thus
-by couched in terms of α, β and γ diversity.
+be couched in terms of α, β and γ diversity.
 
 Measuring biodiversity
 ----------------------
