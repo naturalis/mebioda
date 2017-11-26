@@ -284,14 +284,6 @@ Methods in biodiversity data analysis
 - Functional diversity
 - Trait-dependent diversification 
 
-Analysis workflows
-------------------
-
-- Too much data to do 'by hand'
-- Reproducibility is easier with automation
-- We will explore this using the UNIX/Linux shell, using R, and scripting
-  languages (a bit of Python and Perl)
-
 Data management
 ---------------
 
@@ -300,6 +292,14 @@ Data management
 - How to manage versions of data, their history, and provenance?
 - How to store and share data?
 - How to represent, store, and share what we know _about_ the data?
+
+Analysis workflows
+------------------
+
+- Too much data to do 'by hand'
+- Reproducibility is easier with automation
+- We will explore this using the UNIX/Linux shell, using R, and scripting
+  languages (a bit of Python and Perl)
 
 Tools of the trade
 ------------------
