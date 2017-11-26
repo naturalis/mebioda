@@ -180,18 +180,24 @@ Patterns of biodiversity
 
 ![](alphabetagamma.jpg)
 
-- alpha diversity: within a single extent of time and space
-- beta diversity: the turnover between locations or time windows
-- gamma diversity: the total diversity in a system
+- **alpha (α)** diversity: within a single extent of time and space
+- **beta (β)** diversity: the turnover between locations or time windows
+- **gamma (γ)** diversity: the total diversity in a system
+
+Research questions surrounding, for example, latitudinal gradients in diversity can thus
+by couched in terms of α, β and γ diversity.
 
 Measuring biodiversity
 ----------------------
 
 ![](coord_planes.png)
 
-- Molecular techniques (week 1)
-- Field observations (week 2)
-- Trait/character measurements (week 3)
+- **Molecular techniques**, i.e. one-dimensional biomolecular sequence data, which allows 
+  us to sample species diversity and phylogenetic diversity (week 1)
+- **Occurrences**, i.e. two-dimensional (lat/lon) coordinate data, combined with climate, 
+  land use, remote sensing, etc., to identify spatial patterns (week 2)
+- **Trait/character measurements**, i.e. multidimensional data, to explore functional 
+  diversity (week 3)
 
 Biodiversity data
 -----------------
@@ -204,20 +210,36 @@ Biodiversity data
   - Remote sensing satellites and drones
   - Digital cameras
 
-The data cycle
---------------
+The "data life cycle"
+---------------------
+
 ![](data_life_cycle.jpg)
 
-Data science
-------------
-The dirty work throughout the data cycle, leading up to, and including, 
-statistical analysis:
+Biodiversity data, like all research data, needs to be managed properly throughout the 
+_data life cycle_:
 
-- Representation and modeling of collected data
-- Data processing: cleaning, filtering, reduction, integration
-- Data management: metadata, versioning, formats
-- Handling scalability challenges, e.g. through automation
-- And finally: analyzing, visualizing, and interpreting data
+- **Data creation** - e.g. in a lab when a sequencing assay is run
+- **Data processing** - any quality filtering, dimensionality reduction
+- **Data analysis** - all substantial calculations and hypothesis tests
+- **Data preservation** - store data and metadata for perpetuity
+- **Data access** - allow stored data to be accessed, considering interoperability
+- **Data reuse** - stand on the shoulders of others
+
+"Data science"
+--------------
+
+![](data-science.png)
+
+_Data science_ is concerned with the dirty work throughout the data cycle:
+
+- **Representation** and modeling of collected data, e.g. how to represent sequence data
+  and metadata in efficient ways
+- **Data processing**: cleaning, for example removing low quality observations, filtering
+  data to observations of interest, reduction, integration
+- **Data management**: technological issues surrounding metadata, versioning, 
+  interoperability, preservation and access
+- **Handling scalability**: technological challenges and solutions, e.g. automation
+- And finally: **analyzing, visualizing, and interpreting data**
 
 Representation and modeling of collected data
 ---------------------------------------------
