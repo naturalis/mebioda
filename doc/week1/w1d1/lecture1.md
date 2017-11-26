@@ -8,7 +8,7 @@ Introductions
 - Different interests, needs, and expectations
 - Different skill levels and experiences
 
-> Please introduce yourself, mentioning at least the following:
+> Please introduce each other, mentioning at least the following:
 > - Name
 > - Which faculty (IBL, CML, ...) 
 > - Which master's programme
