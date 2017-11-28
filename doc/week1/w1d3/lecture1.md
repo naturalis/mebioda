@@ -5,28 +5,44 @@ Data science tools
 - Download [the image](https://www.dropbox.com/s/xovgaqnussueuoh/mebioda.ova?dl=0)
 - In VirtualBox:
   - Import appliance
-  - Select the image, accept the settings and import (this will take a minute or two)
+  - Select the downloaded image, accept the settings and import (this will take a minute or two)
   - Start the image
+  - This will boot up the [Ubuntu](https://www.ubuntu.com/) operating system
   - User: `mebioda`, password: `mebioda`
 
 UNIX/Linux operating systems: why do we care?
 ---------------------------------------------
+
+![](unix.png)
+
 - Have better facilities for automation (shell scripting)
+  - More scripting languages pre-installed (
+    [python](https://www.python.org/), 
+    [perl](https://www.perl.org/), 
+    [ruby](https://www.ruby-lang.org/en/))
+  - The [shell](http://tldp.org/LDP/abs/html/) is more powerful
 - A lot of scientific software is (only) written for them
-- Linux is free, so analytical environments can be copied
+- Linux is free, so analytical environments can be copied and instantiated in
+  virtualization environments with few restrictions
   
 UNIX file system conventions
 ----------------------------
+
+![](unix-fs.png)
+
 UNIX-like file systems:
-- are hierarchical trees navigated with relative and absolute paths
-- follow some organizational conventions
+- start at the root: `/`
+- are hierarchical trees navigated with paths:
+  - **absolute** paths start from the root, e.g. `/home/mebioda`
+  - **relative** paths go from one location to another, e.g. `../../tmp`
 - consider everything a “file”
 - consider files simple byte arrays (and text)
+- follow some organizational conventions
 
 | Directory | Description          |
 |-----------|----------------------|
 |`/bin`     | Single user binaries |
-|`/dev`     | Essential devices    |
+|`/dev`     | Hardware devices     |
 |`/etc`     | Configuration files  |
 |`/home`    | User home dirs       |
 |`/lib`     | Libraries            |

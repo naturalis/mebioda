@@ -34,6 +34,10 @@ Practical and homework
 
 Journal club
 ------------
+- What does this paper say about the systematics of this species (i.e. in relation to others)?
+- If the paper is unsuitable, suggest an alternative (paper or species)
+- Prepare 3 slides max to present the paper
+- Prepare a 5 min talk
 
 1. **Maize** - Cereal: _Zea mays_ subsp. _mays_. Teosintes are _Z. m. huehuetenangensis_, _Z. m. mexicana_, and _Z. m. parviglumis_ (Poaceae)
 	- [Phylogenetic analysis reveals five independent transfers of the chloroplast gene rbcL to the mitochondrial genome in angiosperms.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.623.8964&rep=rep1&type=pdf) (2003)
@@ -42,7 +46,7 @@ Journal club
 3. **Sorghum** - Cereal: _Sorghum bicolor_ (Poaceae)
 	- [Oligocene CO2 decline promoted C4 photosynthesis in grasses.](https://doi.org/10.1016/j.cub.2007.11.058) (2008)
 4. **Teff** - Cereal (Chloridoideae): _Eragrostis tef_ (Poaceae)
-	- [New grass phylogeny resolves deep evolutionary relationships and discovers C4 origins.](https://doi.org/10.1111/j.1469-8137.2011.03972.x) (2011)
+	- [The origin and evolution of Eragrostis tef (Poaceae) and related polyploids: evidence from nuclear waxy and plastid rps161.](http://doi.org/10.3732/ajb.90.1.116) (2002)
 5. **Millet** - Cereal (Chloridoideae): _Eleusine coracana_ (Poaceae)
 	- [Assembling the Tree of the Monocotyledons: Plastome Sequence Phylogeny and Evolution of Poales 1](http://biostor.org/reference/164352) (2010)
 6. **Barley** - Cereal (Triticeae): _Hordeum vulgare_, wild ancestor is _H. vulgare_ subsp. _spontaneum_. Domesticate alternatively named _H. vulgare_ subsp. _vulgare_ (Poaceae)
@@ -78,7 +82,8 @@ Journal club
 21. **Coconut** - Palm: _Cocos nucifera_ (Arecaceae)
 	- [A new subfamily classification of the palm family (Arecaceae): evidence from plastid DNA phylogeny](https://doi.org/10.1111/j.1095-8339.2006.00521.x) (2006)
 22. **Dates** - Palm: _Phoenix dactylifera_ (Arecaceae)
-	- [Networks in a large-scale phylogenetic analysis: reconstructing evolutionary history of Asparagales (Lilianae) based on four plastid genes.](http://doi.org/10.1371/journal.pone.0059472) (2013)
+	- [DNA barcoding for species identification in the Palmae family.](http://dx.doi.org/10.4238/2014.December.4.29) 
+	  (2014)
 23. **Sago** - Palm: _Metroxylon sagu_ (Arecaceae)
 	- [Molecular phylogenetics of subfamily Calamoideae (Palmae) based on nrDNA ITS and cpDNA rps16 intron sequence data.](https://doi.org/10.1006/mpev.1999.0696) (2000)
 
