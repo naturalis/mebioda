@@ -46,7 +46,7 @@ Journal club
 3. **Sorghum** - Cereal: _Sorghum bicolor_ (Poaceae)
 	- [Oligocene CO2 decline promoted C4 photosynthesis in grasses.](https://doi.org/10.1016/j.cub.2007.11.058) (2008)
 4. **Teff** - Cereal (Chloridoideae): _Eragrostis tef_ (Poaceae)
-	- [New grass phylogeny resolves deep evolutionary relationships and discovers C4 origins.](https://doi.org/10.1111/j.1469-8137.2011.03972.x) (2011)
+	- [The origin and evolution of Eragrostis tef (Poaceae) and related polyploids: evidence from nuclear waxy and plastid rps161.](http://doi.org/10.3732/ajb.90.1.116) (2002)
 5. **Millet** - Cereal (Chloridoideae): _Eleusine coracana_ (Poaceae)
 	- [Assembling the Tree of the Monocotyledons: Plastome Sequence Phylogeny and Evolution of Poales 1](http://biostor.org/reference/164352) (2010)
 6. **Barley** - Cereal (Triticeae): _Hordeum vulgare_, wild ancestor is _H. vulgare_ subsp. _spontaneum_. Domesticate alternatively named _H. vulgare_ subsp. _vulgare_ (Poaceae)
