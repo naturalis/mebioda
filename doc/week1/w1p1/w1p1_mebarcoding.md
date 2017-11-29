@@ -58,9 +58,9 @@ for fq in out_trimmed/*_trimmed_primers2.fastq; do
 done
 ```
 
-- --fastq_qmax: specify the maximum quality score accepted when reading FASTQ files. 
-- --fastq_maxee_rate 1: we specify the expected error per base: 1 
-- --fastq_trunclen 200, all the sequences will be truncated at 200 bp; 
+`--fastq_qmax`: specify the maximum quality score accepted when reading FASTQ files. 
+`--fastq_maxee_rate 1`: we specify the expected error per base: 1 
+`--fastq_trunclen 200`, all the sequences will be truncated at 200 bp; 
 
 2. **Dereplicating at sample level and relabel with sample_n**
 
