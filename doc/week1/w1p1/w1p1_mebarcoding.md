@@ -53,7 +53,8 @@ done
 
 ```bash   
 for fq in out_trimmed/*_trimmed_primers2.fastq; do
-  vsearch --fastq_qmax 46 --fastq_filter ${fq} --fastq_maxee_rate 1 --fastq_trunclen 200 --fastaout "${fq%.fastq}.fa"
+  parameters="--fastq_qmax 46 --fastq_maxee_rate 1 --fastq_trunclen 200"
+  vsearch $parameters --fastq_filter ${fq} --fastaout "${fq%.fastq}.fa"
 done
 ```
 
