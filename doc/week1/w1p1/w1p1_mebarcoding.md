@@ -178,13 +178,13 @@ of the OTUs in the different samples_")
 
     join CPotus.uniq.tsv CP.otutab.txt > CPotus.samples.tsv
  
-8. Open the file we just generated in LibreOffice Calc.
+**Open the file we just generated in LibreOffice Calc.**
 
-After the OTUs' abundance values calculate the sum. 
-e.g =SUM(a1:g1)
+After the OTUs' abundance values you can calculate the sum, e.g `=SUM(a1:g1)`
 
-Next to the sum we are going to write an IF condition that will return the value 1 if the abundance value is greater than 0, otherwise it will return 0. 
-=IF(e1>0,1,0)
+Next to the sum we are going to write an IF condition that will return the value 1 if the 
+abundance value is greater than 0, otherwise it will return 0. `=IF(e1>0,1,0)`
 
-Finally, we want the sum of each absence-presence column, so at the end of each column calculate the sum.
+Finally, we want the sum of each absence-presence column, so at the end of each column 
+calculate the sum.
 
