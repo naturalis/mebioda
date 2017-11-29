@@ -116,16 +116,16 @@ vsearch \
 
 ```bash
 vsearch \
-	--cluster_size CPuniq_no_sing.fasta \
-	--id 0.97 \
-	--strand plus \
-	--sizein \
-	--sizeout \
-	--fasta_width 0 \
-	--uc CP_otus.uc \
-	--relabel OTU_ \
-	--centroids CP.otus.fasta \
-	--otutabout CP.otutab.txt
+--cluster_size CPuniq_no_sing.fasta \
+--id 0.97 \
+--strand plus \
+--sizein \
+--sizeout \
+--fasta_width 0 \
+--uc CP_otus.uc \
+--relabel OTU_ \
+--centroids CP.otus.fasta \
+--otutabout CP.otutab.txt
 ```
 
 - --cluster_size: sorts sequences by decreasing abundance before
@@ -142,11 +142,11 @@ the abundances of the OTUs in the different samples.
 
 ```bash
 vsearch \
-	--uchime_denovo CP.otus.fasta \
-	--sizein \
-	--sizeout \
-	--fasta_width 0 \
-	--nonchimeras CP.otus.nonchim.fasta 
+--uchime_denovo CP.otus.fasta \
+--sizein \
+--sizeout \
+--fasta_width 0 \
+--nonchimeras CP.otus.nonchim.fasta 
 ```
 
 --uchime_denovo: Detect chimeras present in the fasta-formatted filename, without external references (i.e. de novo)       
@@ -155,13 +155,13 @@ vsearch \
 
 ```bash
 vsearch \
-	--usearch_global CP.otus.nonchim.fasta \
-	-db ../utax_reference_dataset_10.10.2017.fasta \
-	-id 0.7 \
-	-blast6out CPotus.m8 \
-	-strand both \
-	-maxaccepts 1 \
-	-maxrejects 256
+--usearch_global CP.otus.nonchim.fasta \
+-db ../utax_reference_dataset_10.10.2017.fasta \
+-id 0.7 \
+-blast6out CPotus.m8 \
+-strand both \
+-maxaccepts 1 \
+-maxrejects 256
 ```
 
 - --usearch_global: Compare target sequences (--db) to the fasta-formatted query sequences contained in
