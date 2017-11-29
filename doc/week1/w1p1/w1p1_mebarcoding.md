@@ -21,10 +21,7 @@ Week 1 Data analysis of mycorrhizal diversity
 ```bash
 mkdir out_trimmed
 for fq in *.fastq; do
-	cutadapt \
-		-q 20,20 \
-		-o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" \
-		${fq}
+cutadapt -q 20,20 -o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
 done
 ```
 
