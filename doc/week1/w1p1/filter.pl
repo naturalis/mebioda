@@ -25,5 +25,5 @@ while(<>) {
 # print output
 for my $otu ( sort { $a cmp $b } keys %map ) {
 	my $row = $map{$otu};
-	print $otu, "\t", join("\t", @{ $map{$otu} } ), "\n";
+	print $otu, "\t", join("\t", @{ $map{$otu} } );
 }
