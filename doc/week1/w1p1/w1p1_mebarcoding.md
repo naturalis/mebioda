@@ -83,9 +83,8 @@ done
 3.  **Merging all the samples into one file**
 
 ```bash
+rm *_ends.fastq *_primers.fastq *_primers2.fastq *_primers2.fa
 cat *uniques.fa* > CPuniques.fasta
-# clean up:
-rm *_ends.fastq *_primers.fastq *_primers2.fastq
 ```
 
 4. **Dereplicating across samples and remove singletons**
