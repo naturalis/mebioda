@@ -10,14 +10,14 @@ while(<>) {
 	
 	# we have not yet seen this OTU id
 	if ( not $map{$otu} ) {
-		$map{$otu} = [ @fields[1..$#fields] ]; # store it
+		$map{$otu} = [ @fields[1..3] ]; # store it
 	}
 	else {
 	
 		# we've already seen this OTU, but this match is higher
 		if ( $fields[2] > $map{$otu}->[2] ) {
 			warn $fields[2], '>', $map{$otu}->[2];
-			$map{$otu} = [ @fields[1..$#fields] ]; # replace it
+			$map{$otu} = [ @fields[1..3] ]; # replace it
 		}
 	}
 }
