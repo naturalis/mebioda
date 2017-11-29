@@ -80,11 +80,9 @@ done
 ```bash
 cd out_trimmed
 for fq in *_trimmed_primers2.fa; do
-        vsearch \
-		--derep_fulllength  ${fq} \
-		--output "${fq/trimmed_primers2/uniques}" \
-		--relabel "${fq/trimmed_primers2/seq}" \
-		--sizeout 
+	out="${fq/trimmed_primers2/uniques}"
+	label="${fq/trimmed_primers2/seq}"
+        vsearch --derep_fulllength $fq --output $out --relabel $label --sizeout 
 done 
 ```
 
