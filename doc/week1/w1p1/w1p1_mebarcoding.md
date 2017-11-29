@@ -84,6 +84,8 @@ done
 
 ```bash
 cat *uniques.fa* > CPuniques.fasta
+# clean up:
+rm *_ends.fastq *_primers.fastq *_primers2.fastq
 ```
 
 4. **Dereplicating across samples and remove singletons**
