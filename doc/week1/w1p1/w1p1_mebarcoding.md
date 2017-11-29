@@ -126,9 +126,9 @@ We are going to work with the `CP.otutab.txt` and the `CPotus.m8` tables.
    the **descending** option. Move the last two columns of the sheet after column A.
 6. Save the files as text csv: `CPotus.csv`
 
-As you can see the CPotus.csv has duplicate rows which need to be removed.
+As you can see the CPotus.csv has duplicate rows, which need to be removed.
 
-The uniq.pl script provided will remove the duplicate rows 
+The [uniq.pl](uniq.pl) script provided will remove the duplicate rows 
  
 7. Open the terminal:  
 
@@ -136,11 +136,6 @@ The uniq.pl script provided will remove the duplicate rows
 
 We need now to join the two tables that we have created: 
 
-             sort CP.tab.csv | more
-
-             cat CP.tab.csv | sed -e 's/,/\t/'
-
-             cat CP.tab.csv | sed -e 's/,/\t/' | sort | head
 
             cat CP.tab.csv | sed -e 's/,/\t/' | sort > CP.tab.sorted.csv
 
