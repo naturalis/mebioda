@@ -3,7 +3,8 @@ Week 1 Data analysis of mycorrhizal diversity
 
 - **Step-by-step analysis of micorrhizal diversity**
 
-1. Create a directory where you will store the files to use for the analyses, you can call it e.g. w1p1
+1. Create a directory where you will store the files to use for the analyses, you can call it e.g. w1p1.
+   Place the reads and the reference in the directory. Extract them: `gunzip *.gz`
 
 2. **Cutadapt**
 
@@ -17,28 +18,37 @@ Week 1 Data analysis of mycorrhizal diversity
 
 3. **Trimming the bad quality ends**
 
-       mkdir out_trimmed
-
-       for fq in *.fastq 
-       do
-	   cutadapt -q 20,20 -o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
-       done
-
+```bash
+mkdir out_trimmed
+for fq in *.fastq; do
+	cutadapt \
+		-q 20,20 \
+		-o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" \
+		${fq}
+done
+```
 
 4. **Trimming the 3' primer**
 
-        for fq in out_trimmed/*.fastq
-        do 
-        cutadapt -a TCCTCCGCTTATTGATAGC -o "${fq/_ends/_primers}" ${fq} 
-        done 
+```bash
+for fq in out_trimmed/*.fastq; do 
+	cutadapt \
+		-a TCCTCCGCTTATTGATAGC \
+		-o "${fq/_ends/_primers}" \
+		${fq} 
+done
+```
 
 5. **Trimming the 5' primer**
-             
-       for fq in out_trimmed/*_trimmed_primers.fastq
-       do 
-       cutadapt -g GTGARTCATCGAATCTTTG -o "${fq/_primers/_primers2}" ${fq}
-       done
 
+```bash
+for fq in out_trimmed/*_trimmed_primers.fastq; do 
+       cutadapt \
+       		-g GTGARTCATCGAATCTTTG \
+		-o "${fq/_primers/_primers2}" \
+		${fq}
+done
+```
 
  Vsearch
  ------------
@@ -50,42 +60,76 @@ Week 1 Data analysis of mycorrhizal diversity
  
 1. **Quality filtering**
 
-   
-         for fq in out_trimmed/*_trimmed_primers2.fastq
-         do
-         vsearch --fastq_qmax 46 --fastq_filter ${fq} --fastq_maxee_rate 1 --fastq_trunclen 200 --fastaout "${fq%.fastq}.fa"
-         done
-         
-- --fastq_qmax:specify the maximum quality score accepted when reading FASTQ files. 
+```bash   
+for fq in out_trimmed/*_trimmed_primers2.fastq; do
+	vsearch \
+		--fastq_qmax 46 \
+		--fastq_filter ${fq} \
+		--fastq_maxee_rate 1 \
+		--fastq_trunclen 200 \
+		--fastaout "${fq%.fastq}.fa"
+done
+```
+
+- --fastq_qmax: specify the maximum quality score accepted when reading FASTQ files. 
 - --fastq_maxee_rate 1: we specify the expected error per base: 1 
 - --fastq_trunclen 200, all the sequences will be truncated at 200 bp; 
 
 2. **Dereplicating at sample level and relabel with sample_n**
 
-        cd out_trimmed
-        for fq in *_trimmed_primers2.fa
-        do
-        vsearch --derep_fulllength  ${fq} --output "${fq/trimmed_primers2/uniques}" --relabel "${fq/trimmed_primers2/seq}" --sizeout 
-        done 
-        
+```bash
+cd out_trimmed
+for fq in *_trimmed_primers2.fa; do
+        vsearch \
+		--derep_fulllength  ${fq} \
+		--output "${fq/trimmed_primers2/uniques}" \
+		--relabel "${fq/trimmed_primers2/seq}" \
+		--sizeout 
+done 
+```
+
 - --derep_fulllength: Merge strictly identical sequences contained in filename.   
-- --sizeout: the number of occurrences (i.e. abundance) of each sequence is indicated at the end of their fasta header.
-- --relabel: sequence renaming is done to add sample prefixes to the sequence identifiers, so that we can later merge the sequences
+- --sizeout: the number of occurrences (i.e. abundance) of each sequence is indicated 
+  at the end of their fasta header.
+- --relabel: sequence renaming is done to add sample prefixes to the sequence identifiers, 
+  so that we can later merge the sequences
         
 
 3.  **Merging all the samples into one file**
 
-        cat *uniques.fa* > CPuniques.fasta
+```bash
+cat *uniques.fa* > CPuniques.fasta
+```
 
 4. **Dereplicating across samples and remove singletons**
 
-       vsearch --derep_fulllength CPuniques.fasta --minuniquesize 2 --sizein --sizeout --fasta_width 0 --uc all.derep.uc --output CPuniq_no_sing.fasta
+```bash
+vsearch \
+	--derep_fulllength CPuniques.fasta \
+	--minuniquesize 2 \
+	--sizein \
+	--sizeout \
+	--fasta_width 0 \
+	--uc all.derep.uc \
+	--output CPuniq_no_sing.fasta
+```
 
 5. **Clustering at 97% before chimera detection**
 
+```bash
+vsearch \
+	--cluster_size CPuniq_no_sing.fasta \
+	--id 0.97 \
+	--strand plus \
+	--sizein \
+	--sizeout \
+	--fasta_width 0 \
+	--uc CP_otus.uc \
+	--relabel OTU_ \
+	--centroids CP.otus.fasta \
+	--otutabout CP.otutab.txt
+```
 
-       vsearch --cluster_size CPuniq_no_sing.fasta --id 0.97 --strand plus --sizein --sizeout --fasta_width 0 --uc CP_otus.uc --relabel OTU_ --centroids CP.otus.fasta --otutabout CP.otutab.txt
-       
 - --cluster_size: sorts sequences by decreasing abundance before
     clustering.
 - --id: reject the sequence match if the pairwise identity is lower than 0.97
@@ -97,15 +141,31 @@ the abundances of the OTUs in the different samples.
  
 
 6. **De novo chimera detection**
-            
-       vsearch --uchime_denovo CP.otus.fasta --sizein --sizeout --fasta_width 0 --nonchimeras CP.otus.nonchim.fasta 
 
---uchime_denovo: Detect chimeras present in the fasta-formatted filename, without external references(i.e. de novo)       
+```bash
+vsearch \
+	--uchime_denovo CP.otus.fasta \
+	--sizein \
+	--sizeout \
+	--fasta_width 0 \
+	--nonchimeras CP.otus.nonchim.fasta 
+```
+
+--uchime_denovo: Detect chimeras present in the fasta-formatted filename, without external references (i.e. de novo)       
 
 7. **Comparing target sequences**
 
-       vsearch --usearch_global CP.otus.nonchim.fasta -db utax_reference_dataset_10.10.2017.fasta -id 0.7 -blast6out CPotus.m8 -strand both -maxaccepts 1 -maxrejects 256
-       
+```bash
+vsearch \
+	--usearch_global CP.otus.nonchim.fasta \
+	-db ../utax_reference_dataset_10.10.2017.fasta \
+	-id 0.7 \
+	-blast6out CPotus.m8 \
+	-strand both \
+	-maxaccepts 1 \
+	-maxrejects 256
+```
+
 - --usearch_global: Compare target sequences (--db) to the fasta-formatted query sequences contained in
 filename, using global pairwise alignment.
 
