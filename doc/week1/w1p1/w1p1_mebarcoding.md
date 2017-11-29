@@ -110,22 +110,21 @@ the abundances of the OTUs in the different samples.
 filename, using global pairwise alignment.
 
 Part 2
------------
+------
 We now have the all the output files that we need.
 
-Open the CP.otutab.txt and the CPotus.m8 tables.
+We are going to work with the `CP.otutab.txt` and the `CPotus.m8` tables.
 
-1. Open LibreOffice Calc and import the files separately, using the tab separated option.
- 
-2. In the CP.otus.m8 keep only the first two columns after the taxonomic information. They respectively contain the match percentage and the length of the sequences (bp). 
-
-3. Sort the sheet according to the basepair column and delete all the sequences shorter than 150 bp. 
-
-4. Then, insert a column after column A, click on the column A and go on Data -> Text to columns and use the semmi-comma separated option. You will see that the size information will be in the inserted column, you can remove this column.
-
-5. Sort by column A and by the column containing the match percentages, using for this column the descending option. Move the last two columns of the sheet after column A.
-
-6. Save both the files as text csv.
+1. Open LibreOffice Calc and import `CPotus.m8`, using the tab separated option.
+2. Keep the columns up to (and including) the first two columns after the taxonomic information. 
+   They respectively contain the match percentage and the length of the sequences (bp).
+3. Sort the sheet according to the sequence length column and delete all the rows shorter than 150 bp. 
+4. Then, insert a column after column A, click on the column A, and go to _Data -> Text to columns_ and use 
+   the semicolon separated option. You will see that the size information will be in the inserted column: 
+   you can remove this column, we just want the OTU id's.
+5. Sort by column A and by the column containing the match percentages, using for this column 
+   the **descending** option. Move the last two columns of the sheet after column A.
+6. Save the files as text csv: `CPotus.csv`
 
 As you can see the CPotus.csv has duplicate rows which need to be removed.
 
