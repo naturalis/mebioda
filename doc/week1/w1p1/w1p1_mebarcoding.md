@@ -170,14 +170,13 @@ processed in the following way:
 
 This [script](filter.pl) performs these operations. It is executed like this:
 
-    perl filter.pl CPotus.m8 > CPotus.uniq.csv
+    perl ../filter.pl CPotus.m8 > CPotus.uniq.tsv
 
-We need now to join the two tables that we have created: 
+We need now to _join_ the OTU-to-taxonomy match table with the OTU-by-sample table 
+("_in the classic tab-separated plain text format as a matrix containing the abundances 
+of the OTUs in the different samples_")
 
-            cat CP.tab.csv | sed -e 's/,/\t/' | sort > CP.tab.sorted.csv
-
-            join CPotus.uniq.csv CP.tab.sorted.csv > CPotus.uniq.joined.csv
- 
+    join CPotus.uniq.tsv CP.otutab.txt > CPotus.samples.tsv
  
 8. Open the file we just generated in LibreOffice Calc.
 
