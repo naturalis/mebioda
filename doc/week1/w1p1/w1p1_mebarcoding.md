@@ -65,7 +65,7 @@ Week 1 Data analysis of mycorrhizal diversity
         cd out_trimmed
         for fq in *_trimmed_primers2.fa
         do
-        vsearch --derep_fulllength  ${fq} --output "${fq/trimmed_primers2/uniques}" --relabel "${fq/trimmed_primers2.fa/seq}" --sizeout 
+        vsearch --derep_fulllength  ${fq} --output "${fq/trimmed_primers2/uniques}" --relabel "${fq/trimmed_primers2/seq}" --sizeout 
         done 
         
 - --derep_fulllength: Merge strictly identical sequences contained in filename.   
