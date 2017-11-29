@@ -111,39 +111,26 @@ filename, using global pairwise alignment.
 
 Part 2
 ------
-We now have the all the output files that we need.
+We now have the all the output files that we need. However, the `CPotus.m8` needs to be
+processed in the following way:
 
-We are going to work with the `CP.otutab.txt` and the `CPotus.m8` tables.
+- The fourth column contains the sequence length. We only want sequences longer than
+  150 bp
+- The first column contains both the OTU id and the cluster size, like this: 
+  `OTU_1;size=9159;`. We just want to keep the `OTU_1` part, so before the first 
+  semicolon.
+- For each distinct OTU id, we want to keep the match with the highest percentage (there
+  might be multiple matches for the same OTU).
 
-1. Open LibreOffice Calc and import `CPotus.m8`, using the tab separated option.
-2. Keep the columns up to (and including) the first two columns after the taxonomic information. 
-   They respectively contain the match percentage and the length of the sequences (bp).
-3. Sort the sheet according to the sequence length column and delete all the rows shorter than 150 bp. 
-4. Then, insert a column after column A, click on the column A, and go to _Data -> Text to columns_ and use 
-   the semicolon separated option. You will see that the size information will be in the inserted column: 
-   you can remove this column, we just want the OTU id's.
-5. Sort by column A and by the column containing the match percentages, using for this column 
-   the **descending** option. Move the last two columns of the sheet after column A.
-6. Save the files as text csv: `CPotus.csv`
+This [script](filter.pl) performs these operations. It is executed like this:
 
-As you can see the CPotus.csv has duplicate rows, which need to be removed.
-
-The [uniq.pl](uniq.pl) script provided will remove the duplicate rows 
- 
-7. Open the terminal:  
-
-        perl uniq.pl CPotus.csv > CPotus.uniq.csv
+    perl filter.pl CPotus.m8 > CPotus.uniq.csv
 
 We need now to join the two tables that we have created: 
 
-
             cat CP.tab.csv | sed -e 's/,/\t/' | sort > CP.tab.sorted.csv
 
-            sort CPotus_uniq.csv | head
-
-            join CPotus_uniq.csv CP.tab.sorted.csv | more
-
-            join CPotus_uniq.csv CP.tab.sorted.csv > CPotus.uniq.joined.csv
+            join CPotus.uniq.csv CP.tab.sorted.csv > CPotus.uniq.joined.csv
  
  
 8. Open the file we just generated in LibreOffice Calc.
