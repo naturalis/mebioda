@@ -21,7 +21,7 @@ Week 1 Data analysis of mycorrhizal diversity
 ```bash
 mkdir out_trimmed
 for fq in *.fastq; do
-cutadapt -q 20,20 -o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
+  cutadapt -q 20,20 -o out_trimmed/"${fq%.fastq}_trimmed_ends.fastq" ${fq}
 done
 ```
 
@@ -29,7 +29,7 @@ done
 
 ```bash
 for fq in out_trimmed/*.fastq; do 
-cutadapt -a TCCTCCGCTTATTGATAGC -o "${fq/_ends/_primers}" ${fq} 
+  cutadapt -a TCCTCCGCTTATTGATAGC -o "${fq/_ends/_primers}" ${fq} 
 done
 ```
 
@@ -37,7 +37,7 @@ done
 
 ```bash
 for fq in out_trimmed/*_trimmed_primers.fastq; do 
-cutadapt -g GTGARTCATCGAATCTTTG -o "${fq/_primers/_primers2}" ${fq}
+  cutadapt -g GTGARTCATCGAATCTTTG -o "${fq/_primers/_primers2}" ${fq}
 done
 ```
 
@@ -53,12 +53,7 @@ done
 
 ```bash   
 for fq in out_trimmed/*_trimmed_primers2.fastq; do
-	vsearch \
-		--fastq_qmax 46 \
-		--fastq_filter ${fq} \
-		--fastq_maxee_rate 1 \
-		--fastq_trunclen 200 \
-		--fastaout "${fq%.fastq}.fa"
+  vsearch --fastq_qmax 46 --fastq_filter ${fq} --fastq_maxee_rate 1 --fastq_trunclen 200 --fastaout "${fq%.fastq}.fa"
 done
 ```
 
@@ -71,9 +66,9 @@ done
 ```bash
 cd out_trimmed
 for fq in *_trimmed_primers2.fa; do
-	out="${fq/trimmed_primers2/uniques}"
-	label="${fq/trimmed_primers2/seq}"
-        vsearch --derep_fulllength $fq --output $out --relabel $label --sizeout 
+  out="${fq/trimmed_primers2/uniques}"
+  label="${fq/trimmed_primers2/seq}"
+  vsearch --derep_fulllength $fq --output $out --relabel $label --sizeout 
 done 
 ```
 
