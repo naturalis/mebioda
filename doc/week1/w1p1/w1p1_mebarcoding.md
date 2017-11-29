@@ -29,10 +29,7 @@ done
 
 ```bash
 for fq in out_trimmed/*.fastq; do 
-	cutadapt \
-		-a TCCTCCGCTTATTGATAGC \
-		-o "${fq/_ends/_primers}" \
-		${fq} 
+cutadapt -a TCCTCCGCTTATTGATAGC -o "${fq/_ends/_primers}" ${fq} 
 done
 ```
 
@@ -40,10 +37,7 @@ done
 
 ```bash
 for fq in out_trimmed/*_trimmed_primers.fastq; do 
-       cutadapt \
-       		-g GTGARTCATCGAATCTTTG \
-		-o "${fq/_primers/_primers2}" \
-		${fq}
+cutadapt -g GTGARTCATCGAATCTTTG -o "${fq/_primers/_primers2}" ${fq}
 done
 ```
 
