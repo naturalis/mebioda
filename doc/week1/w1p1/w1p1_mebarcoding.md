@@ -103,13 +103,13 @@ cat *uniques.fa* > CPuniques.fasta
 
 ```bash
 vsearch \
-	--derep_fulllength CPuniques.fasta \
-	--minuniquesize 2 \
-	--sizein \
-	--sizeout \
-	--fasta_width 0 \
-	--uc all.derep.uc \
-	--output CPuniq_no_sing.fasta
+--derep_fulllength CPuniques.fasta \
+--minuniquesize 2 \
+--sizein \
+--sizeout \
+--fasta_width 0 \
+--uc all.derep.uc \
+--output CPuniq_no_sing.fasta
 ```
 
 5. **Clustering at 97% before chimera detection**
