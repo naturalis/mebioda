@@ -58,9 +58,9 @@ for fq in out_trimmed/*_trimmed_primers2.fastq; do
 done
 ```
 
-`--fastq_qmax`: specify the maximum quality score accepted when reading FASTQ files. 
-`--fastq_maxee_rate 1`: we specify the expected error per base: 1 
-`--fastq_trunclen 200`, all the sequences will be truncated at 200 bp; 
+- `--fastq_qmax`: specify the maximum quality score accepted when reading FASTQ files. 
+- `--fastq_maxee_rate 1`: we specify the expected error per base: 1 
+- `--fastq_trunclen 200`, all the sequences will be truncated at 200 bp; 
 
 2. **Dereplicating at sample level and relabel with sample_n**
 
@@ -73,10 +73,10 @@ for fq in *_trimmed_primers2.fa; do
 done 
 ```
 
-- --derep_fulllength: Merge strictly identical sequences contained in filename.   
-- --sizeout: the number of occurrences (i.e. abundance) of each sequence is indicated 
+- `--derep_fulllength`: Merge strictly identical sequences contained in filename.   
+- `--sizeout`: the number of occurrences (i.e. abundance) of each sequence is indicated 
   at the end of their fasta header.
-- --relabel: sequence renaming is done to add sample prefixes to the sequence identifiers, 
+- `--relabel`: sequence renaming is done to add sample prefixes to the sequence identifiers, 
   so that we can later merge the sequences
         
 
@@ -115,13 +115,13 @@ vsearch \
 --otutabout CP.otutab.txt
 ```
 
-- --cluster_size: sorts sequences by decreasing abundance before
+- `--cluster_size`: sorts sequences by decreasing abundance before
     clustering.
-- --id: reject the sequence match if the pairwise identity is lower than 0.97
-- --fasta_width: Fasta files produced by vsearch are wrapped (sequences are written on lines of integer
+- `--id`: reject the sequence match if the pairwise identity is lower than 0.97
+- `--fasta_width`: Fasta files produced by vsearch are wrapped (sequences are written on lines of integer
     nucleotides, 80 by default). To eliminate the wrapping, the value is set to zero.
-- --centroids: The centroid is the sequence that seeded the cluster (i.e. the first sequence of the cluster).     
-- --otutabout: Output an OTU table in the classic tab-separated plain text format as a matrix containing
+- `--centroids`: The centroid is the sequence that seeded the cluster (i.e. the first sequence of the cluster).     
+- `--otutabout`: Output an OTU table in the classic tab-separated plain text format as a matrix containing
 the abundances of the OTUs in the different samples.
  
 
@@ -151,7 +151,7 @@ vsearch \
 -maxrejects 256
 ```
 
-- --usearch_global: Compare target sequences (--db) to the fasta-formatted query sequences contained in
+- `--usearch_global`: Compare target sequences (--db) to the fasta-formatted query sequences contained in
 filename, using global pairwise alignment.
 
 Part 2
