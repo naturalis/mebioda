@@ -1,6 +1,16 @@
 Big trees
 =========
 
+- Download the [PhytoPhylo DB](https://ndownloader.figshare.com/files/9742438)
+- Go to [sqlitebrowser.org](http://sqlitebrowser.org) and download and install the program for
+  your operating system. There are installers for Windows and Mac, and for Ubuntu you can do:
+
+```bash
+sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
+sudo apt-get update
+sudo apt-get install sqlitebrowser
+```
+
 Recursion
 ---------
 
