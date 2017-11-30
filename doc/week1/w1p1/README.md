@@ -69,7 +69,7 @@ cd out_trimmed
 for fq in *_trimmed_primers2.fa; do
   out="${fq/trimmed_primers2/uniques}"
   label="${fq/trimmed_primers2/seq}"
-  vsearch --derep_fulllength $fq --output $out --relabel $label --sizeout 
+  vsearch --derep_fulllength $fq --output $out --relabel $label --sizeout --minsize 2
 done 
 ```
 
@@ -87,6 +87,7 @@ rm *_ends.fastq *_primers.fastq *_primers2.fastq *_primers2.fa
 cat *uniques.fa* > CPuniques.fasta
 ```
 
+<!--
 4. **Dereplicating across samples and remove singletons**
 
 ```bash
@@ -99,12 +100,13 @@ vsearch \
 --uc all.derep.uc \
 --output CPuniq_no_sing.fasta
 ```
+-->
 
-5. **Clustering at 97% before chimera detection**
+4. **Clustering at 97% before chimera detection**
 
 ```bash
 vsearch \
---cluster_size CPuniq_no_sing.fasta \
+--cluster_size CPuniques.fasta \
 --id 0.97 \
 --strand plus \
 --sizein \
@@ -126,7 +128,7 @@ vsearch \
 the abundances of the OTUs in the different samples.
  
 
-6. **De novo chimera detection**
+5. **De novo chimera detection**
 
 ```bash
 vsearch \
@@ -139,7 +141,7 @@ vsearch \
 
 --uchime_denovo: Detect chimeras present in the fasta-formatted filename, without external references (i.e. de novo)       
 
-7. **Comparing target sequences**
+6. **Comparing target sequences**
 
 ```bash
 vsearch \
