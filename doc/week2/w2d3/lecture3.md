@@ -1,6 +1,13 @@
 Versioning
 ==========
 
+The problem
+-----------
+
+![](versioning.jpg)
+
+(source: [PhD comics](http://phdcomics.com/comics/archive.php?comicid=1531))
+
 Project organization
 --------------------
 
