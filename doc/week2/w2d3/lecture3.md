@@ -45,3 +45,8 @@ The distributed approach
 - Only after _all_ local changes have been comitted to the local repository do we push the repository "upstream"
 - If the upstream repository has changed since the last time the local was synchronized, potential conflicts need to be 
   resolved first
+ 
+`git` - distributed version control
+-----------------------------------
+
+![](git-workflow.png)
