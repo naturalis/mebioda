@@ -6,6 +6,8 @@ Versioning
 > - History 
 > - Provenance
 
+![](provenance.png)
+
 The problem
 -----------
 
