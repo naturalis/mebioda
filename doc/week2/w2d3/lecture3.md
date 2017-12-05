@@ -16,9 +16,9 @@ The problem: how to manage ongoing _change_
 (source: [PhD comics](http://phdcomics.com/comics/archive.php?comicid=1531))
 
 - Documents go through many versions, over the course of years
-- You probably will not know ahead of time which will be the "final" document version
 - Meanwhile, related files (data, scripts, figures, bibliographies, etc.) are changing as well
-- And you are probably collaborating with others
+- You are probably collaborating with others (coauthors, reviewers, editors, etc.)
+- You probably will not know ahead of time which will be the "final" document version
 
 Project organization
 --------------------
