@@ -20,8 +20,8 @@ The problem: how to manage ongoing _change_
 - You are probably collaborating with others (coauthors, reviewers, editors, etc.)
 - You probably will not know ahead of time which will be the "final" document version
 
-Project organization
---------------------
+Part of the solution: work in a project-oriented manner
+-------------------------------------------------------
 
 **WS Noble**, 2009. A Quick Guide to Organizing Computational Biology Projects. _PLoS Computational Biology_ **5**(7): e1000424. doi:[10.1371/journal.pcbi.1000424](https://doi.org/10.1371/journal.pcbi.1000424)
 
@@ -31,13 +31,13 @@ Project organization
 - Follow consistent naming schemes (e.g. [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format)
 - Plan for open-ended change - but how to deal with mistakes? Undos?
 
-Naive approach: a centralized folder
-------------------------------------
+Backing up your projects
+------------------------
 
 ![](central-version-control.png)
 
-- Assuming we are doing local operations (e.g. writing, editing (code, data), analyzing) we might have a remote 
-  folder and a local copy
+- We are doing local operations (e.g. writing, editing (code, data), analyzing) on a local copy that is
+  backed up to a remote folder
 - This is roughly the workflow in [dropbox](http://dropbox.com), [google drive](http://drive.google.com) (where 
   synchronization happens as a background process) as well as in centralized version control systems such as 
   [cvs](http://www.nongnu.org/cvs/) and [svn](https://subversion.apache.org/) (where synchronization happens 
