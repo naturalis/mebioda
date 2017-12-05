@@ -1,6 +1,11 @@
 Versioning
 ==========
 
+> - Version management
+> - Backup 
+> - History 
+> - Provenance
+
 The problem
 -----------
 
