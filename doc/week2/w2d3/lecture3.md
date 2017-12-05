@@ -57,3 +57,81 @@ The distributed approach
 -----------------------------------
 
 ![](git-workflow.png)
+
+- `git` is an approach to distributed version control that was developed to manage the contributions of thousands of 
+  people to the source code of Linux.
+- There is a standard [command line tool](https://git-scm.com/downloads) for all major operating systems. There are also
+  graphical interfaces (which are not that useful), and plug-ins for development tools (such as 
+  [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN), which is 
+  _very_ useful)
+- Many websites provide remote hosting for git projects. [GitHub](http://github.com) is a very popular one, but there
+  are others, such as [BitBucket](https://bitbucket.org/) or [SourceForge](http://sf.net)
+
+`git` workflow - adding a file
+------------------------------
+
+Let's say I have a file `data.tsv` that I want to add to a repository:
+
+```bash
+# I have placed my file in my local repository and check to see if git notices:
+$ git status
+
+# response:
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	data.tsv
+```
+
+Now add it:
+
+```bash
+$ git add data.tsv
+$ git status
+
+# response:
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   data.tsv
+```
+
+So now the file is ready to be "committed". Let's commit it to our local repository, and
+add a message (`-m 'message text goes here`):
+
+```bash
+$ git commit -m 'adding file data.tsv' data.tsv
+
+# response:
+[master d588593] adding data.tsv
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 doc/week2/w2d3/data.tsv
+
+$ git status
+
+# response:
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+```
+
+Now our file has been incorporated in our _local_ repository. If this is a fork of a remote 
+repository we can "push" the file upstream to the remote repo:
+
+```bash
+$ git push
+
+# response:
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 455 bytes | 455.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:naturalis/mebioda.git
+   0f031d6..d588593  master -> master
+```
