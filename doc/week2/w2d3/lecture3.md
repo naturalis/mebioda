@@ -94,6 +94,8 @@ $ git clone git@github.com:<user name>/<project name>.git
 `git` workflow - adding a file
 ------------------------------
 
+![](git-workflow.png)
+
 Let's say I have a file `data.tsv` that I want to add to a repository:
 
 ```bash
