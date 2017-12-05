@@ -29,10 +29,13 @@ Part of the solution: work in a project-oriented manner
 
 - Organize your work in projects (e.g. [GTD](https://en.wikipedia.org/wiki/Getting_Things_Done) philosophy)
 - Follow consistent naming schemes (e.g. [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format)
-- Plan for open-ended change - but how to deal with mistakes? Undos?
+- This allows us to plan for open-ended change by date-stamping folders, but: 
+  - How to deal with mistakes? 
+  - How to "undo"?
+  - How to **collaborate**?
 
-Backing up your projects
-------------------------
+Backing up and sharing your projects
+------------------------------------
 
 ![](central-version-control.png)
 
