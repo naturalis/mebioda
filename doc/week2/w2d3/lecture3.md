@@ -164,3 +164,11 @@ remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To github.com:naturalis/mebioda.git
    0f031d6..d588593  master -> master
 ```
+
+Distributed version control: why?
+---------------------------------
+
+- **Infinite undo**, all the way to the beginning of the project
+- **Backups** on the servers of the version control host (e.g. github)
+- **Explicit history** with messages explaining why files were changed and ways to tag specific versions
+- **Distributed collaboration** including mechanisms for experimentation (branches) and resolving conflicts
