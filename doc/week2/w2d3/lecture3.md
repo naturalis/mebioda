@@ -8,12 +8,17 @@ Versioning
 
 ![](provenance.png)
 
-The problem
------------
+The problem: how to manage ongoing _change_
+-------------------------------------------
 
 ![](versioning.jpg)
 
 (source: [PhD comics](http://phdcomics.com/comics/archive.php?comicid=1531))
+
+- Documents go through many versions, over the course of years
+- You probably will not know ahead of time which will be the "final" document version
+- Meanwhile, related files (data, scripts, figures, bibliographies, etc.) are changing as well
+- And you are probably collaborating with others
 
 Project organization
 --------------------
@@ -23,15 +28,15 @@ Project organization
 ![](git-folders.png)
 
 - Organize your work in projects (e.g. [GTD](https://en.wikipedia.org/wiki/Getting_Things_Done) philosophy)
-- Follow consistent naming schemes
-- Plan for open-ended change
+- Follow consistent naming schemes (e.g. [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format)
+- Plan for open-ended change - but how to deal with mistakes? Undos?
 
 Naive approach: a centralized folder
 ------------------------------------
 
 ![](central-version-control.png)
 
-- Assuming we are doing local operations (e.g. writing, editing (code, data), analyzing) we have a remote 
+- Assuming we are doing local operations (e.g. writing, editing (code, data), analyzing) we might have a remote 
   folder and a local copy
 - This is roughly the workflow in [dropbox](http://dropbox.com), [google drive](http://drive.google.com) (where 
   synchronization happens as a background process) as well as in centralized version control systems such as 
