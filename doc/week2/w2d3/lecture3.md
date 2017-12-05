@@ -61,7 +61,7 @@ The distributed approach
 `git` - distributed version control
 -----------------------------------
 
-![](git-workflow.png)
+![](git-history.png)
 
 - `git` is an approach to distributed version control that was developed to manage the contributions of thousands of 
   people to the source code of Linux.
