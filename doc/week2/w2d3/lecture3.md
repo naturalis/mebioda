@@ -67,6 +67,25 @@ The distributed approach
 - Many websites provide remote hosting for git projects. [GitHub](http://github.com) is a very popular one, but there
   are others, such as [BitBucket](https://bitbucket.org/) or [SourceForge](http://sf.net)
 
+`git` workflow - starting a repository
+--------------------------------------
+
+![](git-clone.png)
+
+- The first step is to create a repository. This can be:
+  - A new repository that you start locally (e.g. `git init .`)
+  - A repository you start remotely (e.g. "New repository", top-right menu on GitHub)
+  - A repository that you _fork_ remotely (e.g. "Fork" button, top-right, on GitHub)
+- Then, if the repository was started or forked _remotely_ you want a local _clone_, e.g.:
+
+```bash
+# using HTTPS:
+$ git clone https://github.com/<user name>/<project name>.git
+
+# using SSH:
+$ git clone git@github.com:<user name>/<project name>.git
+```
+
 `git` workflow - adding a file
 ------------------------------
 
