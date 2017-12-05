@@ -168,7 +168,17 @@ To github.com:naturalis/mebioda.git
 Distributed version control: why?
 ---------------------------------
 
+![](git-commit.png)
+
 - **Infinite undo**, all the way to the beginning of the project
 - **Backups** on the servers of the version control host (e.g. github)
 - **Explicit history** with messages explaining why files were changed and ways to tag specific versions
 - **Distributed collaboration** including mechanisms for experimentation (branches) and resolving conflicts
+
+In addition, _GitHub_ provides for a lot of functionality on top of _git_:
+
+- Project management tools, such as an [issue tracker](https://github.com/naturalis/mebioda/issues)
+- Ways to work in the browser instead of the command line (e.g. to 
+  [upload](https://github.com/naturalis/mebioda/upload/master) or edit and commit without the command line)
+- Ways to test code [automatically](https://travis-ci.org/rvosa/bio-phylo)
+- A facility to give a [DOI](https://doi.org/10.5281/zenodo.1010138) to a specific version
