@@ -179,7 +179,7 @@ In addition, _GitHub_ provides for a lot of functionality on top of _git_:
 
 - Project management tools, such as an [issue tracker](https://github.com/naturalis/mebioda/issues)
 - Ways to work in the browser instead of the command line (e.g. to 
-  [upload](https://github.com/naturalis/mebioda/upload/master) or edit and commit without the command line)
+  [upload](https://github.com/naturalis/mebioda/upload/master) or edit and commit without the command line: _hello world_)
 - Ways to test code [automatically](https://travis-ci.org/rvosa/bio-phylo)
 - A facility to give a [DOI](https://doi.org/10.5281/zenodo.1010138) to a specific version
 
