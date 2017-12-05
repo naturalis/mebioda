@@ -168,6 +168,8 @@ To github.com:naturalis/mebioda.git
 Distributed version control: why?
 ---------------------------------
 
+![](git-commit.png)
+
 - **Infinite undo**, all the way to the beginning of the project
 - **Backups** on the servers of the version control host (e.g. github)
 - **Explicit history** with messages explaining why files were changed and ways to tag specific versions
