@@ -118,29 +118,27 @@ When integrating data sets, you will often end up trying to reconcile taxonomic 
 from different data sources. Therefore, numerous data resources have APIs that allow for
 (fuzzy?) lookups of names, synonyms, alternative spellings:
 
-| Source                                        | Docs |
-|-----------------------------------------------|------|
-| Encylopedia of Life                           | http://www.eol.org/api/ |
-| Taxonomic Name Resolution Service             | http://www.taxosaurus.org/ |
-| Integrated Taxonomic Information Service      | http://www.itis.gov/ws%5Fdescription.html |
-| Global Names Resolver                         | http://resolver.globalnames.org/api |
-| Global Names Index                            | https://github.com/dimus/gni/wiki/api |
-| IUCN Red List                                 | https://www.assembla.com/spaces/sis/wiki/Red%5FList%5FAPI?version=3 |
-| Tropicos                                      | http://services.tropicos.org/help |
-| The Plant List                                | http://theplantlist.org |
-| Catalogue of Life                             | http://www.catalogueoflife.org/colwebsite/content/web-services |
-| National Center for Biotechnology Information | http://ncbi.nlm.nih.gov/taxonomy |
-| CANADENSYS Vascan name search API             | http://data.canadensys.net/vascan/api |
-| International Plant Names Index (IPNI)        | http://www.ipni.org/link%5Fto%5Fipni.html |
-| Barcode of Life Data Systems (BOLD)           | http://www.boldsystems.org/index.php/Resources |
-| National Biodiversity Network (UK)            | https://data.nbn.org.uk/Documentation/Web%5FServices/Web%5FServices-REST/resources/restapi/rest.html |
-| Index Fungorum                                | http://www.indexfungorum.org/ixfwebservice/fungus.asmx |
-| EU BON                                        | http://cybertaxonomy.eu/eubon-utis/doc.html |
-| Index of Names (ION)                          | http://www.organismnames.com/ |
-| Open Tree of Life (TOL)                       | https://opentreeoflife.org |
-| World Register of Marine Species (WoRMS)      | http://www.marinespecies.org/aphia.php?p=webservice |
-| NatureServe                                   | https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp |
-| Wikipedia                                     | https://www.mediawiki.org/wiki/API:Main_page |
+- [Encylopedia of Life](http://www.eol.org/api/)
+- [Taxonomic Name Resolution Service](http://www.taxosaurus.org/)
+- [Integrated Taxonomic Information Service](http://www.itis.gov/ws%5Fdescription.html)
+- [Global Names Resolver](http://resolver.globalnames.org/api)
+- [Global Names Index](https://github.com/dimus/gni/wiki/api)
+- [IUCN Red List](https://www.assembla.com/spaces/sis/wiki/Red%5FList%5FAPI?version=3)
+- [Tropicos](http://services.tropicos.org/help)
+- [The Plant List](http://theplantlist.org)
+- [Catalogue of Life](http://www.catalogueoflife.org/colwebsite/content/web-services)
+- [National Center for Biotechnology Information](http://ncbi.nlm.nih.gov/taxonomy)
+- [CANADENSYS Vascan name search API](http://data.canadensys.net/vascan/api)
+- [International Plant Names Index (IPNI)](http://www.ipni.org/link%5Fto%5Fipni.html)
+- [Barcode of Life Data Systems (BOLD)](http://www.boldsystems.org/index.php/Resources)
+- [National Biodiversity Network (UK)](https://data.nbn.org.uk/Documentation/Web%5FServices/Web%5FServices-REST/resources/restapi/rest.html)
+- [Index Fungorum](http://www.indexfungorum.org/ixfwebservice/fungus.asmx)
+- [EU BON](http://cybertaxonomy.eu/eubon-utis/doc.html)
+- [Index of Names (ION)](http://www.organismnames.com/)
+- [Open Tree of Life (TOL)](https://github.com/OpenTreeOfLife/germinator/wiki/TNRS-API-v3)
+- [World Register of Marine Species (WoRMS)](http://www.marinespecies.org/aphia.php?p=webservice)
+- [NatureServe](https://services.natureserve.org/BrowseServices/getSpeciesData/getSpeciesListREST.jsp)
+- [Wikipedia](https://www.mediawiki.org/wiki/API:Main_page)
 
 The [taxize](https://github.com/ropensci/taxize) package allows you to scan all these 
 different databases for name variants, common names, and higher classifications.
