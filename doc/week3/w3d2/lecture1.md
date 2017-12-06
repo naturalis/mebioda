@@ -92,10 +92,24 @@ and/or marker.
 
 ![](lecture1/opentree.jpg)
 
-Phylomatic
-----------
+Tools to operate on large phylogenies
+-------------------------------------
 
-- Phylomatic http://phylodiversity.net/phylomatic/
+Given the increasing availability of large phylogenies for different taxonomic groups
+there is probably a tree out there that is fairly close to the set of taxa you're 
+interested in. Nonetheless, there are probably some additional steps to take when
+re-using such a tree:
+
+1. **Taxonomic name resolution** - for example, to reconcile the taxon names in the tree
+   with those used in other data sets you already have (such as occurrence data, trait
+   data, etc.).
+2. **Pruning** - to reduce the large input tree down to the set of taxa of interest, many
+   superfluous taxa may need to be pruned out of the tree.
+3. **Grafting** - if a small number of taxa of interest is missing from the tree, there 
+   are algorithms that can place those taxa in the tree (at least, "close enough") on the
+   basis of the location of related species.
+
+![](lecture1/grafting.jpg)
 
 Taxonomic Name Resolution
 -------------------------
@@ -105,6 +119,11 @@ Taxonomic Name Resolution
 - The [taxize](https://github.com/ropensci/taxize) package allows you to scan different
   databases for name variants, common names, and higher classifications
 - In this [exercise](lecture1/taxize.Rmd), compare the outputs of NCBI and ITIS
+
+Phylomatic
+----------
+
+- Phylomatic http://phylodiversity.net/phylomatic/
 
 Pruning PhytoPhylo
 ------------------
