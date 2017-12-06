@@ -283,6 +283,8 @@ Likelihood
 
 ![](lecture1/likelihood-correlated.png)
 
-Here is a [tutorial](https://www.r-phylo.org/wiki/HowTo/InferringModelsForDiscreteData)
-that applies these concepts using the R package 
-[geiger](https://cran.r-project.org/web/packages/geiger/index.html).
+----
+
+> Here is a [tutorial](https://www.r-phylo.org/wiki/HowTo/InferringModelsForDiscreteData)
+> that applies these concepts using the R package 
+> [geiger](https://cran.r-project.org/web/packages/geiger/index.html).
