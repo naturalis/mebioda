@@ -51,6 +51,19 @@ doi:[10.1038/nature11631](http://doi.org/10.1038/nature11631)
 - Tree cited and re-used many times, thanks to the accompanying data 
   resource [birdtree.org](https://birdtree.org/)
 
+Large, _ad hoc_ phylogenies: Plants
+-----------------------------------
+
+**AE Zanne, et al.** 2014. Three keys to the radiation of angiosperms into freezing 
+environments. _Nature_ **506**: 89–92
+doi:[10.1038/nature12872](http://doi.org/10.1038/nature12872)
+
+![](lecture1/plants.jpg)
+
+- Constructed using molecular data
+- Combined with trait and ecological data
+- Reported result: certain traits allowed plants to colonize freezing environments
+
 Phylomatic
 ----------
 
