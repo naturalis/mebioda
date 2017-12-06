@@ -9,7 +9,7 @@ Large phylogenies in biodiversity
 Why care about large phylogenies outside systematics?
 -----------------------------------------------------
 
-![](ltt.png)
+![](lecture1/ltt.png)
 
 - The distribution of splits on a tree says something about diversification 
   processes (example: LTT plot in context of GMYC species delimitation)
@@ -28,7 +28,7 @@ Large, _ad hoc_ phylogenies
 _Nature_ **446**: 507–512 
 doi:[10.1038/nature05634](http://doi.org/10.1038/nature05634)
 
-![](mammals.jpg)
+![](lecture1/mammals.jpg)
 
 - Constructed by combining many, smaller input trees into a consensus-like 
   ("supertree") method
