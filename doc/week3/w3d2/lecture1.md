@@ -145,19 +145,22 @@ different databases for name variants, common names, and higher classifications.
 
 > In this [exercise](lecture1/taxize.Rmd), compare the outputs of NCBI and ITIS
 
-Phylomatic
-----------
+Pruning and grafting
+--------------------
 
-- Phylomatic http://phylodiversity.net/phylomatic/
+![](lecture1/phylotastic.png)
 
-Pruning PhytoPhylo
-------------------
+- [Phylomatic](http://phylodiversity.net/phylomatic/) was the first standalone tool and web
+  service that prunes large phylogenies down to the subtree for the provided input taxa, and
+  graft missing taxa by way of a path statement (e.g. `/ <family> / <genus> / <species>`) that
+  identifies where the taxon should be placed in relation to others.
+- [Phylotastic](http://phylo.cs.nmsu.edu:3000/) is a re-design and re-implementation of the
+  Phylomatic concept, but then with interchangeable components (e.g. tree stores, taxon
+  services, pruning and grafting algorithms).
+- [S.PhyloMaker](https://github.com/jinyizju/S.PhyloMaker) promises to infer trees and prune 
+  and graft supplied names, but it appears to be a bit buggy. Nevertheless, it does provide
+  the very large [PhytoPhylo](lecture3/PhytoPhylo.tre) reference tree.
 
-- One way to obtain a tree for a group of interest is simply by pruning a larger tree
-- The [S.PhyloMaker](https://github.com/jinyizju/S.PhyloMaker) package promises to both
-  prune and graft supplied names, but it appears buggy
-- However, we can use their [PhytoPhylo](lecture3/PhytoPhylo.tre) and simply extract our
-  crop species
-- In this [exercise](lecture1/extract.Rmd), prune the large tree and inspect the subtree
-  for our taxa. What are some of the higher groups you recognize?
+> In this [exercise](lecture1/extract.Rmd), prune the PhytoPhylo tree down to just our set of
+> crop species, and inspect the subtree. What are some of the higher groups you recognize?
 
