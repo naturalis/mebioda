@@ -67,10 +67,30 @@ doi:[10.1038/nature12872](http://doi.org/10.1038/nature12872)
 Large, ongoing, phylogenetic projects
 -------------------------------------
 
-- Molecular biodiversity projects: SILVA, UNITE, GreenGenes
-- Tree of Life Web project
-- Open Tree of Life
-- APG III/IV
+Apart from these _ad hoc_ projects where a tree was published once, there are ongoing
+initiatives to periodically release estimates of phylogeny for a given taxonomic group
+and/or marker.
+
+**Examples from molecular biodiversity:**
+
+- [SILVA](https://www.arb-silva.de/) - curated datasets of aligned small (16S/18S, SSU) 
+  and large subunit (23S/28S, LSU) ribosomal RNA (rRNA) sequences for all three domains 
+  of life (Bacteria, Archaea and Eukarya).
+- [GreenGenes](http://greengenes.secondgenome.com/) - curated database of small (16S) 
+  subunit ribosomal near-full length sequences from the kingdoms Bacteria and Archaea.
+
+**Examples of species tree initiatives:**
+
+- [Tree of Life Web project](http://tolweb.org/tree/) - systematics resource where 
+  clades are maintained by taxonomic experts. Hence, topology is based on the judgment
+  of expert individuals.
+- [Angiosperm Phylogeny working Group (APG)](http://www.mobot.org/MOBOT/research/APweb/) -
+  community effort to release classifications (now at version IV) of flowering plants on 
+  the basis of phylogenetic systematics.
+- [Open Tree of Life](https://tree.opentreeoflife.org) - open source project to develop
+  an infrastructure for building supertree-like phylogenetic estimates.
+
+![](lecture1/opentree.jpg)
 
 Phylomatic
 ----------
