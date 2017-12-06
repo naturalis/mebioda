@@ -64,6 +64,14 @@ doi:[10.1038/nature12872](http://doi.org/10.1038/nature12872)
 - Combined with trait and ecological data
 - Reported result: certain traits allowed plants to colonize freezing environments
 
+Large, ongoing, phylogenetic projects
+-------------------------------------
+
+- Molecular biodiversity projects: SILVA, UNITE, GreenGenes
+- Tree of Life Web project
+- Open Tree of Life
+- APG III/IV
+
 Phylomatic
 ----------
 
