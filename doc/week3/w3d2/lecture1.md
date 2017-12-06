@@ -9,7 +9,7 @@ Large phylogenies in biodiversity
 Why care about large phylogenies outside systematics?
 -----------------------------------------------------
 
-![](ltt.png)
+![](lecture1/ltt.png)
 
 - The distribution of splits on a tree says something about diversification 
   processes (example: LTT plot in context of GMYC species delimitation)
@@ -21,20 +21,35 @@ Why care about large phylogenies outside systematics?
   characteristics cannot be analyzed as independent observations: we have to 
   consider phylogeny as a source of covariation
 
-Large, _ad hoc_ phylogenies
----------------------------
+Large, _ad hoc_ phylogenies: Mammals
+------------------------------------
 
 **ORP Bininda-Emonds, et al.** 2007. The delayed rise of present-day mammals.
 _Nature_ **446**: 507–512 
 doi:[10.1038/nature05634](http://doi.org/10.1038/nature05634)
 
-![](mammals.jpg)
+![](lecture1/mammals.jpg)
 
 - Constructed by combining many, smaller input trees into a consensus-like 
   ("supertree") method
 - Time-calibrated using molecules and fossils
 - Reported result: mammals started diversifying earlier than thought
 - Tree cited and re-used many times
+
+Large, _ad hoc_ phylogenies: Birds
+----------------------------------
+
+**W Jetz, et al.** 2012. The global diversity of birds in space and time.
+_Nature_ **491**: 444–448
+doi:[10.1038/nature11631](http://doi.org/10.1038/nature11631)
+
+![](lecture1/birds.jpg)
+
+- Constructed mostly on the basis of molecular data
+- Time-calibrated using relaxed molecular clocks
+- Reported result: bird diversification rates increased 50MYA
+- Tree cited and re-used many times, thanks to the accompanying data 
+  resource [birdtree.org](https://birdtree.org/)
 
 Phylomatic
 ----------
