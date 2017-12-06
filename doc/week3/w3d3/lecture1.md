@@ -286,15 +286,3 @@ Likelihood
 Here is a [tutorial](https://www.r-phylo.org/wiki/HowTo/InferringModelsForDiscreteData)
 that applies these concepts using the R package 
 [geiger](https://cran.r-project.org/web/packages/geiger/index.html).
-
-Bayesian
---------
-
-_"Bayesian statistics is a mathematical procedure that applies probabilities to 
-statistical problems. It provides people the tools to update their beliefs in the 
-evidence of new data."_
-
-
-
-Ornstein-Uhlenbeck models
--------------------------
