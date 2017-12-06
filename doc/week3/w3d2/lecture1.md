@@ -51,6 +51,47 @@ doi:[10.1038/nature11631](http://doi.org/10.1038/nature11631)
 - Tree cited and re-used many times, thanks to the accompanying data 
   resource [birdtree.org](https://birdtree.org/)
 
+Large, _ad hoc_ phylogenies: Plants
+-----------------------------------
+
+**AE Zanne, et al.** 2014. Three keys to the radiation of angiosperms into freezing 
+environments. _Nature_ **506**: 89–92
+doi:[10.1038/nature12872](http://doi.org/10.1038/nature12872)
+
+![](lecture1/plants.jpg)
+
+- Constructed using molecular data
+- Combined with trait and ecological data
+- Reported result: certain traits allowed plants to colonize freezing environments
+
+Large, ongoing, phylogenetic projects
+-------------------------------------
+
+Apart from these _ad hoc_ projects where a tree was published once, there are ongoing
+initiatives to periodically release estimates of phylogeny for a given taxonomic group
+and/or marker.
+
+**Examples from molecular biodiversity:**
+
+- [SILVA](https://www.arb-silva.de/) - curated datasets of aligned small (16S/18S, SSU) 
+  and large subunit (23S/28S, LSU) ribosomal RNA (rRNA) sequences for all three domains 
+  of life (Bacteria, Archaea and Eukarya).
+- [GreenGenes](http://greengenes.secondgenome.com/) - curated database of small (16S) 
+  subunit ribosomal near-full length sequences from the kingdoms Bacteria and Archaea.
+
+**Examples of species tree initiatives:**
+
+- [Tree of Life Web project](http://tolweb.org/tree/) - systematics resource where 
+  clades are maintained by taxonomic experts. Hence, topology is based on the judgment
+  of expert individuals.
+- [Angiosperm Phylogeny working Group (APG)](http://www.mobot.org/MOBOT/research/APweb/) -
+  community effort to release classifications (now at version IV) of flowering plants on 
+  the basis of phylogenetic systematics.
+- [Open Tree of Life](https://tree.opentreeoflife.org) - open source project to develop
+  an infrastructure for building supertree-like phylogenetic estimates.
+
+![](lecture1/opentree.jpg)
+
 Phylomatic
 ----------
 
