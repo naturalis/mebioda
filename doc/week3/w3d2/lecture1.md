@@ -121,7 +121,7 @@ from different data sources. Therefore, numerous data resources have APIs that a
 | Source                                        | Docs |
 |-----------------------------------------------|------|
 | Encylopedia of Life                           | http://www.eol.org/api/ |
-| Taxonomic Name Resolution Service             | http://api.phylotastic.org/tnrs |
+| Taxonomic Name Resolution Service             | http://www.taxosaurus.org/ |
 | Integrated Taxonomic Information Service      | http://www.itis.gov/ws%5Fdescription.html |
 | Global Names Resolver                         | http://resolver.globalnames.org/api |
 | Global Names Index                            | https://github.com/dimus/gni/wiki/api |
