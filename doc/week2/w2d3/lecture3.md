@@ -188,5 +188,5 @@ Exercise: contributing to the course repository
 
 > 1. Make an account on github.com if you don't have one already
 > 2. Fork the `naturalis/mebioda` repository (top-right button) to your own account
-> 3. In your own copy, go to the folder `<user name>/mebioda/data/<student number>` and upload your ENM results
+> 3. In your own copy, go to the folder `<user name>/mebioda/data/<student number>` and upload your SDM results
 > 4. Create a "pull request" so that your results (in your own repository) are submitted upstream to the course repository
