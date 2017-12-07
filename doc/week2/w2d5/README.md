@@ -6,7 +6,8 @@ Species distribution modelling (SDM)
 - [SDM Manual](Manual_Raes_SDM.zip) - A Zip archive containing Word documents with 
   general guides for doing SDM
 - [Exercise: Model habitat suitability under present and future climate conditions](SDM_Workshop_LeidenUni_08_12_17.pdf) - 
-  A PDF file with instructions for the SDM assignment
+  A PDF file with instructions for the SDM assignment. **See also:** 
+  [instructions for submitting your results](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository)
 - [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and MAXENT 
   analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm)
 
