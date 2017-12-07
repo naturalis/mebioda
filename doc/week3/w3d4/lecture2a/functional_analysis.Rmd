@@ -1,8 +1,8 @@
 Functional trait analysis methods
 =================================
 
-Pairwise distance in "trait space"
-----------------------------------
+Dummy trait data
+----------------
 
 Consider the following trait data (equivalent file [here](traits.tsv)):
 
@@ -24,7 +24,10 @@ Consider the following trait data (equivalent file [here](traits.tsv)):
 - some are binary, e.g. presence/absence (`bin1`, `bin2`)
 - most of them have some missing values (`NA`)
 
-Let's read these data and compute the Gower distance between the species.
+Pairwise distances in "trait space"
+-----------------------------------
+
+Let's read the trait data and compute the "Gower distance"" between the species.
 `FD::gowdis` computes the Gower (1971) similarity coefficient exactly as
 described by Podani (1999), then converts it to a dissimilarity coefficient
 by using D = 1 - S. It integrates variable weights as described by

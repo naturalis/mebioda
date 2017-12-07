@@ -73,6 +73,36 @@ doi:[10.1111/j.0030-1299.2005.13886.x](http://doi.org/10.1111/j.0030-1299.2005.1
 - Similarly, functional evenness can decrease without a change in functional richness if 
   the amount of niche space filled is unchanged (going from B to C).
   
+Functional dispersion
+---------------------
+
+**E Laliberté & P Legendre**, 2010. A distance-based framework for measuring functional 
+diversity from multiple traits. _Ecology_ **91**:299-305
+doi:[10.1890/08-2244.1](http://doi.org/10.1890/08-2244.1)
+
+_An example showing how functional dispersion (FDis) is computed._
+
+![](functional-dispersion.png)
+
+- The _n_ individual species in a two-dimensional trait space are represented by black 
+  circles whose sizes are proportional to their abundances. 
+- Vector **x**<sub>_j_</sub> represents the position of species _j_, 
+- Vector **c** is the centroid of the _n_ species (white square) 
+- _z_<sub>_j_</sub> is the distance of species j to centroid **c** 
+- _a<sub>j</sub>_ is the abundance of species _j_ 
+
+**Panel (a)**
+- All species have equal abundances (i.e., presence–absence data). In that 
+  case, **c** = [_c<sub>i</sub>_], where _c<sub>i</sub>_ is the mean value of trait _i_
+- FDis is the mean of distances _z_ of individual species to **c**. 
+
+**Panel (b)**
+- Species have different abundances. In that case, the position of c is 
+  weighted by the species relative abundances, such that it shifts toward the more 
+  abundant species. 
+- Individual distances _z_ of species to **c** are weighted by their relative abundances 
+  to compute FDis.
+
 Functional turnover between communities
 ---------------------------------------
 
