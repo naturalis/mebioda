@@ -1,0 +1,68 @@
+Functional trait analysis methods
+=================================
+
+Pairwise distance in "trait space"
+----------------------------------
+
+Consider the following trait data (equivalent file [here](traits.tsv)):
+
+|     | num1 | num2 | fac1 | fac2 | ord1 | ord2 | bin1 | bin2 |
+|-----|------|------|------|------|------|------|------|------|
+| sp1 | 9    | 4.5  | A    | X    | 3    | 2    | 0    | 1    |
+| sp2 | 8.1  | 6    | A    | Z    | NA   | 1    | 0    | 1    |
+| sp3 | NA   | 2.3  | C    | Y    | 5    | 3    | 1    | 1    |
+| sp4 | 3.2  | 5.4  | B    | Z    | 1    | 7    | 0    | 0    |
+| sp5 | 5.8  | 1.2  | C    | X    | 2    | 6    | NA   | 0    |
+| sp6 | 3.4  | 8.5  | C    | Y    | 2    | 1    | 1    | 1    |
+| sp7 | 7.5  | 2.1  | B    | X    | 3    | 2    | 1    | 0    |
+| sp8 | 4.3  | 6.5  | NA   | Z    | 1    | 3    | 0    | 1    |
+
+- 8 species (rows, sp1 .. sp8), 8 traits (columns)
+- some traits are continuous numerical values (`num1`, `num2`)
+- some are factors (`fac1`, `fac2`)
+- some are ordinal, i.e. (ranked) integers (`ord1`, `ord2`)
+- some are binary, e.g. presence/absence (`bin1`, `bin2`)
+- most of them have some missing values (`NA`)
+
+Let's read these data and compute the Gower distance between the species.
+`FD::gowdis` computes the Gower (1971) similarity coefficient exactly as
+described by Podani (1999), then converts it to a dissimilarity coefficient
+by using D = 1 - S. It integrates variable weights as described by
+Legendre and Legendre (1998).
+
+```{r gowdis}
+library(FD)
+traits <- read.csv2("traits.tsv", header = T, sep = "\t", row.names = 1 )
+gdist <- gowdis(traits)
+gdist
+```
+
+Functional dispersion
+---------------------
+
+Likewise, here are the abundances for the species (file [here](abundances.tsv)):
+
+|      | sp1 | sp2 | sp3 | sp4 | sp5 | sp6 | sp7 | sp8 |
+|------|-----|-----|-----|-----|-----|-----|-----|-----|
+| com1 | 1   | 1   | 0   | 0   | 4   | 2   | 0   | 0   |
+| com2 | 0   | 0   | 0   | 2   | 1   | 0   | 0   | 5   |
+| com3 | 2   | 0   | 0   | 0   | 0   | 1   | 0   | 3   |
+| com4 | 1   | 0   | 7   | 0   | 0   | 0   | 0   | 0   |
+| com5 | 0   | 0   | 2   | 3   | 3   | 0   | 0   | 0   |
+| com6 | 0   | 3   | 0   | 0   | 5   | 6   | 1   | 6   |
+| com7 | 3   | 5   | 0   | 3   | 0   | 0   | 0   | 0   |
+| com8 | 0   | 0   | 0   | 0   | 6   | 2   | 1   | 2   |
+| com9 | 4   | 1   | 1   | 3   | 0   | 0   | 2   | 0   |
+
+
+
+
+References
+----------
+
+- **JC Gower**, 1971. A general coefficient of similarity and some of its properties. _Biometrics_ **27**:857-871
+- **E Laliberté & P Legendre**, 2010. A distance-based framework for measuring functional diversity from multiple 
+  traits. _Ecology_ **91299**:305.
+- **P Legendre & L Legendre**, 1998. _Numerical Ecology_. 2nd English edition. Amsterdam: Elsevier.
+- **J Podani**, 1999. Extending Gower's general coefficient of similarity to ordinal characters. _Taxon_ **48**:331-340.
+
