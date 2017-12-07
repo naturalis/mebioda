@@ -80,7 +80,8 @@ Functional dispersion
 diversity from multiple traits. _Ecology_ **91**:299-305
 doi:[10.1890/08-2244.1](http://doi.org/10.1890/08-2244.1)
 
-_An example showing how functional dispersion (FDis) is computed._
+_An example showing how the functional dispersion (FDis), i.e. the functional "spread" of
+species, is computed._
 
 ![](functional-dispersion.png)
 

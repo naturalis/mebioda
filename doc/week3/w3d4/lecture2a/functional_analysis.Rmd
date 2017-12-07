@@ -40,8 +40,17 @@ gdist <- gowdis(traits)
 gdist
 ```
 
+This gives us a pairwise, symmetrical (i.e. triangular) distance matrix, which
+might be used, for example, to cluster species by functional similarity:
+
+```{r cluster}
+plot(nj(gdist), type = "unrooted")
+```
+
 Functional dispersion
 ---------------------
+
+Now let's have a look at the `FDis`.
 
 Likewise, here are the abundances for the species (file [here](abundances.tsv)):
 
