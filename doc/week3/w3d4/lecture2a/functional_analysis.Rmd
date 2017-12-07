@@ -50,9 +50,8 @@ plot(nj(gdist), type = "unrooted")
 Functional dispersion
 ---------------------
 
-Now let's have a look at the `FDis`.
-
-Likewise, here are the abundances for the species (file [here](abundances.tsv)):
+Now let's have a look at the functional dispersion. As we saw, `FDis` takes abundances into
+account. Consider these abundance data (file [here](abundances.tsv)):
 
 |      | sp1 | sp2 | sp3 | sp4 | sp5 | sp6 | sp7 | sp8 |
 |------|-----|-----|-----|-----|-----|-----|-----|-----|
@@ -66,8 +65,14 @@ Likewise, here are the abundances for the species (file [here](abundances.tsv)):
 | com8 | 0   | 0   | 0   | 0   | 6   | 2   | 1   | 2   |
 | com9 | 4   | 1   | 1   | 3   | 0   | 0   | 2   | 0   |
 
+If we read the abundance data and compute `fdisp` we get estimates for the functional
+dispersion of the various communities:
 
-
+```{r fdisp}
+abundances <- read.csv2("abundances.tsv", header = T, sep = "\t", row.names = 1 )
+dispersion <- fdisp(gdist,as.matrix(abundances))
+dispersion
+```
 
 References
 ----------
