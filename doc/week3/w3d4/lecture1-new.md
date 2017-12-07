@@ -99,7 +99,7 @@ analyses of species turnover alone could provide erroneous ecological inferences
   expected if one were to randomly pull three strategies from trait pool. This might be 
   seen if an underlying environmental gradient determines species turnover and community 
   assembly. 
-- **Community A** and **community C** share no functional strategies, but the functional 
+- **Community A** and **community C** share some functional strategies, but the functional 
   turnover is indistinguishable from a random pull of three functional strategies from 
   the trait pool. This would be expected under a stochastic model of species turnover and 
   community assembly. 
