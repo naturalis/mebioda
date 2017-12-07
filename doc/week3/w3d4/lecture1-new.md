@@ -140,13 +140,3 @@ analyses of species turnover alone could provide erroneous ecological inferences
   functional turnover than expected given a random pull of three strategies from the 
   trait pool. This would be expected where dispersal is limited but community assembly is 
   deterministic with respect to the environment. 
-
-Functional trait analysis methods
-=================================
-
-
-Functional trait data
-=====================
-
-- trait databases
-- semantics of traits
