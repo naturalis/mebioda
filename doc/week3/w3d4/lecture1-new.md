@@ -76,6 +76,8 @@ doi:[10.1111/j.0030-1299.2005.13886.x](http://doi.org/10.1111/j.0030-1299.2005.1
 Functional turnover between communities
 ---------------------------------------
 
+> What are α, β, and γ diversity in this context?
+
 **NG Swenson, et al.,** 2011. Deterministic tropical tree community turnover: evidence 
 from patterns of functional beta diversity along an elevational gradient.
 _Proc. R. Soc. B_ **278**(1707):877-884 
