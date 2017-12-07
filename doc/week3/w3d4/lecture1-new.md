@@ -1,6 +1,13 @@
 Functional diversity
 ====================
 
+Functional trait example: Leaf Area Index
+-----------------------------------------
+
+![](lai.jpg)
+
+![](lai.gif)
+
 Characters versus traits
 ------------------------
 
