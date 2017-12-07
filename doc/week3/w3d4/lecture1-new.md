@@ -32,6 +32,9 @@ Phylogenetic conservatism
 Niche conservatism
 ------------------
 
+> What is a "niche"? What's the difference between _potential_ and _realized_ niche? What
+> processes maintain the dimensions of a species' niche?
+
 **JJ Wiens et al.,** 2010. Niche conservatism as an emerging principle in ecology and 
 conservation biology. _Ecology Letters_ **13**(10): 1310–1324
 doi:[10.1111/j.1461-0248.2010.01515.x](http://doi.org/10.1111/j.1461-0248.2010.01515.x)
@@ -41,9 +44,6 @@ doi:[10.1111/j.1461-0248.2010.01515.x](http://doi.org/10.1111/j.1461-0248.2010.0
 Whereas characters are selected based on the general assumption that evolutionary change
 is inherently rare (i.e. "maximum parsimony"), conservatism in functional traits related
 to the niche is thought to be actively maintained by natural selection.
-
-> What is a "niche"? What's the difference between _potential_ and _realized_ niche? What
-> processes maintain the dimensions of a species' niche?
 
 Functional diversity of communities
 -----------------------------------
