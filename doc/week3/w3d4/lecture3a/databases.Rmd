@@ -59,7 +59,12 @@ accepted_names <- tnrs(query = species, source = "iPlant_TNRS")
 accepted_names$acceptedname
 ```
 
-(It turns out that all the names are matched precisely.)
+It turns out that all the names are matched precisely. Let's create a data frame in which we will collect trait data
+for our crops from a variety of databases:
+
+```{r frame}
+results <- data.frame( row.names = species )
+```
 
 Trait databases accessible through GioBo/TR8
 --------------------------------------------
@@ -94,7 +99,13 @@ library(TR8)
 # Alternatively, by providing the gui_config = T argument we can launch a graphical 
 # interface that allows us to select traits of interest.
 traits_tr8 <- tr8(accepted_names$acceptedname, download_list = available_tr8$short_code)
-write.csv(traits_tr8@results, file = "traits_tr8.csv")
+
+# Copy the returned traits over to the results data frame
+for ( trait in colnames(traits_tr8@results) ) {
+  for ( spec in species ) {
+    results[ spec, trait ] <- traits_tr8@results[ spec, trait ]
+  }
+}
 ```
 
 Trait databases accessible through rOpenSci/traits
