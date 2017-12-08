@@ -106,7 +106,6 @@ databases:
 
 * [Encyclopedia of Life Traitbank](http://eol.org/info/516)<sup>*</sup>
 * [LEDA Traitbase](http://www.leda-traitbase.org/LEDAportal/)<sup>*</sup>
-* [Euro+Med Plantbase](http://rbg-web2.rbge.org.uk/FE/fe.html)<sup>*</sup>
 * [USDA Plants Database](https://plants.usda.gov/java/)<sup>*</sup>
 * [Zanne et al. plant dataset](http://dx.doi.org/10.1038/nature12872)<sup>*</sup>
 * [BETYdb](http://www.betydb.org)
@@ -120,7 +119,27 @@ Let's fetch data from **EoL**, **LEDA** (to compare with TR8), **Euro+Med**, **U
 and **Zanne et al.** using the `traits` package:
 
 ```{r traits}
+library(traits)
+library(taxize)
 
+# For EoL traitbank data we need to provide the EoL taxon ID as input parameter. Hence,
+# we first need to do a TNRS lookup of these, as follows:
+sources <- gnr_datasources()
+eol_id <- sources[sources$title == "EOL", "id"]
+eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all")
+
+# We then iterate over the list of species, lookup the EoL taxon ID for that species
+# and fetch its traits
+for (sp in species) {
+  eol_taxon_id <- unique(eol_tnrs[eol_tnrs$user_supplied_name == sp,]$local_id)
+  eol_traits <- traitbank(eol_taxon_id)
+}
+
+# For LEDA, see traits::leda(trait = "...")
+
+# For USDA, see traits::tr_usda()
+
+# For Zanne, see traits::tr_zanne()
 ```
 
 The bmaitner/RBIEN package
