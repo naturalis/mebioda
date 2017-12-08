@@ -34,15 +34,9 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Leon + Maarten
 - Practical: Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.
 
-### Day 5 - (Spatial) Data output
+### [Day 5 - (Spatial) Data output](w2d5)
 
 - Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
 - Lecture II: Principles of SDM - Niels
 - Lecture III: Future projections, climate models, introduction to SDM practical - Leon
 - Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Leon Marshall
-- Reporting requirements:
-1. a 2-3 page report on a selected species
-2. screendumps of distribution 
-3. screendumps of selected variables
-4. response to future scenario
-5. biological interpretation
