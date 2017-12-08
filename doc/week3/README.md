@@ -27,12 +27,12 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 4 - Trait data and analysis
 
-- Lecture I: [Introduction](w3d4/lecture1.md) to traits. Trait databases, especially 
+- Lecture I: [Introduction](w3d4/lecture1-new.md) to traits. 
+- Lecture II: <!-- [Traits in space and time](w3d4/lecture2.md) --> [Trait analysis](lecture2a/functional_analysis.Rmd)
+- Lecture III: <!-- [Trait covariation and optimization](w3d4/lecture3.md) --> Trait databases, especially 
   [BIEN](https://github.com/naturalis/RBIEN/tree/master/tutorials), but also 
   [EoL trait bank](http://eol.org/info/516), 
   [TRY](https://www.try-db.org/TryWeb/Home.php)
-- Lecture II: [Traits in space and time](w3d4/lecture2.md)
-- Lecture III: [Trait covariation and optimization](w3d4/lecture3.md)
 - Practical: Collect trait data for your study organism
 
 ### Day 5 - Functional and character diversity
