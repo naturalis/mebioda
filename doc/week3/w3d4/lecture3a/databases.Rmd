@@ -91,7 +91,6 @@ Let's fetch data using the `TR8` package and copy it over to the `results` data 
 ```{r tr8}
 # installation instructions: https://github.com/GioBo/TR8/blob/master/README.md
 library(devtools)
-dev_mode(on=T)
 library(TR8)
 
 # The dataframe named available_tr8 lists the short codes and descriptions of the traits
@@ -102,8 +101,26 @@ traits_tr8 <- tr8(accepted_names$acceptedname, download_list = available_tr8$sho
 
 # Copy the returned traits over to the results data frame
 for ( trait in colnames(traits_tr8@results) ) {
-  for ( spec in species ) {
-    results[ spec, trait ] <- traits_tr8@results[ spec, trait ]
+  for ( sp in species ) {
+    results[ sp, trait ] <- traits_tr8@results[ sp, trait ]
+  }
+}
+```
+
+The bmaitner/RBIEN package
+--------------------------
+
+The R package [RBIEN](https://github.com/bmaitner/RBIEN) fetches trait data
+from the [botanical information and ecology network](http://bien.nceas.ucsb.edu/bien/),
+which we also query for crop plant traits.
+
+```{r bien}
+library(BIEN)
+library(dplyr)
+traits_bien <- BIEN_trait_species(species)
+for ( sp in species ) {
+  for ( trait in unique(traits_bien$trait_name) ) {
+    results[ sp, trait ] <- first( filter( traits_bien, scrubbed_species_binomial == sp & trait_name == trait )$trait_value )
   }
 }
 ```
@@ -126,30 +143,14 @@ databases:
 
 <sup>*</sup>Probably has plant traits globally
 
-Let's fetch data from **EoL**, **LEDA** (to compare with TR8), **Euro+Med**, **USDA**
-and **Zanne et al.** using the `traits` package:
+Let's fetch data from **LEDA** (to compare with TR8), **USDA**, **Zanne et al.**, 
+and **EoL**, using the `traits` package.
 
-```{r traits}
+Starting with **LEDA**, the trait names listed here are all of the traits available in the database. 
+Because queries into LEDA require a trait name to look for, we have to hard code them here.
+
+```{r leda}
 library(traits)
-library(taxize)
-
-# For EoL traitbank data we need to provide the EoL taxon ID as input parameter. Hence,
-# we first need to do a TNRS lookup of these, as follows:
-sources <- gnr_datasources()
-eol_id <- sources[sources$title == "EOL", "id"]
-eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all")
-
-# We then iterate over the list of species, lookup the EoL taxon ID for that species
-# and fetch its traits, which we again copy over to the results frame
-for (sp in species) {
-  eol_taxon_id <- eol_tnrs[eol_tnrs$matched_name == sp,]$local_id
-  eol_traits <- traitbank(eol_taxon_id)
-  for ( trait in eol_traits[["graph"]]$predicate ) {
-    results[ sp, trait ] <- ( eol_traits[["graph"]][ eol_traits[["graph"]]$predicate == trait, ]$value )[1]
-  }
-}
-
-# For LEDA, see traits::leda(trait = "...")
 leda_traits <- c(
   "age_first_flowering", 
   "branching", 
@@ -176,12 +177,19 @@ leda_traits <- c(
   "clonal_growth_organs"
 )
 
-leda_out <- list()
-for (i in seq_along(leda_traits)) {
-  cat(leda_traits[i], sep="\n")
-  leda_out[[i]] <- leda(leda_traits[i])
+for (trait in leda_traits) {
+  leda_record <- leda(trait)
+  for ( sp in species ) {
+    value <- first(filter(leda_record, sbs_name == sp)[[trait]])
+    if ( is.null(value) ) {
+      results[sp, trait] <- NA
+    }
+    else {
+      results[sp, trait] <- value
+    }
+  }
 }
-sapply(leda_out, NROW)
+```
 
 # For USDA, see traits::tr_usda()
 # 1. iterate over species
@@ -192,16 +200,22 @@ sapply(leda_out, NROW)
 # 1. traits_zanne <- tr_zanne()
 # 2. traits_zanne[["woodiness"]][ traits_zanne[["woodiness"]]$gs == 'Zea mays', ]
 # 3. traits: `woodiness`, `freezing`, `leaf_phenology`
+
+```{r eol}
+# For EoL traitbank data we need to provide the EoL taxon ID as input parameter. Hence,
+# we first need to do a TNRS lookup of these, as follows:
+sources <- gnr_datasources()
+eol_id <- sources[sources$title == "EOL", "id"]
+eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all")
+
+# We then iterate over the list of species, lookup the EoL taxon ID for that species
+# and fetch its traits, which we again copy over to the results frame
+for (sp in species) {
+  eol_taxon_id <- eol_tnrs[eol_tnrs$matched_name == sp,]$local_id
+  eol_traits <- traitbank(eol_taxon_id)
+  for ( trait in eol_traits[["graph"]]$predicate ) {
+    results[ sp, trait ] <- ( eol_traits[["graph"]][ eol_traits[["graph"]]$predicate == trait, ]$value )[1]
+  }
+}
 ```
 
-The bmaitner/RBIEN package
---------------------------
-
-The R package [RBIEN](https://github.com/bmaitner/RBIEN) fetches trait data
-from the [botanical information and ecology network](http://bien.nceas.ucsb.edu/bien/),
-which we also query for crop plant traits.
-
-```{r bien}
-library(BIEN)
-traits_bien <- BIEN_trait_species(species)
-```
