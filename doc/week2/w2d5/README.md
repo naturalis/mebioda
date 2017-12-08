@@ -4,7 +4,7 @@ Species distribution modelling (SDM)
 The SDM practical
 -----------------
 
-- [Instructions for the practical]((SDM_Workshop_MethodsBiodiversity_08_12_17.pdf)
+- [Instructions for the practical](SDM_Workshop_MethodsBiodiversity_08_12_17.pdf)
 - [Instructions for submitting your results](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository)
 - [R script for clipping and variable selection](RScript_SDM_Workshop_VariableSelection_Clipping.R)
 
