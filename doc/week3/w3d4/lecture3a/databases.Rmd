@@ -86,7 +86,7 @@ from the following databases:
 
 <sup>*</sup>Probably has plant traits globally
 
-Let's fetch data from **LEDA** and **PLANTS** using the `TR8` package:
+Let's fetch data using the `TR8` package and copy it over to the `results` data frame:
 
 ```{r tr8}
 # installation instructions: https://github.com/GioBo/TR8/blob/master/README.md
@@ -140,10 +140,13 @@ eol_id <- sources[sources$title == "EOL", "id"]
 eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all")
 
 # We then iterate over the list of species, lookup the EoL taxon ID for that species
-# and fetch its traits
+# and fetch its traits, which we again copy over to the results frame
 for (sp in species) {
-  eol_taxon_id <- unique(eol_tnrs[eol_tnrs$user_supplied_name == sp,]$local_id)
+  eol_taxon_id <- eol_tnrs[eol_tnrs$matched_name == sp,]$local_id
   eol_traits <- traitbank(eol_taxon_id)
+  for ( trait in eol_traits[["graph"]]$predicate ) {
+    results[ sp, trait ] <- ( eol_traits[["graph"]][ eol_traits[["graph"]]$predicate == trait, ]$value )[1]
+  }
 }
 
 # For LEDA, see traits::leda(trait = "...")
