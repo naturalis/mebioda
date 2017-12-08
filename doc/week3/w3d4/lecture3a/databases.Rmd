@@ -136,10 +136,48 @@ for (sp in species) {
 }
 
 # For LEDA, see traits::leda(trait = "...")
+leda_traits <- c(
+  "age_first_flowering", 
+  "branching", 
+  "buds_seasonality",
+  "buds_vertical_dist", 
+  "canopy_height",
+  "dispersal_type", 
+  "leaf_distribution", 
+  "ldmc_geo", 
+  "leaf_mass",
+  "leaf_size", 
+  "morphology_disperal", 
+  "growth_form", 
+  "life_span",
+  "releasing_height", 
+  "seed_longevity", 
+  "seed_mass",
+  "seed_number", 
+  "seed_shape", 
+  "shoot_growth_form",
+  "snp", 
+  "ssd", 
+  "tv", 
+  "clonal_growth_organs"
+)
+
+leda_out <- list()
+for (i in seq_along(leda_traits)) {
+  cat(leda_traits[i], sep="\n")
+  leda_out[[i]] <- leda(leda_traits[i])
+}
+sapply(leda_out, NROW)
 
 # For USDA, see traits::tr_usda()
+# 1. iterate over species
+# 2. per species, fetch data: `tr_usda(query = list(genus = "Oryza", species = "sativa"))`
+# 3. potentially of interest: `Duration`, `Growth_Habit`, ...
 
-# For Zanne, see traits::tr_zanne()
+# For Zanne, see traits::tr_zanne(), e.g.:
+# 1. traits_zanne <- tr_zanne()
+# 2. traits_zanne[["woodiness"]][ traits_zanne[["woodiness"]]$gs == 'Zea mays', ]
+# 3. traits: `woodiness`, `freezing`, `leaf_phenology`
 ```
 
 The bmaitner/RBIEN package
