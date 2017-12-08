@@ -32,7 +32,9 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture III: <!-- [Trait covariation and optimization](w3d4/lecture3.md) --> Trait databases, especially 
   [BIEN](https://github.com/naturalis/RBIEN/tree/master/tutorials), but also 
   [EoL trait bank](http://eol.org/info/516), 
-  [TRY](https://www.try-db.org/TryWeb/Home.php)
+  [TRY](https://www.try-db.org/TryWeb/Home.php),
+  using [web services](https://github.com/GioBo/TR8),
+  with attention to semantics
 - Practical: Collect trait data for your study organism
 
 ### Day 5 - Functional and character diversity
