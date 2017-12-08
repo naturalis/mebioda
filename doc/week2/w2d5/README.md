@@ -12,7 +12,7 @@ Lecture slides
 --------------
 
 - [SDM and its suite of applications](Principles_SDM_Raes_2017.pptx) - Niels Raes
-- [Practical uses of SDM: Forecasting](Presentation_SDM_Forecasting_Leon Marshall_08_12_17.pptx) - Leon Marshall
+- [Practical uses of SDM: Forecasting](Presentation_SDM_Forecasting_Leon_Marshall_08_12_17.pptx) - Leon Marshall
 
 Background reading
 ------------------
