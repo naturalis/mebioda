@@ -9,7 +9,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture II: [Data carpentry](http://www.datacarpentry.org/R-ecology-lesson/)
 - Lecture III: Data carpentry (cont.)
 - Practical: [RMarkdown](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/First_RMarkdown_Document.Rmd), [Phylogenies in R (part 1)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture1/Introduction_phylo.Rmd),
-[Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.rmd)
+[Phylogenies in R (part 2)](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture2/PhylogeneticTree.Rmd)
 
 ### Day 2 - Topological analysis
 
