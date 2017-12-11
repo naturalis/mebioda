@@ -84,8 +84,9 @@ Post-simulation analysis
 
 ![](lecture/fig2.png)
 
-- NEXUS files produced by MeSA were then manipulated in R to compute I<sub>c</sub> values
-  using the function `colless` for each tree in a time series and treatment
+- [NEXUS](../../week1/w1d5/lecture1.md) files produced by MeSA were then manipulated in 
+  R to compute I<sub>c</sub> values using the function `colless` for each tree in a time 
+  series and treatment
   [MESA_output files](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
 - The treatments were coded as:
   - `RAND` = random extinction 
@@ -119,3 +120,9 @@ Hypothesis tests
 - To test whether the various extinction treatment outcomes differed systematically from 
   the control and pre-treatment reference points,  Dunnett's tests were perfomed, using 
   either pre-treatment or the control treatment as the reference standard.
+
+_"We cannot solely use tree balance metrics to infer past history of mass extinction for 
+a given extant clade’s phylogeny. [...] our results are a further demonstration that as 
+an evolving clade gets further away from a mass extinction event, subsequent evolution 
+can obscure and eventually erase the initial phylogenetic effects caused by the 
+extinction/recovery process."_
