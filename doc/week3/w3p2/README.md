@@ -1,5 +1,30 @@
 Topological analysis
---------------------
+====================
+
+**G-D Yang, P-M Agapow & G Yedi**, 2017. The tree balance signature of mass extinction is 
+erased by continued evolution in clades of constrained size with trait-dependent 
+speciation. _PLoS ONE_ **12**(6): e0179553
+doi:[10.1371/journal.pone.0179553](https://doi.org/10.1371/journal.pone.0179553)
+
+What happens to tree shape metrics over time? Wouldn't signatures such as imbalance or
+"stemminess" eventually be swamped?
+
+![](lecture/fig1.png)
+
+**Change in tree balance at select time points after mass extinction episode in 
+communities of avida digital organisms.**
+- Mass extinction treatments were applied _randomly and instantaneously_ (pulse) or by 
+  _massive environmental change_ over a period of time (press), at strong and weak 
+  intensities.
+- The y-axis is Aldous's β [β<sub>A</sub>] a measure of tree balance applicable to 
+  non-dichotomous trees; a Yule expectation is around zero, while more negative values 
+  indicate trees more imbalanced than this expectation.
+- Data points are averages of 100 replicates ± 2 standard errors. Solid traces are 
+  maximum likelihood estimates of β<sub>A</sub>, dashed traces are 95% confidence 
+  intervals around the calculated β<sub>A</sub> estimates. β<sub>A</sub> values (with 
+  confidence intervals) were determined using a customized version of the 
+  `maxlik.betasplit` function in the R package apTreeshape (courtesy M. Blum).
+
 1. Simulated phylogenies were generated using the software [MESA](http://datadryad.org/resource/doi:10.5061/dryad.sm379/15).
 2. Three mass extinction treatments were employed: 
    - _Random_ = taxa were culled from the tree regardeless of trait value or phylogenetic position. 
