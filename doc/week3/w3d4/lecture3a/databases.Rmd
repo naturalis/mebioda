@@ -5,8 +5,8 @@ date: "8-12-2017"
 output: html_document
 ---
 
-Collecting trait data for our crops
------------------------------------
+Trait data web services and semantic integration
+------------------------------------------------
 
 Numerous smaller and larger databases exist with ecological or functional
 trait data. Many of these databases can be queried directly from within R.
