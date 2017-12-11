@@ -52,6 +52,11 @@ R packages
 - VEGAN
 - TreeSim
 - TreePar
+- molaR
+- geomorph
+- Rvcg
+- Morpho
+- rgl
 
 R communities
 -------------
