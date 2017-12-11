@@ -21,7 +21,7 @@ The Yule process revisited
 Birth/death processes
 ---------------------
 
-![](lecture2/BD-process.png)
+![](lecture2/BD-proces.png)
 
 - In the simplest birth/death processes, an additional parameter determines the 
   probability with which every lineage is to go extinct at any given time.
