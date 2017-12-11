@@ -84,9 +84,9 @@ Post-simulation analysis
 
 ![](lecture/fig2.png)
 
-- [NEXUS](../../week1/w1d5/lecture1.md) files produced by MeSA were then manipulated in 
-  R to compute I<sub>c</sub> values using the function `colless` for each tree in a time 
-  series and treatment
+- [NEXUS](../../week1/w1d5/lecture1.md#the-nexus-format) files produced by MeSA were then 
+  manipulated in R to compute I<sub>c</sub> values using the function `colless` for each 
+  tree in a time series and treatment
   [MESA_output files](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
 - The treatments were coded as:
   - `RAND` = random extinction 
