@@ -102,7 +102,7 @@ traits_tr8 <- tr8(accepted_names$acceptedname, download_list = available_tr8$sho
 # Copy the returned traits over to the results data frame
 for ( trait in colnames(traits_tr8@results) ) {
   for ( sp in species ) {
-    results[ sp, trait ] <- traits_tr8@results[ sp, trait ]
+    results[ sp, paste( 'tr8', trait, sep = ':' ) ] <- traits_tr8@results[ sp, trait ]
   }
 }
 ```
@@ -120,7 +120,8 @@ library(dplyr)
 traits_bien <- BIEN_trait_species(species)
 for ( sp in species ) {
   for ( trait in unique(traits_bien$trait_name) ) {
-    results[ sp, trait ] <- first( filter( traits_bien, scrubbed_species_binomial == sp & trait_name == trait )$trait_value )
+    value <- first( filter( traits_bien, scrubbed_species_binomial == sp & trait_name == trait )$trait_value );
+    results[ sp, paste( 'bien', trait, sep = ':' ) ] <- value
   }
 }
 ```
@@ -181,11 +182,12 @@ for (trait in leda_traits) {
   leda_record <- leda(trait)
   for ( sp in species ) {
     value <- first(filter(leda_record, sbs_name == sp)[[trait]])
+    predicate <- paste( 'leda', trait, sep = ':' )
     if ( is.null(value) ) {
-      results[sp, trait] <- NA
+      results[sp, predicate] <- NA
     }
     else {
-      results[sp, trait] <- value
+      results[sp, predicate] <- value
     }
   }
 }
@@ -201,7 +203,22 @@ for (trait in leda_traits) {
 # 2. traits_zanne[["woodiness"]][ traits_zanne[["woodiness"]]$gs == 'Zea mays', ]
 # 3. traits: `woodiness`, `freezing`, `leaf_phenology`
 
+The Encyclopedia of Life
+------------------------
+
+The [EoL TraitBank](http://eol.org/info/516) can be accessed with the same client packages, but it
+is worth paying attention to how the results are represented:
+
 ```{r eol}
+# EoL's web service sometimes returns an error 500 (server error), so we make
+# a function that we can then wrap inside a try(). Function definition:
+do_query <- function(eol_taxon_id, sp) {
+  eol_traits <- traitbank(eol_taxon_id)
+  for ( trait in unique(eol_traits[["graph"]]$predicate) ) {
+    results[ sp, trait ] <- first( filter( eol_traits[["graph"]], predicate == trait )$value )
+  }
+}
+
 # For EoL traitbank data we need to provide the EoL taxon ID as input parameter. Hence,
 # we first need to do a TNRS lookup of these, as follows:
 sources <- gnr_datasources()
@@ -212,10 +229,7 @@ eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all")
 # and fetch its traits, which we again copy over to the results frame
 for (sp in species) {
   eol_taxon_id <- eol_tnrs[eol_tnrs$matched_name == sp,]$local_id
-  eol_traits <- traitbank(eol_taxon_id)
-  for ( trait in eol_traits[["graph"]]$predicate ) {
-    results[ sp, trait ] <- ( eol_traits[["graph"]][ eol_traits[["graph"]]$predicate == trait, ]$value )[1]
-  }
+  try(do_query(eol_taxon_id, sp))
 }
 ```
 
