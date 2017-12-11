@@ -6,8 +6,10 @@ erased by continued evolution in clades of constrained size with trait-dependent
 speciation. _PLoS ONE_ **12**(6): e0179553
 doi:[10.1371/journal.pone.0179553](https://doi.org/10.1371/journal.pone.0179553)
 
-What happens to the signatures of mass extinctions or radiations (such as imbalance or
-"stemminess")? Wouldn't they eventually be swamped?
+- What happens to the signatures of mass extinctions or radiations (such as imbalance or
+  "stemminess")? 
+- Wouldn't they eventually be swamped?
+- What can we learn from simulation?
 
 Experimental evolution using [Avida](http://avida.devosoft.org/)
 ----------------------------------------------------------------
