@@ -19,6 +19,8 @@ Practicals
 R syntax
 --------
 - [syntax basics](lecture1/base-r.pdf)
+- [data import](lecture1/data-import.pdf)
+- [data transformation](lecture1/data-transformation.pdf)
 - [data wrangling](lecture1/data-wrangling-cheatsheet.pdf)
 - additional [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
 
