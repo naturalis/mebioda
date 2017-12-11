@@ -6,13 +6,27 @@ erased by continued evolution in clades of constrained size with trait-dependent
 speciation. _PLoS ONE_ **12**(6): e0179553
 doi:[10.1371/journal.pone.0179553](https://doi.org/10.1371/journal.pone.0179553)
 
-What happens to tree shape metrics over time? Wouldn't signatures such as imbalance or
-"stemminess" eventually be swamped?
+What happens to the signatures of mass extinctions or radiations (such as imbalance or
+"stemminess")? Wouldn't they eventually be swamped?
+
+Experimental evolution using [Avida](http://avida.devosoft.org/)
+----------------------------------------------------------------
+
+![](lecture/avida.png)
+
+_Avida is a free, open source scientific software platform for conducting and analyzing 
+experiments with self-replicating and evolving computer programs. It provides detailed 
+control over experimental settings and protocols, a large array of measurement tools, 
+and sophisticated methods to analyze and post-process experimental data._
+
+Effect on tree balance of mass extinction
+-----------------------------------------
 
 ![](lecture/fig1.png)
 
 **Change in tree balance at select time points after mass extinction episode in 
 communities of avida digital organisms.**
+
 - Mass extinction treatments were applied _randomly and instantaneously_ (pulse) or by 
   _massive environmental change_ over a period of time (press), at strong and weak 
   intensities.
