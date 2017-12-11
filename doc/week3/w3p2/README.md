@@ -109,6 +109,8 @@ Post-simulation analysis
 Hypothesis tests
 ----------------
 
+![](lecture/fig4.png)
+
 - I<sub>c</sub> values were later rearranged in EXCEL and exported in txt files to be 
   used for the statistical analyses.   
 - The treatments involving a combination of extinction types and intensity were analyzed 
