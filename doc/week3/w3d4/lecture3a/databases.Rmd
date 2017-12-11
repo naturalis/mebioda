@@ -153,29 +153,10 @@ Because queries into LEDA require a trait name to look for, we have to hard code
 ```{r leda}
 library(traits)
 leda_traits <- c(
-  "age_first_flowering", 
-  "branching", 
-  "buds_seasonality",
-  "buds_vertical_dist", 
-  "canopy_height",
-  "dispersal_type", 
-  "leaf_distribution", 
-  "ldmc_geo", 
-  "leaf_mass",
-  "leaf_size", 
-  "morphology_disperal", 
-  "growth_form", 
-  "life_span",
-  "releasing_height", 
-  "seed_longevity", 
-  "seed_mass",
-  "seed_number", 
-  "seed_shape", 
-  "shoot_growth_form",
-  "snp", 
-  "ssd", 
-  "tv", 
-  "clonal_growth_organs"
+  "age_first_flowering", "branching", "buds_seasonality",
+  "buds_vertical_dist", "canopy_height", "dispersal_type", "leaf_distribution", "ldmc_geo", "leaf_mass",
+  "leaf_size", "morphology_disperal", "growth_form", "life_span", "releasing_height", "seed_longevity", 
+  "seed_mass", "seed_number", "seed_shape", "shoot_growth_form", "snp", "ssd", "tv", "clonal_growth_organs"
 )
 
 for (trait in leda_traits) {
@@ -193,15 +174,90 @@ for (trait in leda_traits) {
 }
 ```
 
-# For USDA, see traits::tr_usda()
-# 1. iterate over species
-# 2. per species, fetch data: `tr_usda(query = list(genus = "Oryza", species = "sativa"))`
-# 3. potentially of interest: `Duration`, `Growth_Habit`, ...
+For the plants traits data dump of the US department of agriculture (**USDA**), the way to invoke it
+is by passing the genus and species name as separate arguments. Hence, we will have to split the 
+binomial species names on whitespace and then do the function call:
 
-# For Zanne, see traits::tr_zanne(), e.g.:
-# 1. traits_zanne <- tr_zanne()
-# 2. traits_zanne[["woodiness"]][ traits_zanne[["woodiness"]]$gs == 'Zea mays', ]
-# 3. traits: `woodiness`, `freezing`, `leaf_phenology`
+
+```{r usda}
+
+# The returned results include taxonomic data (i.e. a lot of columns dealing with Linnean classification),
+# cultural use, and "actual" traits. We are only interested in the latter:
+usda_predicates <- c(
+	"Duration", "Growth_Habit", "After_Harvest_Regrowth_Rate", "Bloat", "C_N_Ratio", 
+	"Fall_Conspicuous", "Fire_Resistance", "Flower_Color", "Flower_Conspicuous", 
+	"Foliage_Color", "Foliage_Porosity_Summer", "Foliage_Porosity_Winter", "Foliage_Texture", 
+	"Fruit_Color", "Fruit_Conspicuous", "Growth_Form", "Growth_Rate", 
+	"Height_at_Base_Age_Maximum_feet", "Height_Mature_feet", "Leaf_Retention", "Lifespan", 
+	"Low_Growing_Grass", "Nitrogen_Fixation", "Resprout_Ability", "Shape_and_Orientation", 
+	"Toxicity", "Adapted_to_Coarse_Textured_Soils", "Adapted_to_Medium_Textured_Soils", 
+	"Adapted_to_Fine_Textured_Soils", "Anaerobic_Tolerance", "CaCO_3_Tolerance", 
+	"Cold_Stratification_Required", "Drought_Tolerance", "Fertility_Requirement", 
+	"Fire_Tolerance", "Frost_Free_Days_Minimum", "Hedge_Tolerance", "Moisture_Use", 
+	"pH_Minimum", "pH_Maximum", "Precipitation_Minimum", "Precipitation_Maximum", 
+	"Root_Depth_Minimum_inches", "Salinity_Tolerance", "Shade_Tolerance", 
+	"Temperature_Minimum_F", "Bloom_Period", "Fruit_Seed_Abundance", 
+	"Fruit_Seed_Period_Begin", "Fruit_Seed_Period_End", "Fruit_Seed_Persistence", 
+	"Propogated_by_Bare_Root", "Propogated_by_Bulbs", "Propogated_by_Container", 
+	"Propogated_by_Corms", "Propogated_by_Cuttings", "Propogated_by_Seed", 
+	"Propogated_by_Sod", "Propogated_by_Sprigs", "Propogated_by_Tubers", "Seeds_per_Pound", 
+	"Seed_Spread_Rate", "Seedling_Vigor", "Small_Grain", "Vegetative_Spread_Rate", 
+	"Berry_Nut_Seed_Product", "Palatable_Browse_Animal", "Palatable_Graze_Animal", 
+	"Palatable_Human"
+)
+
+for ( sp in species ) {
+  binomial <- strsplit(sp, " ", fixed = T)
+  
+  # potentially of interest: `Duration`, `Growth_Habit`, ...
+  try(traits_usda <- tr_usda(query = list( genus=binomial[[1]][1], species = binomial[[1]][2] )))
+  for ( pr in usda_predicates ) {
+    val_usda <- traits_usda[["data"]] %>% 
+      select(pr) %>% 
+      filter(pr != "") %>% 
+      unique %>% 
+      first
+    results[ sp, paste("usda",pr,sep=":") ] <- val_usda[[1]][1]
+  }
+}
+
+```
+
+The trait data set of **Zanne et al.** contains only three traits, which we fetch as follows:
+
+```{r zanne}
+traits_zanne <- tr_zanne()
+for ( sp in species ) {
+  
+  # handle 'woodiness'
+  zw <- traits_zanne$woodiness %>% 
+    filter(gs == sp) %>% 
+    select(woodiness) %>%
+    first
+  if (length(zw) > 0) {
+    results[sp, "zanne:woodiness" ] <- zw
+  }
+  
+  # handle 'freezing'
+  zf <- traits_zanne$freezing %>% 
+    filter(species == sp) %>% 
+    select(Freeze.tmin.lo) %>% 
+    first
+  if (length(zf) > 0) {
+    results[sp, "zanne:freezing" ] <- zf
+  }
+  
+  # handle 'leaf_phenology'
+  zp <- traits_zanne$leaf_phenology %>% 
+    filter(Binomial == sp) %>% 
+    select(Phenology) %>% 
+    first
+  if (length(zp) > 0) {
+    results[sp, "zanne:leaf_phenology"] <- zp
+  }
+}
+
+```
 
 The Encyclopedia of Life
 ------------------------
@@ -233,3 +289,12 @@ for (sp in species) {
 }
 ```
 
+Once we have all the traits, we will want to remove the columns with excessive amounts of `NA` missing
+data. In addition, we will want to remove columns where all species have the same values. The logic
+will roughly be:
+
+```{r clean}
+# merge rows for the same taxon (e.g. Musa sp.)
+#length(na.omit(col)) # should be more than 50% of species, for example
+#unique(na.omit(col)) # should be more than 1
+```
