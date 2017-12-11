@@ -21,7 +21,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 3 - Comparative character analysis
 
 - Lecture I: [Comparative analysis intro](w3d3/lecture1.md)
-- Lecture II: [Three dimensional analysis of morphological characters] (Aidan Couzens)(https://github.com/naturalis/mebioda/tree/master/doc/week3/Data_A_Couzens_lecture)
+- Lecture II: [Three dimensional analysis of morphological characters (Aidan Couzens)] (https://github.com/naturalis/mebioda/tree/master/doc/week3/Data_A_Couzens_lecture)
 - Lecture III: Character data mining and representation (Jeremy Miller)
 - Practical: [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) and [Ornstein-Uhlenbeck models](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture5/OUModels.Rmd)
 
