@@ -6,26 +6,26 @@ output: word_document
 ---
 Simulated phylogenies were generated with the software MESA, using trait-biased and heritable speciation probabilities. At a particular point of the simulation a user-specified fraction of terminal taxa were culled from the tree. 
 Three mass extintion treatments were employed: 
-Random = taxa were culled from the tree regardeless of trait value or phylogenetic position
-Selective-on-diversifiers = taxa culled from the tree had the lowes trait value and highest speciation rates.
-Selective-on-relicts = those taxa with highest trait value and lowest speciation rates were culled preferentally. 
-each of the treatments occurred at intensity 90%, 0.75% and 0.5%of all the extant taxa in the tree. Following mass extintion, trees recovered continued to evolve according to the same rules applied before the extintion event. 
+*Random* = taxa were culled from the tree regardeless of trait value or phylogenetic position
+*Selective-on-diversifiers* = taxa culled from the tree had the lowes trait value and highest speciation rates.
+*Selective-on-relicts* = those taxa with highest trait value and lowest speciation rates were culled preferentally. 
+each of the treatments occurred at intensity 90%, 75% and 50% of all the extant taxa in the tree. Following mass extintion, trees recovered continued to evolve according to the same rules applied before the extintion event. 
 Recovery from mass extintion had 2 phases: Clade size recovery, covering the time where the tree either recovers to it pre- extintion size or settles to a new equilibrium value and Post CSR, the time after clade size recovery until the end of the simulation. 
-The nexus files produced by MESA were then manipulated in R. 
-The Colless index of imbalance was calculated using the function for each tree in a time series. Trees more balanced have negative values while those less balanced have positive values.  
-Then for the three treamtments combined with the different intensities,the Colless index of imbalance (COL_BLUM) values were collected at the key CSR relative times (CSR time, CSR end-mid 1quartile, CSR end-mid, CSR end-mid 3quartile) and at pre extintion time (300), post extintion event (305), at the CRS end-mid time (470) and at the end of simulation (600).
+The nexus files produced by `MESA` were then manipulated in R. 
+The `Colless index of imbalance` was calculated using the function for each tree in a time series. Trees more balanced have negative values while those less balanced have positive values.  
+Then for the three treamtments combined with the different intensities,the Colless index of imbalance (COL_BLUM) values were collected at the key CSR relative times (`CSR time`, `CSR end-mid 1quartile`, `CSR end-mid`, `CSR end-mid 3quartile`) and at pre extintion time (`300`), post extintion event (`305`), at the CRS end-mid time (`470`) and at the end of simulation (`600`).
 
 
-Now, for tree balance at CSR, the post CSR inverval times and end simulation times, we analyze the treatments involving a combination of extintion types and intensity with two-way ANOVA and Tukey-corrected multiple comparison testing, in order to see if there are any significant treatment-by-intensity interactions. Different treatment intensities are treated as non-numerical
+Now, for tree balance at `CSR`, the `post CSR inverval` times and end `simulation times`, we analyze the treatments involving a combination of extintion types and intensity with `two-way ANOVA` and `Tukey-corrected multiple comparison testing`, in order to see if there are any significant treatment-by-intensity interactions. Different treatment intensities are treated as non-numerical
 factors, and a family-wise confidence level of 95% are assumed for all comparisons.
 
 ```{r} 
 CSR <- read.table("CSR_1.txt", header=T,sep="\t")
 colnames(CSR) = c("TREAT","INTENSITY","COLBLUM")
 attach(CSR)
-tapply(COLBLUM,TREAT,mean)# we calculate the mean of the tree balance value for the treatment types
-tapply(COLBLUM,INTENSITY,mean)# we calculate the mean of the tree balance value for the intensities. 
-tapply(COLBLUM,TREAT:INTENSITY,mean) # we calculate the mean of the tree balance value for the treatment type and intensity. 
+tapply(COLBLUM,TREAT,mean)# apply the function mean to COL_BLUM and TREAT
+tapply(COLBLUM,INTENSITY,mean)
+tapply(COLBLUM,TREAT:INTENSITY,mean)  
 
 with_int <- aov(COLBLUM ~ TREAT*INTENSITY) 
 summary(with_int)
@@ -118,7 +118,7 @@ summary.lm(no_int)
 
 anova(no_int,with_int)
 TukeyHSD(with_int)
-#Random and SOR do not differ significantly form each other at any intensity and all SOD trees remained more balanced than the other treatments.
+
 plot(TukeyHSD(with_int))
 
 TukeyHSD(no_int)
