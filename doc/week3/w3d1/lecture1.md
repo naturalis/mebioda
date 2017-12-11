@@ -19,7 +19,8 @@ Practicals
 R syntax
 --------
 - [syntax basics](lecture1/base-r.pdf)
-- [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
+- [data wrangling](lecture1/data-wrangling-cheatsheet.pdf)
+- additional [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
 
 Interacting with the R environment
 ----------------------------------
