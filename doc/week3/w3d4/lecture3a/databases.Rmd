@@ -91,6 +91,7 @@ Let's fetch data using the `TR8` package and copy it over to the `results` data 
 ```{r tr8}
 # installation instructions: https://github.com/GioBo/TR8/blob/master/README.md
 library(devtools)
+dev_mode(on=T)
 library(TR8)
 
 # The dataframe named available_tr8 lists the short codes and descriptions of the traits
