@@ -135,9 +135,9 @@ The package [traits](https://github.com/ropensci/traits), from the
 databases:
 
 * [Encyclopedia of Life Traitbank](http://eol.org/info/516)<sup>*</sup>
-* [LEDA Traitbase](http://www.leda-traitbase.org/LEDAportal/)<sup>*</sup>
 * [USDA Plants Database](https://plants.usda.gov/java/)<sup>*</sup>
 * [Zanne et al. plant dataset](http://dx.doi.org/10.1038/nature12872)<sup>*</sup>
+* [LEDA Traitbase](http://www.uni-oldenburg.de/en/landeco/research/projects/LEDA)
 * [BETYdb](http://www.betydb.org)
 * [National Center for Biotechnology Information - NCBI](http://www.ncbi.nlm.nih.gov/)
 * [Coral Traits Database](http://coraltraits.org/)
