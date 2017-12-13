@@ -29,14 +29,14 @@ as their geographical patterns of diversity are not simply accidents of history.
 ### Day 4 - Trait data and analysis
 
 - Lecture I: [Introduction](w3d4/lecture1-new.md) to traits. 
-- Lecture II: [Trait databases](w3d4/lecture3a/databases.Rmd) and [analysis](w3d4/lecture2a/functional_analysis.Rmd)
+- Lecture II: [Trait databases](w3d4/lecture3a/databases.Rmd), [semantics](w3d4/semantics.md), and [analysis](w3d4/lecture2a/functional_analysis.Rmd)
 - Lecture III: [Evolutionary dynamics of mycorrhizal symbiosis in land plant diversification](https://doi.org/10.1101/213090)
 - Practical: [Phylogenetic signal](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture6/PD.Rmd)
 
 ### Day 5 - Functional and character diversity
 
 - Lecture I: [Methods for computing functional diversity](w3d5/lecture1.md)
-- Lecture II: Trait-dependent diversification Cyprinodontiformes (Tom van Dooren)
+- Lecture II: Trait-dependent diversification in Cyprinodontiformes (Tom van Dooren)
 - Lecture III: Traits, characters, and diversification (Vincent Merckx) - **canceled**
 - Practical: [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
