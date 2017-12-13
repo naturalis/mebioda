@@ -37,7 +37,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 - Lecture I: [Methods for computing functional diversity](w3d5/lecture1.md)
 - Lecture II: Trait-dependent diversification Cyprinodontiformes (Tom van Dooren)
-- Lecture III: Traits, characters, and diversification (Vincent Merckx)
+- Lecture III: Traits, characters, and diversification (Vincent Merckx) - **canceled**
 - Practical: [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
 <!--
