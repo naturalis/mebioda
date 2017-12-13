@@ -140,6 +140,7 @@ can be reformatted in this
 
 By doing so, we integrate our data set in a [web](https://en.wikipedia.org/wiki/Semantic_Web) 
 of knowledge representations, linking us to, for example:
+
 - the [plant trait ontology concept of 'drought tolerance'](http://purl.obolibrary.org/obo/TO_0000276)
 - the [concept of 'life span' from the phenotypic quality ontology](http://purl.obolibrary.org/obo/PATO_0000050)
 - [NASA's understanding of human agriculture](http://sweet.jpl.nasa.gov/2.3/humanAgriculture.owl#Horticulture)
@@ -150,3 +151,21 @@ linked data graph:
 ![](semantics/lod_2009.png)
 
 ![](semantics/lod_2014.png)
+
+RDF representation formats
+--------------------------
+
+RDF is fundamentally about abstract concepts (the **triples** thing), which can be
+represented in many ways. The example above (`<> <> <> .`) is a terse form called 
+**turtle**, others include:
+
+- [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/)
+- [JSON-LD](https://json-ld.org/)
+
+Large RDF data sets are typically not stored as files but in a special kind of database
+called a [triple store](https://en.wikipedia.org/wiki/Triplestore) (this is closer to 
+the graph database [neo4j](https://neo4j.com/) used by OpenTree than to a relational
+SQL database).
+
+Querying RDF: SPARQL
+--------------------
