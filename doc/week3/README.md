@@ -30,7 +30,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 - Lecture I: [Introduction](w3d4/lecture1-new.md) to traits. 
 - Lecture II: [Trait databases](w3d4/lecture3a/databases.Rmd), [semantics](w3d4/semantics.md), and [analysis](w3d4/lecture2a/functional_analysis.Rmd)
-- Lecture III: [Evolutionary dynamics of mycorrhizal symbiosis in land plant diversification](https://doi.org/10.1101/213090)
+- Lecture III: [BayesTraits](https://github.com/naturalis/mycorrhiza) ([preprint](https://doi.org/10.1101/213090))
 - Practical: [Phylogenetic signal](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture6/PD.Rmd)
 
 ### Day 5 - Functional and character diversity
