@@ -182,3 +182,26 @@ shifts are disallowed, shown by the green line in both panels).
 > Because it cannot describe the correct branching process, the CPP prior model assumed 
 > by BAMM is "statistically incoherent".
 
+Heated exchanges follow
+-----------------------
+
+Moore et al.:
+
+- [Prior sensitivity in BAMM](http://treethinkers.org/prior-sensitivity-in-bamm/)
+- [The relationship between prior sensitivity and extinction probabilities in BAMM](http://treethinkers.org/the-relationship-between-prior-sensitivity-and-extinction-probabilities-in-bamm/)
+- [BAMM provides unreliable parameter estimates](http://treethinkers.org/bamm-provides-unreliable-parameter-estimates/)
+
+Rabosky et al.:
+
+- [Is BAMM Flawed? Theoretical and Practical Concerns in the Analysis of Multi-Rate Diversification Models](https://doi.org/10.1093/sysbio/syx037)
+- [Bayesian model selection with BAMM: effects of the model prior on the inferred number of diversification shifts](http://doi.org/10.1111/2041-210X.12626)
+- [How to make any method "fail": BAMM at the kangaroo court of false equivalency](https://arxiv.org/abs/1711.03253)
+
+And also Meyer & Wiens:
+
+- [Estimating diversification rates for higher taxa: BAMM can give problematic estimates of rates and rate shifts](http://doi.org/10.1111/evo.13378)
+
+----
+
+A good summary of the technical issues is in a very readable blog post on
+[MolecularEcologist.org](http://www.molecularecologist.com/2016/08/a-primer-on-the-great-bamm-controversy/)
