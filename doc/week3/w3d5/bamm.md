@@ -17,7 +17,12 @@ What are some of the options?
 _Syst Biol_ **56**(5):701-10
 
 - The **Bi**nary-**S**tate **S**peciation and **E**xtinction model (**BiSSE**)
-- Six parameters: 
+- Assumes that: 
+  - An accurate rooted phylogenetic tree with branch lengths is known (the “inferred tree”) 
+  - The character state is known for each of the terminal taxa
+  - The tree is assumed complete: all extant species in the group have been found and included 
+  - The tree is ultrametric (i.e., the total root-to-tip distance is the same for all tips)
+- Estimates six parameters: 
   - The instantaneous rates of speciation `λ` and extinction `μ` when the lineage is in state `0` (e.g., _herbivory_)
   - The rates (`λ`, `μ`) when the lineage is in state `1` (e.g., _carnivory_)
   - The instantaneous rates of character state change (`0 ⟶ 1` and `1 ⟶ 0`)
