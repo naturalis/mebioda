@@ -1,5 +1,5 @@
-Teach the controversy!
-======================
+Methods for detecting trait-dependent diversification
+=====================================================
 
 ![](bamm/schluter.jpg)
 
