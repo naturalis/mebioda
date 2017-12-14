@@ -61,3 +61,5 @@ doi:[10.1371/journal.pone.0089543](https://doi.org/10.1371/journal.pone.0089543)
 
 "_[A method to] identify arbitrary numbers of time-varying diversification processes on phylogenies 
 without specifying their locations in advance_"
+
+![](bamm/whales.png)
