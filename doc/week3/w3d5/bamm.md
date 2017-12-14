@@ -54,3 +54,8 @@ Follow up on the SSE methods
 
 Bayesian Analysis of Macroevolutionary Mixtures (BAMM)
 ------------------------------------------------------
+
+**DL Rabosky**, 2014. Automatic Detection of Key Innovations, Rate Shifts, and Diversity-Dependence on 
+Phylogenetic Trees. _PLoS ONE_ **9**(2): e89543 
+doi:[10.1371/journal.pone.0089543](https://doi.org/10.1371/journal.pone.0089543)
+
