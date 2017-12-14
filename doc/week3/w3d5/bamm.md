@@ -10,14 +10,13 @@ Wouldn't it be nice if we could detect _diversification rate shifts_ (so, change
 between speciation, `λ`, and extinction, `μ`) in relation to state shifts? This would be our ticket to
 detecting _adaptive ratiations_ and _key innovations_.
 
-What are some of the options?
------------------------------
+The Binary-State Speciation and Extinction model (BiSSE)
+--------------------------------------------------------
 
 **Maddison WP, Midford PE, Otto SP**, 2007. Estimating a binary character's effect on speciation and extinction.
 _Syst Biol_ **56**(5):701-10
 doi:[10.1080/10635150701607033](https://doi.org/10.1080/10635150701607033)
 
-- The **Bi**nary-**S**tate **S**peciation and **E**xtinction model (**BiSSE**)
 - Assumes that: 
   - An accurate rooted phylogenetic tree with branch lengths is known (the “inferred tree”) 
   - The character state is known for each of the terminal taxa
@@ -53,5 +52,5 @@ Follow up on the SSE methods
     rate variation rejects the null ([Rabosky & Goldberg, 2015](https://doi.org/10.1093/sysbio/syu131))
   
 
-The BAMM situation
-------------------
+Bayesian Analysis of Macroevolutionary Mixtures (BAMM)
+------------------------------------------------------
