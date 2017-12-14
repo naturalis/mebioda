@@ -20,7 +20,7 @@ _Syst Biol_ **56**(5):701-10
 - Six parameters: 
   - The instantaneous rates of speciation `λ` and extinction `μ` when the lineage is in state `0` (e.g., _herbivory_)
   - The rates (`λ`, `μ`) when the lineage is in state `1` (e.g., _carnivory_)
-  - The instantaneous rates of character state change (0 ⟶ 1 and 1 ⟶ 0)
+  - The instantaneous rates of character state change (`0 ⟶ 1` and `1 ⟶ 0`)
 
 
 
