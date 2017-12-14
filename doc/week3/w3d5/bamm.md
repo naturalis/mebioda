@@ -1,0 +1,17 @@
+Teach the controversy!
+======================
+
+![](bamm/schluter.jpg)
+
+> [_The Ecology of Adaptive Radiation_](https://global.oup.com/academic/product/the-ecology-of-adaptive-radiation-9780198505235)
+> is an important synthesis on the interplay between the selective environment and diversification
+
+Wouldn't it be nice if we could detect _diversification rate shifts_ (so, changes in the net difference
+between speciation, `λ`, and extinction, `μ`) in relation to state shifts? This would be our ticket to
+detecting _adaptive ratiations_ and _key innovations_.
+
+What are some of the options?
+-----------------------------
+
+The BAMM situation
+------------------
