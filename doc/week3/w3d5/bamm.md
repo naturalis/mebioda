@@ -62,20 +62,24 @@ doi:[10.1371/journal.pone.0089543](https://doi.org/10.1371/journal.pone.0089543)
 "_[A method to] identify arbitrary numbers of time-varying diversification processes on phylogenies 
 without specifying their locations in advance_"
 
+> Essentially an extension of BiSSE's algorithms but with potentially infinite processes 
+> (as opposed to two in BiSSE, namely "in state 0" and "in state 1")
+
 ![](bamm/bamm-tree.png)
 
 **Example of tree simulated under mixture of three distinct evolutionary processes.**
 
 - **A** Clade diversification under constant-rate “background” diversification process 
   with λ=0.032 and μ=0
-- **B** Shift to new adaptive zone with subsequent diversity-dependent regulation of 
-  speciation and diversity-independent extinction (blue branches; λ<sub>0</sub>=0.395; 
-  K=66; μ=0.041). 
+- **B** Shift to new adaptive zone with subsequent 
+  [diversity-dependent regulation of speciation](https://github.com/naturalis/mebioda/blob/master/doc/week3/w3d2/lecture3.md#density-dependent-diversification)
+  and diversity-independent extinction (blue branches; λ<sub>0</sub>=0.395; carrying
+  capacity K=66; μ=0.041). 
 - **C** Another lineage shifts to diversity-dependent speciation regime (red branches; 
-  λ<sub>0</sub>=0.21; K=97; μ=0.012). Total tree depth is 100 time units. Despite 
-  undergoing two distinct diversity-dependent slowdowns in the rate of speciation, the 
-  overall gamma statistic for the tree is positive (Pybus's γ=2.51) and provides no 
-  evidence for changes in the rate of speciation through time. 
+  λ<sub>0</sub>=0.21; K=97; μ=0.012). 
+- Despite undergoing two distinct diversity-dependent slowdowns in the rate of 
+  speciation, the overall gamma statistic for the tree is positive (Pybus's γ=2.51) and 
+  provides no evidence for changes in the rate of speciation through time. 
 - Note that a tree with three distinct processes contains two distinct transitions 
   between processes.
 
@@ -104,3 +108,73 @@ Dynamics of cetacean diversification through time as revealed by BAMM analysis
   posterior distribution of rates at a given point in time. Massive spike in mean 
   speciation rates at 7.5 Ma corresponds to the early radiation of the Delphinidae clade. 
 - **E** Corresponding extinction through time curve. 
+
+Critically evaluating the theory and performance of BAMM
+--------------------------------------------------------
+
+**BR Moore, S Höhna, MR May, B Rannala, and JP Huelsenbeck**, 2016. Critically evaluating 
+the theory and performance of Bayesian analysis of macroevolutionary mixtures
+_PNAS_ **113**(34): 9569-9574
+doi:[10.1073/pnas.1518659113](http://doi.org/10.1073/pnas.1518659113)
+
+![](bamm/mea.png)
+
+**Approximation of the likelihood under the BAMM model ignores diversification-rate shifts 
+on extinct lineages.**
+
+- The probability of observing the data under the BAMM model is approximated by an 
+  algorithm that traverses the tree from the tips to the root in small time steps, Δ_t_. 
+- At each step, two terms are computed: 
+  - **A** the probability of realizing the observed lineage, _N_, over time _t_, given 
+    that it is in process _i_ - denoted _D<sub>N,i</sub>(t)_ — which sums over all of the 
+    possible scenarios that could occur in the instant Δ_t_, and; 
+  - **B** the probability of unobserved (extinct or unsampled) lineages, 
+    _E<sub>i</sub>(t)_, which is computed similarly. 
+- The last scenario **iv**, where diversification-rate shifts occur on an extinct lineage,
+  is not included in the likelihood computation, causing BAMM to incorrectly estimate the 
+  extinction probabilities
+
+Identifiability
+---------------
+
+[Wikipedia](https://en.wikipedia.org/wiki/Identifiability):
+
+- In statistics, _identifiability_ is a property which a model must satisfy in order for 
+  precise inference to be possible. 
+- Different values of the parameters must generate different probability distributions of 
+  the observable variables.
+- A model that fails to be identifiable is said to be **non-identifiable** or 
+  unidentifiable; two or more parametrizations are observationally equivalent.
+
+![](bamm/mea-priors.png)
+
+Figure 4 from Moore et al. 2016, showing the prior and posterior probability 
+distributions of rate shift events on top for different prior means, with frequency and 
+posterior mode value (MAP, reported by Rabosky) on the bottom.
+
+Coherence
+---------
+
+- BAMM adopts a CPP
+  ([Compound Poisson Process ](https://en.wikipedia.org/wiki/Compound_Poisson_process))
+  prior model to describe the number and location of diversification-rate shifts over the 
+  tree  
+- Under the CPP prior model, events are uniformly distributed through time (over the tree 
+  length) and the number of events is 
+  [Poisson-distributed](https://en.wikipedia.org/wiki/Poisson_distribution)
+- This implementation is similar to how _substitution_ rate shifts are sampled in other
+  methods, but it is not a valid approach if the shifts being sampled _generate the tree_
+
+![](bamm/mea-coherence.png)
+
+Consider this special case of the BAMM model: 
+- A pure-birth (μ=0) process with two speciation-rates, λ<sub>0</sub> and λ<sub>1</sub>
+- The branching process switches between speciation rates at rate _η_. 
+- The probability distribution of the number of diversification-rate shifts (and no 
+  speciation events) does not follow a Poisson distribution (Upper), and the timing of a 
+  single event does not follow a uniform distribution (Lower), except in the special case 
+  where λ<sub>0</sub>=λ<sub>1</sub> (i.e., when diversification-rate shifts are 
+  disallowed, shown by the green line in both panels). 
+- Because it cannot describe the correct branching process, the CPP prior model assumed 
+  by BAMM is "statistically incoherent".
+
