@@ -62,4 +62,28 @@ doi:[10.1371/journal.pone.0089543](https://doi.org/10.1371/journal.pone.0089543)
 "_[A method to] identify arbitrary numbers of time-varying diversification processes on phylogenies 
 without specifying their locations in advance_"
 
-![](bamm/whales.png)
+Dynamics of cetacean diversification through time as revealed by BAMM analysis
+------------------------------------------------------------------------------
+
+![](bamm/whales-trees.png)
+
+- **A** Phylogeny of cetaceans with branch lengths drawn proportional to their marginal 
+  speciation rate as estimated using BAMM. A large increase in the rate of speciation 
+  (>6-fold) occurred in one of the ancestral branches leading to the Delphinidae 
+  (including or excluding the killer whale, Orcinus orca). Despite this increase, the 
+  overall trend is towards decelerating rates through time. 
+- **B** Cetacean phylogeny with branch lengths scaled by the posterior probability that 
+  they contain a rate shift. Numbers above branches denote branch-specific shift 
+  probabilities. The probability that a rate shift occurred on at least one of these 
+  three branches was 0.975. No other branches had shift probabilities exceeding 0.02. 
+
+![](bamm/whales-plots.png)
+
+- **C** Posterior distribution of the number of distinct processes (including the root 
+  process) on the cetacean phylogeny. A two-process model vastly outperforms a 
+  one-process model. 
+- **D** Speciation rates through time during the extant cetacean radiation; distinct shaded 
+  regions denote (from bottom) 0.05, 0.25, 0.50, 0.75, and 0.95 quantiles on the 
+  posterior distribution of rates at a given point in time. Massive spike in mean 
+  speciation rates at 7.5 Ma corresponds to the early radiation of the Delphinidae clade. 
+- **E** Corresponding extinction through time curve. 
