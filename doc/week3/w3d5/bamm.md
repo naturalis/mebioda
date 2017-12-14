@@ -40,5 +40,18 @@ How BiSSE estimates its model parameters
   calculate the likelihood
 - (This exploits the general pattern known as _Felsenstein's pruning algorithm_)
 
+Follow up on the SSE methods
+----------------------------
+
+- BiSSE can be used for hypothesis testing (likelihood ratio tests)
+- BiSSE has been expanded to multistate (MuSSE), continuous (QuaSSE), geography (GeoSSE), etc.
+- However, several criticisms have been suggested:
+  - Maybe not very powerful: need a lot of taxa in a complete, dated tree; trait values should probably
+    have some homoplasy, i.e. not one of many synapomorphies for a megadiverse group
+    ([Davis et al. (2013)](https://doi.org/10.1186/1471-2148-13-38))
+  - False positives: simulating a character onto an existing tree that already has diversification
+    rate variation rejects the null ([Rabosky & Goldberg, 2015](https://doi.org/10.1093/sysbio/syu131))
+  
+
 The BAMM situation
 ------------------
