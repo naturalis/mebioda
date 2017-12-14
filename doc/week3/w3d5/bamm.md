@@ -15,6 +15,7 @@ What are some of the options?
 
 **Maddison WP, Midford PE, Otto SP**, 2007. Estimating a binary character's effect on speciation and extinction.
 _Syst Biol_ **56**(5):701-10
+doi:[10.1080/10635150701607033](https://doi.org/10.1080/10635150701607033)
 
 - The **Bi**nary-**S**tate **S**peciation and **E**xtinction model (**BiSSE**)
 - Assumes that: 
