@@ -164,17 +164,21 @@ Coherence
   [Poisson-distributed](https://en.wikipedia.org/wiki/Poisson_distribution)
 - This implementation is similar to how _substitution_ rate shifts are sampled in other
   methods, but it is not a valid approach if the shifts being sampled _generate the tree_
-
-![](bamm/mea-coherence.png)
-
-Consider this special case of the BAMM model: 
-- A pure-birth (μ=0) process with two speciation-rates, λ<sub>0</sub> and λ<sub>1</sub>
+- Below is a special case of the BAMM model: a pure-birth (μ=0) process with two 
+  speciation-rates, λ<sub>0</sub> and λ<sub>1</sub>
 - The branching process switches between speciation rates at rate _η_. 
-- The probability distribution of the number of diversification-rate shifts (and no 
-  speciation events) does not follow a Poisson distribution (Upper), and the timing of a 
-  single event does not follow a uniform distribution (Lower), except in the special case 
-  where λ<sub>0</sub>=λ<sub>1</sub> (i.e., when diversification-rate shifts are 
-  disallowed, shown by the green line in both panels). 
-- Because it cannot describe the correct branching process, the CPP prior model assumed 
-  by BAMM is "statistically incoherent".
+
+![](bamm/mea-poisson.png)
+
+The probability distribution of the number of diversification-rate shifts (and no 
+speciation events) does not follow a Poisson distribution
+
+![](bamm/mea-uniform.png)
+  
+The timing of a single event does not follow a uniform distribution, except in 
+the special case where λ<sub>0</sub>=λ<sub>1</sub> (i.e., when diversification-rate 
+shifts are disallowed, shown by the green line in both panels). 
+
+> Because it cannot describe the correct branching process, the CPP prior model assumed 
+> by BAMM is "statistically incoherent".
 
