@@ -124,11 +124,11 @@ doi:[10.1073/pnas.1518659113](http://doi.org/10.1073/pnas.1518659113)
 on extinct lineages.**
 
 - The probability of observing the data under the BAMM model is approximated by an 
-  algorithm that traverses the tree from the tips to the root in small time steps, Δ_t_. 
+  algorithm that traverses the tree from the tips to the root in small time steps, _Δt_. 
 - At each step, two terms are computed: 
   - **A** the probability of realizing the observed lineage, _N_, over time _t_, given 
     that it is in process _i_ - denoted _D<sub>N,i</sub>(t)_ — which sums over all of the 
-    possible scenarios that could occur in the instant Δ_t_, and; 
+    possible scenarios that could occur in the instant _Δt_, and; 
   - **B** the probability of unobserved (extinct or unsampled) lineages, 
     _E<sub>i</sub>(t)_, which is computed similarly. 
 - The last scenario **iv**, where diversification-rate shifts occur on an extinct lineage,
