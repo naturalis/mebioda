@@ -13,5 +13,12 @@ detecting _adaptive ratiations_ and _key innovations_.
 What are some of the options?
 -----------------------------
 
+**Maddison WP, Midford PE, Otto SP**, 2007. Estimating a binary character's effect on speciation and extinction.
+_Syst Biol_ **56**(5):701-10
+
+The **Bi**nary-**S**tate **S**peciation and **E**xtinction model model (**BiSSE**)
+
+
+
 The BAMM situation
 ------------------
