@@ -62,6 +62,23 @@ doi:[10.1371/journal.pone.0089543](https://doi.org/10.1371/journal.pone.0089543)
 "_[A method to] identify arbitrary numbers of time-varying diversification processes on phylogenies 
 without specifying their locations in advance_"
 
+![](bamm/bamm-tree.png)
+
+**Example of tree simulated under mixture of three distinct evolutionary processes.**
+
+- **A** Clade diversification under constant-rate “background” diversification process 
+  with λ=0.032 and μ=0
+- **B** Shift to new adaptive zone with subsequent diversity-dependent regulation of 
+  speciation and diversity-independent extinction (blue branches; λ<sub>0</sub>=0.395; 
+  K=66; μ=0.041). 
+- **C** Another lineage shifts to diversity-dependent speciation regime (red branches; 
+  λ<sub>0</sub>=0.21; K=97; μ=0.012). Total tree depth is 100 time units. Despite 
+  undergoing two distinct diversity-dependent slowdowns in the rate of speciation, the 
+  overall gamma statistic for the tree is positive (Pybus's γ=2.51) and provides no 
+  evidence for changes in the rate of speciation through time. 
+- Note that a tree with three distinct processes contains two distinct transitions 
+  between processes.
+
 Dynamics of cetacean diversification through time as revealed by BAMM analysis
 ------------------------------------------------------------------------------
 
