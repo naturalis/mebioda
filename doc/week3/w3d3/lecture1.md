@@ -210,8 +210,8 @@ Variance-covariance matrix from relatedness
   _U. argillicola_ do not share any evolutionary history, so their expected covariance is 
   0) and produce the new expected variance–covariance matrix.
   
-PGLS solution
--------------
+Phylogenetic Generalized Least Squares (PGLS) solution
+------------------------------------------------------
 
 When this new version of **C** is applied to the GLS calculation (e.g. with 
 [geiger](https://www.r-phylo.org/wiki/HowTo/PGLS)), we eventually end with the PGLS 
