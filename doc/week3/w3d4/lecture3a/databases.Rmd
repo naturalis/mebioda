@@ -1,0 +1,301 @@
+---
+title: "Trait databases"
+author: "Rutger Vos (@rvosa)"
+date: "8-12-2017"
+output: html_document
+---
+
+Trait data web services and semantic integration
+------------------------------------------------
+
+Numerous smaller and larger databases exist with ecological or functional
+trait data. Many of these databases can be queried directly from within R.
+To illustrate this, we are going to collect data for our crop species, i.e.:
+
+```{r vector}
+# to pick up as many traits as possible we will consider all putative ancestors
+# for each crop (e.g. see the Musa species) and all domesticated "species" 
+# (e.g. see the Cucurbita species)
+species <- c(
+  "Arachis hypogaea",
+  "Artocarpus altilis",  
+  "Cocos nucifera",
+  "Colocasia esculenta",
+  "Cucurbita argyrosperma",
+  "Cucurbita ficifolia",
+  "Cucurbita maxima",
+  "Cucurbita moschata",
+  "Cucurbita pepo",
+  "Dioscorea cayennensis",  
+  "Eleusine coracana",  
+  "Ensete ventricosum",  
+  "Eragrostis tef",
+  "Fagopyrum esculentum",
+  "Fagopyrum tataricum",
+  "Hordeum vulgare",
+  "Ipomoea batatas",
+  "Mangifera indica",
+  "Manihot esculenta",
+  "Metroxylon sagu",
+  "Musa acuminata",
+  "Musa paradisiaca",
+  "Musa balbisiana",
+  "Oryza sativa",
+  "Phoenix dactylifera",
+  "Secale cereale",
+  "Solanum tuberosum",
+  "Sorghum bicolor",
+  "Triticum aestivum",  
+  "Zea mays"
+)
+```
+
+For the names of our species, let's check to see if our names are actually recognized, using
+the [rOpenSci/taxize package](https://github.com/ropensci/taxize):
+
+```{r taxize}
+library(taxize)
+accepted_names <- tnrs(query = species, source = "iPlant_TNRS")
+accepted_names$acceptedname
+```
+
+It turns out that all the names are matched precisely. Let's create a data frame in which we will collect trait data
+for our crops from a variety of databases:
+
+```{r frame}
+results <- data.frame( row.names = species )
+```
+
+Trait databases accessible through GioBo/TR8
+--------------------------------------------
+
+The R package [TR8](https://github.com/GioBo/TR8) can fetch trait data
+from the following databases:
+
+* [LEDA traitbase](http://www.leda-traitbase.org/LEDAportal/)<sup>*</sup>
+* [PLANTS](http://www.bricol.net/)<sup>*</sup>
+* [BROT - Mediterranean](http://www.uv.es/jgpausas/brot.htm)
+* [Catminat France](http://perso.wanadoo.fr/philippe.julve/catminat.htm)
+* [MycoFlor for Central Europe](http://www.esajournals.org/doi/abs/10.1890/12-1700.1)
+* [Mycorrhizal intensity database for the USSR](http://esapubs.org/Archive/ecol/E093/059/default.htm)
+* [Ecological Flora of California](http://ucjeps.berkeley.edu/efc/)
+* [Biolflor Germany](http://www2.ufz.de/biolflor/index.jsp)
+* [The Ecological Flora of the British Isles](http://www.ecoflora.co.uk/)
+* [Flora Italiana](http://luirig.altervista.org/)
+* [Ellenberg values for Italian Flora](http://doi.org/10.7320/FlMedit22.197)
+
+<sup>*</sup>Probably has plant traits globally
+
+Let's fetch data using the `TR8` package and copy it over to the `results` data frame:
+
+```{r tr8}
+# installation instructions: https://github.com/GioBo/TR8/blob/master/README.md
+library(devtools)
+dev_mode(on=T)
+library(TR8)
+
+# The dataframe named available_tr8 lists the short codes and descriptions of the traits
+# and the respective databases in which they occur. Here we are fetching all of them.
+# Alternatively, by providing the gui_config = T argument we can launch a graphical 
+# interface that allows us to select traits of interest.
+traits_tr8 <- tr8(accepted_names$acceptedname, download_list = available_tr8$short_code)
+
+# Copy the returned traits over to the results data frame
+for ( trait in colnames(traits_tr8@results) ) {
+  for ( sp in species ) {
+    results[ sp, paste( 'tr8', trait, sep = ':' ) ] <- traits_tr8@results[ sp, trait ]
+  }
+}
+```
+
+The bmaitner/RBIEN package
+--------------------------
+
+The R package [RBIEN](https://github.com/bmaitner/RBIEN) fetches trait data
+from the [botanical information and ecology network](http://bien.nceas.ucsb.edu/bien/),
+which we also query for crop plant traits.
+
+```{r bien}
+library(BIEN)
+library(dplyr)
+traits_bien <- BIEN_trait_species(species)
+for ( sp in species ) {
+  for ( trait in unique(traits_bien$trait_name) ) {
+    value <- first( filter( traits_bien, scrubbed_species_binomial == sp & trait_name == trait )$trait_value );
+    results[ sp, paste( 'bien', trait, sep = ':' ) ] <- value
+  }
+}
+```
+
+Trait databases accessible through rOpenSci/traits
+--------------------------------------------------
+
+The package [traits](https://github.com/ropensci/traits), from the 
+[rOpenSci](https://ropensci.org/) initiative, fetches data from these
+databases:
+
+* [Encyclopedia of Life Traitbank](http://eol.org/info/516)<sup>*</sup>
+* [USDA Plants Database](https://plants.usda.gov/java/)<sup>*</sup>
+* [Zanne et al. plant dataset](http://dx.doi.org/10.1038/nature12872)<sup>*</sup>
+* [LEDA Traitbase](http://www.uni-oldenburg.de/en/landeco/research/projects/LEDA)
+* [BETYdb](http://www.betydb.org)
+* [National Center for Biotechnology Information - NCBI](http://www.ncbi.nlm.nih.gov/)
+* [Coral Traits Database](http://coraltraits.org/)
+* [Amniote life history dataset](https://doi.org/10.1890/15-0846R.1)
+
+<sup>*</sup>Probably has plant traits globally
+
+Let's fetch data from **LEDA** (to compare with TR8), **USDA**, **Zanne et al.**, 
+and **EoL**, using the `traits` package.
+
+Starting with **LEDA**, the trait names listed here are all of the traits available in the database. 
+Because queries into LEDA require a trait name to look for, we have to hard code them here.
+
+```{r leda}
+library(traits)
+leda_traits <- c(
+  "age_first_flowering", "branching", "buds_seasonality",
+  "buds_vertical_dist", "canopy_height", "dispersal_type", "leaf_distribution", "ldmc_geo", "leaf_mass",
+  "leaf_size", "morphology_disperal", "growth_form", "life_span", "releasing_height", "seed_longevity", 
+  "seed_mass", "seed_number", "seed_shape", "shoot_growth_form", "snp", "ssd", "tv", "clonal_growth_organs"
+)
+
+for (trait in leda_traits) {
+  leda_record <- leda(trait)
+  for ( sp in species ) {
+    value <- first(filter(leda_record, sbs_name == sp)[[trait]])
+    predicate <- paste( 'leda', trait, sep = ':' )
+    if ( is.null(value) ) {
+      results[sp, predicate] <- NA
+    }
+    else {
+      results[sp, predicate] <- value
+    }
+  }
+}
+```
+
+For the plants traits data dump of the US department of agriculture (**USDA**), the way to invoke it
+is by passing the genus and species name as separate arguments. Hence, we will have to split the 
+binomial species names on whitespace and then do the function call:
+
+
+```{r usda}
+
+# The returned results include taxonomic data (i.e. a lot of columns dealing with Linnean classification),
+# cultural use, and "actual" traits. We are only interested in the latter:
+usda_predicates <- c(
+	"Duration", "Growth_Habit", "After_Harvest_Regrowth_Rate", "Bloat", "C_N_Ratio", 
+	"Fall_Conspicuous", "Fire_Resistance", "Flower_Color", "Flower_Conspicuous", 
+	"Foliage_Color", "Foliage_Porosity_Summer", "Foliage_Porosity_Winter", "Foliage_Texture", 
+	"Fruit_Color", "Fruit_Conspicuous", "Growth_Form", "Growth_Rate", 
+	"Height_at_Base_Age_Maximum_feet", "Height_Mature_feet", "Leaf_Retention", "Lifespan", 
+	"Low_Growing_Grass", "Nitrogen_Fixation", "Resprout_Ability", "Shape_and_Orientation", 
+	"Toxicity", "Adapted_to_Coarse_Textured_Soils", "Adapted_to_Medium_Textured_Soils", 
+	"Adapted_to_Fine_Textured_Soils", "Anaerobic_Tolerance", "CaCO_3_Tolerance", 
+	"Cold_Stratification_Required", "Drought_Tolerance", "Fertility_Requirement", 
+	"Fire_Tolerance", "Frost_Free_Days_Minimum", "Hedge_Tolerance", "Moisture_Use", 
+	"pH_Minimum", "pH_Maximum", "Precipitation_Minimum", "Precipitation_Maximum", 
+	"Root_Depth_Minimum_inches", "Salinity_Tolerance", "Shade_Tolerance", 
+	"Temperature_Minimum_F", "Bloom_Period", "Fruit_Seed_Abundance", 
+	"Fruit_Seed_Period_Begin", "Fruit_Seed_Period_End", "Fruit_Seed_Persistence", 
+	"Propogated_by_Bare_Root", "Propogated_by_Bulbs", "Propogated_by_Container", 
+	"Propogated_by_Corms", "Propogated_by_Cuttings", "Propogated_by_Seed", 
+	"Propogated_by_Sod", "Propogated_by_Sprigs", "Propogated_by_Tubers", "Seeds_per_Pound", 
+	"Seed_Spread_Rate", "Seedling_Vigor", "Small_Grain", "Vegetative_Spread_Rate", 
+	"Berry_Nut_Seed_Product", "Palatable_Browse_Animal", "Palatable_Graze_Animal", 
+	"Palatable_Human"
+)
+
+for ( sp in species ) {
+  binomial <- strsplit(sp, " ", fixed = T)
+  
+  # potentially of interest: `Duration`, `Growth_Habit`, ...
+  try(traits_usda <- tr_usda(query = list( genus=binomial[[1]][1], species = binomial[[1]][2] )))
+  for ( pr in usda_predicates ) {
+    val_usda <- traits_usda[["data"]] %>% 
+      select(pr) %>% 
+      filter(pr != "") %>% 
+      unique %>% 
+      first
+    results[ sp, paste("usda",pr,sep=":") ] <- val_usda[[1]][1]
+  }
+}
+
+```
+
+The trait data set of **Zanne et al.** contains only three traits, which we fetch as follows:
+
+```{r zanne}
+traits_zanne <- tr_zanne()
+for ( sp in species ) {
+  
+  # handle 'woodiness'
+  zw <- traits_zanne$woodiness %>% 
+    filter(gs == sp) %>% 
+    select(woodiness) %>%
+    first
+  if (length(zw) > 0) {
+    results[sp, "zanne:woodiness" ] <- zw
+  }
+  
+  # handle 'freezing'
+  zf <- traits_zanne$freezing %>% 
+    filter(species == sp) %>% 
+    select(Freeze.tmin.lo) %>% 
+    first
+  if (length(zf) > 0) {
+    results[sp, "zanne:freezing" ] <- zf
+  }
+  
+  # handle 'leaf_phenology'
+  zp <- traits_zanne$leaf_phenology %>% 
+    filter(Binomial == sp) %>% 
+    select(Phenology) %>% 
+    first
+  if (length(zp) > 0) {
+    results[sp, "zanne:leaf_phenology"] <- zp
+  }
+}
+
+```
+
+The Encyclopedia of Life
+------------------------
+
+The [EoL TraitBank](http://eol.org/info/516) can be accessed with the same client packages, but it
+is worth paying attention to how the results are represented:
+
+```{r eol}
+# EoL's web service sometimes returns an error 500 (server error), so we make
+# a function that we can then wrap inside a try(). Function definition:
+do_query <- function(eol_taxon_id, sp) {
+  eol_traits <- traitbank(eol_taxon_id)
+  for ( trait in unique(eol_traits[["graph"]]$predicate) ) {
+    results[ sp, trait ] <- first( filter( eol_traits[["graph"]], predicate == trait )$value )
+  }
+}
+
+# For EoL traitbank data we need to provide the EoL taxon ID as input parameter. Hence,
+# we first need to do a TNRS lookup of these, as follows:
+sources <- gnr_datasources()
+eol_id <- sources[sources$title == "EOL", "id"]
+eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all")
+
+# We then iterate over the list of species, lookup the EoL taxon ID for that species
+# and fetch its traits, which we again copy over to the results frame
+for (sp in species) {
+  eol_taxon_id <- eol_tnrs[eol_tnrs$matched_name == sp,]$local_id
+  try(do_query(eol_taxon_id, sp))
+}
+```
+
+Once we have all the traits, we will want to remove the columns with excessive amounts of `NA` missing
+data. In addition, we will want to remove columns where all species have the same values. The logic
+will roughly be:
+
+```{r clean}
+# merge rows for the same taxon (e.g. Musa sp.)
+#length(na.omit(col)) # should be more than 50% of species, for example
+#unique(na.omit(col)) # should be more than 1
+```

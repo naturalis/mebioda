@@ -1,6 +1,10 @@
 Simple tree shape metrics: imbalance, branchiness
 =================================================
 
+> - Fundamental models of diversification: Yule (pure birth) and birth/death
+> - Simple metrics to express rate variation through time: Pybus's γ (and others)
+> - Simple metrics to express lineage-specific rate variation: Colless's Imbalance (and others)
+
 The Yule process revisited
 --------------------------
 - We've previously seen the Yule process in the context of species delimitation, where
@@ -16,6 +20,9 @@ The Yule process revisited
 
 Birth/death processes
 ---------------------
+
+![](lecture2/BD-proces.png)
+
 - In the simplest birth/death processes, an additional parameter determines the 
   probability with which every lineage is to go extinct at any given time.
 - The _net diversification rate_ is thus `speciation - extinction`.
@@ -125,13 +132,14 @@ $ic = parse_tree(
 )->calc_i2;
 ```
 
-Simulating sets of trees with different topological properties
---------------------------------------------------------------
-Scott Chamberlain, of [rOpenSci](http://ropensci.org) has developed a nice RMarkdown
-document that demonstrates [simulating](lecture2/2012-10-10-phylogenetic-tree-balance.Rmd)
-sets of trees, filtered for different tree topology metrics. See what the distributions
-look like if the input trees aren't Yule but birth/death.
-
 Empirical results for tree balance
 ----------------------------------
 ![](lecture2/phylogenetic-tree-balance-as-a-function-of-tree-size.gif)
+
+> Simulating sets of trees with different topological properties
+> --------------------------------------------------------------
+> Scott Chamberlain, of [rOpenSci](http://ropensci.org) has developed a nice RMarkdown
+> document that demonstrates [simulating](lecture2/2012-10-10-phylogenetic-tree-balance.Rmd)
+> sets of trees, filtered for different tree topology metrics. See what the distributions
+> look like if the input trees aren't Yule but birth/death.
+

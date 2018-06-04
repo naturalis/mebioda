@@ -1,0 +1,73 @@
+---
+title: "BIEN practical"
+output: html_document
+---
+
+Load the [BIEN](http://bien.nceas.ucsb.edu/bien/) package and other dependencies:
+
+```{r message=FALSE}
+library(BIEN)
+library(tidyverse)
+library(FD) # functional diversity
+```
+
+Define a vector of species names:
+
+```{r vector}
+species <- c(
+  "Arachis hypogaea",
+  "Artocarpus altilis",  
+  "Cocos nucifera",
+  "Colocasia esculenta",
+  "Cucurbita argyrosperma",
+  "Cucurbita ficifolia",
+  "Cucurbita maxima",
+  "Cucurbita moschata",
+  "Cucurbita pepo",
+  "Dioscorea cayennensis",  
+  "Eleusine coracana",  
+  "Ensete ventricosum",  
+  "Eragrostis tef",
+  "Fagopyrum esculentum",
+  "Fagopyrum tataricum",
+  "Hordeum vulgare",
+  "Ipomoea batatas",
+  "Mangifera indica",
+  "Manihot esculenta",
+  "Metroxylon sagu",
+  "Musa acuminata",
+  "Musa paradisiaca",
+  "Musa balbisiana",
+  "Oryza sativa",
+  "Phoenix dactylifera",
+  "Secale cereale",
+  "Solanum tuberosum",
+  "Sorghum bicolor",
+  "Triticum aestivum",  
+  "Zea mays"
+)
+```
+
+Query the BIEN web server for data:
+
+```{r query}
+traits <- BIEN_trait_species(species)
+```
+
+Reshape:
+
+```{r message=FALSE}
+reshaped<-reshape(select(
+                    traits, 
+                    scrubbed_species_binomial, trait_name, trait_value
+                  ),
+                  timevar="trait_name",
+                  idvar="scrubbed_species_binomial",
+                  direction="wide")
+row.names(reshaped) <- reshaped$scrubbed_species_binomial
+distances <- gowdis(reshaped)
+```
+
+```{r plot}
+plot(nj(distances),type="unrooted", lab4ut="axial")
+```

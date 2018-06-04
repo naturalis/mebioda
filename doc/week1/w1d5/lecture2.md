@@ -1,11 +1,24 @@
 Big trees
 =========
 
+- Download the [PhytoPhylo DB](https://ndownloader.figshare.com/files/9742438)
+- Go to [sqlitebrowser.org](http://sqlitebrowser.org) and download and install the program for
+  your operating system. There are installers for Windows and Mac, and for Ubuntu you can do:
+
+```bash
+sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
+sudo apt-get update
+sudo apt-get install sqlitebrowser
+```
+
 Recursion
 ---------
 
 A tree is a hierarchical data structure that is often traversed using recursion. For 
 example:
+
+- Assume that a `node` object has a name (`node.name`)
+- Assume that a `node` object has zero or more other such nodes as children (`node.children`)
 
 ```python
 # Start at the root
@@ -64,6 +77,9 @@ Breadth-first traversal
 ![](phylogeny.png)
 
 A breadth-first algorithm:
+
+- Assume that a `node` object knows about its next sibling (`node.sibling`)
+- Assume that a `node` object knows about its first child (`node.first_child`)
 
 ```python
 def breadth_first(node):
@@ -219,3 +235,4 @@ that, in principe, we have to inspect all pairs - so work together.
 - Download the database version of the PhytoPhylo tree: https://doi.org/10.6084/m9.figshare.5598631
 - Using MRCA queries and the `height` column (distance to root) you should be able to fetch the
   distance between a pair.
+- What could explain the fact that you see the same distance for many pairs?

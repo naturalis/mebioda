@@ -19,7 +19,10 @@ Practicals
 R syntax
 --------
 - [syntax basics](lecture1/base-r.pdf)
-- [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
+- [data import](lecture1/data-import.pdf)
+- [data transformation](lecture1/data-transformation.pdf)
+- [data wrangling](lecture1/data-wrangling-cheatsheet.pdf)
+- additional [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
 
 Interacting with the R environment
 ----------------------------------
@@ -49,6 +52,11 @@ R packages
 - VEGAN
 - TreeSim
 - TreePar
+- molaR
+- geomorph
+- Rvcg
+- Morpho
+- rgl
 
 R communities
 -------------

@@ -1,316 +1,300 @@
-High-throughput DNA sequencing
-==============================
+Genome HTS in biodiversity research
+===================================
 
-Data centric view of genome resequencing workflow
--------------------------------------------------
-1. (semi-)raw reads come out of lab as FASTQ
-2. reads are aligned to a (pseudo-)reference as SAM/BAM/CRAM
-3. alignment is viewed in genome browser, with additional tracks as BED
-4. variants are called (e.g. as VCF/BCF), consensus is computed (e.g. as FASTA)
-5. consensus is annotated as GFF
+High-throughput sequencing
+--------------------------
 
-The FASTQ format
+> What are your experiences with:
+> - Any lab work, e.g. isolating DNA? PCR?
+> - Any sequencing? Sanger? HTS?
+> - Any HTS data analysis?
+> - What have you learned in Genomic Architecture?
+
+- At time of writing (2017) there are multiple technologies, broadly categorized as
+  sequencing-by-ligation (e.g. SOLiD) and sequencing-by-synthesis (illumina, Ion Torrent,
+  454). Reads are getting longer on all platforms, but especially on PacBio and MinION.
+- A number of vendors have created numerous platforms for specific needs and requirements, 
+  e.g. data volumes, read lengths, cost, error profile, runtime
+- A fairly current review is [Goodwin et al., 2016](lecture1/goodwin2016.pdf)
+- Illumina (below) is currently the largest platform
+
+![](lecture1/illumina.png)
+
+Typical workflow
 ----------------
-- The initial mountain of data to deal with
-- Sequential [format](FASTQ.pdf) returned by most HTS platforms
-- Includes base calling quality scores
 
-Record layout:
+1. clip any synthetic oligonucleotides (adaptors, primers)
+2. trim low quality bases, filter short reads
+3. _de novo_ or _mapping_ assembly
+4. further annotation
+5. variant calling
+6. consensus sequence computation
 
-1. `@`+identifier - _note paired-end sequencing_
-2. Sequence data - _IUPAC single character nucleotides_
-3. `+` - _separator between sequence and quality_
-4. Quality lines - _map phred scores to ASCII characters_
+Library preparation
+-------------------
 
-Example:
+![](lecture1/fragmentation_and_ligation.png)
 
-    @FAKE0005
-    ACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
-    +
-    @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+- After DNA isolation and fragmentation, _primer sequences_ may be _ligated_ to the 
+  fragment as part of an amplification procedure (PCR)
+- In addition, various sequencing platforms involve ligation of _adaptor sequences_ for
+  various roles, e.g. to label samples and to participate in the chemistry of the 
+  platform (attach to the flowcell surface, for example)
 
-Quality (phred) scores
-----------------------
-Phred quality scores _Q_ are defined as a property which is logarithmically related to 
-the base-calling error probabilities _P_.
+Clipping adaptors
+-----------------
 
-_Q_ = -10 log<sub>10</sub> _P_
+![](lecture1/fragmentsize.png)
 
-For example, if Phred assigns a quality score of 30 to a base, the chances that this base 
-is called incorrectly are 1 in 1000.
+Depending on the sequencing platform, insert size, and additional services provided by 
+the sequencing lab, the reads may already be sorted by adaptors (which are then clipped 
+off) or you may have to do this yourself. 
 
-| Phred Quality Score | Probability of incorrect base call | Base call accuracy |
-|---------------------|------------------------------------|--------------------|
-| 10                  | 1 in 10                            | 90%                |
-| 20                  | 1 in 100                           | 99%                |
-| 30                  | 1 in 1000                          | 99.9%              |
-| 40                  | 1 in 10,000                        | 99.99%             |
-| 50                  | 1 in 100,000                       | 99.999%            |
-| 60                  | 1 in 1,000,000                     | 99.9999%           |
+Effect of adaptor clipping
+--------------------------
 
-Phred score encoding
+**Sturm M, C Schroeder & P Bauer**, 2016. SeqPurge: highly-sensitive adapter trimming for 
+paired-end NGS data. _BMC Bioinformatics._ **17**: 208.
+doi:[10.1186/s12859-016-1069-7](http://doi.org/10.1186/s12859-016-1069-7)
+
+![](lecture1/clipping.png)
+
+- There are many tools available for adaptor clipping. Some are faster than others, and 
+  they all affect downstream analysis time differently
+- Under some circumstances, it may not be necessary to do this, depending on the 
+  experimental design (for example, if there is no de-multiplexing to do and the adaptors
+  are ignored in a mapping assembly)
+
+Clipping primers
+----------------
+
+![](lecture1/libstructure.png)
+
+**Sidenote about amplicon sequencing**
+
+- In _amplicon_ sequencing, the fragment will have been ligated with a primer as well as 
+  an adaptor sequence. 
+- This allows for more samples to be multiplexed because the number of combinations then 
+  becomes _n adaptors_ * _n primers_ 
+- And you probably don't need the amount of coverage on a single marker that a 
+  non-multiplexed run would give you anyway
+- However, platform vendors cannot de-multiplex automatically (because they know their
+  own adaptors, but not _your_ primers), and with degenerate primers you'd have to do
+  [fuzzy matching](https://github.com/naturalis/fastq-simple-tools/blob/master/script/splitfastq.pl#L128) 
+  against their sequences
+
+Quality assessment and trimming
+-------------------------------
+
+A convenient tool for initial quality assessment of HTS read data is 
+[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html),
+whose results can indicate numerous pathologies:
+
+- Low Phred scores overall (e.g. pacbio compared to illumina), at higher base positions 
+  on the read (i.e. near the "end"), or along homopolymers, some of which can be addressed
+  using read trimming
+- The presence of biases (GC content) and overrepresentations of certain reads (e.g.
+  adaptors) that may still need to be clipped 
+- Some examples show: 
+  - [good illumina data](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html)
+  - [bad illumina data](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html)
+  - [adaptors still connected](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/RNA-Seq_fastqc.html)
+  - [pacbio](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/pacbio_srr075104_fastqc.html)
+
+![](lecture1/fastqc.png)
+
+Additional filtering
 --------------------
 
-Different platforms map phred scores in different ways to ASCII:
+![](lecture1/chimera.gif)
 
-- sanger: 33..126
-- solexa: 59..126
-- illumina: 64..126
+- A (crude) proxy for a read possibly being chimeric is that it occurs only once, i.e. as
+  a singleton, which you might therefore filter out. This is more likely the case in
+  genomes than in amplicon sequencing (because the chimera might be PCR'ed)
+- On platforms that have variable length reads, you might want to filter out all reads
+  below a threshold length
+- When paired-end sequencing, one of the two 'ends' might have been filtered out, in 
+  which case you might filter out the opposite end as well
 
-| code  | char  | code  | char  | code  | char  | code  | char  | code  | char  | code  | char  |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|   33  |   !   |   49  |   1   |   65  |   A   |   81  |   Q   |   97  |   a   |   113 |   q   |
-|   34  |   "   |   50  |   2   |   66  |   B   |   82  |   R   |   98  |   b   |   114 |   r   |
-|   35  |   #   |   51  |   3   |   67  |   C   |   83  |   S   |   99  |   c   |   115 |   s   |
-|   36  |   $   |   52  |   4   |   68  |   D   |   84  |   T   |   100 |   d   |   116 |   t   |
-|   37  |   %   |   53  |   5   |   69  |   E   |   85  |   U   |   101 |   e   |   117 |   u   |
-|   38  |   &   |   54  |   6   |   70  |   F   |   86  |   V   |   102 |   f   |   118 |   v   |
-|   39  |   '   |   55  |   7   |   71  |   G   |   87  |   W   |   103 |   g   |   119 |   w   |
-|   40  |   (   |   56  |   8   |   72  |   H   |   88  |   X   |   104 |   h   |   120 |   x   |
-|   41  |   )   |   57  |   9   |   73  |   I   |   89  |   Y   |   105 |   i   |   121 |   y   |
-|   42  |   *   |   58  |   :   |   74  |   J   |   90  |   Z   |   106 |   j   |   122 |   z   |
-|   43  |   +   |   59  |   ;   |   75  |   K   |   91  |   \[  |   107 |   k   |   123 |   {   |
-|   44  |   ,   |   60  |   <   |   76  |   L   |   92  |   \\  |   108 |   l   |   124 |   \|  |
-|   45  |   -   |   61  |   =   |   77  |   M   |   93  |   ]   |   109 |   m   |   125 |   }   |
-|   46  |   .   |   62  |   >   |   78  |   N   |   94  |   ^   |   110 |   n   |   126 |   ~   |
-|   47  |   /   |   63  |   ?   |   79  |   O   |   95  |   _   |   111 |   o   |       |       |
-|   48  |   0   |   64  |   @   |   80  |   P   |   96  |   \`  |   112 |   p   |       |       |
+Overlap-layout-consensus assembly
+---------------------------------
 
-The SAM/BAM/CRAM format
------------------------
-- [Format](SAM.pdf) to represent (FASTQ) reads aligned to a reference sequence
-- Textual (SAM) and binary representations (BAM)
-- Binary representation further compressed as CRAM
-- Accessed using tools such as samtools, picard
+> What do you know about graph theory? Edges? Vertices? Degrees? Directedness?
 
-Example alignment:
+- In _Sanger_ sequencing assembly, a 
+  [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is constructed 
+  where every 
+  [vertex](https://en.wikipedia.org/wiki/Vertex_(graph_theory)) is a 
+  read, and 
+  [edges](https://en.wikipedia.org/wiki/Edge_(graph_theory)) connect the reads that 
+  overlap
+- Subsequently, the [Hamiltonian path](https://en.wikipedia.org/wiki/Hamiltonian_path), 
+  which visits every _vertex_ (read) exactly once is searched for, and the consensus 
+  sequence along the path is computed
+- However, this _overlap-layout-consensus_ approach is hard to solve (computer scientists
+  call this [NP-complete](https://en.wikipedia.org/wiki/NP-completeness))
 
+![](lecture1/overlap-layout-consensus.png)
+
+An alternative way to traverse the graph
+----------------------------------------
+
+- Computing the _Hamiltonian path_ is too computationally intensive ("NP-complete") for 
+  HTS data 
+- Another approach to traverse graphs is along the _Eulerian path_, where every _edge_
+  (instead of vertex) is visited exactly once
+- The [Eulerian path](https://en.wikipedia.org/wiki/Eulerian_path) can be traversed in 
+  _linear time_ (computer scientists notate this as "_O_(|_E_|)") as opposed to 
+  non-deterministic _polynomial time_ (i.e. with _n_ input _T_(_n_) = O(_n_<sup>k</sup>) 
+  for some constant _k_ in [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation))
+- However, for this _Eulerian path_ to exist, either zero or two _vertices_ may exist with 
+  odd _degree_, so the Seven Bridges of Königsberg, which Euler studied, don't form a path
+  (and the overlap graph might also not)
+
+![](lecture1/koenigsberg.png)
+
+Making the graph amenable to Eulerian traversal
+-----------------------------------------------
+
+- In a complete [De Bruijn graph](https://en.wikipedia.org/wiki/De_Bruijn_graph), all 
+  vertices have even degree
+- A _De Bruijn_ graph connects symbolic sequence data such that every vertex is a sequence
+  string of length _k_ (a "_k-mer_") that is connected to other such vertices if the 
+  the sequences are identical along the substring of length _k_-1, i.e. the sequences
+  are shifted one step relative to one another, which creates _directedness_ in the
+  graph
+- The simplest cases, with binary sequence data, are shown for _k_ = 1..3 (imagine what
+  this would look like for four symbols):
+
+![](lecture1/DeBruijn-as-line-digraph.svg)
+
+HTS sequence data and _k-mers_
+------------------------------
+
+- The _De Bruijn_ graph presupposes that for every _k-mer_ there are neighbours that 
+  overlap with it along the substring _k-1_
+- HTS read data does not naturally come out meeting that assumption: there are biases
+  causing reads to overlap more irregularly
+- However, the reads can be re-processed to a spectrum of substrings of some smaller 
+  size _k_ that are shifted relative to one another (note that this collapses the 
+  duplicates that are then created):
+
+![](lecture1/K-mer-example.png)
+
+This re-processing can be achieved naively (there are faster tools than this) in python
+thusly:
+
+```python
+def find_kmers(string, k):
+    
+      kmers = []
+      n = len(string)
+
+      for i in range(0, n-k+1):
+           kmers.append(string[i:i+k])
+
+      return kmers
 ```
-Coor    12345678901234  5678901234567890123456789012345
-ref     AGCATGTTAGATAA**GATAGCTGTGCTAGTAGGCAGTCAGCGCCAT
-+r001/1       TTAGATAAAGGATA*CTG                       
-+r002        aaaAGATAA*GGATA
-+r003      gcctaAGCTAA
-+r004                    ATAGCT..............TCAGC
--r003                           ttagctTAGGC
--r001/2                                       CAGCGGCAT
-```
 
-- Read `r001/1` and `r001/2` constitute a read pair
-- `r003` is a chimeric read
-- `r004` represents a split alignment
+Optimal _k-mer_ size and assembly
+---------------------------------
 
-SAM representation
-------------------
+**Chikhi R & P Medvedev**, 2014. Informed and automated k-mer size selection for genome 
+assembly. _Bioinformatics_ **30**(1): 31–37 
+doi:[10.1093/bioinformatics/btt310](https://doi.org/10.1093/bioinformatics/btt310)
 
-Example:
-```
-@HD VN:1.5 SO:coordinate
-@SQ SN:ref LN:45
-r001    99 ref  7 30 8M2I4M1D3M = 37 39 TTAGATAAAGGATACTG *
-r002     0 ref  9 30 3S6M1P1I4M * 0   0 AAAAGATAAGGATA    *
-r003     0 ref  9 30 5S6M       * 0   0 GCCTAAGCTAA       *
-r004     0 ref 16 30 6M14N5M    * 0   0 ATAGCTTCAGC       *
-r003  2064 ref 29 17 6H5M       * 0   0 TAGGC             *
-r001   147 ref 37 30 9M         = 7 -39 CAGCGGCAT         *
-```
+- Smaller _k_ makes for a smaller graph, but at the cost of more duplicate _k-mers_ 
+  collapsed, causing information loss and an inability to cross over repeat regions
+- Higher _k_ is more memory intensive, and may increase the risk of _k-mers_ having no
+  neighbours, causing short contigs
+- Some tools exist that attempt to optimize this value, for example by attempting to 
+  predict the value that results in the most distinct _k-mers_, which corresponds with
+  certain measures of assembly quality:
 
-Mandatory columns: 
+![](lecture1/K-mer-genie.png)
 
-| No. |	Name  | Description                                        |
-|-----|-------|----------------------------------------------------|
-| 1   | QNAME | Query NAME of the read or the read pair            |
-| 2   | FLAG  | Bitwise FLAG (pairing, strand, mate strand, etc.)  |
-| 3   | RNAME | Reference sequence NAME                            |
-| 4   | POS   | 1-Based leftmost POSition of clipped alignment     |
-| 5   | MAPQ  | MAPping Quality (Phred-scaled)                     |
-| 6   | CIGAR | Extended CIGAR string (operations: MIDNSHP)        |
-| 7   | MRNM  | Mate Reference NaMe (‘=’ if same as RNAME)         |
-| 8   | MPOS  | 1-Based leftmost Mate POSition                     |
-| 9   | ISIZE | Inferred Insert SIZE                               |
-| 10  | SEQ   | Query SEQuence on the same strand as the reference |
-| 11  | QUAL  | Query QUALity (ASCII-33=Phred base quality)        |
+- [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) is often used as benchmark / gold 
+  standard for _de novo_ assembly, but it is limited in data set size. 
+- [SOAPdenovo2](http://soap.genomics.org.cn/soapdenovo.html) is an efficient, commonly 
+  used assembler for larger genomes.
+- [NG50](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#NG50) gives the 
+  length of the contig (when sorted by descending length) that is the mid point along the
+  way to covering the length of the reference genome (compare with N50, which is the mid
+  point along the way to the total length of the assembly).
 
-What is a CIGAR?
+Scaffolding
+-----------
+
+- _De novo_ assembly results in _contigs_, stretches of contiguous read data, which then
+  may be scaffolded
+- [Paired-end and mate-pair](https://era7bioinformatics.com/en/page.cfm?id=1626) read 
+  data (with larger insert sizes) can help span a gap and help orient and approximate
+  the distance between reads
+- Other ways to scaffold include using [optical mapping](https://en.wikipedia.org/wiki/Optical_mapping)
+  or sequencing longer reads (e.g. pacbio) as well
+
+![](lecture1/scaffolding.jpg)
+
+Mapping assembly
 ----------------
-The sequence being aligned to a reference may have additional bases that are not in the 
-reference or may be missing bases that are in the reference. The CIGAR string is a 
-sequence of base lengths and the associated operation. They are used to indicate things 
-like which bases align (either a match/mismatch) with the reference, are deleted from the 
-reference, and are insertions that are not in the reference.
-For example:
-```
-RefPos:     1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
-Reference:  C  C  A  T  A  C  T  G  A  A  C  T  G  A  C  T  A  A  C
-Read: ACTAGAATGGCT
-```
-Aligning these two:
-```
-RefPos:     1  2  3  4  5  6  7     8  9 10 11 12 13 14 15 16 17 18 19
-Reference:  C  C  A  T  A  C  T     G  A  A  C  T  G  A  C  T  A  A  C
-Read:                   A  C  T  A  G  A  A     T  G  G  C  T
-```
-With the alignment above, you get:
-```
-POS: 5
-CIGAR: 3M1I3M1D5M
-```
-The POS indicates that the read aligns starting at position 5 on the reference. The CIGAR 
-says that the first 3 bases in the read sequence align with the reference. The next base 
-in the read does not exist in the reference. Then 3 bases align with the reference. The 
-next reference base does not exist in the read sequence, then 5 more bases align with the 
-reference. Note that at position 14, the base in the read is different than the reference,
-but it still counts as an M since it aligns to that position.
 
-Bitwise flags
--------------
+![](lecture1/mapping.png)
 
-| 2<sup>x</sup> | Value (Hex)       | Value (Decimal)    | Bits         | SAM property                             |
-|---------------|-------------------|--------------------|--------------|------------------------------------------|
-| 2<sup>0</sup> | 1                 | 1                  | 000000000001 | are there multiple fragments?            |
-| 2<sup>1</sup> | 2                 | 2                  | 000000000010 | are all fragments properly aligned?      |
-| 2<sup>2</sup> | 4                 | 4                  | 000000000100 | is this fragment unmapped?               |
-| 2<sup>3</sup> | 8                 | 8                  | 000000001000 | is the next fragment unmapped?           |
-| 2<sup>4</sup> | 10<sub>hex</sub>  | 16<sub>dec</sub>   | 000000010000 | is this query the reverse strand?        |
-| 2<sup>5</sup> | 20<sub>hex</sub>  | 32<sub>dec</sub>   | 000000100000 | is the next fragment the reverse strand? |
-| 2<sup>6</sup> | 40<sub>hex</sub>  | 64<sub>dec</sub>   | 000001000000 | is this the 1st fragment?                |
-| 2<sup>7</sup> | 80<sub>hex</sub>  | 128<sub>dec</sub>  | 000010000000 | is this the last fragment?               |
-| 2<sup>8</sup> | 100<sub>hex</sub> | 256<sub>dec</sub>  | 000100000000 | is this a secondary alignment?           |
-| 2<sup>9</sup> | 200<sub>hex</sub> | 512<sub>dec</sub>  | 001000000000 | did this read fail quality controls?     |
-| 2<sup>A</sup> | 400<sub>hex</sub> | 1024<sub>dec</sub> | 010000000000 | is this read a PCR or optical duplicate? |
-| 2<sup>B</sup> | 800<sub>hex</sub> | 2048<sub>dec</sub> | 100000000000 | supplementary alignment                  |
+- In a mapping assembly, a reference genome is scanned for the best place to map a read
+- Hence, the reference genome needs to be indexed in order for this to be efficient
 
-The values in the `FLAG` column (2) correspond to bitwise flags as follows: 
+The Burrows-Wheeler transform
+-----------------------------
 
-| FLAG | hex   | [Explanation](https://broadinstitute.github.io/picard/explain-flags.html)       |
-|------|-------|---------------------------------------------------------------------------------|
-| 99   | 0x63  | first/next is reverse-complemented/properly aligned/multiple segments           |
-| 0    |       | no flags set, thus a mapped single segment                                      |
-| 2064 | 0x810 | supplementary/reversecomplemented                                               |
-| 147  | 0x93  | last (second of a pair)/reverse-complemented/properly aligned/multiple segments |
+![](lecture1/bwt.png)
 
-Using the flags, we can filter the reads in a BAM file:
+1. All rotations for a given input string are generated
+2. These are sorted alphabetically
+3. The final column is the transformed string, i.e. [BWT(T)](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform)
 
-```
-$ samtools view -f 4 file.bam > unmapped.sam
-```
+This string has the following properties:
 
-The BED format
---------------
-If you load a SAM/BAM file in a genome browser (e.g. [UCSC](https://genome.ucsc.edu)) you
-might want to load additional 'tracks' alongside the alignment. For this the BED format
-is used.
+- Almost incomprehensibly, the input string can be recovered from BWT(T) by a reverse
+  function
+- But, in the transformed string, the same character now occurs multiple times in 
+  sequence, which can be compressed (e.g. by counting the number of repetitions)
+- By computing an additional index (FM), substring locations can quickly be found,
+  and thus reads be mapped
+- [Here](lecture1/bwt_fm.pdf) is a good tutorial with code samples for all the steps
+  in Python
 
-```
-track name=pairedReads description="Clone Paired Reads" useScore=1
-chr22 1000 5000 cloneA 960 + 1000 5000 0 2 567,488, 0,3512
-chr22 2000 6000 cloneB 900 - 2000 6000 0 2 433,399, 0,3601
-```
+BWT mapping assembly tools
+--------------------------
 
-1.  The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. 
-    scaffold10671).
-2.  The starting position of the feature in the chromosome or scaffold. The first base in 
-    a chromosome is numbered 0.
-3.  The ending position of the feature in the chromosome or scaffold. The chromEnd base is 
-    not included in the display of the feature. For example, the first 100 bases of a 
-    chromosome are defined as chromStart=0, chromEnd=100, and span the bases numbered 0-99.
-4.  Defines the name of the BED line. This label is displayed to the left of the BED line 
-    in the Genome Browser window when the track is open to full display mode or directly 
-    to the left of the item in pack mode.
-5.  A score between 0 and 1000. If the track line useScore attribute is set to 1 for this 
-    annotation data set, the score value will determine the level of gray in which this 
-    feature is displayed (higher numbers = darker gray).
-6.  Defines the strand. Either "." (=no strand) or "+" or "-".
-7.  The starting position at which the feature is drawn thickly (for example, the start 
-    codon in gene displays). When there is no thick part, thickStart and thickEnd are 
-    usually set to the chromStart position.
-8.  The ending position at which the feature is drawn thickly (for example the stop codon 
-    in gene displays).
-9.  An RGB value of the form R,G,B (e.g. 255,0,0). If the track line itemRgb attribute is 
-    set to "On", this RBG value will determine the display color of the data contained in 
-    this BED line. NOTE: It is recommended that a simple color scheme (eight colors or 
-    less) be used with this attribute to avoid overwhelming the color resources of the 
-    genome Browser and your Internet browser.
-10. The number of blocks (exons) in the BED line.
-11. A comma-separated list of the block sizes. The number of items in this list should 
-    correspond to blockCount.
-12. A comma-separated list of block starts. All of the blockStart positions should be 
-    calculated relative to chromStart. The number of items in this list should correspond 
-    to blockCount.
+Commonly used BWT mapping tools are:
 
-The VCF/BCF format
-------------------
-- Format for variants (SNPs, indels, microsats) computed from a SAM/BAM/CRAM file
-- Concise, good for resequencing projects, but lossy
-- [Text](VCFv4.2.pdf) and binary version
+- [bwa](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtp324)
+- [bowtie](https://dx.doi.org/10.1186%2Fgb-2009-10-3-r25)
+- [SOAP2](https://doi.org/10.1093/bioinformatics/btp336)
 
-```
-##fileformat=VCFv4.2
-##fileDate=20090805
-##source=myImputationProgramV3.1
-##reference=file:///seq/references/1000GenomesPilot-NCBI36.fasta
-##contig=<ID=20,length=62435964,assembly=B36,md5=f126cdf8a6e0c7f379d618ff66beb2da,species="Homo sapiens",taxonomy=x>
-##phasing=partial
-##INFO=<ID=NS,Number=1,Type=Integer,Description="Number of Samples With Data">
-##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
-##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency">
-##INFO=<ID=AA,Number=1,Type=String,Description="Ancestral Allele">
-##INFO=<ID=DB,Number=0,Type=Flag,Description="dbSNP membership, build 129">
-##INFO=<ID=H2,Number=0,Type=Flag,Description="HapMap2 membership">
-##FILTER=<ID=q10,Description="Quality below 10">
-##FILTER=<ID=s50,Description="Less than 50% of samples have data">
-##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
-##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
-##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
-##FORMAT=<ID=HQ,Number=2,Type=Integer,Description="Haplotype Quality">
-#CHROM  POS     ID          REF ALT     QUAL    FILTER  INFO                                FORMAT      NA00001         NA00002         NA00003
-20      14370   rs6054257   G   A       29      PASS    NS=3;DP=14;AF=0.5;DB;H2             GT:GQ:DP:HQ 0|0:48:1:51,51  1|0:48:8:51,51  1/1:43:5:.,.
-20      17330   .           T   A       3       q10     NS=3;DP=11;AF=0.017                 GT:GQ:DP:HQ 0|0:49:3:58,50  0|1:3:5:65,3    0/0:41:3
-20      1110696 rs6040355   A   G,T     67      PASS    NS=2;DP=10;AF=0.333,0.667;AA=T;DB   GT:GQ:DP:HQ 1|2:21:6:23,27  2|1:2:0:18,2    2/2:35:4
-20      1230237 .           T   .       47      PASS    NS=3;DP=13;AA=T                     GT:GQ:DP:HQ 0|0:54:7:56,60  0|0:48:4:51,51  0/0:61:2
-20      1234567 microsat1   GTC G,GTCT  50      PASS    NS=3;DP=9;AA=G                      GT:GQ:DP    0/1:35:4        0/2:17:2        1/1:40:3
-```
+Genome annotation
+-----------------
 
-1. a good simple SNP 
-2. a possible SNP that has been filtered out because its quality is below 10
-3. a site at which two alternate alleles are called, with one of them (T) being ancestral 
-   (possibly a reference sequencing error)
-4. a site that is called monomorphic reference (i.e. with no alternate alleles)
-5. a microsatellite with two alternative alleles, one a deletion of 2 bases (TC), and the 
-   other an insertion of one base (T). 
-   
-Genotype data are given for three samples, two of which are phased and the third unphased, 
-with per sample genotype quality, depth and haplotype qualities (the latter only for the 
-phased samples) given as well as the genotypes. The microsatellite calls are unphased.
+![](lecture1/MAKER.jpg)
 
-The GFF format
---------------
-Once a plausible sequence has been generated (e.g. by doing a de novo assembly or by 
-computing a consensus from a genome alignment) the next step might be to annotate it, i.e.
-predict ORFs and scan databases for homologies. Such genome annotations are stored in GFF
-files:
+Genomes are annotated using multiple lines of evidence, such as:
 
-```
-contig_1    maker   gene            1797    7025    .   +   .   ID=CR513_016834;Name=CR513_016834;Alias=maker-contig_1-snap-gene-0.0;Note=Similar to SCAI: Protein SCAI (Homo sapiens);
-contig_1    maker   five_prime_UTR  1797    1954    .   +   .   ID=CR513_016834-RA:five_prime_utr;Parent=CR513_016834-RA;
-contig_1    maker   CDS             1955    2095    .   +   0   ID=CR513_016834-RA:cds;Parent=CR513_016834-RA;
-contig_1    maker   CDS             2223    2359    .   +   0   ID=CR513_016834-RA:cds;Parent=CR513_016834-RA;
-contig_1    maker   CDS             6748    6979    .   +   1   ID=CR513_016834-RA:cds;Parent=CR513_016834-RA;
-contig_1    maker   three_prime_UTR 6980    7025    .   +   .   ID=CR513_016834-RA:three_prime_utr;Parent=CR513_016834-RA;
-```
+- gene prediction, e.g. with [SNAP](https://doi.org/10.1186/1471-2105-5-59)
+- [EST](https://en.wikipedia.org/wiki/Expressed_sequence_tag) mappings, e.g. with
+  [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) 
+  or [exonerate](https://doi.org/10.1186/1471-2105-6-31)
+- protein mappings, e.g. with blastx (protein blast) or exonerate
+- repeat masking data
 
-1. name of the chromosome or scaffold; chromosome names can be given with or without the 
-   'chr' prefix. Important note: the seqname must be one used within Ensembl, i.e. a 
-   standard chromosome name or an Ensembl identifier such as a scaffold ID, without any 
-   additional content such as species or assembly. See the example GFF output below.
-2. name of the program that generated this feature, or the data source (database or 
-   project name)
-3. feature type name, e.g. Gene, Variation, Similarity
-4. start position of the feature, with sequence numbering starting at 1.
-5. end position of the feature, with sequence numbering starting at 1.
-6. a floating point value.
-7. defined as + (forward) or - (reverse).
-8. one of '0', '1' or '2'. '0' indicates that the first base of the feature is the first 
-   base of a codon, '1' that the second base is the first base of a codon, and so on.
-9. semicolon-separated list of tag-value pairs, providing additional information about 
-   each feature.
+Variant calling
+---------------
+
+![](lecture1/SNP-example.png)
+
+Variants are called with a variety of methods:
+
+- Allele counting 
+- Probabilistic/Bayesian: build a model of the expected number of variants and use that
+  to quantify support for any given call
+- Heuristic techniques: based on filtering / thresholding for read depth, base quality,
+  frequency

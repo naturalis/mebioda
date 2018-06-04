@@ -1,0 +1,133 @@
+"","dwc:scientificname","dwc:measurementtype","dwc:measurementvalue","units"
+"1","Cocos nucifera","http://rs.tdwg.org/dwc/terms/decimalLongitude","69.5","degrees"
+"2","Cocos nucifera","http://rs.tdwg.org/dwc/terms/decimalLongitude","69.5","degrees"
+"3","Cocos nucifera","http://rs.tdwg.org/dwc/terms/decimalLatitude","22.6","degrees"
+"4","Cocos nucifera","http://rs.tdwg.org/dwc/terms/decimalLatitude","22.6","degrees"
+"5","Cocos nucifera L.","http://eol.org/schema/terms/WetlandIndicatorStatus","http://eol.org/schema/terms/nwpl_facu",NA
+"6","Cocos nucifera L.","http://eol.org/schema/terms/WetlandIndicatorStatus","http://eol.org/schema/terms/nwpl_facu",NA
+"7","Cocos nucifera L.","http://eol.org/schema/terms/WetlandIndicatorStatus","http://eol.org/schema/terms/nwpl_upl",NA
+"8","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0000207","60","ft"
+"9","Cocos nucifera","http://purl.bioontology.org/ontology/SNOMEDCT/260865002","http://eol.org/schema/terms/moderateRate",NA
+"10","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0000207","60","ft"
+"11","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0000624","http://eol.org/schema/terms/allelopathyUnknown",NA
+"12","Cocos nucifera","http://purl.obolibrary.org/obo/PATO_0001729","http://purl.obolibrary.org/obo/PATO_0001733",NA
+"13","Cocos nucifera","http://purl.obolibrary.org/obo/PATO_0000050","http://eol.org/schema/terms/moderateLifeSpan",NA
+"14","Cocos nucifera","http://eol.org/schema/terms/GrassGrowthType","http://eol.org/schema/terms/lowGrowingGrassNo",NA
+"15","Cocos nucifera","http://purl.obolibrary.org/obo/GO_0009399","http://purl.bioontology.org/ontology/SNOMEDCT/260413007",NA
+"16","Cocos nucifera","http://eol.org/schema/terms/ResproutAbility","http://eol.org/schema/terms/ResproutNo",NA
+"17","Cocos nucifera","http://purl.obolibrary.org/obo/PATO_0000052","http://purl.obolibrary.org/obo/PATO_0000622",NA
+"18","Cocos nucifera","http://eol.org/schema/terms/HumanLivestockToxicity","http://purl.bioontology.org/ontology/SNOMEDCT/260413007",NA
+"19","Cocos nucifera","http://eol.org/schema/terms/SoilRequirements","http://eol.org/schema/terms/coarseSoilYes",NA
+"20","Cocos nucifera","http://eol.org/schema/terms/SoilRequirements","http://eol.org/schema/terms/mediumSoilYes",NA
+"21","Cocos nucifera","http://eol.org/schema/terms/SoilRequirements","http://eol.org/schema/terms/fineSoilYes",NA
+"22","Cocos nucifera","http://eol.org/schema/terms/AnaerobicSoilTolerance","http://purl.obolibrary.org/obo/PATO_0000461",NA
+"23","Cocos nucifera","http://eol.org/schema/terms/CalcareousSoilTolerance","http://purl.obolibrary.org/obo/PATO_0000461",NA
+"24","Cocos nucifera","http://eol.org/schema/terms/GerminationRequirements","http://eol.org/schema/terms/coldStratificationNo",NA
+"25","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0000276","http://purl.obolibrary.org/obo/PATO_0000461",NA
+"26","Cocos nucifera","http://eol.org/schema/terms/FireTolerance","http://purl.bioontology.org/ontology/SNOMEDCT/260413007",NA
+"27","Cocos nucifera","http://eol.org/schema/terms/PrimaryMacronutrientRequirements","http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54722",NA
+"28","Cocos nucifera","http://eol.org/schema/terms/FrostFreeDays","365","days"
+"29","Cocos nucifera","http://eol.org/schema/terms/HedgeTolerance","http://purl.bioontology.org/ontology/SNOMEDCT/260413007",NA
+"30","Cocos nucifera","http://eol.org/schema/terms/MoistureUse","http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54722",NA
+"31","Cocos nucifera","http://eol.org/schema/terms/SoilPH","8",NA
+"32","Cocos nucifera","http://eol.org/schema/terms/SoilPH","4",NA
+"33","Cocos nucifera","http://eol.org/schema/terms/PlantingDensity","300","per acre"
+"34","Cocos nucifera","http://eol.org/schema/terms/PlantingDensity","150","per acre"
+"35","Cocos nucifera","http://eol.org/schema/terms/PrecipitationTolerance","20","inch"
+"36","Cocos nucifera","http://eol.org/schema/terms/SoilDepth","60","inch"
+"37","Cocos nucifera","http://eol.org/schema/terms/PrecipitationTolerance","80","inch"
+"38","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0006001","http://purl.obolibrary.org/obo/PATO_0002393",NA
+"39","Cocos nucifera","http://eol.org/schema/terms/ShadeTolerance","http://purl.obolibrary.org/obo/PATO_0002394",NA
+"40","Cocos nucifera","http://eol.org/schema/terms/TemperatureTolerance","18","degrees Fahrenheit"
+"41","Cocos nucifera","http://eol.org/schema/terms/BloomPeriod","http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48658",NA
+"42","Cocos nucifera","http://eol.org/schema/terms/CommercialAvailability","http://eol.org/schema/terms/routinelyAvailable",NA
+"43","Cocos nucifera","http://eol.org/schema/terms/SeedPeriodBegin","http://eol.org/schema/terms/yearRound",NA
+"44","Cocos nucifera","http://eol.org/schema/terms/SeedAbundance","http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25227",NA
+"45","Cocos nucifera","http://eol.org/schema/terms/SeedPeriodEnd","http://eol.org/schema/terms/yearRound",NA
+"46","Cocos nucifera","http://eol.org/schema/terms/FruitPersistence","http://eol.org/schema/terms/fruitPersistentYes",NA
+"47","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedByBareRootNo",NA
+"48","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedByBulbsNo",NA
+"49","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedByContainerYes",NA
+"50","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedByCormsNo",NA
+"51","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedByCuttingsNo",NA
+"52","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedBySeedYes",NA
+"53","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedBySodNo",NA
+"54","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedBySprigsNo",NA
+"55","Cocos nucifera","http://eol.org/schema/terms/PropagationMethod","http://eol.org/schema/terms/propagatedByTubersNo",NA
+"56","Cocos nucifera","http://eol.org/schema/terms/SeedSpreadRate","http://purl.obolibrary.org/obo/PATO_0000911",NA
+"57","Cocos nucifera","http://eol.org/schema/terms/GrainType","http://eol.org/schema/terms/smallGrainNo",NA
+"58","Cocos nucifera","http://eol.org/schema/terms/VegetativeSpreadRate","http://purl.bioontology.org/ontology/SNOMEDCT/260413007",NA
+"59","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/berryNutSeedNo",NA
+"60","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/christmasTreeNo",NA
+"61","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/fodderNo",NA
+"62","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/lumberNo",NA
+"63","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/navalStoreNo",NA
+"64","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/nurseryStockNo",NA
+"65","Cocos nucifera","http://eol.org/schema/terms/BrowseAnimalPalatability","http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54722",NA
+"66","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/palatableHumansYes",NA
+"67","Cocos nucifera","http://eol.org/schema/terms/GrazeAnimalPalatability","http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54722",NA
+"68","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/postProductYes",NA
+"69","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/pulpwoodNo",NA
+"70","Cocos nucifera","http://eol.org/schema/terms/Uses","http://eol.org/schema/terms/veneerNo",NA
+"71","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0002725","http://eol.org/schema/terms/perennial",NA
+"72","Cocos nucifera","http://eol.org/schema/terms/PlantHabit","http://eol.org/schema/terms/tree",NA
+"73","Cocos nucifera","http://eol.org/schema/terms/IntroducedRange","U. S. Virgin Islands",NA
+"74","Cocos nucifera","http://eol.org/schema/terms/IntroducedRange","Puerto Rico",NA
+"75","Cocos nucifera","http://eol.org/schema/terms/IntroducedRange","Hawaii, USA",NA
+"76","Cocos nucifera","http://eol.org/schema/terms/IntroducedRange","Lower 48 United States of America",NA
+"77","Cocos nucifera","http://eol.org/schema/terms/ActiveGrowthPeriod","http://eol.org/schema/terms/yearRound",NA
+"78","Cocos nucifera","http://eol.org/schema/terms/BloatPotential","http://purl.bioontology.org/ontology/SNOMEDCT/260413007",NA
+"79","Cocos nucifera","http://eol.org/schema/terms/CNRatio","http://eol.org/schema/terms/highCNRatio",NA
+"80","Cocos nucifera","http://sweet.jpl.nasa.gov/2.3/humanAgriculture.owl#Horticulture","http://eol.org/schema/terms/fallConspicuousYes",NA
+"81","Cocos nucifera","http://sweet.jpl.nasa.gov/2.3/humanAgriculture.owl#Horticulture","http://eol.org/schema/terms/coppicePotentialNo",NA
+"82","Cocos nucifera","http://eol.org/schema/terms/FireResistance","http://eol.org/schema/terms/fireResistantNo",NA
+"83","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0000537","http://purl.obolibrary.org/obo/PATO_0000323",NA
+"84","Cocos nucifera","http://sweet.jpl.nasa.gov/2.3/humanAgriculture.owl#Horticulture","http://eol.org/schema/terms/flowerConspicuousNo",NA
+"85","Cocos nucifera","http://purl.obolibrary.org/obo/TO_0000326","http://purl.obolibrary.org/obo/PATO_0000320",NA
+"86","Cocos nucifera","http://eol.org/schema/terms/FoliagePorositySummer","http://purl.obolibrary.org/obo/PATO_0000984",NA
+"87","Cocos nucifera","http://eol.org/schema/terms/FoliagePorosityWinter","http://purl.obolibrary.org/obo/PATO_0000984",NA
+"88","Cocos nucifera","http://eol.org/schema/terms/FoliageTexture","http://purl.obolibrary.org/obo/PATO_0000700",NA
+"89","Cocos nucifera","http://sweet.jpl.nasa.gov/2.3/humanAgriculture.owl#Horticulture","http://eol.org/schema/terms/fruitSeedConspicuousYes",NA
+"90","Cocos nucifera","http://eol.org/schema/terms/FruitSeedColor","http://purl.obolibrary.org/obo/PATO_0000952",NA
+"91","Cocos nucifera","http://eol.org/schema/terms/PrimaryGrowthForm","http://eol.org/schema/terms/singleStem",NA
+"92","Cocos nucifera","http://eol.org/schema/terms/ExtinctionStatus","http://eol.org/schema/terms/extant",NA
+"93","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000303",NA
+"94","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000485",NA
+"95","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000303",NA
+"96","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_01000067",NA
+"97","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000303",NA
+"98","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000113",NA
+"99","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00002229",NA
+"100","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000416",NA
+"101","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000098",NA
+"102","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000011",NA
+"103","Cocos nucifera",NA,NA,NA
+"104","Cocos nucifera",NA,NA,NA
+"105","Cocos nucifera",NA,NA,NA
+"106","Cocos nucifera",NA,NA,NA
+"107","Cocos nucifera",NA,NA,NA
+"108","Cocos nucifera",NA,NA,NA
+"109","Cocos nucifera",NA,NA,NA
+"110","Cocos nucifera",NA,NA,NA
+"111","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/verbatimElevation","6","m"
+"112","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/verbatimElevation","15","m"
+"113","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/verbatimElevation","30","m"
+"114","Cocos nucifera","http://eol.org/schema/terms/Habitat","http://eol.org/schema/terms/nonMarine",NA
+"115","Cocos nucifera L.","http://rs.tdwg.org/dwc/terms/habitat","http://purl.obolibrary.org/obo/ENVO_00000016",NA
+"116","Cocos nucifera",NA,NA,NA
+"117","Cocos nucifera",NA,NA,NA
+"118","Cocos nucifera",NA,NA,NA
+"119","Cocos nucifera",NA,NA,NA
+"120","Cocos nucifera",NA,NA,NA
+"121","Cocos nucifera",NA,NA,NA
+"122","Cocos nucifera",NA,NA,NA
+"123","Cocos nucifera",NA,NA,NA
+"124","Cocos nucifera",NA,NA,NA
+"125","Cocos nucifera",NA,NA,NA
+"126","Cocos nucifera",NA,NA,NA
+"127","Cocos nucifera",NA,NA,NA
+"128","Cocos nucifera",NA,NA,NA
+"129","Cocos nucifera",NA,NA,NA
+"130","Cocos nucifera",NA,NA,NA
+"131","Cocos nucifera",NA,NA,NA
+"132","Cocos nucifera",NA,NA,NA

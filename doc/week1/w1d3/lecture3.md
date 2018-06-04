@@ -36,8 +36,10 @@ through single linkage clustering with sequence divergence thresholds ranging fr
 BIN pipeline
 ------------
 
-- HMM alignment uses a profile of the COI marker protein
-- SLC connects sequences by distance, but creates 'long' graphs
+- [HMM](https://www.ncbi.nlm.nih.gov/pubmed/20147223) alignment uses a profile of 
+  the COI marker protein
+- [SLC](https://en.wikipedia.org/wiki/Single-linkage_clustering) connects sequences 
+  by distance, but creates 'long' graphs
 - [MCL](MCL.pdf) iteratively looks for 'attractors' within the graphs and re-clusters 
   around them
 
