@@ -14,4 +14,6 @@ with open(sys.argv[1], "rU") as handle:
         records[fields[0]] = seq
     
     aln = MultipleSeqAlignment([ records[key] for key in sorted(records.keys()) ])
-    AlignIO.write(aln, sys.argv[2], sys.argv[3], alphabet=Alphabet.generic_dna )
+
+    # if error, try adding argument alphabet=Alphabet.generic_dna
+    AlignIO.write(aln, sys.argv[2], sys.argv[3] )

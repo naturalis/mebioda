@@ -9,9 +9,9 @@ Barcoding
 Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
 -------------------------------------------------------------------------
 
-- Stores records about [specimens](http://www.boldsystems.org/index.php/Public_RecordView?processid=AANIC001-10)
+- Stores records about [specimens](http://www.boldsystems.org/index.php/Public_RecordView?processid=ABMC137-05)
 - Includes marker sequence [data](fasta.fas), images, lat/lon coordinates, etc.
-- Can query [taxonomically](http://www.boldsystems.org/index.php/Public_SearchTerms?query=Danaus[tax])
+- Can query [taxonomically](http://www.boldsystems.org/index.php/Public_SearchTerms?query=Artiodactyla[tax])
   and download [all sequences](Danaus.fas)
 - Identification services:
   - COI for animals
@@ -22,30 +22,28 @@ Fetching taxon data through the [URL API](http://www.boldsystems.org/index.php/a
 ----------------------------------------------------------------------------------------
 
 ```bash
-# Fetch taxon data for Danaus as JSON
-$ curl -o Danaus.json http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus
+# Fetch taxon data for Artiodactyla as JSON
+$ curl -o Artiodactyla.json http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Artiodactyla
 ```
 
-Returned [taxon data](Danaus.json) is encoded as JSON:
+Returned [taxon data](Artiodactyla.json) is encoded as JSON:
 
 ```json
 {
-  "top_matched_names": [
-    {
-      "taxid": 6926,
-      "taxon": "Danaus",
-      "tax_rank": "genus",
-      "tax_division": "Animals",
-      "parentid": 3681,
-      "parentname": "Danainae",
-      "representitive_image": {
-        "image": "JAGWI/WIJAG1191+1445394342.JPG",
-        "apectratio": 1.333
-      },
-      "specimenrecords": "517"
-    }
-  ],
-  "total_matched_names": 1
+	"top_matched_names":[{
+			"taxid":304,
+			"taxon":"Artiodactyla",
+			"tax_rank":"order",
+			"tax_division":"Animals",
+			"parentid":62,
+			"parentname":"Mammalia",
+			"representitive_image":{
+				"image":"GBMA\/sheep005+1357763501.jpg",
+				"apectratio":1.506
+			},
+			"specimenrecords":"3662"
+	}],
+	"total_matched_names":1
 }
 ```
 
@@ -55,7 +53,7 @@ JSON in a little [script](json.py):
 ```python
 import urllib
 import simplejson as json # sudo pip install simplejson
-url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus"
+url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Artiodactyla"
 response = urllib.urlopen(url)
 data = json.loads(response.read())
 
@@ -72,11 +70,11 @@ Fetching sequences
 Data from URLs can be downloaded on the command line using [curl](https://curl.haxx.se/):
 
 ```bash
-# Fetch all sequences for Danaus as FASTA
-$ curl -o Danaus.fas http://www.boldsystems.org/index.php/API_Public/sequence?taxon=Danaus
+# Fetch all sequences for Artiodactyla as FASTA
+$ curl -o Artiodactyla.fas http://www.boldsystems.org/index.php/API_Public/sequence?taxon=Artiodactyla
 ```
 
-The BOLD sequence data service API returns a [FASTA file](Danaus.fas), which holds 
+The BOLD sequence data service API returns a [FASTA file](Artiodactyla.fas), which holds 
 multiple sequences, unaligned. The 
 [definition line](https://en.wikipedia.org/wiki/FASTA_format#Description_line) is 
 formatted as:
@@ -90,44 +88,66 @@ With this we can use standard UNIX command line tools
 basic checks, e.g.:
 
 ```bash
-$ grep '>' Danaus.fas | cut -f 3 -d '|' | sort | uniq
-ArgKin
-CAD
-COI-3P
-COI-5P
-COI-5P
-EF1-alpha
-GAPDH
-IDH
-MDH
-RpS2
-RpS5
-Wnt1
+$ grep '>' Artiodactyla.fas | cut -f 3 -d '|' | sort | uniq -c
+  30 16S
+2316 COI-5P
+ 184 COI-5P
+ 188 COII
+ 214 COII
+ 188 COXIII
+ 214 COXIII
+ 188 CYTB
+ 214 CYTB
+  18 D-loop
+ 188 ND1
+ 188 ND2
+ 188 ND3
+ 188 ND4
+ 188 ND4L
+ 188 ND5-0
+ 188 ND6
+ 214 atp6
 ```
 
 Filtering out markers
 ---------------------
-It turns out there are multiple markers for this genus. Unfortunately, because FASTA 
+It turns out there are multiple markers for this order. Unfortunately, because FASTA 
 records are multiple lines (and the exact number is unpredictable), we can't easily use
 command line tools (like `grep`). Instead, we might write a little script, e.g. in 
 [biopython](http://biopython.org):
 
 ```python
 from Bio import SeqIO # sudo pip install biopython
-with open("Danaus.fas", "rU") as handle:
-    
-    # Example: retain COI
-    for record in SeqIO.parse(handle, "fasta"):
-        fields = record.description.split('|')
-        if fields[2] == 'COI-5P':
-        	print '>' + record.description
-        	print record.seq
+with open("Artiodactyla.fas", "rU") as handle:
+	
+	# retain COI-5P records for each species
+	species = {}
+	for record in SeqIO.parse(handle, "fasta"):
+		fields = record.description.split('|')
+		if fields[2] == 'COI-5P':
+			sp = fields[1]
+			if sp in species:
+				species[sp].append(record)
+			else:
+				species[sp] = [ record ]
+
+	# write longest record for each species
+	seen = {}
+	for sp in species:
+		length = 0
+		longest = None
+		for record in species[sp]:
+			if len(record.seq) > length:
+				length = len(record.seq)
+				longest = record
+		print '>' + longest.description
+		print longest.seq
 ```
 
 Run as:
 
 ```shell
-$ python fasta.py > Danaus.COI-5P.fas
+$ python fasta.py > Artiodactyla.COI-5P.fas
 ```
 
 Multiple sequence alignment
@@ -136,40 +156,31 @@ Multiple sequence alignment
 FASTA files can be aligned, for example, with [muscle](https://www.drive5.com/muscle/):
 
 ```shell
-$ muscle -in Danaus.COI-5P.fas -out Danaus.muscle.fas
+$ muscle -in Artiodactyla.COI-5P.fas -out Artiodactyla.COI-5P.muscle.fas
 ```
 
-Resulting in an [alignment](Danaus.muscle.fas), which is also a FASTA file. 
+Resulting in an [alignment](Artiodactyla.COI-5P.muscle.fas), which is also a FASTA file. 
 
 Alternatively, you might align with [mafft](https://mafft.cbrc.jp/alignment/software/), 
 (or one of the many other multiple sequence alignment tools) which has additional 
 functionality for more difficult markers (such as ITS):
 
 ```shell
-$ mafft Danaus.COI-5P.fas > Danaus.mafft.fas
+$ mafft Artiodactyla.COI-5P.fas > Artiodactyla.COI-5P.mafft.fas
 ```
 
-Resulting in this [file](Danaus.mafft.fas). You can view both, for example, with this 
-[web viewer](http://msa.biojs.net/app/). Are they different?
+Resulting in this [file](Artiodactyla.COI-5P.mafft.fas). You can view both, for example, 
+with this [web viewer](http://msa.biojs.net/app/). Are they different?
 
 ```shell
-$ ls -la Danaus.m*
--rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.mafft.fas
--rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.muscle.fas
+$ ls -la Artiodactyla.COI-5P.m*
+-rw-r--r--  1 rutger.vos  NNM\Domain Users  400748 Jul 12 11:13 Artiodactyla.COI-5P.mafft.fas
+-rw-r--r--@ 1 rutger.vos  NNM\Domain Users  400748 Jul 12 11:11 Artiodactyla.COI-5P.muscle.fas
 ```
 
 Same number of bytes (so, same number of inserted gaps) but with different contents. Could
 be capitalization, could be line folding, could be sequence order, or 
 _actual differences in the alignment algorithms_. 
-[Checksums](https://en.wikipedia.org/wiki/Checksum) are different:
-
-```shell
-$ md5 Danaus.mafft.fas
-MD5 (Danaus.mafft.fas) = 47e8d36d43a68f11c131badf75adcc3a
-
-$ md5 Danaus.mafft.nex
-MD5 (Danaus.mafft.nex) = e604e23ab1c39ecf54f755a0c882ded8
-```
 
 **How might we verify this further?**
 
@@ -204,48 +215,14 @@ Usage:
 $ python convert.py <infile> <outfile> <format>
 ```
 
-Now we can compare the two alignments, e.g. with a 
-[diff](https://github.com/naturalis/mebioda/commit/93090e4ac2f80bb0e1bd9a63d40b73987631b3fd?diff=split).
-It seems that there are only minor differences. 
-
-Detecting non-overlapping sequences
------------------------------------
-
-One quick way to compute a pairwise distance matrix is with PHYLIP's program `dnadist`, so
-let's install it:
+Now we can compare the two alignments, e.g. using:
 
 ```bash
-# let's install phylip
-$ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.696.tar.gz
-$ gunzip phylip-3.696.tar.gz
-$ tar xvf phylip-3.696.tar
-$ cd phylip-3.696/src
-$ make -f Makefile.unx install
-$ cd -
-$ sudo mv phylip-3.696 /usr/local
+$ diff <mafft version> <muscle version>
 ```
 
-(And add `/usr/local/phylip-3.696/exe` to the $PATH)
+It turns out there were no differences. Phew.
 
-When we compute a distance matrix we receive warnings that for some pairs of sequences 
-there is no sequence overlap at all:
-
-```
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 202; -1.0 WAS WRITTEN
-```
-
-In a text editor we can see that 200 and 202 are `SETIU001-1` and `SETIU032-1`.
-Let's [remove](https://github.com/naturalis/mebioda/commit/681e9750b32612b59b2953a6b3a042f6c2ee47f0?diff=unified)
-these.
 
 Bayesian evolutionary analysis by sampling trees (BEAST)
 --------------------------------------------------------

@@ -1,6 +1,6 @@
 import urllib
 import simplejson as json # sudo pip install simplejson
-url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus"
+url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Artiodactyla"
 response = urllib.urlopen(url)
 data = json.loads(response.read())
 
