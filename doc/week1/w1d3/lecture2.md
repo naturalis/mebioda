@@ -12,7 +12,7 @@ Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
 - Stores records about [specimens](http://www.boldsystems.org/index.php/Public_RecordView?processid=ABMC137-05)
 - Includes marker sequence [data](fasta.fas), images, lat/lon coordinates, etc.
 - Can query [taxonomically](http://www.boldsystems.org/index.php/Public_SearchTerms?query=Artiodactyla[tax])
-  and download [all sequences](Danaus.fas)
+  and download [all sequences](Artiodactyla.fas)
 - Identification services:
   - COI for animals
   - ITS for fungi
