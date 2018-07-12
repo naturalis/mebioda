@@ -18,54 +18,8 @@ Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
   - ITS for fungi
   - rbcL and matK for plants
   
-Fetching taxon data through the [URL API](http://www.boldsystems.org/index.php/api_home)
-----------------------------------------------------------------------------------------
-
-```bash
-# Fetch taxon data for Artiodactyla as JSON
-$ curl -o Artiodactyla.json http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Artiodactyla
-```
-
-Returned [taxon data](Artiodactyla.json) is encoded as JSON:
-
-```json
-{
-	"top_matched_names":[{
-			"taxid":304,
-			"taxon":"Artiodactyla",
-			"tax_rank":"order",
-			"tax_division":"Animals",
-			"parentid":62,
-			"parentname":"Mammalia",
-			"representitive_image":{
-				"image":"GBMA\/sheep005+1357763501.jpg",
-				"apectratio":1.506
-			},
-			"specimenrecords":"3662"
-	}],
-	"total_matched_names":1
-}
-```
-
-Let's say we wanted to figure out what the image location was, we can then read this
-JSON in a little [script](json.py):
-
-```python
-import urllib
-import simplejson as json # sudo pip install simplejson
-url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Artiodactyla"
-response = urllib.urlopen(url)
-data = json.loads(response.read())
-
-if data['top_matched_names']:
-	for name in data['top_matched_names']:
-		if name['representitive_image']:
-			print name['representitive_image']['image']
-
-```
-
-Fetching sequences 
-------------------
+Fetching sequences through the [URL API](http://www.boldsystems.org/index.php/api_home)
+---------------------------------------------------------------------------------------
 
 Data from URLs can be downloaded on the command line using [curl](https://curl.haxx.se/):
 
