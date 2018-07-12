@@ -86,7 +86,6 @@ with open("Artiodactyla.fas", "rU") as handle:
 				species[sp] = [ record ]
 
 	# write longest record for each species
-	seen = {}
 	for sp in species:
 		length = 0
 		longest = None
