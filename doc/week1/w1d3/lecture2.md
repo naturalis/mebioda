@@ -97,7 +97,7 @@ with open("Artiodactyla.fas", "rU") as handle:
 		print longest.seq
 ```
 
-Run as:
+Run the script ([fasta.py](fasta.py)) as follows:
 
 ```shell
 $ python fasta.py > Artiodactyla.COI-5P.fas
@@ -150,6 +150,7 @@ from Bio import SeqIO
 from Bio import AlignIO
 from Bio.Align import MultipleSeqAlignment
 
+# sys.argv is the list of command line arguments
 with open(sys.argv[1], "rU") as handle:
     
     records = {}
@@ -162,7 +163,7 @@ with open(sys.argv[1], "rU") as handle:
     AlignIO.write(aln, sys.argv[2], sys.argv[3])
 ```
 
-Usage:
+Run the script ([convert.py](convert.py)) as follows:
 
 ```bash
 $ python convert.py <infile> <outfile> <format>
@@ -177,45 +178,33 @@ $ diff <mafft version> <muscle version>
 It turns out there were no differences. Phew.
 
 
-Bayesian evolutionary analysis by sampling trees (BEAST)
---------------------------------------------------------
+Exercise: generalizing the marker filter
+----------------------------------------
+The first python script we saw ([fasta.py](fasta.py)) extracts from the file 
+`Artiodactyla.fas` for each species the longest sequence for the marker `COI-5P`. The 
+script is useful, but only for a very specific case because the file name and the marker
+name are "hard-coded" into the program. This is bad form: 
 
-[BEAST2](http://www.beast2.org/) is a modular system that can run many different types of 
-analyses. The typical workflow usually goes:
+- What if the file has a different name? 
+- What if we wanted to filter out all the markers and write them to separate files?
 
-1. Import data (e.g. a  FASTA alignment) into `beauti`, set up the analysis parameters, 
-   possibly using a template
-2. Start `beast filename.xml`, numerous output files (a.o. are log and tree files)
-3. Inspect the log in `tracer` and run the analysis until the parameters all reach ESS>200
-4. Summarize and interpret the results, e.g. build a consensus tree with `treeannotator`
-   and visualize it with `figtree`
+We can use some of the magic we saw in the second script ([convert.py](convert.py)) to
+generalize the filter script, by using the special variable `sys.argv`. This variable
+is a list. The first element in the list (`sys.argv[0]`) holds the name of the script.
+The following elements hold the arguments that are passed to the script on the command
+line. For example, if you run a script like this:
 
-BEAST can read FASTA files, but it would be nice if the definition lines came out better
-in trees, so we might relabel these:
-
-```python
-import sys
-from Bio import SeqIO # sudo pip install biopython
-with open(sys.argv[1], "rU") as handle:
-    
-    # Example: relabel sequences as Genus_species-ID
-    for record in SeqIO.parse(handle, "fasta"):
-        fields = record.description.split('|')
-        name = fields[1].replace(' ', '_')
-        print '>' + name + '-' + fields[0]
-        print record.seq
+```bash
+$ python script.py foo bar
 ```
 
-Which gives us [this version](https://github.com/naturalis/mebioda/commit/76e9562db3f5ce1a8140f73f0b57d34e56e63b42)
-to import in `beauti`, resulting in the [input file](BEAST/Danaus.mafft.xml).
+Then `sys.argv` will hold:
 
-Running a BEAST analysis
-------------------------
+0. `script.py`
+1. `foo`
+2. `bar`
 
-![](BEAST/tracer.png)
-
-If we run the [input file](BEAST/Danaus.mafft.xml) for 10*10^6 generations, the 
-[log](BEAST/Danaus.log) file shows in tracer that all the parameters have been 
-sufficiently sampled. If we compute a consensus, this is the result:
-
-![](BEAST/Danaus.consensus.trees.png)
+*Assignment*: Open the script [fasta.py](fasta.py) in a text editor (like "editpad",
+"notepad++", "bbedit", "gedit"). Modify the script so that the first argument is the
+name of the FASTA file, and the second argument is the marker name. Save the script as
+`fasta-filter.py`.
