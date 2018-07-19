@@ -1,25 +1,8 @@
-Barcoding workflow and MSA data
-===============================
+MSA barcoding data for species
+==============================
 
-Barcoding
----------
-
-![](barcode_pipeline.jpg)
-
-Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
--------------------------------------------------------------------------
-
-- Stores records about [specimens](http://www.boldsystems.org/index.php/Public_RecordView?processid=ABMC137-05)
-- Includes marker sequence [data](fasta.fas), images, lat/lon coordinates, etc.
-- Can query [taxonomically](http://www.boldsystems.org/index.php/Public_SearchTerms?query=Artiodactyla[tax])
-  and download [all sequences](Artiodactyla.fas)
-- Identification services:
-  - COI for animals
-  - ITS for fungi
-  - rbcL and matK for plants
-  
-Fetching sequences through the [URL API](http://www.boldsystems.org/index.php/api_home)
----------------------------------------------------------------------------------------
+Fetching sequences through the [BoLD URL API](http://www.boldsystems.org/index.php/api_home)
+--------------------------------------------------------------------------------------------
 
 Data from URLs can be downloaded on the command line using [curl](https://curl.haxx.se/):
 
