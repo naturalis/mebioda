@@ -9,11 +9,15 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 1 - Introduction
 
+2018-12-03, Sylvius 1.5.03
+
 - Lecture I: Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)
 - Lecture II: Introduction to GIS (2) and The geographical approach
 - Lecture III: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
 
 ### Day 2 - (Spatial) Data input
+
+2018-12-04, Sylvius 1.5.03
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Satellite images and remote sensing (including Lidar_data ?)  - Joris Timmermans (CML)
@@ -22,6 +26,8 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 3 - (Spatial) Data management
 
+2018-12-05, Sylvius 1.5.03 (morning), **GIS lab archaeology** (afternoon)
+
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
 - Lecture III: [Data and file versioning (e.g. version management, backup, history, provenance)](w2d3/lecture3.md) - Rutger Vos
@@ -29,12 +35,16 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 4 - (Spatial) Data analysis
 
+2018-12-06, Sylvius 1.5.03 (morning), **GIS lab archaeology** (afternoon)
+
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
 - Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Leon + Maarten
 - Practical: Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.
 
 ### [Day 5 - (Spatial) Data output](w2d5)
+
+2018-12-07, Sylvius 1.5.03
 
 - Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
 - Lecture II: Principles of SDM - Niels
