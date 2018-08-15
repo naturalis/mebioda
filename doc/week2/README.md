@@ -26,7 +26,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 3 - (Spatial) Data management
 
-2018-12-05, Sylvius 1.5.03 (morning), **GIS lab archaeology** (afternoon)
+2018-12-05, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
@@ -35,7 +35,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 4 - (Spatial) Data analysis
 
-2018-12-06, Sylvius 1.5.03 (morning), **GIS lab archaeology** (afternoon)
+2018-12-06, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
