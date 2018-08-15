@@ -10,35 +10,35 @@ mornings, we will take two afternoons individually to work our way through an e-
 open source practices. We will then do a hands-on practical in metabarcoding data analysis and conclude the week with 
 a journal club where we discuss a relevant publication with each other in brief stand-up presentations.
 
-### Day 1 - Introduction
+### Day 1 - Introduction - 2018-26-11
 
 - Lecture I: [Introduction to the course](w1d1/lecture1.md)
 - Lecture II: [Introduction to biodiversity and data science](w1d1/lecture2.md)
 - Lecture III: [Introduction to molecular biodiversity](w1d1/lecture3.md)
 - Cleveringa Oratie: no afternoon education (15:00-18:00)
 
-### Day 2 - High-throughput DNA sequencing (HTS)
+### Day 2 - High-throughput DNA sequencing (HTS) - 2018-27-11
 
 - Lecture I: [High-throughput DNA sequencing data](w1d2/lecture1.md)
 - Lecture II: [HTS data types and file formats](w1d2/lecture2.md)
 - Lecture III: [Cases of HTS in biodiversity research](w1d2/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
 
-### Day 3 - Barcoding
+### Day 3 - Barcoding - 2018-28-11
 
 - Lecture I: [Data science tools: UNIX](w1d3/lecture1.md)
 - Lecture II: [Species delimitation](w1d3/lecture2.md)
 - Lecture III: [The barcoding workflow and MSA data](w1d3/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
 
-### Day 4 - Metabarcoding
+### Day 4 - Metabarcoding - 2018-29-11
 
 - Lecture I: [Metabarcoding](w1d4/lecture1.md)
 - Lecture II: environmental quality assessments: [DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/) - Van der Hoorn / Beentjes
 - Lecture III: Guest lecture metabarcoding: [Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566) - Geml
 - Practical: Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity - Geml
 
-### Day 5 - Phylogenies and wrap-up
+### Day 5 - Phylogenies and wrap-up - 2018-30-11 (note: changed location)
 
 - Lecture I: [Phylogenetic data](w1d5/lecture1.md)
 - Lecture II: [Megatrees](w1d5/lecture2.md) (e.g. algorithms, SQL)
