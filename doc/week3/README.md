@@ -5,7 +5,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 1 - Introduction
 
-2018-12-17, Sylvius 1.5.03
+2018-12-10, Sylvius 1.5.03
 
 - Lecture I: [Data science tools: R](w3d1/lecture1.md)
 - Lecture II: [Data carpentry](http://www.datacarpentry.org/R-ecology-lesson/)
@@ -15,7 +15,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 2 - Topological analysis
 
-2018-12-18, Sylvius 1.5.03
+2018-12-11, Sylvius 1.5.03
 
 - Lecture I: [Large phylogenies in biodiversity](w3d2/lecture1.md)
 - Lecture II: [Tree shape metrics](w3d2/lecture2.md)
@@ -24,7 +24,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 3 - Comparative character analysis
 
-2018-12-19, Sylvius 1.5.03
+2018-12-12, Sylvius 1.5.03
 
 - Lecture I: [Comparative analysis intro](w3d3/lecture1.md)
 - Lecture II: [Three dimensional analysis of morphological characters](w3d3/lecture2) (Aidan Couzens)
@@ -34,7 +34,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 4 - Functional and character diversity
 
-2018-12-20, Sylvius 1.5.03
+2018-12-13, Sylvius 1.5.03
 
 - Lecture I: Home study (i.e. no lecture)
 - Lecture II: Trait-dependent diversification in Cyprinodontiformes (Tom van Dooren)
@@ -43,7 +43,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 ### Day 5 - Trait data and analysis
 
-2018-12-21, Sylvius 1.5.03
+2018-12-14, Sylvius 1.5.03
 
 - Lecture I: [Introduction](w3d4/lecture1-new.md) to traits. 
 - Lecture II: [Trait databases](w3d4/lecture3a/databases.Rmd), [semantics](w3d4/semantics.md), and [analysis](w3d4/lecture2a/functional_analysis.Rmd)
