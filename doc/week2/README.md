@@ -17,12 +17,12 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 2 - (Spatial) Data input
 
-2018-12-04, Sylvius 1.5.03
+2018-12-04, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Satellite images and remote sensing (including Lidar_data ?)  - Joris Timmermans (CML)
 - Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
-- Homework: Download occurrence data for your crop species from GBIF
+- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
 
 ### Day 3 - (Spatial) Data management
 
@@ -31,16 +31,16 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
 - Lecture III: [Data and file versioning (e.g. version management, backup, history, provenance)](w2d3/lecture3.md) - Rutger Vos
-- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
+- Practical: Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.
 
 ### Day 4 - (Spatial) Data analysis
 
-2018-12-06, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
+2018-12-06, Sylvius 1.5.03 (afternoon)
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
 - Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Leon + Maarten
-- Practical: Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.
+- Homework: Download occurrence data for your crop species from GBIF (continue ArcGIS on own computer, if need be)
 
 ### [Day 5 - (Spatial) Data output](w2d5)
 
