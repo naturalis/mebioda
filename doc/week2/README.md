@@ -9,20 +9,20 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 1 - Introduction
 
-2018-12-03, Sylvius 1.5.03
+2018-12-03, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)
 - Lecture II: Introduction to GIS (2) and The geographical approach
 - Lecture III: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
+- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
 
 ### Day 2 - (Spatial) Data input
 
-2018-12-04, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
+2018-12-04, Sylvius 1.5.03
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Satellite images and remote sensing (including Lidar_data ?)  - Joris Timmermans (CML)
 - Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
-- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
 
 ### Day 3 - (Spatial) Data management
 
