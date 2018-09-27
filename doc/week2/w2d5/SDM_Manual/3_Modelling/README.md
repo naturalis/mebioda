@@ -40,10 +40,9 @@ Maxent uses the maximum entropy algorithm which is defined as follows:
    best to run one model at the time. Click the button 'Deselect all' of the 'Samples' box 
    and select only _Macaranga auriculata_. Make sure you uncheck the option 
    'Do jackknife to measure variable importance'.
-4. Figure 15 shows how a batch is run in Maxent. For computational and time reasons it is best 
-   to run one model at the time. Click the button 'Deselect all' of the 'Samples' box and 
-   select only _Macaranga auriculata_. Make sure you uncheck the option 'Do jackknife to 
-   measure variable importance'.
+4. Click the button 'Settings' and check the option 'Remove duplicate presence records', set 
+   the 'Random test percentage' to zero, and set the 'Max number of background points' to 
+   10,000 (Fig. 16). Make sure there are more background points than presence records.
    
    ![](fig_16.png)
    
