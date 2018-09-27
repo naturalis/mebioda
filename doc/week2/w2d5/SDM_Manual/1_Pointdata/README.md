@@ -69,13 +69,19 @@ Open Office Calculator. Another option is to directly export from a database que
 3. Open menu option Data → Import Points to Shapefile → From Excel (.XLS) (Figs. 5 & 6). Press button 'Excel spreadsheet' and navigate to the file 
    location. Take care that the fields longitude and latitude are identified correctly. Save to Shapefile (e.g. Macaranga.shp). This takes some time. 
    Close file when finished.
+   
    ![](fig_5.png)
+   
    **Figure 5. Import points to Shapefile.**
+   
    ![](fig_6.png)
+   
    **Figure 6. Create Shapefile from Excel.xls File.**
 4. Double-click the Macaranga layer in the left panel to open the properties panel. Activate the tab 'Unique' → select the Field 'SPECIES' → click 
    the 'Reset Legend' button (Fig. 7) → Apply. You can also use the toolbar button in the red circle to open the properties panel.
+   
    ![](fig_7.png)
+   
    **Figure 7. Change the properties of a layer.**
 5. Click the circle symbol of one of the species in the properties panel to change the type of symbol, size, colour, etc. If you want a special 
    symbol then select character and choose a special font (i.e. ESRI ArcView Cartography - http://www.creamundo.com/es/e/5).
