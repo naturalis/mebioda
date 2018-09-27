@@ -16,7 +16,7 @@ spatial data are CliMond (https://www.climond.org/), CCAFS (http://ccafs-climate
 
 1. Download the current climatic conditions as generic grids (raster) climate files from the 
    WorldClim database; Bioclim variables (19) and Altitude (suggested resolution is 5 arc-minutes).
-2. The *.bil/*.hdr-files need to be converted to *.grd/*.gri-files. Open menu-option Data -> Import 
+2. The \*.bil/\*.hdr-files need to be converted to \*.grd/\*.gri-files. Open menu-option Data -> Import 
    to Gridfile -> Multiple Files. See figure 10 for details.
    
    ![](fig_10.png)
@@ -51,7 +51,7 @@ The next step is to cut the grid layers to the geographical extent of Borneo.
   Before we can start modelling the species distributions we have to check whether all 
   environmental data-layers have exactly the same dimensions.
 
-11. Open the folder with *.asc files -> right-click on an ASCII file -> Open with -> Notepad 
+11. Open the folder with \*.asc files -> right-click on an ASCII file -> Open with -> Notepad 
     (Fig. 13).
     
   ![](fig_13.png)
