@@ -56,14 +56,14 @@ The next step is to cut the grid layers to the geographical extent of Borneo.
     
   ![](fig_13.png)
     
-  **Figure 13. Open an *.asc file with a text editor.**
+  **Figure 13. Open an \*.asc file with a text editor.**
     
   All headers should have the same number of columns (ncols) and rows (nrows), the same x and y 
   coordinates (xllcorner  (= x lower left corner) and yllcorner), and the same cellsize (Fig. 14).
   
   ![](fig_14.png)
   
-  **Figure 14. The header of an *.asc file.**
+  **Figure 14. The header of an \*.asc file.**
   
   You are ready to start modelling.
 
