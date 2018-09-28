@@ -8,8 +8,12 @@ Adapted from a previous version by Dr. Niels Raes
 
 This manual gives a run-through of SDM on Windows computers. As such, some of the steps cannot
 be performed on other operating systems with the programs described. However, other programs
-may be equally suitable. Note also that the exercises in this manual are not a requirement of
-the course, they are only provided here for informational purposes.
+may be equally suitable. Specifically, bioclimatic layer cropping and conversion can also be
+accomplished visually in the portable, open source program [QGIS](https://www.qgis.org) or from
+inside R (in both cases with recourse to the underlying [GDAL](https://www.gdal.org/) libraries).
+Thus, the usage of the Windows-specific program DIVA-GIS can be circumvented. Note also that the 
+exercises in this manual are not a requirement of the course, they are only provided here for 
+informational purposes.
 
 1. **[GIS and spatial modelling](1_Pointdata)** - 
    Chapter 1 starts with data pre-processing and some of the configuration challenges in dealing 
