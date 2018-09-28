@@ -20,7 +20,7 @@ open MaxEnt by clicking the Maxent.bat file (Fig. 15).
 
 Maxent uses the maximum entropy algorithm which is defined as follows:
 
-> MaxEnt, or the maximum entropy method for species’ distribution modelling, estimates the 
+> MaxEnt, or the maximum entropy method for species' distribution modelling, estimates the 
 > most uniform distribution ('maximum entropy') across the study area, given the constraint that 
 > the expected value of each environmental predictor variable under this estimated distribution 
 > matches its empirical average (average values for the set of species’ presence records) 
@@ -40,10 +40,9 @@ Maxent uses the maximum entropy algorithm which is defined as follows:
    best to run one model at the time. Click the button 'Deselect all' of the 'Samples' box 
    and select only _Macaranga auriculata_. Make sure you uncheck the option 
    'Do jackknife to measure variable importance'.
-4. Figure 15 shows how a batch is run in Maxent. For computational and time reasons it is best 
-   to run one model at the time. Click the button 'Deselect all' of the 'Samples' box and 
-   select only _Macaranga auriculata_. Make sure you uncheck the option 'Do jackknife to 
-   measure variable importance'.
+4. Click the button 'Settings' and check the option 'Remove duplicate presence records', set 
+   the 'Random test percentage' to zero, and set the 'Max number of background points' to 
+   10,000 (Fig. 16). Make sure there are more background points than presence records.
    
    ![](fig_16.png)
    
@@ -57,7 +56,7 @@ The most widely applied method to validate SDMs is the Area Under the Curve (AUC
 Operator Curve (ROC) (Fielding and Bell 1997, McPherson et al. 2004, Raes and ter Steege 2007). The 
 advantage of the AUC value over other measures of model accuracy (i.e. Cohen’s kapa, sensitivity, 
 specificity) is that it is a) threshold independent, and b) prevalence insensitive. Setting a 
-threshold means that continues MaxEnt values, running from 0-1, not have to be converted to discrete 
+threshold means that continuous MaxEnt values, running from 0-1, do not have to be converted to discrete 
 presence/absence values. There are several techniques to set thresholds (Liu et al. 2005), but this 
 is not required for the AUC value. 
 
@@ -68,7 +67,7 @@ background points. A sufficiently large sample of pseudo-absences is needed to p
 representation of the environmental variation exhibited by the geographical area of interest, typically 
 1,000-10,000 points. These large numbers of pseudo-absences automatically result in low prevalence 
 values. The number of records by which a species is represented in herbaria and natural history museums 
-range from 1 to 150-200 records. Even when a species is represented by 200 unique presence-only records 
+ranges from 1 to 150-200 records. Even when a species is represented by 200 unique presence-only records 
 and 1000 pseudo-absences are used, prevalence is only 16.7% (200/1200).
 
 AUC values range from 0 to 1, with a value of 0.5 indicating model accuracy not better than random, and 
@@ -84,7 +83,7 @@ area of interest covered by a species' true distribution, which typically is not
 prediction still corresponds to an AUC value of 0.5. Therefore, standard thresholds of AUC values indicating 
 SDM accuracy (e.g. the threshold of AUC>0.7 that is often used), do NOT apply (Raes and ter Steege 2007). 
 Therefore be very cautious when SDMs based on presence-only data are validated with AUC values. This problem 
-can be solved by testing against a null-model. This procedure is described in detail in Raes and ter Steege 
+can be solved by testing against a null model. This procedure is described in detail in Raes and ter Steege 
 2007, but this goes beyond this practical.
 
 6. Open the `Macaranga_auriculata.html` – file in the folder ‘Maxent Results’.
@@ -111,7 +110,7 @@ can be solved by testing against a null-model. This procedure is described in de
     'Data' -> Import to Gridfile -> Single File (N.B. if you ran a batch you choose 'Multiple Files'). 
     Select 'File type' ESRII Ascii. Make sure you uncheck the 'Save as Integer' option. Use the 'Input File' 
     button to navigate to the 'Maxent Results' folder, and import `Macaranga_auriculata.asc`.
-11. Open the 'Properties' dialog by double-clicking the macaranga_auriculata layer in the left frame of 
+12. Open the 'Properties' dialog by double-clicking the macaranga_auriculata layer in the left frame of 
     DIVA-GIS. Select the color scheme 'Red-Green-Blue' (Fig. 19).
     
   ![](fig_19.png)
@@ -119,11 +118,11 @@ can be solved by testing against a null-model. This procedure is described in de
   **Figure 19. Maxent model of_ M. auriculata_.**
 
 13. The following step is to set a threshold. The threshold for the '10 percentile training presence' is 
-    0.296. Open the menu-option 'Grid'  Reclass. Enter an 'Output'-file name, e.g. 
+    0.296. Open the menu-option 'Grid' -> Reclass. Enter an 'Output'-file name, e.g. 
     'macaranga_auriculata_10perc_threshold'. Use the ![](minus.png)  button to reduce the number of rows 
     to two. Enter in the first row 'From' 0 'To' 0.296, 'New value' 0. In the second row 'From' 0.296 
     'To' 1, 'New value' 1. Click OK.
-14.	Double-click the 'macaranga_auriculata_10perc_threshold' and give absence a colour red and presence 
+14. Double-click the 'macaranga_auriculata_10perc_threshold' and give absence a colour red and presence 
     green (Fig. 20).
     
   ![](fig_20.png)
@@ -141,13 +140,13 @@ can be solved by testing against a null-model. This procedure is described in de
 
 With the instructions described above you can now develop your own species distribution model.
 
-1. Choose your species and go-to the GBIF portal gbif.org.
+1. Choose your species and go to the GBIF portal gbif.org.
    
    ![](gbif.png)
 
 2. To download data you have to create an account -> Create an account -> login as user.
-3. Go to the Data option and select 'Explore species'. You can select the higher taoxn of interest to make 
-   a pre-selection below the search bar (e.g. Mammals, Flowering Plants).
+3. Go to the Data option and select 'Explore species'. You can select the higher taxon of interest 
+   to make a pre-selection below the search bar (e.g. Mammals, Flowering Plants).
    
    ![](explore.png)
 
@@ -156,12 +155,12 @@ With the instructions described above you can now develop your own species distr
    ![](Viscum_album.png)
    
 5.	Click 'All xxx | In viewable area' – choose one option, the latter makes a pre-selection of your 
-    records.
+   records.
 6.	Click 'Add a filter' -> 'Basis of record' -> 'Specimen' (if you want to download specimens only)  
-    -> Apply -> Download; this will download your specimen records. You find your records in the 
-    occurrence.txt file. Open this file in Excel (use tab as separator).
-    **NOTE: Marine species are also an option, as abiotic variables you can use the Bio-ORACLE**   
-    **(http://www.oracle.ugent.be/download.html) dataset (Tyberghein et al. 2012).**
+   -> Apply -> Download; this will download your specimen records. You find your records in the 
+   occurrence.txt file. Open this file in Excel (use tab as separator).
+   **NOTE: Marine species are also an option, as abiotic variables you can use the Bio-ORACLE**   
+   **(http://www.oracle.ugent.be/download.html) dataset (Tyberghein et al. 2012).**
 7. Plot the downloaded records on a map – See manual day 1.
 8. Clip data-layers to fit your species' distribution – See manual day 2.
 9. Model your species' distribution.
@@ -176,14 +175,14 @@ Your report should have:
 
 ### Useful links
 
--	Download of Geographic Information Systems (GIS) data-layers: http://www.worldclim.org/download
+- Download of Geographic Information Systems (GIS) data-layers: http://www.worldclim.org/download
   https://www.climond.org/
--	Using the ArcMap model builder to format MaxEnt environmental layers: 
+- Using the ArcMap model builder to format MaxEnt environmental layers: 
   http://biodiversityinformatics.amnh.org/index.php?section=sdm_tutotial
--	ESRI fonts: http://www.creamundo.com/en  search 'esri'. 
--	GBIF workshop papers: http://www.ksib.pl/enm2007/index.php?id=documents
--	Google Groups Maxent: http://groups.google.com/group/Maxent 
--	Manual Species Distribution Modelling AMNH: 
+- ESRI fonts: http://www.creamundo.com/en  search 'esri'. 
+- GBIF workshop papers: http://www.ksib.pl/enm2007/index.php?id=documents
+- Google Groups Maxent: http://groups.google.com/group/Maxent 
+- Manual Species Distribution Modelling AMNH: 
   http://biodiversityinformatics.amnh.org/index.php?section_id=111
 
 ### Literature
