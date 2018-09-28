@@ -4,12 +4,11 @@ Species Distribution Modelling Manual
 Adapted from a previous version by Dr. Niels Raes
 -------------------------------------------------
 
-### Outline
-
 This manual gives a run-through of SDM on Windows computers. As such, some of the steps cannot
 be performed on other operating systems with the programs described. However, other programs
 may be equally suitable. Note also that the exercises in this manual are not a requirement of
-the course, they are only provided here for informational purposes.
+the course, they are only provided here for informational purposes. The data and results of these
+exercises can be found [here](../Maxent_data.zip).
 
 1. **[GIS and spatial modelling](1_Pointdata)** - 
    Chapter 1 starts with data pre-processing and some of the configuration challenges in dealing 
