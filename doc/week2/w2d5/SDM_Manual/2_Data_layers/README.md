@@ -1,13 +1,13 @@
 2 Preparing GIS data layers for Species Distribution Modelling
 ==============================================================
 
-In order to predict the presence/absence of species for areas where never a collection was made, 
+The need to predict the presence/absence of species for areas where never a collection was made 
 has led to the development of species distribution modelling techniques. Comprehensive comparisons 
 of the different distribution modelling techniques have recently been published (Elith et al. 2006, 
-Wisz et al. 2008, Aguirre-Gutiérrez et al. 2013). Species’ distribution models (SDMs) attempt to 
+Wisz et al. 2008, Aguirre-Gutiérrez et al. 2013). Species Distribution Models (SDMs) attempt to 
 predict the potential distribution of species by interpolating identified relationships between 
-species' presence/absence, or presence-only data on one hand, and environmental predictors on the 
-other hand, to a geographical area of interest. This means that we need environmental predictors, 
+species' presence/absence, or presence-only data on the one hand, and environmental predictors on 
+the other, to a geographical area of interest. This means that we need environmental predictors, 
 related to the ecology of the modelled species, for the geographical area of interest. Here the 
 island Borneo. Importantly, the spatial resolution and the geographical extent of the different 
 environmental predictor data-layers must be **exactly** the same. The most widely used 

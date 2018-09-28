@@ -26,7 +26,7 @@ should run correctly.
 ### Developing a base map with country boundaries
 
 1. Download DIVA-GIS from http://www.diva-gis.org/. For full functionality also download the climate 
-   data http://www.diva-gis.org/climate.htm. As an optimal trade-off between functionality and resolution 
+   data http://www.diva-gis.org/climate. As an optimal trade-off between functionality and resolution 
    it is suggested to use the 5 arc-minutes dataset. This is approximately 9.3 × 9.3 km resolution at the 
    equator. Extract the environmental data to the folder 'environ' in the DIVA-GIS program folder (E.g. 
    `C:\Program Files (x86)\DIVA-GIS\environ\` on Windows).

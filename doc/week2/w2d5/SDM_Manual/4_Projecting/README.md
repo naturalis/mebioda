@@ -2,9 +2,9 @@
 ====================================================================================================================
 In the previous chapters you learned how to: 
 
-a. [create the species presence file](../1_Pointdata)
-b. [download and prepare your environmental datasets](../2_Data_layers), and 
-c. [to develop species distribution models](../3_Modelling). 
+1. [create the species presence file](../1_Pointdata)
+2. [download and prepare your environmental datasets](../2_Data_layers), and 
+3. [to develop species distribution models](../3_Modelling). 
 
 Species distribution models identify the relationship between the presence-only species records and 
 the environmental data, and interpolate these relationships to your research area. Once the 

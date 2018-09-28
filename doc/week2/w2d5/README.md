@@ -18,8 +18,7 @@ Lecture slides
 Background reading
 ------------------
 
-- [SDM Manual](Manual_Raes_SDM.zip) - A Zip archive containing Word documents with 
-  general guides for doing SDM
-- [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and MAXENT 
+- [SDM Manual](SDM_Manual) - A collection of informational tutorial pages on DIVA-GIS and Maxent
+- [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and Maxent 
   analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm)
 
