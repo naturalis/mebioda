@@ -32,8 +32,8 @@ Maxent uses the maximum entropy algorithm which is defined as follows:
 
 1. Create a folder 'Maxent'. Within this folder you create three new folders: 'Species', 
    'Environmental Data', and 'Maxent Results'. Copy the file macaranga.csv to the folder 
-   'Species', and copy your environmental data layers (Chapter 2) to the folder 
-   'Environmental Data'.
+   'Species', and copy your environmental data layers ([Chapter 2](../2_Data_layers)) to the 
+   folder 'Environmental Data'.
 2. Use the Browse buttons to select the 'Samples File', the 'Environmental layers Directory 
    File', and the 'Output directory' (Fig. 15).
 3. Figure 15 shows how a batch is run in Maxent. For computational and time reasons it is 
@@ -42,7 +42,7 @@ Maxent uses the maximum entropy algorithm which is defined as follows:
    'Do jackknife to measure variable importance'.
 4. Click the button 'Settings' and check the option 'Remove duplicate presence records', set 
    the 'Random test percentage' to zero, and set the 'Max number of background points' to 
-   10,000 (Fig. 16). Make sure there are more background points than presence records.
+   10,000 (Fig. 16). Make sure there are more background points than presence records.
    
    ![](fig_16.png)
    
@@ -161,8 +161,8 @@ With the instructions described above you can now develop your own species distr
    occurrence.txt file. Open this file in Excel (use tab as separator).
    **NOTE: Marine species are also an option, as abiotic variables you can use the Bio-ORACLE**   
    **(http://www.oracle.ugent.be/download.html) dataset (Tyberghein et al. 2012).**
-7. Plot the downloaded records on a map – See manual day 1.
-8. Clip data-layers to fit your species' distribution – See manual day 2.
+7. Plot the downloaded records on a map – See [manual day 1](../1_Pointdata).
+8. Clip data-layers to fit your species' distribution – See [manual day 2](../1_Data_layers).
 9. Model your species' distribution.
 
 Your report should have:
