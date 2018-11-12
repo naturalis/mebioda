@@ -40,7 +40,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
-- Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Nuno De Mesquita César de Sá + Maarten
+- Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Nuno De Mesquita César de Sá (CML) + Maarten
 - Homework: Download occurrence data for your crop species from GBIF (continued)
 
 ### [Day 5 - (Spatial) Data output](w2d5)
@@ -48,6 +48,6 @@ by species distribution modelling. We will present our findings in a brief repor
 2018-12-07, Sylvius 1.5.03
 
 - Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
-- Lecture II: Principles of SDM - Niels Raes
-- Lecture III: Future projections, climate models, introduction to SDM practical - Rosaleen March
+- Lecture II: Principles of SDM - Niels Raes (Naturalis)
+- Lecture III: Future projections, climate models, introduction to SDM practical - Rosaleen March (CML)
 - Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Nuno en Rosaleen
