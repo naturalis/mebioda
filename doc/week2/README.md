@@ -36,7 +36,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 4 - (Spatial) Data analysis
 
-2018-12-06, Sylvius 1.5.03 (afternoon)
+2018-12-06, Sylvius 1.5.03
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
