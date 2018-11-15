@@ -130,7 +130,7 @@ for infile in $layers; do
   # compose outfile name by replacing the extension
   outfile=`echo $infile | sed -e 's/.tif/.asc/'`
   
-  # compose minimum pixel value
+  # compose minimum and maximum pixel value, for rescaling
   pixmin=`gdalinfo $infile | grep STATISTICS_MINIMUM | cut -f2 -d '='`
   pixmax=`gdalinfo $infile | grep STATISTICS_MAXIMUM | cut -f2 -d '='`
   
