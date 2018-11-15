@@ -1,7 +1,7 @@
 Common workflows in geospatial analysis and SDM
 ===============================================
 
-During this part of the course we introduce you to variety of tools for working with geospatial
+During this part of the course we introduce you to a variety of tools for working with geospatial
 data and species occurrences. During the practicals, we go into some depth with the usage of 
 [ArcGIS](https://www.arcgis.com/index.html) because it is the standard in a lot of institutes 
 (research, government, NGOs, etc.) and companies. In some of the supplementary readings, you
