@@ -29,7 +29,7 @@ just two steps, which don't necessarily have to be taken in any particular order
   
 Hence, we take as a given that we already have downloaded and unzipped our  [layers](http://biogeo.ucdavis.edu/data/worldclim/v2.0/tif/base/wc2.0_10m_bio.zip). For this example
 we use a very, very coarse resolution of 10 arc minutes, just to keep file sizes small. And we have
-a set of [occurrences](occurrences.tsv). These are also just for the sake of argument, do not use
+a set of [occurrences](occurrences.csv). These are also just for the sake of argument, do not use
 them elsewhere for your own analyses.
 
 ArcGIS, the _model builder_, and python
