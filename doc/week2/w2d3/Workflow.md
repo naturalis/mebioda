@@ -130,8 +130,12 @@ for infile in $layers; do
   # compose outfile name by replacing the extension
   outfile=`echo $infile | sed -e 's/.tif/.asc/'`
   
+  # compose minimum pixel value
+  pixmin=`gdalinfo $infile | grep STATISTICS_MINIMUM | cut -f2 -d '='`
+  pixmax=`gdalinfo $infile | grep STATISTICS_MAXIMUM | cut -f2 -d '='`
+  
   # do the conversion, note the order of the coordinates
-  gdal_translate -projwin $xmin $ymax $xmax $ymin -a_nodata -9999.0 -ot Float32 -of AAIGrid $infile $outfile
+  gdal_translate -projwin $xmin $ymax $xmax $ymin -a_nodata -9999 -ot Int16 -of AAIGrid -scale $pixmin $pixmax $infile $outfile
 
 done
 ```
