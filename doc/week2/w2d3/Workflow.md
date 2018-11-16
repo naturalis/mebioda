@@ -1,7 +1,7 @@
 Common workflows in geospatial analysis and SDM
 ===============================================
 
-During this part of the course we introduce you to variety of tools for working with geospatial
+During this part of the course we introduce you to a variety of tools for working with geospatial
 data and species occurrences. During the practicals, we go into some depth with the usage of 
 [ArcGIS](https://www.arcgis.com/index.html) because it is the standard in a lot of institutes 
 (research, government, NGOs, etc.) and companies. In some of the supplementary readings, you
@@ -29,7 +29,7 @@ just two steps, which don't necessarily have to be taken in any particular order
   
 Hence, we take as a given that we already have downloaded and unzipped our  [layers](http://biogeo.ucdavis.edu/data/worldclim/v2.0/tif/base/wc2.0_10m_bio.zip). For this example
 we use a very, very coarse resolution of 10 arc minutes, just to keep file sizes small. And we have
-a set of [occurrences](occurrences.tsv). These are also just for the sake of argument, do not use
+a set of [occurrences](occurrences.csv). These are also just for the sake of argument, do not use
 them elsewhere for your own analyses.
 
 ArcGIS, the _model builder_, and python
@@ -130,8 +130,12 @@ for infile in $layers; do
   # compose outfile name by replacing the extension
   outfile=`echo $infile | sed -e 's/.tif/.asc/'`
   
+  # compose minimum and maximum pixel value, for rescaling
+  pixmin=`gdalinfo $infile | grep STATISTICS_MINIMUM | cut -f2 -d '='`
+  pixmax=`gdalinfo $infile | grep STATISTICS_MAXIMUM | cut -f2 -d '='`
+  
   # do the conversion, note the order of the coordinates
-  gdal_translate -projwin $xmin $ymax $xmax $ymin -a_nodata -9999.0 -ot Float32 -of AAIGrid $infile $outfile
+  gdal_translate -projwin $xmin $ymax $xmax $ymin -a_nodata -9999 -ot Int16 -of AAIGrid -scale $pixmin $pixmax $infile $outfile
 
 done
 ```
