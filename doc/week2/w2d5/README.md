@@ -21,4 +21,4 @@ Background reading
 - [SDM Manual](SDM_Manual) - A collection of informational tutorial pages on DIVA-GIS and Maxent
 - [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and Maxent 
   analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm)
-
+- a [book chapter](Raes_Aguirre_2018_ch21.pdf) on SDM by Niels Raes and Jesús Aguirre‐Gutiérrez 
