@@ -48,7 +48,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 
 ### Day 5 - Phylogenies and wrap-up
 
-2018-30-11 (note: changed location)
+2018-30-11, Sylvius 1.5.03
 
 - Lecture I: [Phylogenetic data](w1d5/lecture1.md)
 - Lecture II: [Megatrees](w1d5/lecture2.md) (e.g. algorithms, SQL)
