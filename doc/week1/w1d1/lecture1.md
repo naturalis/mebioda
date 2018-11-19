@@ -80,8 +80,7 @@ Guest lectures
 --------------
 
 - **DNA WaterScan** - 
-  [Berry van der Hoorn](https://science.naturalis.nl/en/people/scientists/berry-van-der-hoorn/) 
-  / [Kevin Beentjes](https://science.naturalis.nl/en/people/scientists/kevin-beentjes/)
+  [Kevin Beentjes](https://science.naturalis.nl/en/people/scientists/kevin-beentjes/)
 - **Fungal molecular diversity** - 
   [József Geml](https://science.naturalis.nl/en/people/scientists/jozsef-geml/)
 - **GIS** -
@@ -110,21 +109,28 @@ Links to other courses
 ----------------------
 
 **Methods in Biodiversity Analysis as well as the following courses are compulsory in the 
-master Biodiversity and Sustainability, 2017-2018:**
+master Biodiversity and Sustainability, 2018-2019:**
 
-- [Genomic Architecture](https://studiegids.leidenuniv.nl/courses/show/67715/genomic-architecture) -
-  We will give more attention to the data science and bioinformatics side of genome 
-  (and other) sequencing. Bioinformatics in relation to HTS will be more Unix-based. 
-- [Advanced Statistics](https://studiegids.leidenuniv.nl/courses/show/67699/Advanced-Statistics) - 
+- [Orientation on Biodiversity and Sustainability](https://studiegids.leidenuniv.nl/en/courses/show/82523/orientation-in)
+-  **[Advanced Statistics](https://studiegids.leidenuniv.nl/en/courses/show/82483/Advanced-Statistics)** - 
   We will refresh our R skills but apply them more specifically to cases involving 
   biodiversity.
+- **[Genomic Architecture](https://studiegids.leidenuniv.nl/en/courses/show/82497/genomic-architecture)** -
+  We will give more attention to the data science and bioinformatics side of genome 
+  (and other) sequencing. Bioinformatics in relation to HTS will be more Unix-based. 
+- [Ecosystem Services](https://studiegids.leidenuniv.nl/en/courses/show/82521/ecosystem-services)
+- **[Human Impacts on Biodiversity](https://studiegids.leidenuniv.nl/en/courses/show/82491/conservation_biology)** - 
+  We will learn more about the quantitative methods for assessing the impacts discussed in this course.
 
-In addition, Methods in Biodiversity Analysis is an **elective** in:
+In addition, Methods in Biodiversity Analysis is an **elective** in the following Biology Masters:
 
-- Biology: Biology and Education, 2017-2018
-- Biology: Biology and Science-Based Business, 2017-2018
-- Biology: Biology and Science Communication & Society, 2017-2018
-- Biology: General Biology Programme (no research specialisation), 2017-2018
+- [Biology and Business Studies](https://studiegids.leidenuniv.nl/en/studies/show/6589/biology_biology_and_science-based_business)
+- [Biology and Education](https://studiegids.leidenuniv.nl/en/studies/show/6587/biology_biology_and_education)
+- [Biology and Science Communication & Society](https://studiegids.leidenuniv.nl/en/studies/show/6591/biology_biology_and_science_communication_society)
+- [Evolutionary Biology](https://studiegids.leidenuniv.nl/en/studies/show/6593/biology_evolution_biodiversity_and_conservation)
+- [From Cells To Organisms](https://studiegids.leidenuniv.nl/en/studies/show/6595/plant-sciences-and-natural-products)
+- [General Biology Programme (no research specialisation)](https://studiegids.leidenuniv.nl/en/studies/show/6597/biology-general-biology-programme-no-research-specialisation)
+- [Molecular Genetics & Biotechnology](https://studiegids.leidenuniv.nl/en/studies/show/6599/microbial-biotechnology-and-health)
 
 In relation to the **old** programme and the master **Evolutionary Biology**, 2017-2018:
 
