@@ -79,6 +79,8 @@ all pick our own staple food crop:
 Guest lectures
 --------------
 
+Note that the guest lectures are where absenteeism is recorded (10% of final grade).
+
 - **DNA WaterScan** - 
   [Kevin Beentjes](https://science.naturalis.nl/en/people/scientists/kevin-beentjes/)
 - **Fungal molecular diversity** - 
@@ -168,3 +170,10 @@ Grading
 - Paper presentation week 1: 20%
 - Report week 2: 20%
 - Participation: 10%
+
+Locations
+---------
+
+- All lectures, afternoon practicals, presentations, and the exam are in Sylvius 1.5.03
+  **EXCEPT THE GIS PRACTICALS**
+- The GIS practicals, in the afternoons of 3/12 and 5/12, are in Van Steenis F101
