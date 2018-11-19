@@ -23,7 +23,7 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Satellite images and remote sensing (including Lidar_data ?)  - Joris Timmermans (CML)
 - Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
-- Homework: Download occurrence data for your crop species from GBIF
+- Homework: Download occurrence data for **your crop species** from GBIF
 
 ### Day 3 - (Spatial) Data management
 
@@ -41,7 +41,7 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
 - Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Nuno De Mesquita César de Sá (CML) + Maarten
-- Homework: Download occurrence data for your crop species from GBIF (continued)
+- Homework: Download occurrence data for **your crop species** from GBIF (continued)
 
 ### [Day 5 - (Spatial) Data output](w2d5)
 
