@@ -165,10 +165,10 @@ w.stack = stack("path2file/filename.tif")
 w.raster <- raster( w.stack, layer=1 )
  
 # setting the clip extent
-e <- extent(-133.2153004 * 1.05, #xmin
-            83.10261     * 0.95, #xmax
-            46.81686     * 0.95, #ymin
-            58.7162728   * 1.05) #ymax
+e <- extent(-133.2153004 * 1.05, # xmin
+            83.10261     * 0.95, # xmax
+            46.81686     * 0.95, # ymin
+            58.7162728   * 1.05) # ymax
  
 # clipping command and saving to a file
 w.raster.crop <- crop(w.raster,         # raster variable
