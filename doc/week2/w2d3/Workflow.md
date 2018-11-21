@@ -144,8 +144,8 @@ R and GDAL
 ----------
 
 To accomplish a similar result in R, you might do something like the code below.
-This example uses the [raster](https://cran.r-project.org/web/packages/raster/index.html),
-which in turn uses the [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html),
+This example uses the [raster](https://cran.r-project.org/web/packages/raster/index.html) package,
+which in turn uses the [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html) package,
 which uses the GDAL libraries that we saw earlier under the hood. More info on the
 operations performed in the code can be found [here](https://geoscripting-wur.github.io/IntroToRaster/).
 
