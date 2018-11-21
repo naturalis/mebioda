@@ -1,7 +1,7 @@
 Week 1 Data analysis of mycorrhizal diversity
 ---------------------------------------------
 
-- **Step-by-step analysis of micorrhizal diversity**
+### Step-by-step analysis of micorrhizal diversity
 
 1. Create a directory where you will store the files to use for the analyses, you can call it e.g. w1p1.
    Place the reads and the reference in the directory. Extract them: `gunzip *.gz`
