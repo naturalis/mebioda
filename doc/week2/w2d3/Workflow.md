@@ -142,3 +142,56 @@ done
 
 R and GDAL
 ----------
+
+To accomplish a similar result in R, you might do something like the code below.
+This example uses the [raster](https://cran.r-project.org/web/packages/raster/index.html),
+which in turn uses the [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html),
+which uses the GDAL libraries that we saw earlier under the hood. More info on the
+operations performed in the code can be found [here](https://geoscripting-wur.github.io/IntroToRaster/).
+
+```r
+# packages to load. the sp package is not necessary for this set of 
+# particular operations but required upon loading raster package
+library(sp)
+library(raster)
+ 
+# download worldclim data at a given resolution (e.g. 10 arcminutes)
+w.stack = getData( 'worldclim', var='bio', res=10 )
+ 
+# alternatively, if data has already been downloaded:
+w.stack = stack("path2file/filename.tif")
+ 
+# both methods load all the bands - to make processing faster we select only one
+w.raster <- raster( w.stack, layer=1 )
+ 
+# setting the clip extent
+e <- extent(-133.2153004 * 1.05, #xmin
+            83.10261     * 0.95, #xmax
+            46.81686     * 0.95, #ymin
+            58.7162728   * 1.05) #ymax
+ 
+# clipping command and saving to a file
+w.raster.crop <- crop(w.raster,         # raster variable
+                      e,                # extent variable
+                      overwrite=TRUE,   # forces overwrite on the output files
+                      filename="D:/wclim_b01.asc") # saves file to a given path - 
+                                                   # any common file extensions can be used here. 
+                                                   # Some other data types allow compression that 
+                                                   # saves disk space
+ 
+# clipping all the all the predictors in the original file
+w.stack.crop <- crop(w.stack,        # raster stack variable
+                     e,              # extent variable
+                     bylayer=TRUE,   # creates one new raster per each layer in the stack
+                     suffix="names", # keeps the original name and uses it for the name of each saved file
+                     overwrite=TRUE, # forces overwrite on the output files
+                     filename="D:/wclim_.asc") # saves file to a given path - 
+                                               # any common file extensions can be used here. 
+                                               # Some other data types allow compression that 
+                                               # saves disk space
+ 
+# optional:
+# The names of each raster can be changed using the command 
+# `names(w.rstack)` which will in turn change the output filenames
+
+```
