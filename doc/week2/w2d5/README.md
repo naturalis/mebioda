@@ -18,6 +18,7 @@ Lecture slides
 Background reading
 ------------------
 
+- [examples of cropping and conversion using various approaches](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/Workflow.md)
 - [SDM Manual](SDM_Manual) - A collection of informational tutorial pages on DIVA-GIS and Maxent
 - [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and Maxent 
   analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm)
