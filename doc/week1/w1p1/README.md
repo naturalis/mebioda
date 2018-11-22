@@ -1,5 +1,5 @@
-Week 1 Step-by-step analysis of micorrhizal diversity
------------------------------------------------------
+Step-by-step analysis of micorrhizal diversity in a Linux environment
+---------------------------------------------------------------------
 
 In this practical, we are going to analyze some HTS data sets (MiSeq) for soil fungi in samples taken at 
 different locations along a mountain slope. The following are the steps we take:
