@@ -18,7 +18,7 @@ ends of the reads. We are going to remove them. In addition, there still are pri
 ends (i.e. 3' and 5'), which have to be removed. For all of these, we use a tool called
 [cutadapt](https://cutadapt.readthedocs.io/en/v1.10/installation.html). 
 
-1. Install cutadapt: `pip install --user --upgrade cutadapt`
+1. Install cutadapt: `pip install --user --upgrade cutadapt` (if `pip` is not found: `sudo apt install python-pip`)
 2. Trim the bad quality ends:
 
 ```bash
