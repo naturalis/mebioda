@@ -29,7 +29,7 @@ Practical and homework
 ----------------------
 - Fetching, filtering, aligning BoLD sequences
 - Analyzing Kinabalu metabarcoding data
-- Reading [OSODOS](http://osodos.org)
+- Reading [OSODOS](https://pfern.github.io/OSODOS/gitbook/)
 - Reading journal article, preparing 5 min. standup
 
 Journal club
