@@ -148,7 +148,7 @@ In relation to the **old** programme and the master **Evolutionary Biology**, 20
 Teaching materials
 ------------------
 
-- There is no book except for [OSODOS](http://osodos.org)
+- There is no book except for [OSODOS](https://pfern.github.io/OSODOS/gitbook/)
 - Most lectures reference several publications. You should be broadly aware of their
   contents insofar as a biologist can (so skip over the formulas).
 - Slides (re-formatted as handouts) are at http://github.com/naturalis/mebioda
