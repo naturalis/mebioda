@@ -193,6 +193,8 @@ but it still counts as an M since it aligns to that position.
 Bitwise flags
 -------------
 
+![](Altair_8800_at_the_Computer_History_Museum,_cropped.jpg)
+
 - The *Bits* column shows all the 12 [switches](https://en.wikipedia.org/wiki/Bit_field) that can possibly be set
 - *SAM property* shows the meaning of the one switch that is set in the corresponding Bits column
 - The first column shows the number of combinations possible, counting all the switches from right to the current one,
