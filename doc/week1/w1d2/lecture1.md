@@ -108,7 +108,8 @@ Additional filtering
 
 ![](lecture1/chimera.gif)
 
-- A (crude) proxy for a read possibly being chimeric is that it occurs only once, i.e. as
+- A (crude) proxy for a read possibly being [chimeric](https://en.wikipedia.org/wiki/Chimera_(mythology)) 
+  is that it occurs only once, i.e. as
   a singleton, which you might therefore filter out. This is more likely the case in
   genomes than in amplicon sequencing (because the chimera might be PCR'ed)
 - On platforms that have variable length reads, you might want to filter out all reads
