@@ -74,7 +74,7 @@ is called incorrectly are 1 in 1000.
 Phred score encoding
 --------------------
 
-Different platforms map phred scores in different ways to ASCII:
+Different platforms map phred scores in different ways to [ASCII](http://www.asciitable.com/):
 
 - sanger: 33..126
 - solexa: 59..126
