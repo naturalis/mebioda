@@ -193,20 +193,26 @@ but it still counts as an M since it aligns to that position.
 Bitwise flags
 -------------
 
-| 2<sup>x</sup> | Value (Hex)       | Value (Decimal)    | Bits         | SAM property                             |
-|---------------|-------------------|--------------------|--------------|------------------------------------------|
-| 2<sup>0</sup> | 1                 | 1                  | 000000000001 | are there multiple fragments?            |
-| 2<sup>1</sup> | 2                 | 2                  | 000000000010 | are all fragments properly aligned?      |
-| 2<sup>2</sup> | 4                 | 4                  | 000000000100 | is this fragment unmapped?               |
-| 2<sup>3</sup> | 8                 | 8                  | 000000001000 | is the next fragment unmapped?           |
-| 2<sup>4</sup> | 10<sub>hex</sub>  | 16<sub>dec</sub>   | 000000010000 | is this query the reverse strand?        |
-| 2<sup>5</sup> | 20<sub>hex</sub>  | 32<sub>dec</sub>   | 000000100000 | is the next fragment the reverse strand? |
-| 2<sup>6</sup> | 40<sub>hex</sub>  | 64<sub>dec</sub>   | 000001000000 | is this the 1st fragment?                |
-| 2<sup>7</sup> | 80<sub>hex</sub>  | 128<sub>dec</sub>  | 000010000000 | is this the last fragment?               |
-| 2<sup>8</sup> | 100<sub>hex</sub> | 256<sub>dec</sub>  | 000100000000 | is this a secondary alignment?           |
-| 2<sup>9</sup> | 200<sub>hex</sub> | 512<sub>dec</sub>  | 001000000000 | did this read fail quality controls?     |
-| 2<sup>A</sup> | 400<sub>hex</sub> | 1024<sub>dec</sub> | 010000000000 | is this read a PCR or optical duplicate? |
-| 2<sup>B</sup> | 800<sub>hex</sub> | 2048<sub>dec</sub> | 100000000000 | supplementary alignment                  |
+- The *Bits* column shows all the 12 switches that can possibly be set
+- *SAM property* shows the meaning of the one switch that is set in the corresponding Bits column
+- The first column shows the number of combinations possible, counting all the switches from right to the current one,
+  as 2 raised to the power of x, where x is the position of the switch
+- The *Value (Decimal)* column shows what that number of combinations is for normal people
+
+| 2<sup>x</sup> | Value (Hex)       | Value (Decimal) | Bits         | SAM property                             |
+|---------------|-------------------|-----------------|--------------|------------------------------------------|
+| 2<sup>0</sup> | 1                 | 1               | 000000000001 | are there multiple fragments?            |
+| 2<sup>1</sup> | 2                 | 2               | 000000000010 | are all fragments properly aligned?      |
+| 2<sup>2</sup> | 4                 | 4               | 000000000100 | is this fragment unmapped?               |
+| 2<sup>3</sup> | 8                 | 8               | 000000001000 | is the next fragment unmapped?           |
+| 2<sup>4</sup> | 10<sub>hex</sub>  | 16              | 000000010000 | is this query the reverse strand?        |
+| 2<sup>5</sup> | 20<sub>hex</sub>  | 32              | 000000100000 | is the next fragment the reverse strand? |
+| 2<sup>6</sup> | 40<sub>hex</sub>  | 64              | 000001000000 | is this the 1st fragment?                |
+| 2<sup>7</sup> | 80<sub>hex</sub>  | 128             | 000010000000 | is this the last fragment?               |
+| 2<sup>8</sup> | 100<sub>hex</sub> | 256             | 000100000000 | is this a secondary alignment?           |
+| 2<sup>9</sup> | 200<sub>hex</sub> | 512             | 001000000000 | did this read fail quality controls?     |
+| 2<sup>A</sup> | 400<sub>hex</sub> | 1024            | 010000000000 | is this read a PCR or optical duplicate? |
+| 2<sup>B</sup> | 800<sub>hex</sub> | 2048            | 100000000000 | supplementary alignment                  |
 
 The values in the `FLAG` column (2) correspond to bitwise flags as follows: 
 
