@@ -193,11 +193,12 @@ but it still counts as an M since it aligns to that position.
 Bitwise flags
 -------------
 
-- The *Bits* column shows all the 12 switches that can possibly be set
+- The *Bits* column shows all the 12 [switches](https://en.wikipedia.org/wiki/Bit_field) that can possibly be set
 - *SAM property* shows the meaning of the one switch that is set in the corresponding Bits column
 - The first column shows the number of combinations possible, counting all the switches from right to the current one,
   as 2 raised to the power of x, where x is the position of the switch
 - The *Value (Decimal)* column shows what that number of combinations is for normal people
+- The *Value (Hex)* column shows the same number if you were [counting with 16 fingers](https://en.wikipedia.org/wiki/Hexadecimal)
 
 | 2<sup>x</sup> | Value (Hex)       | Value (Decimal) | Bits         | SAM property                             |
 |---------------|-------------------|-----------------|--------------|------------------------------------------|
