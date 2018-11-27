@@ -62,8 +62,6 @@ Commonly-used file operations
 | `rm`    | Remove files            | `chmod` | Change file mode        |
 | `cp`    | Copy files              | `chown` | Change file owner       |
 
-> In Ubuntu, click the top-left search button and look for 'terminal'
-
 ```bash
 # file listing
 $ ls
