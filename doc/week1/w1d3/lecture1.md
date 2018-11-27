@@ -1,14 +1,7 @@
 Data science tools
 ==================
 
-- Install [VirtualBox](https://www.virtualbox.org/)
-- Download [the image](https://www.dropbox.com/s/xovgaqnussueuoh/mebioda.ova?dl=0)
-- In VirtualBox:
-  - Import appliance
-  - Select the downloaded image, accept the settings and import (this will take a minute or two)
-  - Start the image
-  - This will boot up the [Ubuntu](https://www.ubuntu.com/) operating system
-  - User: `mebioda`, password: `mebioda`
+The BlackBoard contains instructions and login keys for getting into the cloud environment. Once logged in, you will be able to run some of the commands that will be introduced here.
 
 UNIX/Linux operating systems: why do we care?
 ---------------------------------------------
@@ -68,8 +61,6 @@ Commonly-used file operations
 | `pwd`   | Print working directory | `rmdir` | Remove directory        |
 | `rm`    | Remove files            | `chmod` | Change file mode        |
 | `cp`    | Copy files              | `chown` | Change file owner       |
-
-> In Ubuntu, click the top-left search button and look for 'terminal'
 
 ```bash
 # file listing

@@ -44,7 +44,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Lecture I: [Metabarcoding](w1d4/lecture1.md)
 - Lecture II: environmental quality assessments: [DNA WaterScan](http://gieskesstrijbisfonds.nl/projecten/dna-bibliotheek-waterdiertjes/) - Van der Hoorn / Beentjes
 - Lecture III: Guest lecture metabarcoding: [Kinabalu mycorrhizal diversity](http://doi.org/10.1111/nph.14566) - Geml
-- Practical: Hands-on practical [step by step](Metabarcoding.md) data analysis of mycorrhizal diversity - Geml
+- Practical: Hands-on practical [step by step](w1p1) data analysis of mycorrhizal diversity - Geml
 
 ### Day 5 - Phylogenies and wrap-up
 

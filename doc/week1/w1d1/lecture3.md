@@ -29,7 +29,7 @@ Practical and homework
 ----------------------
 - Fetching, filtering, aligning BoLD sequences
 - Analyzing Kinabalu metabarcoding data
-- Reading [OSODOS](http://osodos.org)
+- Reading [OSODOS](https://pfern.github.io/OSODOS/gitbook/)
 - Reading journal article, preparing 5 min. standup
 
 Journal club
@@ -52,7 +52,7 @@ Journal club
 6. **Barley** - Cereal (Triticeae): _Hordeum vulgare_, wild ancestor is _H. vulgare_ subsp. _spontaneum_. Domesticate alternatively named _H. vulgare_ subsp. _vulgare_ (Poaceae)
 	- [Sequencing of chloroplast genomes from wheat, barley, rye and their relatives provides a detailed insight into the evolution of the Triticeae tribe.](http://doi.org/10.1371/journal.pone.0085761) (2014)
 7. **Wheat** - Cereal (Triticeae): _Triticum aestivum_ (Poaceae)
-	- [Challenges to barcoding an entire flora.](https://doi.org/10.1111/1755-0998.12277) (2014)
+	- [Evidence for the origin of the B genome of bread wheat based on chloroplast DNA](http://journals.tubitak.gov.tr/agriculture/issues/tar-12-36-1/tar-36-1-2-1011-1394.pdf) (2012)
 8. **Rye** - Cereal (Triticeae): _Secale cereale_ (Poaceae)
 	- [Multigenic phylogeny and analysis of tree incongruences in Triticeae (Poaceae).](https://doi.org/10.1186/1471-2148-11-181) (2011)
 9. **Cassava** - New World tuber: Also known as Manioc, i.e. _Manihot esculenta_ (Euphorbiaceae)
