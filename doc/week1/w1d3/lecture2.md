@@ -216,7 +216,7 @@ let's install it:
 
 ```bash
 # let's install phylip
-$ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.696.tar.gz
+$ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.697.tar.gz
 $ gunzip phylip-3.696.tar.gz
 $ tar xvf phylip-3.696.tar
 $ cd phylip-3.696/src
