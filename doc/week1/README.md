@@ -33,8 +33,8 @@ a journal club where we discuss a relevant publication with each other in brief 
 2018-28-11, Sylvius 1.5.03
 
 - Lecture I: [Data science tools: UNIX](w1d3/lecture1.md)
-- Lecture II: [Species delimitation](w1d3/lecture2.md)
-- Lecture III: [The barcoding workflow and MSA data](w1d3/lecture3.md)
+- Lecture II: [The barcoding workflow and MSA data](w1d3/lecture2.md)
+- Lecture III: [Species delimitation](w1d3/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
 
 ### Day 4 - Metabarcoding
