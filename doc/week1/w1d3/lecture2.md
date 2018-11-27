@@ -217,12 +217,12 @@ let's install it:
 ```bash
 # let's install phylip
 $ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.697.tar.gz
-$ gunzip phylip-3.696.tar.gz
-$ tar xvf phylip-3.696.tar
-$ cd phylip-3.696/src
+$ gunzip phylip-3.697.tar.gz
+$ tar xvf phylip-3.697.tar
+$ cd phylip-3.697/src
 $ make -f Makefile.unx install
 $ cd -
-$ sudo mv phylip-3.696 /usr/local
+$ sudo mv phylip-3.697 /usr/local
 ```
 
 (And add `/usr/local/phylip-3.696/exe` to the $PATH)
