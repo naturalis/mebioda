@@ -2,3 +2,5 @@
 *.html
 *MIBA_def.xls
 .Rproj.user
+.RData
+.Rhistory
