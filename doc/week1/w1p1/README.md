@@ -11,6 +11,18 @@ different locations along a mountain slope. The following are the steps we take:
 3. Do this for all the \*.fastq.gz files
 4. Extract the data, e.g. `gunzip *.gz`
 
+```bash
+#!/bin/bash
+url="https://github.com/naturalis/mebioda/blob/master/doc/week1/w1p1/"
+CNUMS="1 3 5 7"
+for C in $CNUMS; do
+	PNUMS="1 2 3"
+	for P in $PNUMS; do
+		curl -Lo "C${C}P${P}.fastq.gz" "${url}C${C}P${P}.fastq.gz?raw=true"
+	done
+done
+```
+
 ### Trimming the sequences
 
 Our sequencing reads may contain base calls with low support. These typically occur especially on the
