@@ -60,7 +60,7 @@ Then use the file choose to select your layer file(s):
 
 And allow any data pre-processing to take place:
 
-![](argis-pyramids.png)
+![](arcgis-pyramids.png)
 
 ### Converting layers from raster to ASCII
 
