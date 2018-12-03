@@ -32,9 +32,91 @@ we use a very, very coarse resolution of 10 arc minutes, just to keep file sizes
 a set of [occurrences](occurrences.csv). These are also just for the sake of argument, do not use
 them elsewhere for your own analyses.
 
+The geographic extent of the occurrences is between 46.81686 and 58.7162728 degrees latitude (i.e.
+a high latitude, far away from the equator) and between -133.2153004 and -83.10261 longitude (that is,
+on the western hemisphere). Let's say we want the extent of the layers to be that of the occurrences 
+±5%. You can come up with these values yourself by, for example, importing the tab-separated 
+occurrences file in Excel and sorting the columns. This would give us a box of:
+
+```
+xmin = -133.2153004 * 1.05 = -139.8760655
+xmax = -83.10261    * 0.95 = -78.9474795
+ymin = 46.81686     * 0.95 = 44.476017
+ymax = 58.7162728   * 1.05 = 61.65208644
+```
+
 ArcGIS, the _model builder_, and python
 ---------------------------------------
 
+### Importing layers in ArcGIS
+
+In ArcGIS, navigate to 'Add data...':
+
+![](arcgis-add-data.png)
+
+Then use the file choose to select your layer file(s):
+
+![](arcgis-file-chooser.png)
+
+And allow any data pre-processing to take place:
+
+![](argis-pyramids.png)
+
+### Converting layers from raster to ASCII
+
+In the toolbox, under 'Conversion Tools', select 'Raster to ASCII':
+
+![](arcgis-toolbox.png)
+
+In the popup, provide the input and output files / layers, and click the 'Environments...' button:
+
+![](arcgis-r2a.png)
+
+In the Environments, provide the extent to which you want to clip the output layer:
+
+![](arcgis-extent.png)
+
+Once you've entered these settings, run the conversion:
+
+![](arcgis-progress.png)
+
+### Automating the conversion in python
+
+ArcGIS has a facility that generates python scripts for any particular workflow. This facility
+is called the ModelBuilder, and it allows you to chain together the steps of a workflow, then
+output a script that can be run on the command line. Here's the ModelBuilder for our
+present workflow:
+
+![](arcgis-modelbuilder.png)
+
+The script that it produced looks like this (after some cleaning up):
+
+```python
+
+# -*- coding: utf-8 -*-
+# ---------------------------------------------------------------------------
+# common_flows.py
+# Created on: 2018-11-23 16:11:48.00000
+#   (generated partly by ArcGIS/ModelBuilder)
+# Description: Example for Methods in Biodiversity Analyss course in Python
+# Creator:  Maarten van 't Zelfde - 22 November 2018
+# ---------------------------------------------------------------------------
+
+# Import modules
+import arcpy, zipfile
+
+# Local variables:
+wc2_0_bio_10m_zip= "D:\\mvz_data\\Methods_Biodiversity_Analysis\\wc2.0_10m_bio.zip"
+wc2_0_bio_10m_01d_asc = "D:\\mvz_data\\Methods_Biodiversity_Analysis\\wc2.0_bio_10m_01d.asc"
+
+# Extract first layer from zip file
+archive = zipfile.ZipFile(wc2_0_bio_10m_zip, 'r')
+wc2_0_bio_10m_01_tif = archive.extract('wc2.0_bio_10m_01.tif')
+
+# Process: Raster to ASCII with specific extent
+arcpy.env.extent = "-139.876066 44.476017 -78.94748 61.652086"
+arcpy.RasterToASCII_conversion(wc2_0_bio_10m_01_tif, wc2_0_bio_10m_01d_asc)
+```
 
 QGIS, the command line, and GDAL
 --------------------------------
@@ -57,19 +139,6 @@ The layer should now be listed in the bottom left:
 ![](qgis-layers.png)
 
 ### Clipping the extent of the layers
-
-The geographic extent of the occurrences is between 46.81686 and 58.7162728 degrees latitude (i.e.
-a high latitude, far away from the equator) and between -133.2153004 and -83.10261 longitude (that is,
-on the western hemisphere). Let's say we want the extent of the layers to be that of the occurrences 
-±5%. You can come up with these values yourself by, for example, importing the tab-separated 
-occurrences file in Excel and sorting the columns. This would give us a box of:
-
-```
-xmin = -133.2153004 * 1.05 = -139.8760655
-xmax = -83.10261    * 0.95 = -78.9474795
-ymin = 46.81686     * 0.95 = 44.476017
-ymax = 58.7162728   * 1.05 = 61.65208644
-```
 
 We can both clip to this extent and export the result to an ASCII file in one go. Go to
 'Raster > Extraction > Clip Raster by Extent...'. 
