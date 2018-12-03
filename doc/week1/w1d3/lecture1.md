@@ -1,7 +1,7 @@
 Data science tools
 ==================
 
-The BlackBoard contains instructions and login keys for getting into the cloud environment. Once logged in, you will be able to run some of the commands that will be introduced here.
+The BlackBoard contains instructions and login [keys](https://github.com/naturalis/mebioda/tree/master/doc/week1/w1p1/keys) for getting into the cloud environment. Once logged in, you will be able to run some of the commands that will be introduced here.
 
 UNIX/Linux operating systems: why do we care?
 ---------------------------------------------

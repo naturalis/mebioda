@@ -11,10 +11,10 @@ by species distribution modelling. We will present our findings in a brief repor
 
 2018-12-03, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
-- Lecture I: Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)
+- Lecture I: [Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)](w2d1/181203_Zelfde_Introduction_Week_L01_01_v2.pdf)
 - Lecture II: Introduction to GIS (2) and The geographical approach
 - Lecture III: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
-- Practical: Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.
+- Practical: [Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/XwoRrb8x0DEnqrD)
 
 ### Day 2 - (Spatial) Data input
 
