@@ -1,0 +1,144 @@
+---
+title: "Ungulate traits and ecogeography"
+author: "Rutger Vos (@rvosa)"
+date: "7-12-2018"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Trait and geospatial data
+
+We have a [tab-separated table](ungulates-filtered.tsv) containing continuous-valued trait data 
+(including latitude and longitude values) from the 
+[PanTHERIA](http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR05_Aug2008.txt) data base,
+filtered on the Ungulates, i.e. the
+[Artiodactyla](http://www.departments.bucknell.edu/biology/resources/msw3/browse.asp?id=14200001) and the
+[Perissodactyla](http://www.departments.bucknell.edu/biology/resources/msw3/browse.asp?id=14100001).
+
+Here we read that table into a data frame:
+
+```{r readtsv}
+# the table has a header, and the 1st column contains the observation names: species
+df <- read.table("ungulates.tsv", sep = "\t", header = T, row.names = 1)
+```
+
+We can plot the mid points of the latitudinal and longitudinal ranges of the species, on
+an `rworldmap`:
+
+```{r plotmap}
+library(rworldmap, quietly = T)
+newmap <- getMap(resolution = "low")
+plot(newmap, asp = 1)
+points(df$X26.7_GR_MidRangeLong_dd, df$X26.4_GR_MidRangeLat_dd, col = "red", cex = .6)
+```
+
+## Phylogeny
+
+We also have a [phylogenetic tree](ungulates.nwk) in 
+[Newick](https://github.com/naturalis/mebioda/blob/master/doc/week1/w1d5/lecture1.md#the-newick--new-hampshire-format)
+format. It is the topology of a [supertree of the Mammals](http://doi.org/10.1038/nature05634),
+but pruned to the samen taxon set as the trait table. To read that tree, we need to load the `ape` package:
+
+```{r readnwk}
+library(ape, quietly = T)
+tree <- read.tree(file = "ungulates.nwk")
+```
+
+The tree is a `phylo` object, a pseudo-standard in the R community that a number of packages build on. For example,
+we can plot the tree against a geological timescale using the `strap` package:
+
+```{r plotphylo}
+library(strap, quietly = T)
+
+# set the age of the root to absolute time
+tree$root.time <- 88.5
+geoscalePhylo(tree, units = "Epoch", cex.age = 1, cex.ts = 0.5, boxes = T, show.tip.label = F)
+```
+
+## Combining traits and trees
+
+We can combine the trait data and the tree and plot trait values onto the tree. For example, 
+here is the range size of the species, for which we need `phytools`:
+
+```{r plotmass}
+library(phytools, quietly = T)
+
+# make a vector of the area column, remove records with NA values
+log_area <- log(as.vector(df$X26.1_GR_Area_km2))
+names(log_area) <- row.names(df)
+log_area <- log_area[!is.na(log_area)]
+
+# drop the tips that had NA records for area
+tips_to_prune <- setdiff(row.names(df),names(log_area))
+pruned <- drop.tip(tree,tips_to_prune)
+
+# do a continuous trait mapping, of log-transformed mass
+contMap(pruned,log_area,standardize=TRUE,length=10,outline=F,lwd=3,ftype="off")
+```
+
+## Interaction between traits
+
+We can plot to see how latitude relates to range size:
+
+```{r make_vectors}
+# make a vector of absolute latitude, give it names, remove NA values
+abs_lat <- abs(df$X26.4_GR_MidRangeLat_dd)
+names(abs_lat) <- row.names(df)
+abs_lat <- abs_lat[!is.na(abs_lat)]
+
+# keep the intersection for each of the two variables
+abs_lat <- abs_lat[intersect(names(abs_lat),names(log_area))]
+log_area <- log_area[intersect(names(abs_lat),names(log_area))]
+```
+
+The INCORRECT approach would be to just plot the two variables against 
+each other even though there is autocorrelation. Here is what that
+would look like:
+
+```{r plotwrong}
+fitwrong <- lm(log_area ~ abs_lat)
+plot(abs_lat,log_area)
+abline(fitwrong)
+```
+
+A better way to do this is to compute the 
+[independent contrasts](https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts)
+and do the modeling on those:
+
+```{r ic}
+# drop the tips that had NA records for body mass, randomly resolve
+tips_to_prune <- setdiff(row.names(df),names(log_area))
+pruned <- multi2di(drop.tip(tree,tips_to_prune))
+
+# compute independent contrasts
+abs_lat_contrasts <-pic(abs_lat,pruned)
+log_area_contrasts <- pic(log_area,pruned)
+
+# fit linear model
+fit <- lm(log_area_contrasts ~ abs_lat_contrasts - 1)
+plot(abs_lat_contrasts,log_area_contrasts)
+abline(fit)
+```
+
+There appears to be correlation:
+
+```{r fitsumm}
+summary(fit)
+```
+
+## Scaling rules
+
+The result of our analysis shows support for 
+[Rapoport's rule](https://en.wikipedia.org/wiki/Rapoport%27s_rule): an ecogeographical 
+rule that states that latitudinal ranges of plants and animals are generally smaller at 
+lower latitudes than at higher latitudes. In addition to this correlation, our data set
+surely shows other correlations, such as trivial scalings:
+
+- Body mass ~ body length
+- Longevity ~ body mass
+- Neonate body mass ~ gestation length
