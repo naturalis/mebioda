@@ -3,7 +3,7 @@
 ##############                                                                                 ############## 
 ##############                    SDM Workshop - R Script                                      ##############
 ##############                    Clipping + Variable Selection                                ##############
-##############                    Friday 8th December 2017                                     ##############
+##############                    Friday 7th December 2018                                     ##############
 ##############                    Leon Marshall - Naturalis Biodiversity Center                ##############
 ##############                                                                                 ##############
 #############################################################################################################
@@ -85,6 +85,8 @@ sc2 <- sc1[sc1$cor>=0.7|sc1$cor<=-0.7,] #High Correlations
 
 sc2[with(sc2, order(i)), ] #list correlated variables
 
+#Repeat above steps until there is no correlated variables!
+
 
 #Make selection of chosen variables
 list.names <- c("bio1","bio10","bio11","bio12","bio13","bio14",
@@ -103,19 +105,19 @@ dir.create("G:/SDM_Course/MAXENT/ClimateFuture") #create folder
 dir.create("G:/SDM_Course/MAXENT/ClimateTraining") #create folder
 
 for(i in 1:nlayers(pres_bioclims)){
-  ras_sc=scale(pres_bioclims[[1]],center=TRUE, scale=TRUE) #scale variables
+  ras_sc=?scale(pres_bioclims[[i]],center=TRUE, scale=TRUE) #scale variables
   writeRaster(ras_sc,
               file=paste("G:/SDM_Course/MAXENT/ClimatePresent/",select.names[i],".asc",sep=""))
 }
 
 for(i in 1:nlayers(fut_bioclims)){
-  ras_sc=scale(fut_bioclims[[1]],center=TRUE, scale=TRUE) #scale variables
+  ras_sc=scale(fut_bioclims[[i]],center=TRUE, scale=TRUE) #scale variables
   writeRaster(ras_sc,
               file=paste("G:/SDM_Course/MAXENT/ClimateFuture/",select.names[i],".asc",sep=""))
 }
 
 for(i in 1:nlayers(clip_bioclims)){
-  ras_sc=scale(clip_bioclims[[1]],center=TRUE, scale=TRUE) #scale variables
+  ras_sc=scale(clip_bioclims[[i]],center=TRUE, scale=TRUE) #scale variables
   writeRaster(ras_sc, 
               file=paste("G:/SDM_Course/MAXENT/ClimateTraining/",select.names[i],".asc",sep=""))
 }
@@ -144,6 +146,7 @@ pres_bin <- reclassify(pres, bin_mat) #reclassify by matrix present
 fut_bin <- reclassify(fut, bin_mat) #reclassify by matrix future
 plot(pres_bin)
 plot(fut_bin)
+
 #Calculate Change in Sutiable Climate Conditions
 range_change<-BIOMOD_RangeSize(CurrentPred=pres_bin,FutureProj=fut_bin,SpChange.Save=NULL)
 #calculate range change between two maps
