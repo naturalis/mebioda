@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Trait and geospatial data
 
-We have a [tab-separated table](ungulates.tsv) containing continuous-valued trait data 
+We have a [tab-separated table](ungulates-continuous.tsv) containing continuous-valued trait data 
 (including latitude and longitude values) from the 
 [PanTHERIA](http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR05_Aug2008.txt) data base,
 filtered on the Ungulates, i.e. the
@@ -24,15 +24,18 @@ Here we read that table into a data frame:
 
 ```{r readtsv}
 # the table has a header, and the 1st column contains the observation names: species
-df <- read.table("ungulates.tsv", sep = "\t", header = T, row.names = 1)
+df <- read.table("ungulates-continuous.tsv", sep = "\t", header = T, row.names = 1)
 ```
 
 We can plot the mid points of the latitudinal and longitudinal ranges of the species, on
-an `rworldmap`:
+an `rworldmap`. Here we load the library, which emits a welcome message:
 
 ```{r loadworldmap}
 library(rworldmap, quietly = T)
 ```
+
+Now we plot the map:
+
 ```{r plotmap}
 newmap <- getMap(resolution = "low")
 plot(newmap, asp = 1)
@@ -72,13 +75,14 @@ here is the range size of the species, for which we need `phytools`:
 ```{r plotmass}
 library(phytools, quietly = T)
 
-# make a vector of the area column, remove records with NA values
+# make a vector of the area column, keep records in tree, remove records with NA values
 log_area <- log(as.vector(df$X26.1_GR_Area_km2))
 names(log_area) <- row.names(df)
+log_area <- log_area[tree$tip.label]
 log_area <- log_area[!is.na(log_area)]
 
-# drop the tips that had NA records for area
-tips_to_prune <- setdiff(row.names(df),names(log_area))
+# drop the tips that had NA records for area, remove records not in tree
+tips_to_prune <- setdiff(tree$tip.label,names(log_area))
 pruned <- drop.tip(tree,tips_to_prune)
 
 # do a continuous trait mapping, of log-transformed mass
@@ -90,9 +94,10 @@ contMap(pruned,log_area,standardize=TRUE,length=10,outline=F,lwd=3,ftype="off")
 We can plot to see how latitude relates to range size:
 
 ```{r make_vectors}
-# make a vector of absolute latitude, give it names, remove NA values
+# make a vector of absolute latitude, give it names, keep records in tree, remove NA values
 abs_lat <- abs(df$X26.4_GR_MidRangeLat_dd)
 names(abs_lat) <- row.names(df)
+abs_lat <- abs_lat[tree$tip.label]
 abs_lat <- abs_lat[!is.na(abs_lat)]
 
 # keep the intersection for each of the two variables
@@ -114,7 +119,7 @@ We can connect the data points by their relationships in the phylogeny:
 
 ```{r phylomorphospace}
 # drop the tips that had NA records for body mass, randomly resolve
-tips_to_prune <- setdiff(row.names(df),names(log_area))
+tips_to_prune <- setdiff(tree$tip.label,names(log_area))
 pruned <- multi2di(drop.tip(tree,tips_to_prune))
 phylomorphospace(pruned,data.frame(abs_lat,log_area),label = "off")
 ```
