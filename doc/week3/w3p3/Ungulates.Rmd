@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Trait and geospatial data
 
-We have a [tab-separated table](ungulates-filtered.tsv) containing continuous-valued trait data 
+We have a [tab-separated table](ungulates.tsv) containing continuous-valued trait data 
 (including latitude and longitude values) from the 
 [PanTHERIA](http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR05_Aug2008.txt) data base,
 filtered on the Ungulates, i.e. the
@@ -30,10 +30,14 @@ df <- read.table("ungulates.tsv", sep = "\t", header = T, row.names = 1)
 We can plot the mid points of the latitudinal and longitudinal ranges of the species, on
 an `rworldmap`:
 
-```{r plotmap}
+```{r loadworldmap}
 library(rworldmap, quietly = T)
+```
+```{r plotmap}
 newmap <- getMap(resolution = "low")
 plot(newmap, asp = 1)
+
+# notice the two columns in the data frame we read
 points(df$X26.7_GR_MidRangeLong_dd, df$X26.4_GR_MidRangeLat_dd, col = "red", cex = .6)
 ```
 
@@ -106,15 +110,21 @@ plot(abs_lat,log_area)
 abline(fitwrong)
 ```
 
-A better way to do this is to compute the 
-[independent contrasts](https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts)
-and do the modeling on those:
+We can connect the data points by their relationships in the phylogeny:
 
-```{r ic}
+```{r phylomorphospace}
 # drop the tips that had NA records for body mass, randomly resolve
 tips_to_prune <- setdiff(row.names(df),names(log_area))
 pruned <- multi2di(drop.tip(tree,tips_to_prune))
+phylomorphospace(pruned,data.frame(abs_lat,log_area),label = "off")
+```
 
+It looks like the placement of the points in morphospace may be shaped
+by phylogeny. One way to deal with such data is to compute 
+[independent contrasts](https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts)
+and do subsequent linear modeling on those:
+
+```{r ic}
 # compute independent contrasts
 abs_lat_contrasts <-pic(abs_lat,pruned)
 log_area_contrasts <- pic(log_area,pruned)
