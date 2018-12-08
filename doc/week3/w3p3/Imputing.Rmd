@@ -1,0 +1,83 @@
+---
+title: "Imputing missing values"
+author: "Rutger Vos (@rvosa)"
+date: "8-12-2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Pre-processing data
+
+We have multiple files with different data types, which we all load separately into data frames:
+
+```{r load_dfs}
+df_cont <- read.table("ungulates-continuous.tsv", sep = "\t", header = T, row.names = 1)
+df_disc <- read.table("ungulates-discrete.tsv", sep = "\t", header = T, row.names = 1)
+df_doms <- read.table("ungulates-domesticated.tsv", sep = "\t", header = T, row.names = 1)
+```
+
+Now we want to merge the data frames so that we get one big one, with all the columns as 
+in the input frames, and the union of the rows across all frames:
+
+```{r merge}
+# SEE: https://adairama.wordpress.com/2017/11/22/how-to-merge-multiple-datasets-in-r-based-on-row-names/
+# mimics a recursive merge or full outer join
+multimerge <- function (mylist) {
+  
+  # get the union of the distinct taxon/row names
+  unames <- unique(unlist(lapply(mylist, rownames)))
+  n <- length(unames)
+
+  # turns input df's into a matrix 'out' with all rows across mylist 
+  out <- lapply(mylist, function(df) {
+    tmp <- matrix(nr = n, nc = ncol(df), dimnames = list(unames,colnames(df)))
+    tmp[rownames(df), ] <- as.matrix(df)
+    rm(df); gc()
+    return(tmp)
+  })
+ 
+  # check if all rownames match unames
+  stopifnot( all( sapply(out, function(x) identical(rownames(x), unames)) ) )
+  
+  # cbind the matrices
+  bigout <- do.call(cbind, out)
+  
+  # set row and column names
+  colnames(bigout) <- paste(rep(names(mylist), sapply(mylist, ncol)), unlist(sapply(mylist, colnames)), sep = "_")
+  return(bigout)
+}
+
+df <- data.frame( multimerge( list( cont=df_cont, disc=df_disc, doms=df_doms ) ) )
+rm(df_disc,df_cont,df_doms)
+```
+
+And now let's filter this result to remove all the columns that have more than 50% NA:
+
+```{r filter_columns}
+df <- df[, colMeans(is.na(df)) <= .5] 
+```
+
+## Variable selection
+
+## Imputing missing values
+
+In our data frame there are missing values, although never for more than 50%
+of any given column (other columns have already been thrown out). If the amount of missing data
+is not too high, there are [valid strategies](http://doi.org/10.1111/2041-210X.12232) for coming
+up with approximations of what the missing data might have been given the way the remaining values 
+co-vary with each other. There are numerous approaches to this:
+
+## `mice`
+
+Multivariate imputation by chained equations (mice) implements many methods could be used. This is supposed 
+to be the best package for doing this without phylogeny:
+
+```{r mice}
+library(mice)
+mice_result <- mice(df, method = "pmm")
+mice_df <- complete(mice_result)
+row.names(mice_df) <- row.names(df)
+```
