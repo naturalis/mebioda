@@ -60,7 +60,40 @@ And now let's filter this result to remove all the columns that have more than 5
 df <- df[, colMeans(is.na(df)) <= .5] 
 ```
 
-## Variable selection
+And tidy up the remaining columns:
+
+```{r col_factors}
+# 0/1 factor
+#df$doms_IsDomesticated <- as.factor(df$doms_IsDomesticated)
+
+# factors with multiple, ordered levels
+df$disc_X1.1_ActivityCycle <- factor(x = df$disc_X1.1_ActivityCycle, ordered = T);
+df$disc_X12.1_HabitatBreadth <- factor(x = df$disc_X12.1_HabitatBreadth, ordered = T);
+df$disc_X12.2_Terrestriality <- factor(x = df$disc_X12.2_Terrestriality, ordered = T);
+df$disc_X6.1_DietBreadth <- factor(x = df$disc_X6.1_DietBreadth, ordered = T);
+df$disc_X6.2_TrophicLevel <- factor(x = df$disc_X6.2_TrophicLevel, ordered = T);
+
+# absolute values for latitudes
+df$cont_X26.2_GR_MaxLat_dd <- abs(df$cont_X26.2_GR_MaxLat_dd)
+df$cont_X26.3_GR_MinLat_dd <- abs(df$cont_X26.3_GR_MinLat_dd)
+df$cont_X26.4_GR_MidRangeLat_dd <- abs(df$cont_X26.4_GR_MidRangeLat_dd)
+
+# log-transform surface and volume traits
+# df$cont_X26.1_GR_Area_km2 <- sqrt(df$cont_X26.1_GR_Area_km2)
+df$cont_X5.1_AdultBodyMass_g <- log(df$cont_X5.1_AdultBodyMass_g)
+df$cont_X5.3_NeonateBodyMass_g <- log(df$cont_X5.3_NeonateBodyMass_g)
+
+# columns we don't want
+df <- subset(df, select=-c(
+    cont_X27.1_HuPopDen_Min_n.km2,
+    cont_X27.2_HuPopDen_Mean_n.km2,
+    cont_X27.3_HuPopDen_5p_n.km2,
+    cont_X27.4_HuPopDen_Change,
+    cont_X17.1_MaxLongevity_m
+  )
+)
+
+```
 
 ## Imputing missing values
 
@@ -77,7 +110,46 @@ to be the best package for doing this without phylogeny:
 
 ```{r mice}
 library(mice)
-mice_result <- mice(df, method = "pmm")
+mice_result <- mice(df, method = "rf", printFlag = F)
 mice_df <- complete(mice_result)
 row.names(mice_df) <- row.names(df)
+```
+
+## Variable selection
+
+Now we are going to select the variables that best predict domestication, omitting the 
+ones that covary with each other.
+
+```{r var_select}
+library(arm, quietly = T)
+
+# http://www.stat.columbia.edu/~martin/W2024/R10.pdf
+# define a model that includes all parameters:
+full = bayesglm(doms_IsDomesticated~., data = mice_df, family = "binomial", scaled = T)
+
+# do backward selection:
+options(warn=-1)
+step(full, data = mice_df, direction="backward", trace = 0)
+```
+
+And use these variables in the GLM formula:
+
+
+```{r phylolm}
+library(phylolm)
+library(ape)
+
+# read the supertree, randomly resolve
+tree <- read.tree(file = "ungulates.nwk")
+
+# drop the tips that had NA records for body mass
+tip_df <- mice_df[tree$tip.label,]
+
+# the simplified formula with the selected variables
+formula = doms_IsDomesticated ~ cont_X26.2_GR_MaxLat_dd + 
+    cont_X26.4_GR_MidRangeLat_dd + cont_X28.1_Precip_Mean_mm + 
+    cont_X5.3_NeonateBodyMass_g + disc_X12.1_HabitatBreadth
+
+res <- phyloglm(formula, tip_df, tree, btol = 30, method = "logistic_IG10", boot = 5)
+summary(res)
 ```
