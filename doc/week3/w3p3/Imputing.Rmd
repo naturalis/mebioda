@@ -158,7 +158,7 @@ tip_df <- imputed_df[tree$tip.label,]
 
 # the simplified formula with the selected variables
 formula = doms_IsDomesticated ~ cont_X5.1_AdultBodyMass_g + 
-    cont_X28.2_Temp_Mean_01degC + cont_X26.3_GR_MinLat_dd + disc_X12.1_HabitatBreadth
+    cont_X30.2_PET_Mean_mm + disc_X12.1_HabitatBreadth
 
 res <- phyloglm(formula, tip_df, tree, btol = 30, method = "logistic_IG10", boot = 5)
 summary(res)
