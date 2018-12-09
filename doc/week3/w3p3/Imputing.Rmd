@@ -125,11 +125,12 @@ library(arm, quietly = T)
 
 # http://www.stat.columbia.edu/~martin/W2024/R10.pdf
 # define a model that includes all parameters:
+null = bayesglm(doms_IsDomesticated~1, data = mice_df, family = "binomial", scaled = T)
 full = bayesglm(doms_IsDomesticated~., data = mice_df, family = "binomial", scaled = T)
 
 # do backward selection:
 options(warn=-1)
-step(full, data = mice_df, direction="backward", trace = 0)
+step(null, scope = list(upper=full), data=mice_df, direction="both", trace = 0)
 ```
 
 And use these variables in the GLM formula:
@@ -146,9 +147,9 @@ tree <- read.tree(file = "ungulates.nwk")
 tip_df <- mice_df[tree$tip.label,]
 
 # the simplified formula with the selected variables
-formula = doms_IsDomesticated ~ cont_X26.2_GR_MaxLat_dd + 
-    cont_X26.4_GR_MidRangeLat_dd + cont_X28.1_Precip_Mean_mm + 
-    cont_X5.3_NeonateBodyMass_g + disc_X12.1_HabitatBreadth
+formula = doms_IsDomesticated ~ cont_X5.3_NeonateBodyMass_g + 
+    cont_X26.2_GR_MaxLat_dd + cont_X26.3_GR_MinLat_dd + disc_X12.1_HabitatBreadth + 
+    cont_X28.1_Precip_Mean_mm + cont_X30.1_AET_Mean_mm
 
 res <- phyloglm(formula, tip_df, tree, btol = 30, method = "logistic_IG10", boot = 5)
 summary(res)
