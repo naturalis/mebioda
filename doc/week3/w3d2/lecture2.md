@@ -13,8 +13,9 @@ The Yule process revisited
 - The process assumes that every lineage is equally likely to speciate at any given time.
 - Hence, the more lineages there are, the shorter the waiting time till the next 
   speciation, because there are more lineages playing the lottery.
-- The average expected waiting time will the next speciation is therefore 1/_n_ (or any
-  given waiting time, when simulating, is drawn from an exponential distribution).
+- The average expected waiting time till the next speciation is therefore 1/_n_ (or any
+  given waiting time, when [simulating](http://naturalis.github.io/browbrow/#), is drawn 
+  from an [exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution)).
 
 ![](lecture2/exponential-distribution.svg)
 
