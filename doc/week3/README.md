@@ -20,7 +20,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: [Large phylogenies in biodiversity](w3d2/lecture1.md)
 - Lecture II: [Tree shape metrics](w3d2/lecture2.md)
 - Lecture III: [Inferences from tree shape](w3d2/lecture3.md)
-- Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
+- Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379); [ungulate tree shape](w3p3/Ungulates.Rmd)
 
 ### Day 3 - Comparative character analysis
 
