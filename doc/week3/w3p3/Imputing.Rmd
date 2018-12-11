@@ -147,10 +147,9 @@ Then we do model selection via PGLS:
 library(nlme)
 options(warn=-1)
 bm.corr <- corBrownian(phy=tree)
-seen <- c()
 best <- list()
 
-varsec <- function(df, corr, base_form, seen, best ) {
+varsec <- function(df, corr, base_form, best ) {
   nvars <- length(colnames(df)) - 1
   dependents <- colnames(df)[1:nvars]
   result <- list()
@@ -158,18 +157,18 @@ varsec <- function(df, corr, base_form, seen, best ) {
   
   # iterate over all columns
   for ( i in 1:nvars ) {
-    
-    # skip over already included columns
-    if ( ! i %in% seen ) {
-      
-      # concatenate new form string, parse it
-      form_string <- ''
-      if ( substr( base_form, start=nchar(base_form), nchar(base_form) ) == '~' ) {
-        form_string <- sprintf( "%s%s", base_form, dependents[i] );
-      }
-      else {
-        form_string <- sprintf( "%s+%s", base_form, dependents[i] );
-      }
+
+    # concatenate new form string, parse it
+    form_string <- ''
+    if ( substr( base_form, start=nchar(base_form), nchar(base_form) ) == '~' ) {
+      form_string <- sprintf( "%s%s", base_form, dependents[i] );
+    }
+    else {
+      form_string <- sprintf( "%s+%s", base_form, dependents[i] );
+    }
+
+    # skip over already included columns          
+    if ( regexpr( dependents[i], form_string, fixed = T ) ) {
       form <- formula( form_string )
       
       # perform PGLS
@@ -194,19 +193,18 @@ varsec <- function(df, corr, base_form, seen, best ) {
     }
   }
   print(sprintf("AIC=%f model=%s index=%i", aic, new_base_form, j))
-  seen <- c( seen, j )
-  best[new_base_form] <- models[[j]]
+  best[new_base_form] <- models[j]
   
   # recurse or return
-  if ( length(seen) < nvars ) {
-    varsec( df, corr, new_base_form, seen, best )
+  if ( length(best) < nvars ) {
+    varsec( df, corr, new_base_form, best )
   }
   else {
-    return(list(AIC = aic, formula = new_base_form))
+    return(best)
   }
 }
 
-result <- varsec( tip_df, bm.corr, "doms_IsDomesticated~", seen, best )
+result <- varsec( tip_df, bm.corr, "doms_IsDomesticated~", best )
 ```
 
 ```{r glm}
