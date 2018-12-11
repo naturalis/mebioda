@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Pre-processing data
@@ -64,7 +64,7 @@ And tidy up the remaining columns:
 
 ```{r col_factors}
 # 0/1 factor
-#df$doms_IsDomesticated <- as.factor(df$doms_IsDomesticated)
+df$doms_IsDomesticated <- as.factor(df$doms_IsDomesticated)
 
 # factors with multiple, ordered levels
 df$disc_X1.1_ActivityCycle <- factor(x = df$disc_X1.1_ActivityCycle, ordered = T);
@@ -162,4 +162,69 @@ formula = doms_IsDomesticated ~ cont_X5.1_AdultBodyMass_g +
 
 res <- phyloglm(formula, tip_df, tree, btol = 30, method = "logistic_IG10", boot = 5)
 summary(res)
+```
+
+PGLS
+
+```{r pgls}
+options(warn=-1)
+bm.corr <- corBrownian(phy=tree)
+seen <- c()
+best <- c()
+
+varsec <- function(df, corr, base_form, seen, best ) {
+  nvars <- length(colnames(df)) - 1
+  dependents <- colnames(df)[1:nvars]
+  result <- list()
+  models <- c()
+  
+  # iterate over all columns
+  for ( i in 1:nvars ) {
+    
+    # skip over already included columns
+    if ( ! i %in% seen ) {
+      
+      # concatenate new form string, parse it
+      form_string <- ''
+      if ( substr( base_form, start=nchar(base_form), nchar(base_form) ) == '~' ) {
+        form_string <- sprintf( "%s%s", base_form, dependents[i] );
+      }
+      else {
+        form_string <- sprintf( "%s+%s", base_form, dependents[i] );
+      }
+      form <- formula( form_string )
+      
+      # perform PGLS
+      glsr <- gls( form, data = df, correlation = corr, method = "ML" )
+      summ <- summary( glsr )
+      
+      # store results
+      result[form_string] <- summ$AIC
+      models <- c( models, summ )
+    }
+  }
+  
+  # find the lowest AIC, its index, and its formula
+  aic <- Inf
+  j <- 1
+  new_base_form <- ''
+  for ( i in 1:length(result) ) {
+    if ( result[[i]] < aic ) {
+      aic <- result[[i]]
+      new_base_form <- names(result)[i]
+      j <- i
+    }
+  }
+  print(sprintf("AIC=%f model=%s index=%i", aic, new_base_form, j))
+  seen <- c( seen, j )
+  best <- c( best, models[j] )
+  
+  # recurse or return
+  if ( length(seen) < nvars ) {
+    varsec( df, corr, new_base_form, seen, best )
+  }
+  return(best)
+}
+
+result <- varsec( tip_df, bm.corr, "doms_IsDomesticated~", seen, best )
 ```
