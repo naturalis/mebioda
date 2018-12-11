@@ -15,7 +15,6 @@ We have multiple files with different data types, which we all load separately i
 
 ```{r load_dfs}
 df_cont <- read.table("ungulates-continuous.tsv", sep = "\t", header = T, row.names = 1)
-df_disc <- read.table("ungulates-discrete.tsv", sep = "\t", header = T, row.names = 1)
 df_doms <- read.table("ungulates-domesticated.tsv", sep = "\t", header = T, row.names = 1)
 ```
 
@@ -50,8 +49,8 @@ multimerge <- function (mylist) {
   return(bigout)
 }
 
-df <- data.frame( multimerge( list( cont=df_cont, disc=df_disc, doms=df_doms ) ) )
-rm(df_disc,df_cont,df_doms)
+df <- data.frame( multimerge( list( cont=df_cont, doms=df_doms ) ) )
+rm(df_cont,df_doms)
 ```
 
 And now let's filter this result to remove all the columns that have more than 50% NA:
@@ -64,14 +63,14 @@ And tidy up the remaining columns:
 
 ```{r col_factors}
 # 0/1 factor
-df$doms_IsDomesticated <- as.factor(df$doms_IsDomesticated)
+#df$doms_IsDomesticated <- as.factor(df$doms_IsDomesticated)
 
 # factors with multiple, ordered levels
-df$disc_X1.1_ActivityCycle <- factor(x = df$disc_X1.1_ActivityCycle, ordered = T);
-df$disc_X12.1_HabitatBreadth <- factor(x = df$disc_X12.1_HabitatBreadth, ordered = T);
-df$disc_X12.2_Terrestriality <- factor(x = df$disc_X12.2_Terrestriality, ordered = T);
-df$disc_X6.1_DietBreadth <- factor(x = df$disc_X6.1_DietBreadth, ordered = T);
-df$disc_X6.2_TrophicLevel <- factor(x = df$disc_X6.2_TrophicLevel, ordered = T);
+#df$disc_X1.1_ActivityCycle <- factor(x = df$disc_X1.1_ActivityCycle, ordered = T);
+#df$disc_X12.1_HabitatBreadth <- factor(x = df$disc_X12.1_HabitatBreadth, ordered = T);
+#df$disc_X12.2_Terrestriality <- factor(x = df$disc_X12.2_Terrestriality, ordered = T);
+#df$disc_X6.1_DietBreadth <- factor(x = df$disc_X6.1_DietBreadth, ordered = T);
+#df$disc_X6.2_TrophicLevel <- factor(x = df$disc_X6.2_TrophicLevel, ordered = T);
 
 # absolute values for latitudes
 df$cont_X26.2_GR_MaxLat_dd <- abs(df$cont_X26.2_GR_MaxLat_dd)
@@ -89,8 +88,8 @@ df <- subset(df, select=-c(
     cont_X27.2_HuPopDen_Mean_n.km2,
     cont_X27.3_HuPopDen_5p_n.km2,
     cont_X27.4_HuPopDen_Change,
-    cont_X17.1_MaxLongevity_m,
-    disc_X12.2_Terrestriality
+    cont_X17.1_MaxLongevity_m #,
+    #disc_X12.2_Terrestriality
   )
 )
 
@@ -121,29 +120,13 @@ row.names(imputed_df) <- row.names(df)
 Alternatively, missing variables can be imputed using missForest:
 
 ```{r missForest}
-library(missForest)
-imputed_df <- missForest(df)[["ximp"]]
+#library(missForest)
+#imputed_df <- missForest(df)[["ximp"]]
 ```
 
 ## Variable selection
 
-Now we are going to select the variables that best predict domestication, omitting the 
-ones that covary with each other.
-
-```{r var_select}
-library(arm, quietly = T)
-
-# http://www.stat.columbia.edu/~martin/W2024/R10.pdf
-# define a model that includes all parameters:
-null = bayesglm(doms_IsDomesticated~1, data = imputed_df, family = "binomial", scaled = T)
-full = bayesglm(doms_IsDomesticated~., data = imputed_df, family = "binomial", scaled = T)
-
-# do backward selection:
-options(warn=-1)
-step(null, scope = list(upper=full), data = imputed_df, direction = "both", trace = 0)
-```
-
-And use these variables in the GLM formula:
+First we read in a tree:
 
 
 ```{r phylolm}
@@ -156,21 +139,16 @@ tree <- read.tree(file = "ungulates.nwk")
 # drop the tips that had NA records for body mass
 tip_df <- imputed_df[tree$tip.label,]
 
-# the simplified formula with the selected variables
-formula = doms_IsDomesticated ~ cont_X5.1_AdultBodyMass_g + 
-    cont_X30.2_PET_Mean_mm + disc_X12.1_HabitatBreadth
-
-res <- phyloglm(formula, tip_df, tree, btol = 30, method = "logistic_IG10", boot = 5)
-summary(res)
 ```
 
-PGLS
+Then we do model selection via PGLS:
 
 ```{r pgls}
+library(nlme)
 options(warn=-1)
 bm.corr <- corBrownian(phy=tree)
 seen <- c()
-best <- c()
+best <- list()
 
 varsec <- function(df, corr, base_form, seen, best ) {
   nvars <- length(colnames(df)) - 1
@@ -217,14 +195,24 @@ varsec <- function(df, corr, base_form, seen, best ) {
   }
   print(sprintf("AIC=%f model=%s index=%i", aic, new_base_form, j))
   seen <- c( seen, j )
-  best <- c( best, models[j] )
+  best[new_base_form] <- models[[j]]
   
   # recurse or return
   if ( length(seen) < nvars ) {
     varsec( df, corr, new_base_form, seen, best )
   }
-  return(best)
+  else {
+    return(list(AIC = aic, formula = new_base_form))
+  }
 }
 
 result <- varsec( tip_df, bm.corr, "doms_IsDomesticated~", seen, best )
+```
+
+```{r glm}
+# the simplified formula with the selected variables
+formula = doms_IsDomesticated~cont_X26.7_GR_MidRangeLong_dd+cont_X26.2_GR_MaxLat_dd+cont_X26.5_GR_MaxLong_dd+cont_X26.6_GR_MinLong_dd
+
+res <- phyloglm(formula, tip_df, tree, btol = 30, method = "logistic_IG10", boot = 5)
+summary(res)
 ```
