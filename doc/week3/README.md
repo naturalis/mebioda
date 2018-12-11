@@ -29,7 +29,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: [Comparative analysis intro](w3d3/lecture1.md)
 - Lecture II: [Three dimensional analysis of morphological characters](w3d3/lecture2) (Aidan Couzens)
 - Lecture III: Character data mining and representation (Jeremy Miller)
-- Practical: [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) 
+- Practical: [ungulate trait variables](w3p3/Imputing.Rmd); [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) 
   <!-- and [Ornstein-Uhlenbeck models](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture5/OUModels.Rmd)-->
 
 ### Day 4 - Functional and character diversity
