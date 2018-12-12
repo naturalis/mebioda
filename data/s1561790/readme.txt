@@ -1,1 +1,1 @@
-Enjoy the report
+Enjoy the report! :^)
