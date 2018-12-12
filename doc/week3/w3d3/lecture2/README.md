@@ -6,4 +6,10 @@ install.packages("Morpho")
 install.packages("molaR")
 install.packages("geomorph")
 install.packages("rgl")
+
+library(Rvcg)
+library(Morpho)
+library(molaR)
+library(geomorph)
+library(rgl)
 ```
