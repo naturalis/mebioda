@@ -55,7 +55,8 @@ Brownian motion
 Brownian simulation
 -------------------
 
-Here is some code to perform discrete-time (non-phylogenetic) Brownian motion simulation:
+Here is some code to perform discrete-time (non-phylogenetic) 
+[Brownian motion](https://en.wikipedia.org/wiki/Brownian_motion) simulation:
 
 ```r
 # discrete time BM simulation
