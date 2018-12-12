@@ -1,0 +1,23 @@
+---
+title: "Trait-dependent diversification"
+author: "Rutger Vos (@rvosa)"
+date: "12-12-2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load data
+
+We are going to need a tree and a data set with information on grazing:
+
+```{r load_data}
+library(ape)
+tree <- read.tree(file = "ungulates.nwk")
+data <- read.table("ungulates-grazing.tsv", sep = "\t", header = T, row.names = 1)
+taxa <- intersect(tree$tip.label,rownames(data))
+tip_df <- data.frame(data[taxa,], row.names = taxa )
+colnames(tip_df) <- "IsGrazerExclusive"
+```
