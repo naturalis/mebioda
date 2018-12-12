@@ -39,7 +39,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: Home study (i.e. no lecture)
 - Lecture II: Trait-dependent diversification in Cyprinodontiformes (Tom van Dooren)
 - Lecture III: [Methods for trait-dependent diversification](w3d5/bamm.md) (Benedict King)
-- Practical: [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
+- Practical: [ungulate BiSSE](w3p3/Diversification.Rmd), [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
 
 ### Day 5 - Trait data and analysis
 
