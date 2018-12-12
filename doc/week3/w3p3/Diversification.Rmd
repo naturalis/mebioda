@@ -21,3 +21,59 @@ taxa <- intersect(tree$tip.label,rownames(data))
 tip_df <- data.frame(data[taxa,], row.names = taxa )
 colnames(tip_df) <- "IsGrazerExclusive"
 ```
+
+## Analyze diversification
+
+Look at the diversification of the Ungulates:
+
+```{r ltt}
+library(phytools, quietly = T)
+res<-ltt(tree)
+```
+
+Are there shifts in the diversification rate?
+
+```{r shifts}
+library(TreePar)
+
+# make tree binary and ultrametric
+binultra <- multi2di(force.ultrametric(tree, method = "extend"))
+
+# assume a near complete tree, rho[1]=0.9
+rho <- c(0.9,1)
+
+# set windows of 10myr, starting 0, ending 90mya
+grid <- 10
+start <- 0
+end <- 90
+
+# estimate time, lambda, mu
+x <- getx(binultra)
+res <- bd.shifts.optim(x,c(rho,1),grid,start,end)[[2]]
+```
+
+Now what is the MLE of a single rate shift:
+
+```{r MLE}
+res[[2]][6]
+```
+
+In other words, 30mya. What is the rate before?
+
+```{r rate_before}
+res[[2]][5]
+```
+
+And after?
+
+```{r rate_after}
+res[[2]][4]
+```
+
+Significant?
+
+```{r significant}
+i<-1
+test<-pchisq(2*(res[[i]][1]-res[[i+1]][1]),3)
+test > 0.95
+```
