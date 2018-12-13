@@ -102,8 +102,8 @@ In the following exercises, we are going to try out some queries on the web serv
 interface of EoL. This is similar to the requests we placed on the web server for DNA
 barcodes (BoLD), where we downloaded JSON and FASTA data. In this case, more flexible and
 powerful queries can be run, but they require you to log in. If you don't have one yet,
-make an account on the EoL.org website and make sure you are logged in. Then continue
-with the following sections.
+**[make an account on the EoL.org website](https://eol.org/users/sign_up)** and make 
+sure you are logged in. Then continue with the following sections.
 
 ### Graph databases
 
@@ -263,9 +263,12 @@ WHERE p.page_id = 46559130 AND pred.uri = "http://eol.org/schema/terms/Present"
 RETURN DISTINCT p.canonical, pred.name, obj.name
 LIMIT 100
   </textarea>
-  <input type='radio' id='format' name='format' value='json' checked />
-  <label for='json'>JSON nested data structure</label>
+  <input type='radio' id='format' name='format' value='cypher' checked />
+  <label for='cypher'>JSON (cypher) nested data structure</label>
   <input type='radio' id='format' name='format' value='csv' />
   <label for='csv'>Table in CSV format</label>
   <input type='submit' style='clear:all;width:100%' />
 </form> 
+
+Notice how there is now a button where you can switch between output formats? If you 
+click CSV the data will be produced as a table, such as the one here:
