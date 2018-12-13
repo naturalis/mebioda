@@ -277,3 +277,5 @@ A logical next step for some of you in relation to the MAXENT analyses would hav
 to associate the different localities with shape files. You would then have a filter to
 keep only those occurrences that fall within the shapes for cleaning your data. With
 a spatial join, for example. But not today. Done.
+
+Read more about EoL queries on their repository [here](https://github.com/EOL/eol_website/blob/master/doc/query-examples.md).
