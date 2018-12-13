@@ -97,7 +97,54 @@ and so on. Within and across data resources, this creates a very large network
 
 ### Graph databases
 
+As we saw in the first week, networks (or "graphs") can be stored in relational databases:
+a phylogenetic tree is a graph - a [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) - 
+that can be traversed using recursive queries. These queries are basically of the form
+Q1: "get me the children of this node", Q2: "now get me the children of the children", and so
+on. This quickly becomes tedious, and it doesn't work in the same way when there are cycles
+in the tree, for example when a node has multiple ancestors.
 
+The solution is to not use a relational database, but a graph database. In a graph database
+you search for patterns without having to specify how these come about (a relational database
+requires you to be more explicit about what joins with what). The most commonly used graph
+database right now is probably [Neo4J](https://neo4j.com), which has its own query language,
+[cypher](https://neo4j.com/docs/cypher-manual/current/).
+
+It looks a bit like the standard language SQL that we saw in weeks 1 and 2, but it's a dialect
+specific to Neo4J and it uses ASCII art to represent relations:
+
+![](cypher_pattern_simple.png)
+
+The above picture shows that "a likes b" (what's the subject? The predicate? The object?), 
+where `(a)` and `(b)` are now nodes (vertices) in the graph, and `-[:LIKES]->` is the 
+relationship between them (an edge connecting the nodes in the graph). So how does this
+work with the Linnean taxonomy? Assume the following:
+
+- Nodes in the EoL graph have a `page_id`
+- They also have a `canonical` name (i.e. the accepted taxonomic name) and a `parent`
+- The `parent` attribute creates a pattern just like the `-[:LIKES]->` thing
+
+With this information we can run a query where we can get _all_ the ancestors of the
+Sea Otter in one go (and without clever, pre-computed index columns). The following
+allows you to run that query. It is going to return JSON data, so it's a good idea to have
+a browser extension that allows you to view JSON 
+([chrome plugin](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=nl),
+[firefox plugin](https://addons.mozilla.org/nl/firefox/addon/jsonview/)) before you run the
+query:
+
+<form action='https://eol.org/service/cypher'>
+  <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>
+MATCH (origin:Page {page_id: 46559130})-[:parent*]->(ancestor:Page)
+OPTIONAL MATCH (ancestor)-[:parent]->(parent_of_ancestor:Page)
+RETURN ancestor.page_id, ancestor.canonical, parent_of_ancestor.page_id
+LIMIT 100  
+  </textarea>
+  <input type='submit' />
+</form>
+
+> Exercise 5: Now try the same thing with your model organism's page_id
+
+## Querying for trait data
 
 <h1>Cypher query</h1>
 <form action='https://eol.org/service/cypher'>
