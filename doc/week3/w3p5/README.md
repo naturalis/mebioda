@@ -272,4 +272,8 @@ LIMIT 100
 
 Notice how there is now a button where you can switch between output formats? If you 
 click CSV the data will be produced as a table, such as the one 
-[here](https://github.com/naturalis/mebioda/blob/master/doc/week3/w3p5/cypher.csv)
+[here](https://github.com/naturalis/mebioda/blob/master/doc/week3/w3p5/cypher.csv).
+A logical next step for some of you in relation to the MAXENT analyses would have been
+to associate the different localities with shape files. You would then have a filter to
+keep only those occurrences that fall within the shapes for cleaning your data. With
+a spatial join, for example. But not today. Done.
