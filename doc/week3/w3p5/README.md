@@ -146,6 +146,46 @@ LIMIT 100
 
 ## Querying for trait data
 
+From the [EoL documentation](https://github.com/EOL/eol_website/blob/master/doc/trait-schema.md)
+it looks like a `(Page)`, i.e. a taxon, can have zero or more `-[trait]->` patterns, which
+point to a `(Trait)` node. The trait node in turn points `(Term)` node with which it has a
+`-[:predicate]->` relation (i.e. what is the predicate term that we use for this trait),
+and optionally another `(Term)` node that gives the measurement units of the literal trait value.
+
+Here is an example to fetch a single trait triple for the Sea Otter:
+
+<form action='https://eol.org/service/cypher'>
+  <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>
+MATCH (t:Trait)<-[:trait]-(p:Page),
+(t)-[:predicate]->(pred:Term)
+WHERE p.page_id = 46559130 AND pred.uri = "http://purl.obolibrary.org/obo/VT_0001259"
+OPTIONAL MATCH (t)-[:units_term]->(units:Term)
+RETURN p.canonical, pred.name, t.measurement, units.name
+LIMIT 1
+  </textarea>
+  <input type='submit' />
+</form>
+
+So, line by line, the query roughly goes like this:
+
+1. Give me the traits for a page
+2. For those traits give me the predicate term
+3. Do this given that the `page_id` is 46559130 and the predicate has 
+  [this](http://purl.obolibrary.org/obo/VT_0001259) URL
+4. If the trait also has units term, give me that as well
+5. Return the triple, subject `p.canonical`, predicate `pred.name`, object `t.measurement` and add the `units.name`
+6. I only want the first result
+
+> Exercise 6: Run the query with your model organism's page_id. Do you get any results? If not, why not?
+
+> Exercise 7: Run the query with your model organism's page_id, but increase the `LIMIT` (like, set it 
+> to 100, for example), and remove the second part of the `WHERE` close, so without the part from the 
+> `AND` statement onwards.
+
+Because we've removed the restriction to a specific predicate, we get whatever predicates are available.
+However, many of them have no literal object value. Why? Because the object is not a `measurement` but
+something else, such as an ontology term for a habitat type.
+
 <h1>Cypher query</h1>
 <form action='https://eol.org/service/cypher'>
   <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>MATCH (n:Trait) RETURN n LIMIT 1;</textarea>
