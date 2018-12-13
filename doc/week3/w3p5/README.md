@@ -142,14 +142,25 @@ LIMIT 100
   <input type='submit' />
 </form>
 
+To unpack the query above, line by line:
+
+1. Give me all the `ancestor` pages with which the `origin` (identified by `page_id` 46559130)
+   has a `parent` relation. The clever thing here is that the `parent` relation is _transitive_,
+   i.e. parent-of-parent also matches (and parent-of-parent-of-parent, etc.)
+2. For any of these ancestors, give me their parent. This clause is optional, because not
+   all ancestors have a parent. Which one doesn't?
+3. For the matching ancestors, give me the `page_id` and the `canonical`, and the
+   `parent_id` of its parent (this is allowed to be 'null')
+4. Limit the results to 100 ancestors.
+
 > Exercise 5: Now try the same thing with your model organism's page_id
 
 ## Querying for trait data
 
 From the [EoL documentation](https://github.com/EOL/eol_website/blob/master/doc/trait-schema.md)
 it looks like a `(Page)`, i.e. a taxon, can have zero or more `-[trait]->` patterns, which
-point to a `(Trait)` node. The trait node in turn points `(Term)` node with which it has a
-`-[:predicate]->` relation (i.e. what is the predicate term that we use for this trait),
+point to a `(Trait)` node. The trait node in turn points to a `(Term)` node with which it has a
+`-[:predicate]->` relation (i.e. what is the specific predicate term that we use for this trait),
 and optionally another `(Term)` node that gives the measurement units of the literal trait value.
 
 Here is an example to fetch a single trait triple for the Sea Otter:
@@ -166,28 +177,23 @@ LIMIT 1
   <input type='submit' />
 </form>
 
-So, line by line, the query roughly goes like this:
+Line by line, the query roughly goes like this:
 
-1. Give me the traits for a page
-2. For those traits give me the predicate term
-3. Do this given that the `page_id` is 46559130 and the predicate has 
+1. Give me the traits `t` for a page `p`
+2. For those traits `t`, go on and give me the predicate term `pred`
+3. Do this given that `page_id` of page `p` is 46559130 and the predicate has 
   [this](http://purl.obolibrary.org/obo/VT_0001259) URL
-4. If the trait also has units term, give me that as well
-5. Return the triple, subject `p.canonical`, predicate `pred.name`, object `t.measurement` and add the `units.name`
+4. If the trait also has a units term, give me that as well
+5. Return the triple, i.e. subject `p.canonical`, predicate `pred.name`, object `t.measurement` and add the `units.name`
 6. I only want the first result
 
 > Exercise 6: Run the query with your model organism's page_id. Do you get any results? If not, why not?
 
 > Exercise 7: Run the query with your model organism's page_id, but increase the `LIMIT` (like, set it 
 > to 100, for example), and remove the second part of the `WHERE` close, so without the part from the 
-> `AND` statement onwards.
+> `AND` statement onwards on line 3.
 
 Because we've removed the restriction to a specific predicate, we get whatever predicates are available.
-However, many of them have no literal object value. Why? Because the object is not a `measurement` but
-something else, such as an ontology term for a habitat type.
+However, many of them have no literal object value. Why? Because the object is not a literal `measurement` 
+(such as the body mass) but something else, such as an ontology term for a habitat type.
 
-<h1>Cypher query</h1>
-<form action='https://eol.org/service/cypher'>
-  <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>MATCH (n:Trait) RETURN n LIMIT 1;</textarea>
-  <input type='submit' />
-</form>
