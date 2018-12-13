@@ -1,0 +1,12 @@
+---
+title: "Distributions"
+output: html_document
+---
+
+```{r read}
+distributions <- read.csv('distributions.csv')
+```
+
+```{r size2}
+hist(distributions$size3, freq = F, breaks = "FD")
+```
