@@ -85,8 +85,22 @@ distribution depends on what is meant by that, which EoL clarifies by using
 > where the predicate is 'leaf color'), what is the definition? What ontology does that
 > come from?
 
+So, there are _literal_ objects, which are usually numbers (counts, measurements), and
+there are objects that themselves are ontology terms. You can imagine that those objects
+can, in turn, become subjects of other statements. There are many things that can be
+said about Japan, or about the color green, so they can naturally become subjects of
+other triples. And the objects of those triples can in turn become the subjects of others,
+and so on. Within and across data resources, this creates a very large network 
+(or 'graph') of data:
+
+![](lod.png)
+
+### Graph databases
+
+
+
 <h1>Cypher query</h1>
 <form action='https://eol.org/service/cypher'>
-  <textarea name='query' id='query' style='clear:all;width:100%' rows='5'>MATCH (n:Trait) RETURN n LIMIT 1;</textarea>
+  <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>MATCH (n:Trait) RETURN n LIMIT 1;</textarea>
   <input type='submit' />
 </form>
