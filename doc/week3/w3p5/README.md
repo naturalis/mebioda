@@ -55,12 +55,12 @@ predicates are basically invented and defined by EoL itself, but others are borr
 external ontologies. This is a good idea, because we are only going to be able to
 link up on the web of data if there is a shared agreement across different data sources
 on what our predicates mean. And to make sure that we uniquely identify the predicate, 
-it is given a URL (even if that doesn't necessarily mean that the URL resolves to a web
-page! The important part is that it is unique across the entire world, which URLs
-automatically are.)
+it is given a URI (a special type of URL that is used for identifying things. It doesn't
+necessarily lead to a web page when you try to load it, though it might. The main 
+purpose is just to create an identifier.)
 
 > Exercise 3: in the trait data for your model plant, look for the predicate 'Leaf Complexity'. 
-> What is its URL? What ontology does it come from?
+> What is its URI? What ontology does it come from?
 
 ### Objects
 
@@ -96,6 +96,15 @@ and so on. Within and across data resources, this creates a very large network
 
 ![](lod.png)
 
+### Data services
+
+In the following exercises, we are going to try out some queries on the web service
+interface of EoL. This is similar to the requests we placed on the web server for DNA
+barcodes (BoLD), where we downloaded JSON and FASTA data. In this case, more flexible and
+powerful queries can be run, but they require you to log in. If you don't have one yet,
+make an account on the EoL.org website and make sure you are logged in. Then continue
+with the following sections.
+
 ### Graph databases
 
 As we saw in the first week, networks (or "graphs") can be stored in relational databases:
@@ -105,10 +114,10 @@ Q1: "get me the children of this node", Q2: "now get me the children of the chil
 on. This quickly becomes tedious, and it doesn't work in the same way when there are cycles
 in the tree, for example when a node has multiple ancestors.
 
-The solution is to not use a relational database, but a graph database. For the network
+A sensible solution is to not use a relational database, but a graph database. For the network
 of linked data on the web, graph databases offer several advantages over traditional,
 relational databases. In a graph database you search for patterns without having to specify 
-how these come about (a relational database requires you to be more explicit about what 
+how these come about (a relational SQL database requires you to be more explicit about what 
 joins with what). 
 
 The most commonly used graph database right now is probably [Neo4J](https://neo4j.com), and 
@@ -120,7 +129,7 @@ specific to Neo4J and it uses ASCII art to represent relations:
 
 ![](cypher_pattern_simple.png)
 
-The above picture shows that "a likes b" (what's the subject? The predicate? The object?), 
+The above picture shows that "a likes b" (what's the subject here? The predicate? The object?), 
 where `(a)` and `(b)` are now nodes (vertices) in the graph, and `-[:LIKES]->` is the 
 relationship between them (an edge connecting the nodes in the graph). So how does this
 work with the Linnean taxonomy? Assume the following:
@@ -188,7 +197,7 @@ Line by line, the query roughly goes like this:
 1. Give me the traits `t` for a page `p`
 2. For those traits `t`, go on and give me the predicate term `pred`
 3. Do this given that `page_id` of page `p` is 46559130 and the predicate has 
-  [this](http://purl.obolibrary.org/obo/VT_0001259) URL
+  [this](http://purl.obolibrary.org/obo/VT_0001259) URI
 4. If the trait also has a units term, give me that as well
 5. Return the triple, i.e. subject `p.canonical`, predicate `pred.name`, object `t.measurement` and add the `units.name`
 6. I only want the first result
@@ -226,3 +235,37 @@ LIMIT 1
 </form>
 
 > Exercise 8: Run the query for your model organism and increase the limit (100?)
+
+> Exercise 9: Refine the query by adding a `AND pred.uri = "<uri>"` to the `WHERE` line,
+  and put in place of <uri> the URI for [geographic distribution includes]
+
+Notice how there are "duplicate" results? They are trait values from different sources, or 
+otherwise different in some way when you inspect the full record on the website. If all we want
+is the full set of _distinct_ geographic areas that the species includes in its range we
+can modify the query to make it `RETURN DISTINCT ...` (on the fifth line).
+
+> Exercise 9: Refine the query to make it return distinct records for the geographic localities.
+
+### Exporting data
+
+If that worked so far, you would have got all the distinct areas, but perhaps also a `null`
+value, because the presence of the `-[:object_term]->` pattern was optional. We can make
+that a required part of the query. Notice how the clause that was on the fourth line 
+(`OPTIONAL MATCH <clause>`) has now moved to the third line as part of the `MATCH` 
+statement:
+
+<form action='https://eol.org/service/cypher'>
+  <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>
+MATCH (t:Trait)<-[:trait]-(p:Page),
+(t)-[:predicate]->(pred:Term),
+(t)-[:object_term]->(obj:Term)
+WHERE p.page_id = 46559130 AND pred.uri = "http://eol.org/schema/terms/Present"
+RETURN DISTINCT p.canonical, pred.name, obj.name
+LIMIT 100
+  </textarea>
+  <input type='radio' id='format' name='format' value='json' checked />
+  <label for='json'>JSON nested data structure</label>
+  <input type='radio' id='format' name='format' value='csv' />
+  <label for='csv'>Table in CSV format</label>
+  <input type='submit' style='clear:all;width:100%' />
+</form> 
