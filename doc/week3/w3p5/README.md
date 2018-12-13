@@ -69,7 +69,7 @@ right away what the unit is here. Perhaps it is the case that the definition of 
 predicate `ex:age` specifies this, for example by stating that this is age in years
 (as opposed to days, millions of years, milliseconds). On other occasions we have 
 already seen how this is commonly specified, for example when we collected occurrence
-data: the definitions for [dwc:decimalLatitude](https://terms.tdwg.org/wiki/dwc:decimalLatitude)
+data: the terms [dwc:decimalLatitude](https://terms.tdwg.org/wiki/dwc:decimalLatitude)
 and [dwc:decimalLongitude](https://terms.tdwg.org/wiki/dwc:decimalLongitude) are clear
 enough. (So, yes, GBIF uses ontologies as well, and so do BoLD, GenBank, and many other
 databases with biodiversity data.)
