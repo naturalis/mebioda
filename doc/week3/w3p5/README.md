@@ -59,7 +59,8 @@ it is given a URL (even if that doesn't necessarily mean that the URL resolves t
 page! The important part is that it is unique across the entire world, which URLs
 automatically are.)
 
-> Exercise 3: for the predicate 'Leaf Complexity', what is its URL? What ontology does it come from?
+> Exercise 3: in the trait data for your model plant, look for the predicate 'Leaf Complexity'. 
+> What is its URL? What ontology does it come from?
 
 ### Objects
 
@@ -87,7 +88,7 @@ distribution depends on what is meant by that, which EoL clarifies by using
 
 So, there are _literal_ objects, which are usually numbers (counts, measurements), and
 there are objects that themselves are ontology terms. You can imagine that those objects
-can, in turn, become subjects of other statements. There are many things that can be
+can, in turn, become subjects of other statements: there are many things that can be
 said about Japan, or about the color green, so they can naturally become subjects of
 other triples. And the objects of those triples can in turn become the subjects of others,
 and so on. Within and across data resources, this creates a very large network 
@@ -104,13 +105,17 @@ Q1: "get me the children of this node", Q2: "now get me the children of the chil
 on. This quickly becomes tedious, and it doesn't work in the same way when there are cycles
 in the tree, for example when a node has multiple ancestors.
 
-The solution is to not use a relational database, but a graph database. In a graph database
-you search for patterns without having to specify how these come about (a relational database
-requires you to be more explicit about what joins with what). The most commonly used graph
-database right now is probably [Neo4J](https://neo4j.com), which has its own query language,
+The solution is to not use a relational database, but a graph database. For the network
+of linked data on the web, graph databases offer several advantages over traditional,
+relational databases. In a graph database you search for patterns without having to specify 
+how these come about (a relational database requires you to be more explicit about what 
+joins with what). 
+
+The most commonly used graph database right now is probably [Neo4J](https://neo4j.com), and 
+it is the one that EoL uses. Neo4J has its own query language,
 [cypher](https://neo4j.com/docs/cypher-manual/current/).
 
-It looks a bit like the standard language SQL that we saw in weeks 1 and 2, but it's a dialect
+It looks a bit like the standard language SQL that we saw in weeks 1 and 2, but it's a language
 specific to Neo4J and it uses ASCII art to represent relations:
 
 ![](cypher_pattern_simple.png)
@@ -120,7 +125,7 @@ where `(a)` and `(b)` are now nodes (vertices) in the graph, and `-[:LIKES]->` i
 relationship between them (an edge connecting the nodes in the graph). So how does this
 work with the Linnean taxonomy? Assume the following:
 
-- Nodes in the EoL graph have a `page_id`
+- Taxon nodes (really, pages) in the EoL graph have a `page_id`
 - They also have a `canonical` name (i.e. the accepted taxonomic name) and a `parent`
 - The `parent` attribute creates a pattern just like the `-[:LIKES]->` thing
 
@@ -145,8 +150,9 @@ LIMIT 100
 To unpack the query above, line by line:
 
 1. Give me all the `ancestor` pages with which the `origin` (identified by `page_id` 46559130)
-   has a `parent` relation. The clever thing here is that the `parent` relation is _transitive_,
-   i.e. parent-of-parent also matches (and parent-of-parent-of-parent, etc.)
+   has a `-[:parent*]->` relation. The clever thing here is that the `parent` relation is 
+   _transitive_ because of the extra asterisk *, i.e. parent-of-parent also matches (and 
+   parent-of-parent-of-parent, etc.)
 2. For any of these ancestors, give me their parent. This clause is optional, because not
    all ancestors have a parent. Which one doesn't?
 3. For the matching ancestors, give me the `page_id` and the `canonical`, and the
@@ -155,7 +161,7 @@ To unpack the query above, line by line:
 
 > Exercise 5: Now try the same thing with your model organism's page_id
 
-## Querying for trait data
+## Querying for literal trait data
 
 From the [EoL documentation](https://github.com/EOL/eol_website/blob/master/doc/trait-schema.md)
 it looks like a `(Page)`, i.e. a taxon, can have zero or more `-[trait]->` patterns, which
@@ -197,3 +203,26 @@ Because we've removed the restriction to a specific predicate in Exercise 7, we 
 are available. However, many of them have no literal object value. Why? Because the object is not a 
 literal `measurement` (such as the body mass) but something else, such as an ontology term for a habitat type.
 
+## Querying object trait data
+
+In the case of the literal values it made sense to have the trait specify a relation to a 
+`(units:Term)` that contained the name of the measurement unit (g, mm, ångström, whatever).
+For trait values that are objects themselves, it works a bit differently. Here, the relevant
+information about the trait value is contained within the object, by way of a term definition
+(what is Japan? What is green?). The trait therefore has a relation that is defined
+as `-[:obj_term]->` instead of `-[:units_term]->`. The example below produces the first 
+object term for the Sea Otter:
+
+<form action='https://eol.org/service/cypher'>
+  <textarea name='query' id='query' style='clear:all;width:100%' rows='8'>
+MATCH (t:Trait)<-[:trait]-(p:Page),
+(t)-[:predicate]->(pred:Term)
+WHERE p.page_id = 46559130
+OPTIONAL MATCH (t)-[:object_term]->(obj:Term)
+RETURN p.canonical, pred.name, obj.name
+LIMIT 1
+  </textarea>
+  <input type='submit' style='clear:all;width:100%' />
+</form>
+
+> Exercise 8: Run the query for your model organism and increase the limit (100?)
