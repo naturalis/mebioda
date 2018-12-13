@@ -94,7 +94,7 @@ other triples. And the objects of those triples can in turn become the subjects 
 and so on. Within and across data resources, this creates a very large network 
 (or 'graph') of data:
 
-![](lod.png)
+![](lod.gif)
 
 ### Data services
 
