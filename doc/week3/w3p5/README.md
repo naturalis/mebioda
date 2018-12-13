@@ -139,7 +139,7 @@ OPTIONAL MATCH (ancestor)-[:parent]->(parent_of_ancestor:Page)
 RETURN ancestor.page_id, ancestor.canonical, parent_of_ancestor.page_id
 LIMIT 100  
   </textarea>
-  <input type='submit' />
+  <input type='submit' style='clear:all;width:100%' />
 </form>
 
 To unpack the query above, line by line:
@@ -174,7 +174,7 @@ OPTIONAL MATCH (t)-[:units_term]->(units:Term)
 RETURN p.canonical, pred.name, t.measurement, units.name
 LIMIT 1
   </textarea>
-  <input type='submit' />
+  <input type='submit' style='clear:all;width:100%' />
 </form>
 
 Line by line, the query roughly goes like this:
@@ -193,7 +193,7 @@ Line by line, the query roughly goes like this:
 > to 100, for example), and remove the second part of the `WHERE` close, so without the part from the 
 > `AND` statement onwards on line 3.
 
-Because we've removed the restriction to a specific predicate, we get whatever predicates are available.
-However, many of them have no literal object value. Why? Because the object is not a literal `measurement` 
-(such as the body mass) but something else, such as an ontology term for a habitat type.
+Because we've removed the restriction to a specific predicate in Exercise 7, we get whatever predicates 
+are available. However, many of them have no literal object value. Why? Because the object is not a 
+literal `measurement` (such as the body mass) but something else, such as an ontology term for a habitat type.
 
