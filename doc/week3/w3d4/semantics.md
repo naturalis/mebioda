@@ -164,8 +164,15 @@ represented in many ways. The example above (`<> <> <> .`) is a terse form calle
 
 Large RDF data sets are typically not stored as files but in a special kind of database
 called a [triple store](https://en.wikipedia.org/wiki/Triplestore) (this is closer to 
-the graph database [neo4j](https://neo4j.com/) used by OpenTree than to a relational
+the graph database [neo4j](https://neo4j.com/) used by OpenTree and EoL than to a relational
 SQL database).
 
-Querying RDF: SPARQL
---------------------
+Querying graphs: SPARQL and CYPHER
+----------------------------------
+
+The language for querying relational databases (SQL) has a lot of functionality for 
+expressing various types of joins and other clauses that combine tables. For graphs
+this is far less useful: emergent topological patterns are more important. Hence,
+languages for querying graphs have been developed. For RDF and the semantic web, the
+standard language SPARQL is endorsed by the [w3c](w3c.org). For neo4j there is the
+(vendor-specific) language cypher.
