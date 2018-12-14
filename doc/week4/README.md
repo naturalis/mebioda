@@ -7,8 +7,8 @@ patterns of diversity through space and time. We will then wrap up the course an
 
 2018-12-17, Sylvius 1.5.03
 
-- Lecture I: Morphological diversity through space and time: excavations - Pim Kaskes
-- Lecture II: Morphological diversity through space and time: excavations (cont.) - Pim Kaskes
+- Lecture I: Home study
+- Lecture II: Home study (cont.)
 - Lecture III: Functional diversity through space and time: Amazonia - Hans ter Steege
 - Seminar: Course wrap-up
 
