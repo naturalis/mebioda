@@ -6,7 +6,7 @@ The SDM practical
 
 - [Instructions for the practical](SDM_Workshop_MethodsBiodiversity_08_12_17.pdf)
 - [Instructions for submitting your results](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
-  deadline: **Monday, 8 December 2017, 17:00**
+  deadline: **Wednesday 12 December 2018, 17:00**
 - [R script for clipping and variable selection](RScript_SDM_Workshop_VariableSelection_Clipping.R)
 
 Lecture slides
