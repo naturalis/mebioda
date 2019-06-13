@@ -174,6 +174,14 @@ Grading
 Locations
 ---------
 
-- All lectures, afternoon practicals, presentations, and the exam are in Sylvius 1.5.03
-  **EXCEPT THE GIS PRACTICALS**
+- All lectures, afternoon practicals, and presentations are in Sylvius 1.5.03
 - The GIS practicals, in the afternoons of 3/12 and 5/12, are in Van Steenis F101
+- The exam is in Sylvius 1411/16
+
+Times
+-----
+
+- Lecture 1: 09:15 - 10:00
+- Lecture 2: 10:15 - 11:00
+- Lecture 3: 11:15 - 12:00
+- Practicals: 13:15 - ...
