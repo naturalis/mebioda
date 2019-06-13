@@ -176,7 +176,7 @@ Locations
 
 - All lectures, afternoon practicals, and presentations are in Sylvius 1.5.03
 - The GIS practicals, in the afternoons of 3/12 and 5/12, are in Van Steenis F101
-- The exam is in Sylvius 1411/16
+- The exam is in Sylvius 1.4.11/16
 
 Times
 -----
