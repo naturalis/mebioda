@@ -5,13 +5,10 @@ patterns of diversity through space and time. We will then wrap up the course an
 
 ### Day 1 - Guest lectures
 
-2018-12-17, Sylvius 1.5.03
+2019-12-16, Sylvius 1.5.03
 
-- Lecture I: Home study
-- Lecture II: Home study (cont.)
-- Lecture III: Functional diversity through space and time: Amazonia - Hans ter Steege
-- Seminar: Course wrap-up
+- Seminar: Course wrap-up / evaluation / questions / exam template
 
-### Friday, 2018-12-21 Examination 11.00 to 13.00
+### Friday, 2019-12-20 Examination 14:15-17:00 Practicumzaal 1.4.11/16
 
-Sylvius 1.5.03
+### Tuesday, 2019-01-07 Retake examination 14:15-17:00 Practicumzaal 1.4.01/06
