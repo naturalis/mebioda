@@ -1,5 +1,7 @@
 ![MeBioDA](doc/desktop.png)
 
+### Introduction
+
 This repository contains materials for the MSc course _Methods in Biodiversity Analysis_, offered through a 
 collaboration between [Naturalis](http://naturalis.nl), [IBL](https://www.universiteitleiden.nl/en/science/biology),
 and [CML](https://www.universiteitleiden.nl/wiskunde-en-natuurwetenschappen/milieuwetenschappen). The course will
@@ -10,6 +12,15 @@ The goal of the course is to impart data science skills as relevant to biodivers
 covered will include research reproducibility (e.g. scripting) and data management (e.g. versioning), while the 
 scientific applications will encompass biodiversity assessment using DNA sequence data (e.g. metabarcoding),
 geospatial data (e.g. ecological niche modeling) and phenotype/morphology data (e.g. morphometrics). 
+
+### Preparations
+
+The course will consist of lectures and hands-on computer practicals that require you to have the following:
+
+- a working laptop, any major operating system is fine
+- a copy of [RStudio](https://rstudio.com/products/rstudio/) open source edition
+
+### Schedule
 
 - [Week 1](doc/week1) - Molecular diversity
 - [Week 2](doc/week2) - (Geo)spatial diversity
