@@ -18,7 +18,9 @@ geospatial data (e.g. ecological niche modeling) and phenotype/morphology data (
 The course will consist of lectures and hands-on computer practicals that require you to have the following:
 
 - a working laptop, any major operating system is fine
-- a copy of [RStudio](https://rstudio.com/products/rstudio/) open source edition
+- [RStudio](https://rstudio.com/products/rstudio/) (open source edition)
+- [SQLite browser](https://github.com/sqlitebrowser/sqlitebrowser)
+- [Java](https://java.com/)
 
 ### Schedule
 
