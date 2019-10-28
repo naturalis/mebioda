@@ -40,7 +40,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
-- Lecture III: Other tools for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Nuno De Mesquita César de Sá (CML) + Maarten
+- Lecture III: [Other tools](w2d3/Workflow.md) for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) - Nuno De Mesquita César de Sá (CML) + Maarten
 - Homework: Download occurrence data for **your crop species** from GBIF (continued)
 
 ### [Day 5 - (Spatial) Data output](w2d5)
