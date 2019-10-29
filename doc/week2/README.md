@@ -21,8 +21,8 @@ by species distribution modelling. We will present our findings in a brief repor
 2019-12-03, Sylvius 1.5.03
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
-- Lecture II: Satellite images and remote sensing (including Lidar_data ?)  - Joris Timmermans (CML)
-- Lecture III: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
+- Lecture II: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
+- Lecture III: Satellite images and remote sensing  - Joris Timmermans (CML)
 - Homework: Download occurrence data for **your crop species** from GBIF
 
 ### Day 3 - (Spatial) Data management
