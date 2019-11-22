@@ -17,7 +17,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Lecture I: [Introduction to the course](w1d1/lecture1.md)
 - Lecture II: [Introduction to biodiversity and data science](w1d1/lecture2.md)
 - Lecture III: [Introduction to molecular biodiversity](w1d1/lecture3.md)
-- Cleveringa Oratie: no afternoon education (15:00-18:00)
+- Self study / software installs / reading
 
 ### Day 2 - High-throughput DNA sequencing (HTS)
 
