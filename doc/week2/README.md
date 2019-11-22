@@ -9,7 +9,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 1 - Introduction
 
-2019-12-02, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
+2019-12-02, Sylvius 4T01 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: [Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)](w2d1/181203_Zelfde_Introduction_Week_L01_01_v2.pdf)
 - Lecture II: Introduction to GIS (2) and The geographical approach
@@ -18,7 +18,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 2 - (Spatial) Data input
 
-2019-12-03, Sylvius 1.5.03
+2019-12-03, Sylvius 4T01
 
 - Lecture I: Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)
 - Lecture II: Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)
@@ -27,7 +27,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 3 - (Spatial) Data management
 
-2019-12-04, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
+2019-12-04, Sylvius 4T01 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
@@ -36,7 +36,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 4 - (Spatial) Data analysis
 
-2019-12-05, Sylvius 1.5.03
+2019-12-05, Sylvius 4T01
 
 - Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
 - Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
@@ -45,7 +45,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### [Day 5 - (Spatial) Data output](w2d5)
 
-2019-12-06, Sylvius 1.5.03
+2019-12-06, Sylvius 4T01
 
 - Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
 - Lecture II: Principles of SDM - Nuno De Mesquita César de Sá (CML)
