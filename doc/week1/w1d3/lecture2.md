@@ -26,7 +26,7 @@ Fetching taxon data through the [URL API](http://www.boldsystems.org/index.php/a
 $ curl -o Danaus.json http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus
 ```
 
-Returned [taxon data](Danaus.json) is encoded as JSON:
+Returned [taxon data](Danaus.json) is encoded as JSON (e.g. do `python -m json.tool Danaus.json`):
 
 ```json
 {
@@ -76,7 +76,7 @@ Data from URLs can be downloaded on the command line using [curl](https://curl.h
 $ curl -o Danaus.fas http://www.boldsystems.org/index.php/API_Public/sequence?taxon=Danaus
 ```
 
-The BOLD sequence data service API returns a [FASTA file](Danaus.fas), which holds 
+The BOLD sequence data service API returns a FASTA file `Danaus.fas`, which holds 
 multiple sequences, unaligned. The 
 [definition line](https://en.wikipedia.org/wiki/FASTA_format#Description_line) is 
 formatted as:
@@ -96,10 +96,20 @@ CAD
 COI-3P
 COI-5P
 COI-5P
+COII
+COXIII
+CYTB
 EF1-alpha
 GAPDH
 IDH
 MDH
+ND1
+ND2
+ND3
+ND4
+ND4L
+ND5-0
+ND6
 RpS2
 RpS5
 Wnt1
@@ -119,7 +129,7 @@ with open("Danaus.fas", "rU") as handle:
     # Example: retain COI
     for record in SeqIO.parse(handle, "fasta"):
         fields = record.description.split('|')
-        if fields[2] == 'COI-5P':
+        if fields[2] == 'COI-5P' and len(record.seq) == 1246:
         	print '>' + record.description
         	print record.seq
 ```
@@ -139,7 +149,7 @@ FASTA files can be aligned, for example, with [muscle](https://www.drive5.com/mu
 $ muscle -in Danaus.COI-5P.fas -out Danaus.muscle.fas
 ```
 
-Resulting in an [alignment](Danaus.muscle.fas), which is also a FASTA file. 
+Resulting in a file `Danaus.muscle.fas`, which is also a FASTA file. 
 
 Alternatively, you might align with [mafft](https://mafft.cbrc.jp/alignment/software/), 
 (or one of the many other multiple sequence alignment tools) which has additional 
@@ -149,13 +159,13 @@ functionality for more difficult markers (such as ITS):
 $ mafft Danaus.COI-5P.fas > Danaus.mafft.fas
 ```
 
-Resulting in this [file](Danaus.mafft.fas). You can view both, for example, with this 
+Resulting in a file `Danaus.mafft.fas`. You can view both, for example, with this 
 [web viewer](http://msa.biojs.net/app/). Are they different?
 
 ```shell
 $ ls -la Danaus.m*
--rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.mafft.fas
--rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.muscle.fas
+-rw-r--r-- 1 root root 157414 Nov 25 20:56 Danaus.mafft.fas
+-rw-r--r-- 1 root root 157414 Nov 25 20:56 Danaus.muscle.fas
 ```
 
 Same number of bytes (so, same number of inserted gaps) but with different contents. Could
@@ -164,11 +174,11 @@ _actual differences in the alignment algorithms_.
 [Checksums](https://en.wikipedia.org/wiki/Checksum) are different:
 
 ```shell
-$ md5 Danaus.mafft.fas
-MD5 (Danaus.mafft.fas) = 47e8d36d43a68f11c131badf75adcc3a
+$ md5sum Danaus.mafft.fas
+821e4e986131bbdbc19571c4c5456020  Danaus.mafft.fas
 
-$ md5 Danaus.mafft.nex
-MD5 (Danaus.mafft.nex) = e604e23ab1c39ecf54f755a0c882ded8
+$ md5sum Danaus.muscle.fas
+c165c5776e2cf6c72e2b18264ea13b34  Danaus.muscle.fas
 ```
 
 **How might we verify this further?**
@@ -204,88 +214,14 @@ Usage:
 $ python convert.py <infile> <outfile> <format>
 ```
 
-Now we can compare the two alignments, e.g. with a 
-[diff](https://github.com/naturalis/mebioda/commit/93090e4ac2f80bb0e1bd9a63d40b73987631b3fd?diff=split).
-It seems that there are only minor differences. 
+Now we can compare the two alignments, e.g. with a `diff <file1> <file2>`.
+They appear to be identical.
 
-Detecting non-overlapping sequences
------------------------------------
+Building a phylogeny
+--------------------
 
-One quick way to compute a pairwise distance matrix is with PHYLIP's program `dnadist`, so
-let's install it:
+We can build a quick phylogeny from one of the PHYLIP files using raxml, e.g.
+as follows: `raxmlHPC -m GTRGAMMA -n Danaus.phylo -s Danaus.mafft.phy -p 123`
 
-```bash
-# let's install phylip
-$ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.697.tar.gz
-$ gunzip phylip-3.697.tar.gz
-$ tar xvf phylip-3.697.tar
-$ cd phylip-3.697/src
-$ make -f Makefile.unx install
-$ cd -
-$ sudo mv phylip-3.697 /usr/local
-```
-
-(And add `/usr/local/phylip-3.696/exe` to the $PATH)
-
-When we compute a distance matrix we receive warnings that for some pairs of sequences 
-there is no sequence overlap at all:
-
-```
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 202; -1.0 WAS WRITTEN
-```
-
-In a text editor we can see that 200 and 202 are `SETIU001-1` and `SETIU032-1`.
-Let's [remove](https://github.com/naturalis/mebioda/commit/681e9750b32612b59b2953a6b3a042f6c2ee47f0?diff=unified)
-these.
-
-Bayesian evolutionary analysis by sampling trees (BEAST)
---------------------------------------------------------
-
-[BEAST2](http://www.beast2.org/) is a modular system that can run many different types of 
-analyses. The typical workflow usually goes:
-
-1. Import data (e.g. a  FASTA alignment) into `beauti`, set up the analysis parameters, 
-   possibly using a template
-2. Start `beast filename.xml`, numerous output files (a.o. are log and tree files)
-3. Inspect the log in `tracer` and run the analysis until the parameters all reach ESS>200
-4. Summarize and interpret the results, e.g. build a consensus tree with `treeannotator`
-   and visualize it with `figtree`
-
-BEAST can read FASTA files, but it would be nice if the definition lines came out better
-in trees, so we might relabel these:
-
-```python
-import sys
-from Bio import SeqIO # sudo pip install biopython
-with open(sys.argv[1], "rU") as handle:
-    
-    # Example: relabel sequences as Genus_species-ID
-    for record in SeqIO.parse(handle, "fasta"):
-        fields = record.description.split('|')
-        name = fields[1].replace(' ', '_')
-        print '>' + name + '-' + fields[0]
-        print record.seq
-```
-
-Which gives us [this version](https://github.com/naturalis/mebioda/commit/76e9562db3f5ce1a8140f73f0b57d34e56e63b42)
-to import in `beauti`, resulting in the [input file](BEAST/Danaus.mafft.xml).
-
-Running a BEAST analysis
-------------------------
-
-![](BEAST/tracer.png)
-
-If we run the [input file](BEAST/Danaus.mafft.xml) for 10*10^6 generations, the 
-[log](BEAST/Danaus.log) file shows in tracer that all the parameters have been 
-sufficiently sampled. If we compute a consensus, this is the result:
-
-![](BEAST/Danaus.consensus.trees.png)
+The resulting tree file (`RAxML_bestTree.Danaus.phylo`) can then be 
+viewed in http://etetoolkit.org/treeview/
