@@ -23,6 +23,8 @@ The course will consist of lectures and hands-on computer practicals that requir
 - [Java](https://java.com/)
 - [an account on the Galaxy portal](http://galaxy.naturalis.nl/user/login?use_panels=True&redirect=%2F)
 - [an account on EoL](https://eol.org/users/sign_up)
+- an installation of Docker desktop ([windows](https://docs.docker.com/docker-for-windows/), 
+  [mac](https://docs.docker.com/docker-for-mac/))
 
 ### Schedule
 
