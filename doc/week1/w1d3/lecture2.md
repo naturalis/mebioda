@@ -76,7 +76,7 @@ Data from URLs can be downloaded on the command line using [curl](https://curl.h
 $ curl -o Danaus.fas http://www.boldsystems.org/index.php/API_Public/sequence?taxon=Danaus
 ```
 
-The BOLD sequence data service API returns a [FASTA file](Danaus.fas), which holds 
+The BOLD sequence data service API returns a FASTA file `Danaus.fas`, which holds 
 multiple sequences, unaligned. The 
 [definition line](https://en.wikipedia.org/wiki/FASTA_format#Description_line) is 
 formatted as:
@@ -129,7 +129,7 @@ with open("Danaus.fas", "rU") as handle:
     # Example: retain COI
     for record in SeqIO.parse(handle, "fasta"):
         fields = record.description.split('|')
-        if fields[2] == 'COI-5P':
+        if fields[2] == 'COI-5P' and len(record.seq) == 1246:
         	print '>' + record.description
         	print record.seq
 ```
@@ -149,7 +149,7 @@ FASTA files can be aligned, for example, with [muscle](https://www.drive5.com/mu
 $ muscle -in Danaus.COI-5P.fas -out Danaus.muscle.fas
 ```
 
-Resulting in an [alignment](Danaus.muscle.fas), which is also a FASTA file. 
+Resulting in a file `Danaus.muscle.fas`, which is also a FASTA file. 
 
 Alternatively, you might align with [mafft](https://mafft.cbrc.jp/alignment/software/), 
 (or one of the many other multiple sequence alignment tools) which has additional 
@@ -159,13 +159,13 @@ functionality for more difficult markers (such as ITS):
 $ mafft Danaus.COI-5P.fas > Danaus.mafft.fas
 ```
 
-Resulting in this [file](Danaus.mafft.fas). You can view both, for example, with this 
+Resulting in a file `Danaus.mafft.fas`. You can view both, for example, with this 
 [web viewer](http://msa.biojs.net/app/). Are they different?
 
 ```shell
 $ ls -la Danaus.m*
--rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.mafft.fas
--rw-r--r--  1 rutger.vos  staff  329801  4 nov 21:50 Danaus.muscle.fas
+-rw-r--r-- 1 root root 157414 Nov 25 20:56 Danaus.mafft.fas
+-rw-r--r-- 1 root root 157414 Nov 25 20:56 Danaus.muscle.fas
 ```
 
 Same number of bytes (so, same number of inserted gaps) but with different contents. Could
@@ -174,11 +174,11 @@ _actual differences in the alignment algorithms_.
 [Checksums](https://en.wikipedia.org/wiki/Checksum) are different:
 
 ```shell
-$ md5 Danaus.mafft.fas
-MD5 (Danaus.mafft.fas) = 47e8d36d43a68f11c131badf75adcc3a
+$ md5sum Danaus.mafft.fas
+821e4e986131bbdbc19571c4c5456020  Danaus.mafft.fas
 
-$ md5 Danaus.mafft.nex
-MD5 (Danaus.mafft.nex) = e604e23ab1c39ecf54f755a0c882ded8
+$ md5sum Danaus.mafft.fas
+821e4e986131bbdbc19571c4c5456020  Danaus.mafft.fas
 ```
 
 **How might we verify this further?**
