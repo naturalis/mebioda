@@ -217,45 +217,11 @@ $ python convert.py <infile> <outfile> <format>
 Now we can compare the two alignments, e.g. with a `diff <file1> <file2>`.
 They appear to be identical.
 
-Bayesian evolutionary analysis by sampling trees (BEAST)
---------------------------------------------------------
+Building a phylogeny
+--------------------
 
-[BEAST2](http://www.beast2.org/) is a modular system that can run many different types of 
-analyses. The typical workflow usually goes:
+We can build a quick phylogeny from one of the PHYLIP files using raxml, e.g.
+as follows: `raxmlHPC -m GTRGAMMA -n Danaus.phylo -s Danaus.mafft.phy -p 123`
 
-1. Import data (e.g. a  FASTA alignment) into `beauti`, set up the analysis parameters, 
-   possibly using a template
-2. Start `beast filename.xml`, numerous output files (a.o. are log and tree files)
-3. Inspect the log in `tracer` and run the analysis until the parameters all reach ESS>200
-4. Summarize and interpret the results, e.g. build a consensus tree with `treeannotator`
-   and visualize it with `figtree`
-
-BEAST can read FASTA files, but it would be nice if the definition lines came out better
-in trees, so we might relabel these:
-
-```python
-import sys
-from Bio import SeqIO # sudo pip install biopython
-with open(sys.argv[1], "rU") as handle:
-    
-    # Example: relabel sequences as Genus_species-ID
-    for record in SeqIO.parse(handle, "fasta"):
-        fields = record.description.split('|')
-        name = fields[1].replace(' ', '_')
-        print '>' + name + '-' + fields[0]
-        print record.seq
-```
-
-Which gives us [this version](https://github.com/naturalis/mebioda/commit/76e9562db3f5ce1a8140f73f0b57d34e56e63b42)
-to import in `beauti`, resulting in the [input file](BEAST/Danaus.mafft.xml).
-
-Running a BEAST analysis
-------------------------
-
-![](BEAST/tracer.png)
-
-If we run the [input file](BEAST/Danaus.mafft.xml) for 10*10^6 generations, the 
-[log](BEAST/Danaus.log) file shows in tracer that all the parameters have been 
-sufficiently sampled. If we compute a consensus, this is the result:
-
-![](BEAST/Danaus.consensus.trees.png)
+The resulting tree file (`RAxML_bestTree.Danaus.phylo`) can then be 
+viewed in http://etetoolkit.org/treeview/
