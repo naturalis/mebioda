@@ -82,9 +82,9 @@ Guest lectures
 Note that the guest lectures are where absenteeism is recorded (10% of final grade).
 
 - **DNA WaterScan** - 
-  [Kevin Beentjes](https://science.naturalis.nl/en/people/scientists/kevin-beentjes/)
+  [Kevin Beentjes](https://www.universiteitleiden.nl/medewerkers/kevin-beentjes)
 - **Fungal molecular diversity** - 
-  [József Geml](https://science.naturalis.nl/en/people/scientists/jozsef-geml/)
+  [Jorinde Nuytinck](https://www.naturalis.nl/node/630)
 - **GIS** -
   [Maarten van 't Zelfde](https://www.universiteitleiden.nl/medewerkers/maarten-van-t-zelfde)
 - **Birds of the Philippines** - 
@@ -94,18 +94,22 @@ Note that the guest lectures are where absenteeism is recorded (10% of final gra
 - **Georeferencing** - 
   [Jeroen Creuwels](https://www.linkedin.com/in/jeroen-creuwels-81b979a/)
 - **ENM** -
-  [Niels Raes](https://science.naturalis.nl/en/people/scientists/niels-raes/)
-  / [Leon Marshall](https://science.naturalis.nl/en/people/scientists/leon-marshall/)
+  [Nuno De Mesquita César de Sá](https://www.universiteitleiden.nl/medewerkers/nuno-de-mesquita-cesar-de-sa)
+  / [Rosaleen March](https://www.universiteitleiden.nl/en/staffmembers/rosaleen-march)
+<!--
 - **3D objects** -
   [Aidan Couzens](https://science.naturalis.nl/en/people/scientists/aiden-couzens/)
+-->
 - **Character data** - 
   [Jeremy Miller](https://science.naturalis.nl/en/people/scientists/jeremy-miller/)
 - **Diversification** - 
   [Vincent Merckx](https://science.naturalis.nl/en/people/scientists/vincent-merckx/)
 - **Biodiversity dynamics** - 
   [Hans ter Steege](https://science.naturalis.nl/en/people/scientists/hans-ter-steege/)
+<!--
 - **Paleontology** - 
   [Pim Kaskes](https://www.researchgate.net/profile/Pim_Kaskes)
+-->
 
 Links to other courses
 ----------------------
