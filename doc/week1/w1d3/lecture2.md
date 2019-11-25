@@ -177,8 +177,8 @@ _actual differences in the alignment algorithms_.
 $ md5sum Danaus.mafft.fas
 821e4e986131bbdbc19571c4c5456020  Danaus.mafft.fas
 
-$ md5sum Danaus.mafft.fas
-821e4e986131bbdbc19571c4c5456020  Danaus.mafft.fas
+$ md5sum Danaus.muscle.fas
+c165c5776e2cf6c72e2b18264ea13b34  Danaus.muscle.fas
 ```
 
 **How might we verify this further?**
