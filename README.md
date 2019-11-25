@@ -21,6 +21,7 @@ The course will consist of lectures and hands-on computer practicals that requir
 - [RStudio](https://rstudio.com/products/rstudio/) (open source edition)
 - [SQLite browser](https://github.com/sqlitebrowser/sqlitebrowser)
 - [Java](https://java.com/)
+- [an account on the Galaxy portal](http://galaxy.naturalis.nl/user/login?use_panels=True&redirect=%2F)
 
 ### Schedule
 
