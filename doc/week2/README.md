@@ -50,4 +50,5 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
 - Lecture II: Principles of SDM - Nuno De Mesquita César de Sá (CML)
 - Lecture III: Future projections, climate models, introduction to SDM practical - Rosaleen March (CML)
-- Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Nuno/Rosaleen/Rutger/Maarten
+- Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Nuno/Rosaleen/Rutger/Maarten,
+  including [code](w2d5/01_SettingUpEnviromentalVars.R)
