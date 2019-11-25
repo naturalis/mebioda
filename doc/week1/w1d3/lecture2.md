@@ -26,7 +26,7 @@ Fetching taxon data through the [URL API](http://www.boldsystems.org/index.php/a
 $ curl -o Danaus.json http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus
 ```
 
-Returned [taxon data](Danaus.json) is encoded as JSON:
+Returned [taxon data](Danaus.json) is encoded as JSON (e.g. do `python -m json.tool Danaus.json`):
 
 ```json
 {
