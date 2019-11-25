@@ -214,48 +214,8 @@ Usage:
 $ python convert.py <infile> <outfile> <format>
 ```
 
-Now we can compare the two alignments, e.g. with a 
-[diff](https://github.com/naturalis/mebioda/commit/93090e4ac2f80bb0e1bd9a63d40b73987631b3fd?diff=split).
-It seems that there are only minor differences. 
-
-Detecting non-overlapping sequences
------------------------------------
-
-One quick way to compute a pairwise distance matrix is with PHYLIP's program `dnadist`, so
-let's install it:
-
-```bash
-# let's install phylip
-$ curl -O http://evolution.gs.washington.edu/phylip/download/phylip-3.697.tar.gz
-$ gunzip phylip-3.697.tar.gz
-$ tar xvf phylip-3.697.tar
-$ cd phylip-3.697/src
-$ make -f Makefile.unx install
-$ cd -
-$ sudo mv phylip-3.697 /usr/local
-```
-
-(And add `/usr/local/phylip-3.696/exe` to the $PATH)
-
-When we compute a distance matrix we receive warnings that for some pairs of sequences 
-there is no sequence overlap at all:
-
-```
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 145 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 153 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 154 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 162 AND 202; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 200; -1.0 WAS WRITTEN
-WARNING: NO OVERLAP BETWEEN SEQUENCES 198 AND 202; -1.0 WAS WRITTEN
-```
-
-In a text editor we can see that 200 and 202 are `SETIU001-1` and `SETIU032-1`.
-Let's [remove](https://github.com/naturalis/mebioda/commit/681e9750b32612b59b2953a6b3a042f6c2ee47f0?diff=unified)
-these.
+Now we can compare the two alignments, e.g. with a `diff <file1> <file2>`.
+They appear to be identical.
 
 Bayesian evolutionary analysis by sampling trees (BEAST)
 --------------------------------------------------------
