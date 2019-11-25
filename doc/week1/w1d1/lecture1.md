@@ -134,6 +134,8 @@ In addition, Methods in Biodiversity Analysis is an **elective** in the followin
 - [General Biology Programme (no research specialisation)](https://studiegids.leidenuniv.nl/en/studies/show/6597/biology-general-biology-programme-no-research-specialisation)
 - [Molecular Genetics & Biotechnology](https://studiegids.leidenuniv.nl/en/studies/show/6599/microbial-biotechnology-and-health)
 
+<!--
+
 In relation to the **old** programme and the master **Evolutionary Biology**, 2017-2018:
 
 - [(old) Methods In Biodiversity Analysis](https://studiegids.leidenuniv.nl/courses/show/56721/Methods-in-Biodiversity-Analysis) - 
@@ -144,6 +146,8 @@ In relation to the **old** programme and the master **Evolutionary Biology**, 20
 - [Integrative Taxonomy](https://studiegids.leidenuniv.nl/courses/show/72333/integrative-taxonomy) - 
   Focuses more on taxonomy and systematics, less on data science and informatics. Is 
   mostly "Old MIBA" under a new name, in the _Evolutionary Biology_ master.
+
+-->
 
 Teaching materials
 ------------------
