@@ -24,7 +24,9 @@ The course will consist of lectures and hands-on computer practicals that requir
 - [an account on the Galaxy portal](http://galaxy.naturalis.nl/user/login?use_panels=True&redirect=%2F)
 - [an account on EoL](https://eol.org/users/sign_up)
 - an installation of Docker desktop ([windows](https://docs.docker.com/docker-for-windows/), 
-  [mac](https://docs.docker.com/docker-for-mac/))
+  [mac](https://docs.docker.com/docker-for-mac/), or the 
+  [windows toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/) or
+  [mac toolbox](https://docs.docker.com/toolbox/toolbox_install_mac/))
 
 ### Schedule
 
