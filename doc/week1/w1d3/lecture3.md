@@ -69,7 +69,7 @@ $ curl -L -O http://wwwabi.snv.jussieu.fr/public/abgd/last.tgz
 $ tar xzvf last.tgz
 $ cd Abgd
 $ make
-$ sudo cp abgd /usr/local/bin
+$ export PATH="${PATH}":`pwd`
 ```
 
 We should now have an executable called `abgd` on the $PATH. This accepts
