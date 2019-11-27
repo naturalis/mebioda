@@ -65,7 +65,7 @@ The ABGD command line tool
 --------------------------
 
 ```bash
-$ curl -O http://wwwabi.snv.jussieu.fr/public/abgd/last.tgz
+$ curl -L -O http://wwwabi.snv.jussieu.fr/public/abgd/last.tgz
 $ tar xzvf last.tgz
 $ cd Abgd
 $ make
