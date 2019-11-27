@@ -62,16 +62,16 @@ panel and the files on the right.
 
 ## 3. Trimming the primers
 
-Our sequencing reads still have primer sequences on both ends (i.e. 3' and 5'), which 
+Our sequencing reads still have primer sequences on both ends (i.e. 5' and 3'), which 
 have to be removed. We will use a tool called 
 [cutadapt](https://cutadapt.readthedocs.io/en/v1.10/index.html), which is available in 
 Galaxy under the Naturalis tools menu as the "Trim primers" tool. The following primers 
 were used:
 
-- **3' primer** - `TCCTCCGCTTATTGATAGC`
-- **5' primer** - `GTGARTCATCGAATCTTTG`
+- **Forward (5') primer** - `TCCTCCGCTTATTGATAGC`
+- **Reverse (3') primer** - `GTGARTCATCGAATCTTTG`
 
-We are going to use the option where the 3’ primer needs to be present, while the 5’ 
+We are going to use the option where the 5’ primer needs to be present, while the 3’ 
 primer is optional. Your window with settings should look like this:
 
 ![](images/fig7.png)
