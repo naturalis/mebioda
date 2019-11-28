@@ -38,7 +38,7 @@ address, after registering you will receive an email with an activation link.
 ## 2. Upload sequence data to Galaxy
 
 The data files (a zip archive of ±122MB) can be downloaded 
-[here](https://www.dropbox.com/s/if4g0zaezw76n3n/all_samples.zip?dl=0).
+[here](https://www.dropbox.com/s/if4g0zaezw76n3n/all_samples.zip?dl=1).
 In Galaxy open the upload window by clicking on the upload icon on the right top of the 
 tool panel.
 
