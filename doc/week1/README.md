@@ -37,6 +37,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Lecture II: [The barcoding workflow and MSA data](w1d3/lecture2.md)
 - Lecture III: [Species delimitation](w1d3/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source (cont.)](https://pfern.github.io/OSODOS/gitbook/)_
+  ([pdf](Vos.R.A._OSODOS_(2017).pdf))
 
 ### Day 4 - Metabarcoding
 
