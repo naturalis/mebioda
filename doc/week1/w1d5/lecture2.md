@@ -3,6 +3,7 @@ Big trees
 
 <!-- - Download the [PhytoPhylo DB](https://ndownloader.figshare.com/files/9742438) -->
 - Go to [DBTree](https://github.com/rvosa/bio-phylo-forest-dbtree/tree/master/t) and download trivial.db
+- Copy and paste the [trivial newick tree](https://github.com/rvosa/bio-phylo-forest-dbtree/blob/master/t/trivial.newick) into the viewer here: http://etetoolkit.org/treeview/
 - Go to [sqlitebrowser.org](http://sqlitebrowser.org) and download and install the program for
   your operating system. There are installers for Windows and Mac, and for Ubuntu you can do:
 
