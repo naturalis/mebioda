@@ -27,6 +27,7 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Lecture II: [HTS data types and file formats](w1d2/lecture2.md)
 - Lecture III: [Cases of HTS in biodiversity research](w1d2/lecture3.md)
 - Homework: _[Open Science, Open Data, Open Source](https://pfern.github.io/OSODOS/gitbook/)_
+  ([pdf](Vos.R.A._OSODOS_(2017).pdf))
 
 ### Day 3 - Barcoding
 
