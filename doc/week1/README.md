@@ -53,4 +53,4 @@ a journal club where we discuss a relevant publication with each other in brief 
 - Lecture I: [Phylogenetic data](w1d5/lecture1.md)
 - Lecture II: [Megatrees](w1d5/lecture2.md) (e.g. algorithms, SQL)
 - Lecture III: Wrap-up Open Science, Open Data, Open Source
-- Journal club: _All students present their selected paper to the class (10 min. + questions)_
+- Journal club: _All students present their selected paper to the class (5 min. + questions)_
