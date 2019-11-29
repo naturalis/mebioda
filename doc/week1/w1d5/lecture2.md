@@ -1,7 +1,8 @@
 Big trees
 =========
 
-- Download the [PhytoPhylo DB](https://ndownloader.figshare.com/files/9742438)
+<!-- - Download the [PhytoPhylo DB](https://ndownloader.figshare.com/files/9742438) -->
+- Go to [DBTree](https://github.com/rvosa/bio-phylo-forest-dbtree/tree/master/t) and download trivial.db
 - Go to [sqlitebrowser.org](http://sqlitebrowser.org) and download and install the program for
   your operating system. There are installers for Windows and Mac, and for Ubuntu you can do:
 
