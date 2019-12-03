@@ -20,7 +20,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 2019-12-03, Sylvius 1.5.03
 
-- Lecture I: [Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF, BioPortal, Linnaeus)](https://surfdrive.surf.nl/files/index.php/s/VPhWgR3nwW7txyX)
+- Lecture I: [Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF and BioPortal)](https://surfdrive.surf.nl/files/index.php/s/VPhWgR3nwW7txyX)
 - Lecture II: [Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)](https://surfdrive.surf.nl/files/index.php/s/WUE5rL0ExRtgLra)
 - Lecture III: [Satellite images and remote sensing - Joris Timmermans (CML)](https://surfdrive.surf.nl/files/index.php/s/VPT9hZX7RH9YJ2D)
 - Homework: Download occurrence data for **your crop species** from GBIF
