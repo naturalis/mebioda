@@ -14,7 +14,7 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture I: Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)
 - Lecture II: Introduction to GIS (2) and The geographical approach
 - Lecture III: GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)
-- Practical: [Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/XwoRrb8x0DEnqrD)
+- Practical: [Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/XJ2H5Slef4GibML)
 
 ### Day 2 - (Spatial) Data input
 
@@ -32,7 +32,7 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
 - Lecture III: [Data and file versioning (e.g. version management, backup, history, provenance)](w2d3/lecture3.md) - Rutger Vos
-- Practical: [Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/WOTpjzLoy5F5n7n)
+- Practical: [Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/eTiOmklhqPNUlIo)
 
 ### Day 4 - (Spatial) Data analysis
 
