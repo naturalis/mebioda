@@ -11,8 +11,8 @@ by species distribution modelling. We will present our findings in a brief repor
 
 2019-12-02, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
-- Lecture I: [Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)] (https://surfdrive.surf.nl/files/index.php/s/awidzynVpLhqDCT)
-- Lecture II: [Introduction to GIS (2) and The geographical approach] (https://surfdrive.surf.nl/files/index.php/s/rMbMSLDVH7zHhCy)
+- Lecture I: [Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)](https://surfdrive.surf.nl/files/index.php/s/awidzynVpLhqDCT)
+- Lecture II: [Introduction to GIS (2) and The geographical approach](https://surfdrive.surf.nl/files/index.php/s/rMbMSLDVH7zHhCy)
 - Lecture III: [GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)](https://surfdrive.surf.nl/files/index.php/s/SrvbhQ1ibCLuW4Q)
 - Practical: [Getting your data into ArcGIS: _Plotting species distributions on a map_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/XJ2H5Slef4GibML)
 
