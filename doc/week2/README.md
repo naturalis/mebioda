@@ -29,8 +29,8 @@ by species distribution modelling. We will present our findings in a brief repor
 
 2019-12-04, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
-- Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
-- Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
+- Lecture I: [Basic database management (e.g. records, variables, types, querying, geodatabases)](https://surfdrive.surf.nl/files/index.php/s/b2yENs9wcvAXV4f)
+- Lecture II: [Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)](https://surfdrive.surf.nl/files/index.php/s/646hrAAZfwHSrsZ)
 - [Cool website for comparing country sizes in reality, thanks Richard Frische](http://www.thetruesize.com)
 - Lecture III: [Data and file versioning (e.g. version management, backup, history, provenance)](w2d3/lecture3.md) - Rutger Vos
 - Practical: [Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/eTiOmklhqPNUlIo)
@@ -39,9 +39,9 @@ by species distribution modelling. We will present our findings in a brief repor
 
 2019-12-05, Sylvius 1.5.03
 
-- Lecture I: Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)
-- Lecture II: Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)
-- Lecture III: [Other tools](w2d3/Workflow.md) for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) 
+- Lecture I: [Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)](https://surfdrive.surf.nl/files/index.php/s/1H9hRA0WbDIJ6eP)
+- Lecture II: [Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)](https://surfdrive.surf.nl/files/index.php/s/bGs6fuhLoBcaebu)
+- Lecture III: [Other tools](w2d3/Workflow.md), [for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) ](https://surfdrive.surf.nl/files/index.php/s/2UnOQ6VzDeFstTS)
 - Guest lecture: Species Distribution Modelling using Deep Learning - Mark Rademaker
 
 ### [Day 5 - (Spatial) Data output](w2d5)
