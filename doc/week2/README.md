@@ -51,4 +51,4 @@ by species distribution modelling. We will present our findings in a brief repor
 - Lecture II: Principles of SDM - Nuno De Mesquita César de Sá (CML)
 - Lecture III: Future projections, climate models, introduction to SDM practical - Rosaleen March (CML)
 - Practical: Ecological Niche Modelling: _Species distribution modelling (e.g. MAXENT)_ - Nuno/Rosaleen/Rutger/Maarten,
-  including code, [Download Instructions Environmental Variables](w2d5/Mebioda_PracticalManual_2019_DownloadingEnvironmentalVariables.docx)
+  including code, [Download Instructions Environmental Variables](w2d5/Mebioda_PracticalManual_2019_DownloadingEnvironmentalVariables.pdf)
