@@ -1,6 +1,11 @@
 Species distribution modelling (SDM)
 ====================================
 
+- [Instructions for the report](reporting.md)
+
+
+<!--
+
 The SDM practical
 -----------------
 
@@ -23,3 +28,5 @@ Background reading
 - [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and Maxent 
   analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm)
 - a [book chapter](Raes_Aguirre_2018_ch21.pdf) on SDM by Niels Raes and Jesús Aguirre‐Gutiérrez 
+
+-->
