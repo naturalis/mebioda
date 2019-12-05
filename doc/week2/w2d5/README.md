@@ -12,13 +12,13 @@ we will use today.
 
 ## Instructions
 
-- [Full Manual](Mebioda_PracticalManual_2019.pdf) - **The sections in here correspond with the useful code**
+- [Full Manual](Mebioda_PracticalManual_2019.pdf) - **The sections in here correspond with the code below**
 - [Downloading environmental data](Mebioda_PracticalManual_2019_DownloadingEnvironmentalVariables.pdf)
 - [Writing the report](reporting.md)
 - [Submitting your report](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
   deadline: **Wednesday 11 December 2019, 17:00**
 
-## Useful code
+## Code
 
 0. [Setting up working environment](00_SettingUpWorkEnviroment.R)
 1. [Cropping environmental variables](01_CroppingEnvVariables.R)
