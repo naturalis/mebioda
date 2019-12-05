@@ -47,7 +47,7 @@ plot(fut_clip) #visualize
 th <- 0.362 #define threshold
 m <- c(0, th,0, th, 1, 1) #matrix everything before th as 0 and everything after th as 1
 bin_mat <- matrix(m, ncol=3, byrow=TRUE) #convert to correct matrix
-pres_bin <- reclassify(pres2, bin_mat) #reclassify by matrix present
+pres_bin <- reclassify(pres, bin_mat) #reclassify by matrix present
 fut_bin <- reclassify(fut, bin_mat) #reclassify by matrix future
 plot(pres_bin)
 plot(fut_bin)
