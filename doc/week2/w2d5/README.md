@@ -19,7 +19,9 @@ we will use today.
 
 ## Useful code
 
-- [Setting up environmental variables](01_SettingUpEnviromentalVars.R)
+- [Setting up working environment](00_SettingUpWorkEnvironment.R)
+- [Cropping environmental variables](01_CroppingEnvVariables.R)
+- [Variable selection](02_VariableSelection.R)
 - [Making change maps](03_Making_ChangeMaps.R)
 
 <!--
