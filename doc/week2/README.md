@@ -31,6 +31,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 - Lecture I: Basic database management (e.g. records, variables, types, querying, geodatabases)
 - Lecture II: Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)
+  [Cool website for comparing country sizes in reality, thanks Richard Frische](http://www.thetruesize.com)
 - Lecture III: [Data and file versioning (e.g. version management, backup, history, provenance)](w2d3/lecture3.md) - Rutger Vos
 - Practical: [Analysing your data in ArcGIS: _Data preparation with use of spatial tools for SDM_ 2 pers.](https://surfdrive.surf.nl/files/index.php/s/eTiOmklhqPNUlIo)
 
