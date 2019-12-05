@@ -1,6 +1,7 @@
 Species distribution modelling (SDM)
 ====================================
 
+- [Instructions for downloading environmental data](Mebioda_PracticalManual_2019_DownloadingEnvironmentalVariables.pdf)
 - [Instructions for the report](reporting.md)
 
 
