@@ -21,10 +21,10 @@ Expected:
 -	Provide an overview, in the form a flowchart perhaps, of the steps you will perform in 
   this section to test your research hypothesis
 -	Occurrence data:
-  - What are the characteristics of your occurrence data? 
-  - Are there any spatial biases?
-  - Does it properly reflect the species ecological niche?
-  - What corrections did you apply to your data?
+    - What are the characteristics of your occurrence data? 
+    - Are there any spatial biases?
+    - Does it properly reflect the species ecological niche?
+    - What corrections did you apply to your data?
 - Environmental data:
   - Which were the final variables you selected and why?
   - What were the results of your autocorrelation and multicollinearity tests?
