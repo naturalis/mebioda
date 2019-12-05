@@ -14,7 +14,7 @@ we will use today.
 
 - [Downloading environmental data](Mebioda_PracticalManual_2019_DownloadingEnvironmentalVariables.pdf)
 - [Writing the report](reporting.md)
-- [Submitting your results](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
+- [Submitting your report](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
   deadline: **Wednesday 11 December 2019, 17:00**
 
 ## Useful code
