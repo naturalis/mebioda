@@ -41,7 +41,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 - Lecture I: [Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)](https://surfdrive.surf.nl/files/index.php/s/1H9hRA0WbDIJ6eP)
 - Lecture II: [Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)](https://surfdrive.surf.nl/files/index.php/s/bGs6fuhLoBcaebu)
-- Lecture III: [Other tools](w2d3/Workflow.md), [for spatial data (e.g. ArcGIS extensions, QGIS, PostGIS, R, MAXENT) ](https://surfdrive.surf.nl/files/index.php/s/2UnOQ6VzDeFstTS)
+- Lecture III: [Other tools](w2d3/Workflow.md), [for spatial data (e.g. ArcGIS extensions, QGIS, DIVA-GIS, R, MAXENT) ](https://surfdrive.surf.nl/files/index.php/s/2UnOQ6VzDeFstTS)
 - Guest lecture: Species Distribution Modelling using Deep Learning - Mark Rademaker
 
 ### [Day 5 - (Spatial) Data output](w2d5)
