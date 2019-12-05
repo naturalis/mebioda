@@ -1,12 +1,23 @@
 Species distribution modelling (SDM)
 ====================================
 
-## Instructions:
+In this practical you are going to do a species distribution modelling (SDM) analysis. Such an analysis
+is done to establish correlations between the occurrences of a species (which you downloaded and cleaned
+from GBIF) and the environmental conditions in the locations where it occurs (data for which we will 
+download today, if you haven't already). As we have seen, there are different ways in which this can be done,
+e.g. using deep learning and various other machine learning techniques, and using 
+[maximum entropy](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy) as implemented in the Java
+program [maxent](https://biodiversityinformatics.amnh.org/open_source/maxent/), the functionality of which
+we will use today.
+
+## Instructions
 
 - [Downloading environmental data](Mebioda_PracticalManual_2019_DownloadingEnvironmentalVariables.pdf)
 - [Writing the report](reporting.md)
+- [Submitting your results](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
+  deadline: **Wednesday 11 December 2019, 17:00**
 
-## Useful code:
+## Useful code
 
 - [Setting up environmental variables](01_SettingUpEnviromentalVars.R)
 - [Making change maps](03_Making_ChangeMaps.R)
@@ -17,8 +28,6 @@ The SDM practical
 -----------------
 
 - [Instructions for the practical](SDM_Workshop_MethodsBiodiversity_08_12_17.pdf)
-- [Instructions for submitting your results](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
-  deadline: **Wednesday 11 December 2019, 17:00**
 - [R script for clipping and variable selection](RScript_SDM_Workshop_VariableSelection_Clipping.R)
 
 Lecture slides
