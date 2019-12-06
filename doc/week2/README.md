@@ -48,7 +48,7 @@ by species distribution modelling. We will present our findings in a brief repor
 
 2019-12-06, Sylvius 1.5.03
 
-- Lecture I: Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)
+- Lecture I: [Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)](https://surfdrive.surf.nl/files/index.php/s/nRejxWrOp57ofvc)
 - Lecture II: Principles of SDM - Nuno De Mesquita César de Sá (CML)
 - Lecture III: Future projections, climate models, introduction to SDM practical - Rosaleen March (CML)
-- Practical: [Ecological Niche Modelling](w2d5/README.md) - Nuno/Rosaleen/Rutger/Maarten,
+- Practical: [Ecological Niche Modelling](w2d5/README.md) - Nuno/Rosaleen/Rutger/Maarten
