@@ -13,6 +13,9 @@ we will use today.
 ## Instructions
 
 - [Full Manual](Mebioda_PracticalManual_2019.pdf) - **The sections in here correspond with the code below**
+- [Powerpoint Nuno - Preparing the data and variable selection](SDM_Practical_Part_01.pdf)
+- Powerpoint Rosaleen - Discussion of the MaxEnt Results
+- [Powerpoint Maarten - Making Maps of SDM (MaxEnt) output in ArcGIS](https://surfdrive.surf.nl/files/index.php/s/rcBYszz1J1GN7PL)
 - [Writing the report](reporting.md)
 - [Submitting your report](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
   deadline: **Wednesday 11 December 2019, 17:00**
@@ -38,13 +41,15 @@ Lecture slides
 - [SDM and its suite of applications](Principles_SDM_Raes_2017.pptx) - Niels Raes
 - [Practical uses of SDM: Forecasting](Presentation_SDM_Forecasting_Leon_Marshall_08_12_17.pptx) - Leon Marshall
 
-Background reading
-------------------
 
 - [examples of cropping and conversion using various approaches](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/Workflow.md)
 - [SDM Manual](SDM_Manual) - A collection of informational tutorial pages on DIVA-GIS and Maxent
 - [MAXENT Data](Maxent_data.zip) - A Zip archive with example input data and Maxent 
-  analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm)
-- a [book chapter](Raes_Aguirre_2018_ch21.pdf) on SDM by Niels Raes and Jesús Aguirre‐Gutiérrez 
+  analysis results for the species [_Macaranga auriculata_](http://www.asianplant.net/MacMalBorneo/Macaranga%20auriculata.htm) -->
 
--->
+Background reading
+------------------
+
+- a [book chapter](Raes_Aguirre_2018_ch21.pdf) on SDM by Niels Raes and Jesús Aguirre‐Gutiérrez
+
+
