@@ -14,7 +14,7 @@ we will use today.
 
 - [Full Manual](Mebioda_PracticalManual_2019.pdf) - **The sections in here correspond with the code below**
 - [Powerpoint Nuno - Preparing the data and variable selection](SDM_Practical_Part_01.pdf)
-- Powerpoint Rosaleen - Discussion of the MaxEnt Results
+- [Powerpoint Rosaleen - Discussion of the MaxEnt Results](SDMs_2019.pdf)
 - [Powerpoint Maarten - Making Maps of SDM (MaxEnt) output in ArcGIS](https://surfdrive.surf.nl/files/index.php/s/rcBYszz1J1GN7PL)
 - [Writing the report](reporting.md)
 - [Submitting your report](https://github.com/naturalis/mebioda/blob/master/doc/week2/w2d3/lecture3.md#exercise-contributing-to-the-course-repository) -
