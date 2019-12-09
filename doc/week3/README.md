@@ -20,16 +20,16 @@ as their geographical patterns of diversity are not simply accidents of history.
 - Lecture I: [Large phylogenies in biodiversity](w3d2/lecture1.md)
 - Lecture II: [Tree shape metrics](w3d2/lecture2.md)
 - Lecture III: [Inferences from tree shape](w3d2/lecture3.md)
-- Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379); [ungulate tree shape](w3p3/Ungulates.Rmd)
+- Practical: [tree shape analysis](w3p2), turn [this paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179553#sec002) into a practical using [these scripts](http://datadryad.org/resource/doi:10.5061/dryad.sm379)
 
 ### Day 3 - Comparative character analysis
 
 2019-12-11, Sylvius 1.5.03
 
 - Lecture I: [Comparative analysis intro](w3d3/lecture1.md)
-- Lecture II: [Three dimensional analysis of morphological characters](w3d3/lecture2) (Aidan Couzens)
+- Lecture II: [Scaling rules in Ungulates](w3p3/Ungulates.Rmd)
 - Lecture III: Character data mining and representation (Jeremy Miller)
-- Practical: [ungulate trait variables](w3p3/Imputing.Rmd); [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) 
+- Practical: <!--[ungulate trait variables](w3p3/Imputing.Rmd);--> [Ancestral state reconstruction under Brownian motion](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture3/AncestralStatesReconstruction.Rmd) 
   <!-- and [Ornstein-Uhlenbeck models](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture5/OUModels.Rmd)-->
 
 ### Day 4 - Functional and character diversity
