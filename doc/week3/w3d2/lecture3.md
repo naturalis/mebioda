@@ -128,6 +128,11 @@ grid <- 100
 start <- 0
 end <- 400
 
+# Vector of speciation times in the phylogeny. Time is measured 
+# increasing going into the past with the present being time 0. 
+# x can be obtained from a phylogenetic tree using getx(TREE).
+x <- getx(binultra)
+
 # estimate time, lambda, mu
 res <- bd.shifts.optim(x,c(rho,1),grid,start,end)[[2]]
 ```
