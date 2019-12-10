@@ -1,7 +1,6 @@
 Diversity through space and time
 --------------------------------
-The final week of the course starts with two guest speakers who will introduce their research, which concerns
-patterns of diversity through space and time. We will then wrap up the course and start prepping for the exam.
+We will wrap up the course and start prepping for the exam.
 
 ### Day 1 - Guest lectures
 
