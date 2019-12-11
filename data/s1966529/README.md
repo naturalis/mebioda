@@ -1,1 +1,1 @@
-Report *Musa Paradisiaca* distribution modeling.
+Report *Musa Paradisiaca* distribution modelling.
