@@ -38,8 +38,10 @@ as their geographical patterns of diversity are not simply accidents of history.
 
 - Lecture I: Home study (i.e. no lecture)
 - Lecture II: Trait-dependent diversification in Cyprinodontiformes (Tom van Dooren)
-- Lecture III: Methods for trait-dependent diversification ([files](w3d4/BiSSE_elapids)) (Benedict King)
-- Practical: [ungulate BiSSE](w3p3/Diversification.Rmd), [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd)
+- Lecture III: Methods for trait-dependent diversification (Benedict King)
+- Practical: [Practical BiSSE / elapids](w3d4/BiSSE_elapids)
+<!--
+[ungulate BiSSE](w3p3/Diversification.Rmd), [Diversification](https://github.com/naturalis/CourseComparativeMethods/blob/master/lecture7/Diversification.Rmd) -->
 
 ### Day 5 - Trait data and analysis
 
