@@ -37,7 +37,7 @@ as their geographical patterns of diversity are not simply accidents of history.
 2019-12-12, Sylvius 1.5.03
 
 - Lecture I: Home study (i.e. no lecture)
-- Lecture II: Trait-dependent diversification in Cyprinodontiformes (Tom van Dooren)
+- Lecture II: [Trait-dependent diversification in Cyprinodontiformes](w3d4/Leiden2019.pdf) (Tom van Dooren)
 - Lecture III: Methods for trait-dependent diversification (Benedict King)
 - Practical: [Practical BiSSE / elapids](w3d4/BiSSE_elapids)
 <!--
