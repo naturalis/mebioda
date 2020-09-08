@@ -37,7 +37,7 @@ address, after registering you will receive an email with an activation link.
 
 ## 2. Upload sequence data to Galaxy 
 
-> Bottleneck: storage for data staging
+<p style="color:red">Bottleneck: storage for data staging</p>
 
 The data files (a zip archive of ±122MB) can be downloaded 
 [here](https://ndownloader.figshare.com/files/20019950).
@@ -64,7 +64,7 @@ panel and the files on the right.
 
 ## 3. Trimming the primers
 
-> Bottleneck: LIMS for primer sequences
+<p style="color:red">Bottleneck: LIMS for primer sequences</p>
 
 Our sequencing reads still have primer sequences on both ends (i.e. 5' and 3'), which 
 have to be removed. We will use a tool called 
@@ -155,7 +155,7 @@ samples by filtering on length.
 
 ## 7. Create an OTU table
 
-> Bottleneck: HPC
+<p style="color:red">Bottleneck: HPC</p>
 
 We are going to use the tool “vsearch”, first described in a paper by Rognes et al., 2016 
 (https://peerj.com/articles/2584/). Select “Make otu table” in the left panel. The tool 
@@ -186,7 +186,7 @@ results.
 
 ## 8. Identify OTUs
 
-> Bottleneck: reference database in BioCloud (i.e. storage + curation)
+<p style="color:red">Bottleneck: reference database in BioCloud (i.e. storage + curation)</p>
 
 We will now compare the OTUs with a reference database to see if we can identify and 
 classify the OTUs. This step will produce the biologically relevant information that we 
@@ -233,7 +233,7 @@ file and forms the starting point for ecological interpretation of the data.
 
 ## 10. Interpretation
 
-> Bottleneck: link with sample metadata / CRS
+<p style="color:red">Bottleneck: link with sample metadata / CRS</p>
 
 - For each altitude (C1, C3, C5 and C7) 3 replicate samples were analyzed (P1, P2, P3). 
   First create new columns to sum the OTU abundance values per altitude (e.g. =SUM(b1:d1) 
