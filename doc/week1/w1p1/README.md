@@ -35,7 +35,9 @@ address, after registering you will receive an email with an activation link.
 
 ![](images/fig2.png)
 
-## 2. Upload sequence data to Galaxy
+## 2. Upload sequence data to Galaxy 
+
+<font style="color:red">Bottleneck: storage for data staging</font>
 
 The data files (a zip archive of ±122MB) can be downloaded 
 [here](https://ndownloader.figshare.com/files/20019950).
