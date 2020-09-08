@@ -37,7 +37,7 @@ address, after registering you will receive an email with an activation link.
 
 ## 2. Upload sequence data to Galaxy 
 
-<p style="color:red">Bottleneck: storage for data staging</p>
+<p style="color:red">Bottlenecks: 1) FAIR archival storage 2) scratch space for data staging</p>
 
 The data files (a zip archive of ±122MB) can be downloaded 
 [here](https://ndownloader.figshare.com/files/20019950).
@@ -155,8 +155,6 @@ samples by filtering on length.
 
 ## 7. Create an OTU table
 
-<p style="color:red">Bottleneck: HPC</p>
-
 We are going to use the tool “vsearch”, first described in a paper by Rognes et al., 2016 
 (https://peerj.com/articles/2584/). Select “Make otu table” in the left panel. The tool 
 “VSEARCH with chimera checking” performs a series of steps. There is first a 
@@ -186,7 +184,8 @@ results.
 
 ## 8. Identify OTUs
 
-<p style="color:red">Bottleneck: reference database in BioCloud (i.e. storage + curation)</p>
+<p style="color:red">Bottlenecks: 1) HPC for blast; 2) reference databases in BioCloud 
+  (i.e. storage + curation)</p>
 
 We will now compare the OTUs with a reference database to see if we can identify and 
 classify the OTUs. This step will produce the biologically relevant information that we 
