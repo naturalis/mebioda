@@ -213,7 +213,7 @@ select mrca.name
 	where 
 		a.name='A' and 
 		c.name='C' and 
-		m.left < a.left and 
+		mrca.left < a.left and 
 		mrca.right > c.right
 	limit 1;
 ```
