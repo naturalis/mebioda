@@ -19,7 +19,7 @@ a tab called _data_ on the species page. This leads to all the trait data that a
 available on the EoL website. Each individual trait value has a number of different
 bits of information associated with it:
 
-- Where the information originally came from (as of late 2018 this is shown on the right)
+- Where the information originally came from
 - What the name of the trait is
 - What the trait value is
 - More detailed information when you expand the record by clicking the triangle
@@ -47,7 +47,7 @@ unambiguously clear what we mean when we use a certain term in our data. For exa
 when you combine different data tables, do columns with the same name automatically 
 mean they hold the same data? Are columns with different names necessarily different? 
 It is impossible to say unless the terms that we use are anchored on a globally unique
-definition. We variously used the word 'ontology' or 'controlled vocabulary' for this.
+definition. We may have used the word 'ontology' or 'controlled vocabulary' for this.
 
 The EoL trait bank uses this in a big way. Every predicate (so, every term about a
 species, such as `geographic distribution includes`) is anchored on an ontology. Many
@@ -59,7 +59,7 @@ it is given a URI (a special type of URL that is used for identifying things. It
 necessarily lead to a web page when you try to load it, though it might. The main 
 purpose is just to create an identifier.)
 
-> Exercise 3: in the trait data for your model plant, look for the predicate 'Leaf Complexity'. 
+> Exercise 3: in the trait data for a model plant, look for the predicate 'Leaf Complexity'. 
 > What is its URI? What ontology does it come from?
 
 ### Objects
