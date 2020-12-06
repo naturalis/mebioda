@@ -102,7 +102,7 @@ The following briefly explains the different parameters:
   mismatches, insertions and deletions. The level of error tolerance is adjusted by 
   specifying a maximum error rate, which is 0.1 (=10%) by default.  
 - **Minimum read length** - Discard processed reads that are shorter than this length
-- **Output untrimmed sequences** - When this is set to yes you will can an extra output
+- **Output untrimmed sequences** - When this is set to yes you will get an extra output
   file containing the untrimmed reads
 
 The resulting output zip archive contains the fastq files with trimmed primers. Check the 
