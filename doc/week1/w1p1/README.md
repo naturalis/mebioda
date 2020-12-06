@@ -25,13 +25,14 @@ clustering, Blast-identification etc.) are made available.
 
 Go to http://galaxy.naturalis.nl/ 
 
-Before you can use Galaxy you need to create an account. You can do this by clicking on 
-the register button under the menu item "Login or register".
+Before you can use Galaxy you need to create an account. You have probably done this
+already, but if not: you can do this by clicking on the register button under the menu 
+item "Login or register".
 
 ![](images/fig1.png)
 
-On the registration page you need to fill in the fields. Use a real existing email 
-address, after registering you will receive an email with an activation link.
+On the registration page you need to fill in the fields. Use a real, existing email 
+address: after registering you will receive an email with an activation link.
 
 ![](images/fig2.png)
 
