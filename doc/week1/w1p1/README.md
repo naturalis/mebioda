@@ -37,8 +37,6 @@ address, after registering you will receive an email with an activation link.
 
 ## 2. Upload sequence data to Galaxy 
 
-<p style="color:red">Bottlenecks: 1) FAIR archival storage 2) scratch space for data staging</p>
-
 The data files (a zip archive of ±122MB) can be downloaded 
 [here](https://ndownloader.figshare.com/files/20019950).
 In Galaxy open the upload window by clicking on the upload icon on the right top of the 
@@ -63,8 +61,6 @@ panel and the files on the right.
 ![](images/fig6.png)
 
 ## 3. Trimming the primers
-
-<p style="color:red">Bottleneck: LIMS for primer sequences</p>
 
 Our sequencing reads still have primer sequences on both ends (i.e. 5' and 3'), which 
 have to be removed. We will use a tool called 
@@ -184,9 +180,6 @@ results.
 
 ## 8. Identify OTUs
 
-<p style="color:red">Bottlenecks: 1) HPC for blast; 2) reference databases in BioCloud 
-  (i.e. storage + curation)</p>
-
 We will now compare the OTUs with a reference database to see if we can identify and 
 classify the OTUs. This step will produce the biologically relevant information that we 
 need (though we will process the output a bit more so that we can easily interpret it in 
@@ -231,8 +224,6 @@ tabular). It can be imported in a spreadsheet program such as Excel as a tab-sep
 file and forms the starting point for ecological interpretation of the data.
 
 ## 10. Interpretation
-
-<p style="color:red">Bottleneck: link with sample metadata / CRS</p>
 
 - For each altitude (C1, C3, C5 and C7) 3 replicate samples were analyzed (P1, P2, P3). 
   First create new columns to sum the OTU abundance values per altitude (e.g. =SUM(b1:d1) 
