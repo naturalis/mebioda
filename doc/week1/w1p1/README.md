@@ -41,6 +41,7 @@ address: after registering you will receive an email with an activation link.
 The data files (a zip archive of ±122MB) can be downloaded 
 [here](https://ndownloader.figshare.com/files/20019950).
 
+```
 https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C1P1.fastq.gz
 https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C1P2.fastq.gz
 https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C1P3.fastq.gz
@@ -53,6 +54,7 @@ https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C5P3.fastq.gz
 https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C7P1.fastq.gz
 https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C7P2.fastq.gz
 https://github.com/naturalis/mebioda/raw/master/doc/week1/w1p1/C7P3.fastq.gz
+```
 
 In Galaxy open the upload window by clicking on the upload icon on the right top of the 
 tool panel.
