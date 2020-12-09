@@ -10,9 +10,9 @@ Barcode Of Life Data Systems ([BOLDSYSTEMS](http://www.boldsystems.org/))
 -------------------------------------------------------------------------
 
 - Stores records about [specimens](http://www.boldsystems.org/index.php/Public_RecordView?processid=AANIC001-10)
-- Includes marker sequence [data](fasta.fas), images, lat/lon coordinates, etc.
+- Includes marker sequence [data](https://raw.githubusercontent.com/naturalis/mebioda/master/doc/week1/w1d3/fasta.fas), images, lat/lon coordinates, etc.
 - Can query [taxonomically](http://www.boldsystems.org/index.php/Public_SearchTerms?query=Danaus[tax])
-  and download [all sequences](Danaus.fas)
+  and download [all sequences](https://raw.githubusercontent.com/naturalis/mebioda/master/doc/week1/w1d3/Danaus.fas)
 - Identification services:
   - COI for animals
   - ITS for fungi

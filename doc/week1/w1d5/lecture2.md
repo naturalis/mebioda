@@ -146,18 +146,14 @@ This way, for any focal node, its parent, children and siblings can be queried i
 
 ```sql
 select p.name from node as n, node as p where n.name = 'n3' and n.parent = p.id
--- n4
 ```
 The children:
 ```sql
 select c.name from node as n, node as c where n.name = 'n3' and n.id = c.parent
--- n1
--- n2
 ```
 Sibling (but not self):
 ```sql
 select s.name from node as n, node as s where n.name = 'n3' and n.parent = s.parent and s.name != 'n3'
--- E
 ```
 
 Topological queries on tabular trees
@@ -198,19 +194,12 @@ Selecting the descendents of `n3`:
 
 ```sql
 select d.name from node as d, node as n where n.name = 'n3' and d.left > n.left and d.right < n.right;
--- A
--- B
--- n1
--- C
--- D
--- n2
 ```
 
 Selecting the ancestor(s) of `n3`:
 
 ```sql
 select a.name from node as a, node as n where n.name = 'n3' and a.left < n.left and a.right > n.right; 
--- n4
 ```
 
 Selecting the MRCA of `A` and `C`:
@@ -224,15 +213,15 @@ select mrca.name
 	where 
 		a.name='A' and 
 		c.name='C' and 
-		m.left < a.left and 
+		mrca.left < a.left and 
 		mrca.right > c.right
 	limit 1;
 ```
 
 Exercise
 --------
-We are going to figure out which of our crop species are most distant from one another. This means
-that, in principe, we have to inspect all pairs - so work together.
+We are going to figure out which of [our crop species](https://docs.google.com/spreadsheets/d/1tAtdeeeYv6wJYya1NRsLB0NkGeN_FuCOcnYfyBgFBmc/edit#gid=344307906) are most distant from one another. This means
+that, in principe, we have to inspect all pairs - so work together in your group.
 - Install a SQLite client if `sqlite3` is unavailable
 - Download the database version of the PhytoPhylo tree: https://doi.org/10.6084/m9.figshare.5598631
 - Using MRCA queries and the `height` column (distance to root) you should be able to fetch the

@@ -90,7 +90,7 @@ species <- "Cocos nucifera"
 # For EoL traitbank data we need to provide the EoL taxon ID as input parameter. Hence,
 # we first need to do a TNRS lookup of these, as follows:
 sources <- gnr_datasources() # frame with global names sources
-eol_id <- sources[sources$title == "EOL", "id"] # lookup the id of the EOL source
+eol_id <- sources[sources$title == "Encyclopedia of Life", "id"] # lookup the id of the EOL source
 eol_tnrs <- gnr_resolve(species, data_source_ids = c(eol_id), fields = "all") # resolve species
 eol_taxon_id <- eol_tnrs[eol_tnrs$matched_name == species,]$local_id # lookup integer id
 
