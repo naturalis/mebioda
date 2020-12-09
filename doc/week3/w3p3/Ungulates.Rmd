@@ -3,6 +3,7 @@ title: "Ungulate traits and ecogeography"
 author: "Rutger Vos (@rvosa)"
 date: "7-12-2018"
 output:
+  word_document: default
   html_document:
     df_print: paged
 ---
@@ -135,7 +136,7 @@ abs_lat_contrasts <-pic(abs_lat,pruned)
 log_area_contrasts <- pic(log_area,pruned)
 
 # fit linear model
-fit <- lm(log_area_contrasts ~ abs_lat_contrasts - 1)
+fit <- lm(log_area_contrasts ~ abs_lat_contrasts + 0)
 plot(abs_lat_contrasts,log_area_contrasts)
 abline(fit)
 ```
