@@ -39,7 +39,10 @@ address: after registering you will receive an email with an activation link.
 ## 2. Upload sequence data to Galaxy 
 
 The data files (a zip archive of ±122MB) can be downloaded 
-[here](https://ndownloader.figshare.com/files/20019950).
+[here](https://ndownloader.figshare.com/files/20019950).\
+Make sure to upload this file *unaltered* in the next step (ie. prevent your operating
+system from automatically unarchiving zip files, because rearchiving these files can change
+the compression method; even though the extension still is .zip).
 
 In Galaxy open the upload window by clicking on the upload icon on the right top of the 
 tool panel.
