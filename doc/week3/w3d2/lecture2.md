@@ -17,7 +17,7 @@ The Yule process revisited
   given waiting time, when [simulating](http://naturalis.github.io/browbrow/#), is drawn 
   from an [exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution)).
 
-![](lecture2/exponential-distribution.svg)
+![](lecture2/birth.png)
 
 Birth/death processes
 ---------------------
