@@ -183,6 +183,8 @@ In addition, _GitHub_ provides for a lot of functionality on top of _git_:
 - Ways to test code [automatically](https://travis-ci.org/rvosa/bio-phylo)
 - A facility to give a [DOI](https://doi.org/10.5281/zenodo.1010138) to a specific version
 
+<!--
+
 Exercise: contributing to the course repository
 -----------------------------------------------
 
@@ -190,3 +192,5 @@ Exercise: contributing to the course repository
 > 2. Fork the `naturalis/mebioda` repository (top-right button) to your own account
 > 3. In your own copy, go to the folder `<user name>/mebioda/data/<student number>` and upload your SDM results
 > 4. Create a "pull request" so that your results (in your own repository) are submitted upstream to the course repository
+
+-->
