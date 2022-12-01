@@ -53,16 +53,15 @@ Let's say we wanted to figure out what the image location was, we can then read 
 JSON in a little [script](json.py):
 
 ```python
-import urllib
+import urllib.request
 import simplejson as json # sudo pip install simplejson
 url = "http://www.boldsystems.org/index.php/API_Tax/TaxonSearch?taxName=Danaus"
-response = urllib.urlopen(url)
-data = json.loads(response.read())
-
-if data['top_matched_names']:
-	for name in data['top_matched_names']:
-		if name['representitive_image']:
-			print name['representitive_image']['image']
+with urllib.request.urlopen(url) as response:
+  data = json.loads(response.read())
+  if data['top_matched_names']:
+	  for name in data['top_matched_names']:
+		  if name['representitive_image']:
+			  print(name['representitive_image']['image'])
 
 ```
 
