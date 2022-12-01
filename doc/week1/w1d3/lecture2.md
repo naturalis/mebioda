@@ -136,7 +136,7 @@ with open("Danaus.fas", "rU") as handle:
 Run as:
 
 ```shell
-$ python fasta.py > Danaus.COI-5P.fas
+$ python ../src/fasta.py > Danaus.COI-5P.fas
 ```
 
 Multiple sequence alignment
@@ -145,7 +145,7 @@ Multiple sequence alignment
 FASTA files can be aligned, for example, with [muscle](https://www.drive5.com/muscle/):
 
 ```shell
-$ muscle -in Danaus.COI-5P.fas -out Danaus.muscle.fas
+$ muscle -align Danaus.COI-5P.fas -output Danaus.muscle.fas
 ```
 
 Resulting in a file `Danaus.muscle.fas`, which is also a FASTA file. 
