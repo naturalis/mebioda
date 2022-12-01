@@ -145,7 +145,7 @@ Multiple sequence alignment
 FASTA files can be aligned, for example, with [muscle](https://www.drive5.com/muscle/):
 
 ```shell
-$ muscle -align Danaus.COI-5P.fas -output Danaus.muscle.fas
+$ muscle -super5 Danaus.COI-5P.fas -output Danaus.muscle.fas
 ```
 
 Resulting in a file `Danaus.muscle.fas`, which is also a FASTA file. 
@@ -163,22 +163,12 @@ Resulting in a file `Danaus.mafft.fas`. You can view both, for example, with thi
 
 ```shell
 $ ls -la Danaus.m*
--rw-r--r-- 1 root root 157414 Nov 25 20:56 Danaus.mafft.fas
--rw-r--r-- 1 root root 157414 Nov 25 20:56 Danaus.muscle.fas
+-rw-r--r--  1 rutger  staff  157414 Dec  2 00:51 Danaus.mafft.fas
+-rw-r--r--  1 rutger  staff  156819 Dec  2 00:54 Danaus.muscle.fas
 ```
 
-Same number of bytes (so, same number of inserted gaps) but with different contents. Could
-be capitalization, could be line folding, could be sequence order, or 
-_actual differences in the alignment algorithms_. 
-[Checksums](https://en.wikipedia.org/wiki/Checksum) are different:
-
-```shell
-$ md5sum Danaus.mafft.fas
-821e4e986131bbdbc19571c4c5456020  Danaus.mafft.fas
-
-$ md5sum Danaus.muscle.fas
-c165c5776e2cf6c72e2b18264ea13b34  Danaus.muscle.fas
-```
+Different number of bytes. Could be capitalization, could be line folding, could be 
+sequence order, or _actual differences in the alignment algorithms_. 
 
 **How might we verify this further?**
 
