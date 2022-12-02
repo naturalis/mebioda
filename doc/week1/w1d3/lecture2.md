@@ -219,4 +219,4 @@ We can build a quick phylogeny from one of the PHYLIP files using raxml, e.g.
 as follows: `raxmlHPC -m GTRGAMMA -n Danaus.phylo -s Danaus.mafft.phy -p 123`
 
 The resulting tree file (`RAxML_bestTree.Danaus.phylo`) can then be 
-viewed in http://etetoolkit.org/treeview/
+viewed in [IcyTree](https://icytree.org/)
