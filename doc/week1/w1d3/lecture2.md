@@ -65,6 +65,12 @@ with urllib.request.urlopen(url) as response:
 
 ```
 
+Which we run as:
+
+```bash
+python3 ../src/parse_json.py 
+```
+
 Fetching sequences 
 ------------------
 
