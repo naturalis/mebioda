@@ -164,8 +164,8 @@ functionality for more difficult markers (such as ITS):
 $ mafft Danaus.COI-5P.fas > Danaus.mafft.fas
 ```
 
-Resulting in a file `Danaus.mafft.fas`. You can view both, for example, with this 
-[web viewer](http://msa.biojs.net/app/). Are they different?
+Resulting in a file `Danaus.mafft.fas`. You can view both, for example, with mesquite. 
+Are they different?
 
 ```shell
 $ ls -la Danaus.m*
