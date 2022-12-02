@@ -206,7 +206,7 @@ with open(sys.argv[1], "rU") as handle:
 Usage:
 
 ```bash
-$ python convert.py <infile> <outfile> <format>
+$ python3 ../src/convert.py <infile> <outfile> <format>
 ```
 
 Now we can compare the two alignments, e.g. with a `diff <file1> <file2>`.
