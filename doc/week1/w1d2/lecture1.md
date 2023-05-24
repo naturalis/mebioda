@@ -10,7 +10,7 @@ High-throughput sequencing
 > - Any HTS data analysis?
 > - What have you learned in Genomic Architecture?
 
-- At time of writing (2017) there are multiple technologies, broadly categorized as
+- At time of writing there are multiple technologies, broadly categorized as
   sequencing-by-ligation (e.g. SOLiD) and sequencing-by-synthesis (illumina, Ion Torrent,
   454). Reads are getting longer on all platforms, but especially on PacBio and MinION.
 - A number of vendors have created numerous platforms for specific needs and requirements, 
