@@ -21,20 +21,19 @@ written for biological data analysis, particularly genomics. Naturalis has a per
 Galaxy-server through which frequently used scripts (sequence trimming, filtering, 
 clustering, Blast-identification etc.) are made available.
 
-## 1. Create an account on Naturalis Galaxy
+## 1. Log in on Naturalis Galaxy
 
-Go to http://galaxy.naturalis.nl/ 
+Go to [http://galaxy.naturalis.nl/](http://galaxy.naturalis.nl/)
 
-Before you can use Galaxy you need to create an account. You have probably done this
-already, but if not: you can do this by clicking on the register button under the menu 
-item "Login or register".
-
-![](images/fig1.png)
-
-On the registration page you need to fill in the fields. Use a real, existing email 
-address: after registering you will receive an email with an activation link.
-
-![](images/fig2.png)
+- If you are a guest user who is using Galaxy as part of a course or collaboration as
+  an outsider of Naturalis, you should have received an invite by email to participate
+  in a Galaxy project via SRAM. Accepting the invite should have led you to a site
+  where you needed to login with your institution's 2FA system. Once you have done that,
+  SRAM authentication for Galaxy has been activated. You can then log in on Galaxy
+  by clicking 'Sign in with SRAM'.
+- If, instead, you have a Naturalis account, you can simply click 'Sign in with Naturalis
+  account', which functions in the same way as the other web applications Naturalis uses
+  (e.g. the Google tools, AFAS, TopDesk, and so on).
 
 ## 2. Upload sequence data to Galaxy 
 
