@@ -230,18 +230,75 @@ file and forms the starting point for ecological interpretation of the data.
 
 ## 10. Interpretation
 
-- For each altitude (C1, C3, C5 and C7) 3 replicate samples were analyzed (P1, P2, P3). 
-  First create new columns to sum the OTU abundance values per altitude (e.g. =SUM(b1:d1) 
-  for C1).
-- Next to the sum we are going to write an IF condition that will return the value 1 if 
-  the abundance value is greater than 0, otherwise it will return 0 (e.g. =IF(e2>0,1,0) 
-  for C1).
-- The primers we used amplified mainly fungi, but some OTUs remain unidentified at 
-  kingdom level or belong to other kingdoms. Sort the Taxonomy column and retain only the 
-  fungi for the next step.
-- Finally, we want the sum of each absence-presence column, so at the end of each column 
-  calculate the sum.
-- You can now compare fungal diversity across the different zonal forest types.
+For the final step we need to do some custom data processing. Download the TSV table
+that represents OTU table joined with the BLAST results against UNITE and load it into
+R with the following code (note where the input file name is specified as the first
+argument for the `read_tsv()` function).
+
+```{r data_processing}
+# Function to process column names
+clean_colnames <- function(x) {
+  x %>%
+    # Remove leading hash
+    str_remove("^#") %>%
+    # For columns matching C\d+P\d+, keep only that part
+    str_replace("^(C\\d+P\\d+)_.*$", "\\1")
+}
+
+# Read and process the data
+df <- read_tsv("../data/Galaxy.tabular.tsv", 
+               na = "N/A",
+               col_types = cols(
+                 `#OTU ID` = col_character(),
+                 `#Query ID` = col_character(),
+                 `#Subject` = col_character(),
+                 `#Subject accession` = col_character(),
+                 `#Subject Taxonomy ID` = col_character(),
+                 `#Source` = col_character(),
+                 `#Taxonomy` = col_character(),
+                 `#Identity percentage` = col_double(),
+                 `#Coverage` = col_integer(),
+                 `#evalue` = col_double(),
+                 `#bitscore` = col_integer(),
+                 .default = col_integer()
+               )) %>%
+  rename_with(clean_colnames) %>%
+  # Set OTU ID as row names and remove the column
+  column_to_rownames(var = "OTU ID") %>%
+  # Filter for Fungi only
+  filter(str_detect(Taxonomy, "^Fungi")) %>%
+  # Ensure C\d+P\d+ columns are integers
+  mutate(across(matches("^C\\d+P\\d+$"), as.integer)) %>%
+  # Create sum columns for each altitude
+  mutate(
+    C1_total = C1P1 + C1P2 + C1P3,
+    C3_total = C3P1 + C3P2 + C3P3,
+    C5_total = C5P1 + C5P2 + C5P3,
+    C7_total = C7P1 + C7P2 + C7P3
+  ) %>%
+  # Create presence/absence columns (1 if total > 0, 0 otherwise)
+  mutate(
+    C1_presence = if_else(C1_total > 0, 1L, 0L),
+    C3_presence = if_else(C3_total > 0, 1L, 0L),
+    C5_presence = if_else(C5_total > 0, 1L, 0L),
+    C7_presence = if_else(C7_total > 0, 1L, 0L)
+  )
+
+# Calculate species diversity for each altitude
+diversity <- data.frame(
+  Altitude = c("C1", "C3", "C5", "C7"),
+  Species_Diversity = c(
+    sum(df$C1_presence),
+    sum(df$C3_presence),
+    sum(df$C5_presence),
+    sum(df$C7_presence)
+  )
+)
+
+# Display results
+print("Species diversity by altitude:")
+print(diversity)
+```
 
 The deep sequence data in the full data set (we used only a subset for this practical) 
 indicate that fungal community composition correlates most strongly with elevation, with 
