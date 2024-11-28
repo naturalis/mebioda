@@ -235,7 +235,10 @@ that represents OTU table joined with the BLAST results against UNITE and load i
 R with the following code (note where the input file name is specified as the first
 argument for the `read_tsv()` function).
 
-```{r data_processing}
+```r
+library(tidyverse)
+library(readr)
+
 # Function to process column names
 clean_colnames <- function(x) {
   x %>%
