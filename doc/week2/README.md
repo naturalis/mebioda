@@ -9,8 +9,6 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 1 - Introduction
 
-2019-12-02, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
-
 - Lecture I: [Introduction to the week and to GIS, technical inventory (laptop OS's, Java versions)](https://surfdrive.surf.nl/files/index.php/s/awidzynVpLhqDCT)
 - Lecture II: [Introduction to GIS (2) and The geographical approach](https://surfdrive.surf.nl/files/index.php/s/rMbMSLDVH7zHhCy)
 - Lecture III: [GIS+SDM project example: _Birds of the Philippines_ - Merlijn van Weerd (CML)](https://surfdrive.surf.nl/files/index.php/s/SrvbhQ1ibCLuW4Q)
@@ -18,16 +16,12 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 2 - (Spatial) Data input
 
-2019-12-03, Sylvius 1.5.03
-
 - Lecture I: [Data sources (e.g. web services, spatial data sets, attribute data, incl. GBIF and BioPortal)](https://surfdrive.surf.nl/files/index.php/s/VPhWgR3nwW7txyX)
 - Lecture II: [Digitalization, georeferencing and GPS - Jeroen Creuwels (Naturalis)](https://surfdrive.surf.nl/files/index.php/s/WUE5rL0ExRtgLra)
 - Lecture III: [Satellite images and remote sensing - Joris Timmermans (CML)](https://surfdrive.surf.nl/files/index.php/s/VPT9hZX7RH9YJ2D)
 - Homework: Download occurrence data for **your crop species** from GBIF
 
 ### Day 3 - (Spatial) Data management
-
-2019-12-04, Sylvius 1.5.03 (morning), F101 van Steenis gebouw (afternoon)
 
 - Lecture I: [Basic database management (e.g. records, variables, types, querying, geodatabases)](https://surfdrive.surf.nl/files/index.php/s/b2yENs9wcvAXV4f)
 - Lecture II: [Data conversions and transformations (e.g. vector <=> raster, reclassification, (re)projections)](https://surfdrive.surf.nl/files/index.php/s/646hrAAZfwHSrsZ)
@@ -37,16 +31,12 @@ by species distribution modelling. We will present our findings in a brief repor
 
 ### Day 4 - (Spatial) Data analysis
 
-2019-12-05, Sylvius 1.5.03
-
 - Lecture I: [Methods for spatial data analysis (e.g. overlay, reclassification, spatial join, clip, neighbourhood analysis)](https://surfdrive.surf.nl/files/index.php/s/1H9hRA0WbDIJ6eP)
 - Lecture II: [Automated spatial data analysis (e.g. flowcharts, model builder, python scripting)](https://surfdrive.surf.nl/files/index.php/s/bGs6fuhLoBcaebu)
 - Lecture III: [Other tools](w2d3/Workflow.md), [for spatial data (e.g. ArcGIS extensions, QGIS, DIVA-GIS, R, MAXENT) ](https://surfdrive.surf.nl/files/index.php/s/2UnOQ6VzDeFstTS)
 - Guest lecture: [Species Distribution Modelling using Deep Learning](w2d4/DL_SDM_Leiden.pptx) - Mark Rademaker
 
 ### [Day 5 - (Spatial) Data output](w2d5)
-
-2019-12-06, Sylvius 1.5.03
 
 - Lecture I: [Export and visualisation (e.g. maps, histograms, tables, WebGIS, etc.)](https://surfdrive.surf.nl/files/index.php/s/nRejxWrOp57ofvc)
 - Lecture II & III: [Species Distribution Models: Principles and Applications - Nuno De Mesquita César de Sá & Rosaleen March (CML)](w2d5/191206_SDMs_2019.pdf)
